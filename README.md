@@ -31,8 +31,8 @@ insitu y en 3 sucursales adicionales.
 
 Nombre | Dirección web
 ------ | -------------
- nombre1 | url: http://labolognesa.com.ar/ - Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online.
- nombre2 | url: https://dancona.com.ar/ - Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas.
+ La Bolognesa | [Sitio](http://labolognesa.com.ar/) - Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online.
+ D`ancona |  [Sitio](https://dancona.com.ar/) - Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas.
  nombre3 | url:
  nombre4 | url:
  nombre5 | url:
