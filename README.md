@@ -1,6 +1,6 @@
 # **Grupo 1 "Seis Pimientas"**
 
-Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sitio web de fabrica de pastas "SeisPimientas". 
+Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sitio web de fábrica de pastas "SeisPimientas". 
 Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3 sucursales adicionales.
 
 # **Objetivos del ecomerce:**
