@@ -3,7 +3,8 @@
 Proyecto integrador, e-Comerce. Fabrica de pastas "6 Pimientas". 
 Fábrica de pastas dedicada a la elaboración artesanal, con venta
 insitu y en 3 sucursales adicionales.
-Objetivos del ecomerce:
+
+# **Objetivos del ecomerce:**
 -   Facilitar a los clientes la compra vía web con entregas a domicilio.
 -   Ofrecerles un espacio para que puedan interactuar con otros consumidores,
     compartiendo recetas, comentarios y/o sugerencias referidos a los productos ofrecidos. 
