@@ -17,15 +17,15 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
 
 
 ## **Integrantes del Equipo:**  
- Juan Pablo Mealla:
+ - Juan Pablo Mealla:
  Tengo 36 años, Mendocino, a punto de ser Martillero Público y Corredor Público Inmobiliario; me desarrollo laboralmente en esa área actualmente.  
 
- Luis Rufino: 
+ - Luis Rufino: 
  Tengo 41 años, vivo en la Provincia de Mendoza, Soy Lic. en Sistema de Información, 
  Programador y Analista de Sistemas.
  Soy uno de los propietarios de SiesPimientas (Fábrica de pastas). 
 
- Gaspar Valdes: //agregar descripcion del integrante
+ - Gaspar Valdes: //agregar descripcion del integrante
 
 ## **Sitios de Referencia:** //agregar sitios de referencia y url
 
