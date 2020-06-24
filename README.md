@@ -15,6 +15,12 @@ insitu y en 3 sucursales adicionales.
 -   Se agregará una herramienta que guíe al comsumidor para realizar
     una buena cocción de la pasta que haya adquirido.
 
+# **Target:**
+- El sitio está dirigido a público joven, con busca de un mejor servicio de compras y 
+a la generación X que cada vez se adapta más a este formato de servicios.
+- Teniendo en cuenta el aislamiento social, tiene que ser amigable a cualquier tipo de público
+que busque este servicio.
+
 
 
 ## **Integrantes del Equipo:**  
