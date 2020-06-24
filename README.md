@@ -36,7 +36,6 @@ Nombre de la Empresa | Descripción
  D`ancona | [Sitio](https://dancona.com.ar/) - Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas.
  Pascucci | [Sitio](https://business.google.com/v/pastas-frescas-pascucci/011086785476995587146/9f49/_?exp=1769939&bc=8&caid=1693702734&agid=68919136220&dvc=c&dvcmdl=&plmt=&kwd=%2Bfabrica%20%2Bde%20%2Bpasta&adpstn=&fiid=&tgtid=kwd-340679252818&locint=1000092&locphy=20017&mt=b&ntwk=g&gclid=EAIaIQobChMIlv2UmaKb6gIVxoKRCh1r2QW4EAAYASAAEgIMRPD_BwE) - Sitio de Google Business con portfolio de productos, con reseñas de clientes y canales de contacto.
  La Cuyanita | [Sitio](https://www.facebook.com/lacuyanitapastas/) - Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica.
- nombre5 | url:
  Los Abuelos | [Sitio](https://www.losabuelos.com.uy/) - Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. 
 
 
