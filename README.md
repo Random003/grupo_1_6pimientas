@@ -22,7 +22,6 @@ a la generación X que cada vez se adapta más a este formato de servicios.
 que busque este servicio.
 
 
-
 ## **Integrantes del Equipo:**  
  Juan Pablo Mealla: //agregar descripcion del integrante
 
