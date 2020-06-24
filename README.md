@@ -1,16 +1,21 @@
-# Grupo 1 "Seis Pimientas"
+# **Grupo 1 "Seis Pimientas"**
 
 Proyecto integrador, e-Comerce. Fabrica de pastas "6 Pimientas". //agregar descripcion de la fabrica
 
 
-## Integrantes:  //agregar descripcion de los integrantes
- Juan Pablo Mealla:
- Luis Rufino:
- Gaspar Valdes:
+## **Integrantes del Equipo:**  
+ Juan Pablo Mealla: //agregar descripcion del integrante
 
-## Sitios de Referencia: //agregar sitios de referencia y url
- 1 -  url:
- 2 -  url:
- 3 -  url:
- 4 -  url:
- 5 -  url:
+ Luis Rufino: //agregar descripcion del integrante
+
+ Gaspar Valdes: //agregar descripcion del integrante
+
+## **Sitios de Referencia:** //agregar sitios de referencia y url
+
+Nombre | Dirección web
+------ | -------------
+ nombre1 | url:
+ nombre2 | url:
+ nombre3 | url:
+ nombre4 | url:
+ nombre5 | url:
