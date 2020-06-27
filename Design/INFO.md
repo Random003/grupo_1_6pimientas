@@ -27,3 +27,10 @@ Presentes en esta misma carpeta _Design_.
 
 
  ![Logotipo (PNG)](https://github.com/Random003/grupo_1_6pimientas/blob/master/Design/sello_SP.png)
+
+
+
+
+ <p align="center">
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/Design/marca_curvas.png" alt="Marca en PNG"/>
+</p>
