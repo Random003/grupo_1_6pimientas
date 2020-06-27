@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/Design/marca_curvas.png" alt="Marca en PNG"/>
-</p>
+
 
 # **Grupo 1 "Seis Pimientas"**
 
