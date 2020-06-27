@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/Design/marca_curvas.png" alt="Marca en PNG"/>
+</p>
+
 # **Grupo 1 "Seis Pimientas"**
 
 Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sitio web de fábrica de pastas "SeisPimientas". 
