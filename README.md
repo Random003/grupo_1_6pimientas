@@ -24,23 +24,23 @@ que busque este servicio.
 
 
 ## **Integrantes del Equipo:**  
- - Juan Pablo Mealla:
+ - Juan Pablo Mealla [@GitHub](https://github.com/Random003):
  Tengo 36 años, Mendocino, a punto de ser Martillero Público y Corredor Público Inmobiliario; me desarrollo laboralmente en esa área actualmente.  
 
- - Luis Rufino: 
+ - Luis Rufino [@GitHub](https://github.com/LuisMRufino): 
  Tengo 41 años, vivo en la Provincia de Mendoza, Soy Lic. en Sistema de Información, 
  Programador y Analista de Sistemas.
  Soy uno de los propietarios de SiesPimientas (Fábrica de pastas). 
 
- - Gaspar Valdes: 
+ - Gaspar Valdes [@GitHub](https://github.com/Babart): 
  Tengo 31 años, nacido en Corrientes, pero vivo actualmente y hace más de 16 años en Mendoza, soy mendocino por adopción. Soy Bioquímico, trabajo en Cuerpo médico Forense de la provincia, y en un hospital privado. 
 
 ## **Sitios de Referencia:** 
 
-Nombre de la Empresa | Descripción
--------------------- | -----------
- La Bolognesa | [Sitio](http://labolognesa.com.ar/) - Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online.
- D`ancona | [Sitio](https://dancona.com.ar/) - Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas.
- Pascucci | [Sitio](https://business.google.com/v/pastas-frescas-pascucci/011086785476995587146/9f49/_?exp=1769939&bc=8&caid=1693702734&agid=68919136220&dvc=c&dvcmdl=&plmt=&kwd=%2Bfabrica%20%2Bde%20%2Bpasta&adpstn=&fiid=&tgtid=kwd-340679252818&locint=1000092&locphy=20017&mt=b&ntwk=g&gclid=EAIaIQobChMIlv2UmaKb6gIVxoKRCh1r2QW4EAAYASAAEgIMRPD_BwE) - Sitio de Google Business con portfolio de productos, con reseñas de clientes y canales de contacto.
- La Cuyanita | [Sitio](https://www.facebook.com/lacuyanitapastas/) - Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica.
- Los Abuelos | [Sitio](https://www.losabuelos.com.uy/) - Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo.
+Nombre de la Empresa | Descripción | Direccion Web
+-------------------- | ----------- | -------------
+ La Bolognesa | Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online. | [Sitio](http://labolognesa.com.ar/)
+ D`ancona | Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas. | [Sitio](https://dancona.com.ar/)
+ Pascucci | Sitio de Google Business con portfolio de productos, con reseñas de clientes y canales de contacto. | [Sitio](https://business.google.com/v/pastas-frescas-pascucci/011086785476995587146/9f49/_?exp=1769939&bc=8&caid=1693702734&agid=68919136220&dvc=c&dvcmdl=&plmt=&kwd=%2Bfabrica%20%2Bde%20%2Bpasta&adpstn=&fiid=&tgtid=kwd-340679252818&locint=1000092&locphy=20017&mt=b&ntwk=g&gclid=EAIaIQobChMIlv2UmaKb6gIVxoKRCh1r2QW4EAAYASAAEgIMRPD_BwE)
+ La Cuyanita | Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica. | [Sitio](https://www.facebook.com/lacuyanitapastas/)
+ Los Abuelos | Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. | [Sitio](https://www.losabuelos.com.uy/)
