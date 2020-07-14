@@ -41,4 +41,4 @@ app.post("/", (req, res) => {
 });
 
 
-app.listen(5001, () => { console.log("Escuchando en el puerto 5001;  igual recordá de colocar -npm run startdev- y después coloca -localhost/5001- en el navegador por favor.")})
+app.listen(5001, () => { console.log("Escuchando en el puerto 5001; recordá de colocar -npm run startdev- y después en el navegador -localhost/5001-.")})
