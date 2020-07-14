@@ -32,6 +32,10 @@ app.get("/menu", (req, res) => {
     res.sendFile(__dirname + "/views/menu.html");
 });
 
+app.get("*", (req, res) => {
+    res.status(404).sendFile(__dirname + "/views/404.html");
+});
+
 
 app.post("/", (req, res) => {
     // para que haga el JSON dejar este solamente
