@@ -22,8 +22,7 @@ header {
 .encabezado {
     box-sizing: border-box;
     padding: 5px;
-
-
+    flex-wrap: wrap;
 }
 
 .header {
@@ -52,24 +51,24 @@ header {
     position: relative;
     top: 3px;
     left: 110px;
-    width: 40px;
+    width: 47px;
     justify-content: center;
 }
 
 .facebook {
     position: relative;
-    top: 3px;
+    top: 7px;
     left: 110px;
-    width: 40px;
+    width: 47px;
     justify-content: center;
-   
+    margin: 5px
 }
 
 .whatsapp {
     position: relative;
     top: 3px;
     left: 110px;
-    width: 40px;
+    width: 47px;
     justify-content: center;
 
 }
@@ -91,13 +90,15 @@ header {
 .menu {
    position: absolute;
    height: 20px;
+   background-color: blanchedalmond ;
+   color: white;
 }
 
 .banner {
     background-image: url("/images/img_ppal.jpg");
     overflow: auto;
     background-size: 100%;
-    max-width: fit-content;
+    width: 100%;
 }
 
 .banner p {
@@ -213,14 +214,13 @@ ul {
     color: rgb(163, 31, 53);
     font-family: paris; 
     font-weight: bold;
-    font-family: ;,
-    
 }
 
 .promo20 {
     font-family: sans-serif;
     color: rgb(163, 31, 53);
-    font-weight: 100;
+    font-weight: bold;
+    font-size: 26px
 }
 
 
