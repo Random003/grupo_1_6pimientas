@@ -206,7 +206,22 @@ ul {
     font-size: xx-large;
 }
 
+.tituloPromo {
+    background-color: blanchedalmond;
+    max-width: 100%;
+    font-size: ;
+    color: rgb(163, 31, 53);
+    font-family: paris; 
+    font-weight: bold;
+    font-family: ;,
+    
+}
 
+.promo20 {
+    font-family: sans-serif;
+    color: rgb(163, 31, 53);
+    font-weight: 100;
+}
 
 
 /* FOOTER */
