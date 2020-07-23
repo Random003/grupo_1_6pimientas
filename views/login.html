@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.png">
-    <title>Nuestras Promociones</title>
+    <title>Login</title>
 </head>
-<body>
+<body class="loginBody">
     <header>
         <div class="encabezado">
             <img class="marcaSP" src="/images/marcaSP.png" alt="">
@@ -22,45 +22,42 @@
     
 
     <main>
-
-        <div class="banner">   
-            <p>
-                NUESTRAS<br>
-                PROMOCIONES
-            </p>
-        </div>
         
         <div>
-            <a href="#menu"><img class="menu" src="/images/menu.svg" alt="menu"></a>
-        </div>
+            <nav class="barra_menu_ppal">
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Productos</a></li>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Iniciar Sesión</a></li></li>
+            </ul>
+            </nav>
 
-        <h1 class="tituloPromo" align= "center">MARTES Y JUEVES!</h1>
-
-        <div class="caja">
-            <img class="fotosPedido" src="/images/caseritos.jpg" alt="Caseritos">
-            <h4 class="titulos">Caseritos</h4>
-            <p>
-                <label class="promo20" for="">20 % OFF EN LA SEGUNDA UNIDAD!</label><br>
-                <label for="">Precio:$595,00</label><br><br>
-                <img class="agregarPedido" src="/images/agregarPedido.png" alt="Agregar a Pedido">
-            </p>
-        </div>
-
-        <div class="caja">
-            <img class="fotosPedido" src="/images/ravioles.jpg" alt="Ravioles">
-            <h4 class="titulos">Ravioles</h4>
-            <p>
-                <label class="promo20" for="">20 % OFF EN LA SEGUNDA UNIDAD!</label><br>
-                <label for="">Precio:$445,00</label><br><br>
-                <img class="agregarPedido" src="/images/agregarPedido.png" alt="Agregar a Pedido">
-            </p>
         </div>
         
+       
+        <div class="cajaLogin">
+            <h1>Inicio de Sesión</h1>
+            <form action="" method="POST">
+                <label for="">Email: </label>
+                <input type="email" id="email" name="email"><br>
+                <label for="">Contraseña: </label>
+                <input type="password" id="password" name="password"><br>
+                <button type="button" id="botonInicio" placeholder= "Iniciar">Iniciar</button><br>
+                <button type="button" id="botonRegistro" placeholder="Registrarme">Registrarme</button>
+                
+            </form>
+           
 
+
+        </div>
+
+        
+        
+   
         
     </main>
-        
-    </main><br>
 
     
     <footer>
