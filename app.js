@@ -18,8 +18,8 @@ app.get("/productos2", (req, res) => {
     res.sendFile(__dirname + "/views/productos2.html");
 });
 
-app.get("/bolsa", (req, res) => {
-    res.sendFile(__dirname + "/views/bolsa_de_compras.html");
+app.get("/productCart", (req, res) => {
+    res.sendFile(__dirname + "/views/productCart.html");
 });
 
 app.get("/promociones", (req, res) => {
