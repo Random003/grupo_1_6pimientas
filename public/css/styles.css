@@ -4,6 +4,10 @@ body {
     margin: 0;
 }
 
+.loginBody {
+    background-color: white;
+}
+
 #noExiste {
     height: 280px;
     position: relative;
@@ -139,9 +143,9 @@ ul {
     background-position-x: 5px;
     float: left;
     z-index: 3;
-    position: absolute;
-    top: 110px;
-    left: 30%;
+    position: relative;
+    top: -10vh;
+
  }
 
 .separador {
@@ -183,6 +187,33 @@ ul {
     position: relative;
     left: 25%;
     margin-left: -30px;
+}
+/* cree la caja login en con la misma base de las otras cajas, veo que más le modifico para que me quede bien */
+.cajaLogin {
+    box-sizing: border-box;
+    width: 70%;
+    border: 1px hidden currentColor;
+    padding: 20px 0px 10px 0px;
+    margin: 60px;
+    text-align: center;
+    background-color: rgb(253, 227, 179);
+    color: rgb(163, 31, 53);
+    font-size: 20px;
+    position: relative;
+    left: 25%;
+    margin-left: -30px;
+}
+
+#email {
+    block-size: 1cm;
+    align-self: flex-end;
+
+}
+
+#password {
+    block-size: 1cm;
+    margin-block-end: auto
+
 }
 
 .fotosPedido {

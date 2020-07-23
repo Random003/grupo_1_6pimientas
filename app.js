@@ -26,6 +26,11 @@ app.get("/promociones", (req, res) => {
     res.sendFile(__dirname + "/views/promociones.html");
 });
 
+app.get("/login", (req, res) => {
+    res.sendFile(__dirname + "/views/login.html");
+});
+
+
 // PARA VER MENU SACAR DESPUÉS
 
 app.get("/menu", (req, res) => {
