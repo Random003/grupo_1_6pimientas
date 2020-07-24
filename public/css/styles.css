@@ -503,6 +503,60 @@ footer section article p {
 }
 
 
+
+/* ESTILOS REGISTER * -------------------------------------------------*/
+
+
+.cajaLogin {
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 400px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ingreso {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+#botonReseteo {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: #AA0044;
+}
+
+#botonReseteo:hover {
+    background-color: #CC1155;
+    cursor: pointer;
+}
+
+#botonIngreso {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0044AA;
+    cursor: pointer;
+}
+
+#botonIngreso:hover {
+    background-color: #0022AA;
+}
+
+
+
 /* MEDIA QUIERIES * -------------------------------------------------*/
 
 @media (min-width: 426px) {.marcaSP_bolsa {width: 40%;}}

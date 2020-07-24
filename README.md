@@ -50,9 +50,7 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Tablero Trello:** 
 
-<!-- COLOCAR LINK AL TABLERO DE TRELLO -->
-<a href=""> Link al tablero de trabajo grupal en Trello</a>
-<!-- COLOCAR LINK AL TABLERO DE TRELLO -->
+<a href="https://trello.com/b/EJdaU8yL"> Link al tablero de trabajo grupal en Trello</a>
 
 
 ## **Retrospectiva:** 
