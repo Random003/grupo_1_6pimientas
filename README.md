@@ -50,6 +50,11 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Tablero Trello:** 
 
-<a href="">Trello</a>
-
 <!-- COLOCAR LINK AL TABLERO DE TRELLO -->
+<a href=""> Link al tablero de trabajo grupal en Trello</a>
+<!-- COLOCAR LINK AL TABLERO DE TRELLO -->
+
+
+## **Retrospectiva:** 
+
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/doc/retro.md">Link a Markdown de Retrospectiva</a>
