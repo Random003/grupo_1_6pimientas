@@ -7,77 +7,73 @@
     <link rel="icon" href="/images/logo.png">
     <title>Login</title>
 </head>
-<body class="loginBody">
-    <header>
-        <section class="header_login">
-            <img class="marcaSP_bolsa" src="/images/marcaSP.png" alt="Marca Seis Pimientas">
-           
-                <div class="encabezado">
-                
-                <img class="instagram" src="/images/instagram.png"alt="">
-                <img class="facebook" src="/images/face.png" alt="">
-                <img class="whatsapp" src="/images/wsp.png" alt="">
-                <img class= "bolsa" src="/images/bolsa.png" alt="">
-            </div>
-        </section>
+<body>
+    <section class="header_bolsa">
+        <img class="marcaSP_bolsa" src="/images/marcaSP.png" alt="Marca Seis Pimientas">
+        
+        <div class="encabezado">
+            <img class="instagram" src="/images/instagram.png"alt="">
+            <img class="facebook" src="/images/face.png" alt="">
+            <img class="whatsapp" src="/images/wsp.png" alt="">
+            <img class= "bolsa" src="/images/bolsa.png" alt="">
+        </div>
+       
+    </section>
 
-
-    </header>
-    
+    <div class="barra_menu_ppal_bolsa">
+            <nav>
+                <ul>
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="#">Productos</a></li>
+                  <li><a href="#">Nosotros</a></li>
+                  <li><a href="#">Contacto</a></li>
+                  <li><a href="#">Promociones</a></li>
+                  <li><a href="#">Iniciar Sesión</a></li></li>
+                </ul>
+            </nav>
+        </div>
 
     <main>
         
-        <div class="barra_menu_ppal_bolsa">
-            <div class="ul_bolsa">
-                <nav>
-                    <ul>
-                      <li><a href="#">Inicio</a></li>
-                      <li><a href="#">Productos</a></li>
-                      <li><a href="#">Nosotros</a></li>
-                      <li><a href="#">Contacto</a></li>
-                      <li><a href="#">Promociones</a></li>
-                      <li><a href="#">Iniciar Sesión</a></li></li>
-                    </ul>
-                </nav>
-            </div>
-       
         <div class="cajaLogin">
+
+
+
             <h1>Inicio de Sesión</h1>
+            
             <form action="" method="POST">
-                <label for="">Email: </label>
-                <input type="email" id="email" name="email"><br>
-                <label for="">Contraseña: </label>
-                <input type="password" id="password" name="password"><br>
-                <button type="button" id="botonInicio" placeholder= "Iniciar">Iniciar</button><br>
-                <button type="button" id="botonRegistro" placeholder="Registrarme">Registrarme</button>
+
+            <p>
+
+                <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">
+
+                <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
                 
+            </p>
+            <p>
+                <button type="submit" class="ingreso" id="botonIngreso">Ingresar</button> 
+            </p>
             </form>
            
 
 
         </div>
-
-        
-        
-   
-        
-    </main>
-
+            
+     </main>    
     
-    <footer>
-        <!--<img class="back_footer" src="/images/img_footer.jpg" alt="Fondo !Footer">-->
-        <section class="back_footer">
-            <article class="texto_footer">
-                <h3>Contactanos:<img height="40px" src="/images/ico_maps.png" alt="Icono de Mapas"></h3> <br>
-                <h4>Fábrica:</h4>
-                <p>Roque Saenz Peña 765 - Ciudad - Mendoza<br>Tel.: +54 261 3463654</p>
-                <h4>Guaymallén:</h4>
-                <p>Gutierrez 2465 - Guaymallén - Mendoza<br>Tel.: +54 261  4677384</p>
-                <h4>6 Sección:</h4>
-                <p>Jorge A. Calle 123 - Ciudad - Mendoza<br>Tel.: +54 261 3333333</p>
-            </article>
-        </section>
+        <footer>
+            <section class="back_footer">
+                <article class="texto_footer">
+                    <h3>Contactanos:<img height="40px" src="/images/ico_maps.png" alt="Icono de Mapas"></h3> <br>
+                    <h4>Fábrica:</h4>
+                    <p>Roque Saenz Peña 765 - Ciudad - Mendoza<br>Tel.: +54 261 3463654</p>
+                    <h4>Guaymallén:</h4>
+                    <p>Gutierrez 2465 - Guaymallén - Mendoza<br>Tel.: +54 261  4677384</p>
+                    <h4>6 Sección:</h4>
+                    <p>Jorge A. Calle 123 - Ciudad - Mendoza<br>Tel.: +54 261 3333333</p>
+                </article>
+            </section>
 
-    </footer>
+        </footer>
 </body>
 </html>
