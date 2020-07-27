@@ -55,4 +55,4 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Retrospectiva:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/doc/retro.md">Link a Markdown de Retrospectiva</a>
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/design/doc/retro.md">Link a Markdown de Retrospectiva</a>
