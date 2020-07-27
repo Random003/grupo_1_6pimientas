@@ -77,7 +77,7 @@ header {
 }
 
 .bolsa {
-    position: relative;
+    position: fixed;
     top: 3px;
     left: 154px;
     width: 40px;
@@ -115,40 +115,6 @@ main {
     background-color: blanchedalmond;
 }
 
-<<<<<<< HEAD
-=======
-/* POR ESTE CLASS SE BAJA AL BODY DEL HEADER */
-/* .marcaSP {
-    background-image: url("/images/marcaSP.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 130px;
-    width: 320px;
-    top: 30px;
-    left: 20px;
-    z-index: 1;
-} */
-
-ul {
-    list-style-type: none;
-    padding: 5px 20px;
-    text-align: center;
-}
-.barra_menu_ppal {
-    background-image: url("/images/barra_central.png");
-    background-size: 99% 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    background-position-x: 5px;
-    float: left;
-    z-index: 3;
-    position: relative;
-    top: -10vh;
-
- }
->>>>>>> 7725497a6881066ff10c2f6eded0b2999238ab0f
 
 
 
