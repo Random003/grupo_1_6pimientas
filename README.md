@@ -41,9 +41,18 @@ que busque este servicio.
 ## **Sitios de Referencia:** 
 
 Nombre de la Empresa | Descripción | Dirección Web
--------------------- | ----------- | -------------
+:------------------: | :---------: | :-----------:
  La Bolognesa | Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online. | [Sitio](http://labolognesa.com.ar/)
  D`ancona | Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas. | [Sitio](https://dancona.com.ar/)
  Pascucci | Sitio de Google Business con portfolio de productos, con reseñas de clientes y canales de contacto. | [Sitio](https://business.google.com/v/pastas-frescas-pascucci/011086785476995587146/9f49/_?exp=1769939&bc=8&caid=1693702734&agid=68919136220&dvc=c&dvcmdl=&plmt=&kwd=%2Bfabrica%20%2Bde%20%2Bpasta&adpstn=&fiid=&tgtid=kwd-340679252818&locint=1000092&locphy=20017&mt=b&ntwk=g&gclid=EAIaIQobChMIlv2UmaKb6gIVxoKRCh1r2QW4EAAYASAAEgIMRPD_BwE)
  La Cuyanita | Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica. | [Sitio](https://www.facebook.com/lacuyanitapastas/)
  Los Abuelos | Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. | [Sitio](https://www.losabuelos.com.uy/)
+
+## **Tablero Trello:** 
+
+<a href="https://trello.com/b/EJdaU8yL"> Link al tablero de trabajo grupal en Trello</a>
+
+
+## **Retrospectiva:** 
+
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/design/doc/retro.md">Link a Markdown de Retrospectiva</a>

@@ -23,15 +23,16 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     display: block;
-
     background-size: cover;
     overflow: auto;
 }
 
 .encabezado {
-    box-sizing: border-box;
     padding: 5px;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 
@@ -53,36 +54,57 @@ header {
 .instagram {
     position: relative;
     top: 3px;
-    left: 110px;
-    width: 47px;
-    justify-content: center;
+    left: 10px;
+    width: 3vw;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 5px
 }
 
 .facebook {
     position: relative;
-    top: 7px;
-    left: 110px;
+    top: 3px;
+    left: 10px;
     width: 47px;
-    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
     margin: 5px
 }
 
 .whatsapp {
     position: relative;
     top: 3px;
-    left: 110px;
-    width: 47px;
+    left: 10px;
+    width: 3vw;
     justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 5px
 
 }
 
 .bolsa {
     position: relative;
     top: 3px;
-    left: 154px;
-    width: 40px;
-    justify-content: end;
+    left: 10px;
+    width: 3vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 5px
 }
+
+/* .bolsa {
+    position: fixed;
+    top: 17vh;
+    right: 5vw;
+    width: 40px;
+    z-index: 1;
+} */
 
 
 
@@ -109,12 +131,48 @@ header {
     text-align: right;
     font-size: larger;
     padding-right: 10%;
+    position: relative;
+    flex-direction: column;
 }
 
 main {
     background-color: blanchedalmond;
 }
 
+<<<<<<< HEAD
+=======
+/* POR ESTE CLASS SE BAJA AL BODY DEL HEADER */
+/* .marcaSP {
+    background-image: url("/images/marcaSP.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 130px;
+    width: 320px;
+    top: 30px;
+    left: 20px;
+    z-index: 1;
+} */
+
+ul {
+    list-style-type: none;
+    padding: 5px 20px;
+    text-align: center;
+}
+.barra_menu_ppal {
+    background-image: url("/images/barra_central.png");
+    background-size: 99% 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position-x: 5px;
+    float: left;
+    z-index: 3;
+    position: relative;
+    top: -10vh;
+
+ }
+>>>>>>> ab99bb2c153f1b74fd14f4c12c376e5526c899b1
 
 
 
@@ -139,9 +197,12 @@ main {
     left: 25%;
     margin-left: -30px;
 }
+
 /* cree la caja login en con la misma base de las otras cajas, veo que más le modifico para que me quede bien */
 .cajaLogin {
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
     width: 70%;
     border: 1px hidden currentColor;
     padding: 20px 0px 10px 0px;
@@ -151,19 +212,25 @@ main {
     color: rgb(163, 31, 53);
     font-size: 20px;
     position: relative;
-    left: 25%;
     margin-left: -30px;
+    border-style: solid;
 }
+
 
 #email {
     block-size: 1cm;
     align-self: flex-end;
-
+    
 }
 
 #password {
     block-size: 1cm;
     margin-block-end: auto
+}
+
+.Login {
+    text-align: left;
+
 
 }
 
@@ -192,7 +259,7 @@ main {
 .tituloPromo {
     background-color: blanchedalmond;
     max-width: 100%;
-    font-size: ;
+    /* font-size: ; */
     color: rgb(163, 31, 53);
     font-family: paris; 
     font-weight: bold;
@@ -253,7 +320,7 @@ main {
 
 
 .barra_menu_ppal_bolsa {
-    /*background-image: url("/images/barra_central.png");*/
+    background-image: url("/images/barra_central.png");
     background-color: rgb(163, 31, 53);
     display: flex;
     margin: 10px auto;
@@ -344,7 +411,7 @@ div div nav ul {
    
 }
 
-main div p {
+.contenido_bolsa p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -354,7 +421,7 @@ main div p {
     
 }
 
-main div p label {
+.contenido_bolsa p label {
     margin-bottom: 10px;
 }
 
@@ -482,6 +549,60 @@ footer section article p {
 }
 
 
+
+/* ESTILOS REGISTER * -------------------------------------------------*/
+
+
+.cajaLogin {
+    padding: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 400px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.ingreso {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+#botonReseteo {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: #AA0044;
+}
+
+#botonReseteo:hover {
+    background-color: #CC1155;
+    cursor: pointer;
+}
+
+#botonIngreso {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0044AA;
+    cursor: pointer;
+}
+
+#botonIngreso:hover {
+    background-color: #0022AA;
+}
+
+
+
 /* MEDIA QUIERIES * -------------------------------------------------*/
 
 @media (min-width: 426px) {.marcaSP_bolsa {width: 40%;}}
@@ -495,6 +616,12 @@ footer section article p {
     .header_bolsa {
         justify-content: flex-start;
         align-items: center;
-        
     }
+    .encabezado {
+        justify-content: flex-start;
+        align-self: flex-end;
+    }  
+    
 }
+@media (min-width: 426px) {.encabezado {width: 60%;}}
+

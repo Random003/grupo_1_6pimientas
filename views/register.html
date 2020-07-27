@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="icon" href="/images/logo.png">
-    <title>La pagina no existe..aun</title>
+    <title>Registrase en SeisPimientas</title>
 </head>
 <body>
     <header>
@@ -24,12 +24,12 @@
     
 
     <main>
-        <div class="banner">   
+        <!-- <div class="banner">   
             <p>
                 NUESTRAS<br>
                 PASTAS
             </p>
-        </div>
+        </div> -->
 
         <div class="barra_menu_ppal_bolsa">
             <nav>
@@ -44,19 +44,46 @@
                 </ul>
             </nav>
         </div>
-        
-        <div>
-            <!-- <a href="#menu"><img class="menu" src="/images/menu.svg" alt="menu"></a> -->
 
-            <br>
-            <div>
-                <h1>
-                  <a href="/"><img id="noExiste" src="/images/404gif.gif" alt="404"></a>
-                </h1>
-                <h2 align ="center">La pagina que intenta acceder no existe.... aun</h2>
-            </div>    
-        </div>
-    </main><br>
+        <!-- <div>
+            <a href="#menu"><img class="menu" src="/images/menu.svg" alt="menu"></a>
+        </div> -->
+
+        <form class="cajaLogin" action="/" method="POST">
+            <h3>
+                Registro de Usuario:
+            </h3>
+
+            <p>
+                <input class="ingreso" type="text" name="fullName" id="fullName" placeholder="Nombre y Apellido">
+
+                <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">
+
+                <input class="ingreso" type="confirEmail" name="confirEmail" id="confirmEmail" placeholder="Confirmar E-mail">
+
+                <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
+                
+                <input class="ingreso" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña">
+
+                <input class="ingreso" type="calle" name="calle" id="calle" placeholder="Calle">
+
+                <input class="ingreso" type="numero" name="numero" id="numero" placeholder="Número">
+
+                <input class="ingreso" type="piso" name="piso" id="piso" placeholder="Piso">
+
+                <input class="ingreso" type="departamento" name="departamento" id="departamento" placeholder="Departamento">
+
+                <input class="ingreso" type="localidad" name="localidad" id="localidad" placeholder="Localidad">
+
+                <p>COLOCAR CAPTCHA AQUÍ</p>
+
+                <p>
+                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
+                    <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
+                </p>
+            </p>
+        </form>
+    </main>
 
     
     <footer>
