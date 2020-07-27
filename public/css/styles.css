@@ -98,6 +98,14 @@ header {
     margin: 5px
 }
 
+/* .bolsa {
+    position: fixed;
+    top: 17vh;
+    right: 5vw;
+    width: 40px;
+    z-index: 1;
+} */
+
 
 
 
@@ -390,7 +398,7 @@ div div nav ul {
    
 }
 
-main div p {
+.contenido_bolsa p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -400,7 +408,7 @@ main div p {
     
 }
 
-main div p label {
+.contenido_bolsa p label {
     margin-bottom: 10px;
 }
 
