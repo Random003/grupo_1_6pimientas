@@ -77,7 +77,7 @@ header {
 }
 
 .bolsa {
-    position: fixed;
+    position: relative;
     top: 3px;
     left: 154px;
     width: 40px;
@@ -241,6 +241,16 @@ main {
     
 }
 
+.barra_redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    
+}
+
+
 
 .barra_menu_ppal_bolsa {
     /*background-image: url("/images/barra_central.png");*/
@@ -289,7 +299,7 @@ div div nav ul {
     
 }
 
-/* MAIN BC---------------------------------------------------------------------*/
+/* MAIN BOLSA DE COMPRAS---------------------------------------------------------------------*/
 
 .main_bc {
     display: flex;
