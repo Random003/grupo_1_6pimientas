@@ -182,6 +182,13 @@ ul {
     text-align: center;
 }
 
+.botoz {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
 .caja {
     box-sizing: border-box;
     width: 70%;
