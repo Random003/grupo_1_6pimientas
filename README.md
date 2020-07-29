@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/marca_curvas.png" alt="Marca en PNG"/>
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/code/public/images/marca_curvas.png" alt="Marca en PNG"/>
 </p>
 
 
