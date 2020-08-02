@@ -5,9 +5,22 @@ body {
     margin: 0;
 }
 
-.loginBody {
-    background-color: white;
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    background-image: url("/images/fondo_header.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 28vh;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
+.loginBody {background-color: white;}
 
 #noExiste {
     height: 280px;
@@ -18,8 +31,6 @@ body {
 
 /* HEADER */
 
-
-
 .encabezado {
     padding: 5px;
     flex-wrap: wrap;
@@ -28,23 +39,21 @@ body {
     position: relative;
 }
 
-
-
 .inicio { /* no sé si está en uso VERIFICAR*/
     position: absolute;
     top: 210px;
     z-index: 0;
 }
 
-.marcaSP {
+/* .marcaSP {
     position: relative;
     top: 24px;
     left: 15px;
     width: 315px;
     margin-bottom: 25px;
-}
+} */
 
-.instagram {
+/* .instagram {
     position: relative;
     top: 3px;
     left: 10px;
@@ -76,7 +85,6 @@ body {
     display: flex;
     flex-direction: row;
     margin: 5px
-
 }
 
 .bolsa {
@@ -89,18 +97,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 5px
-}
-
-/* .bolsa {
-    position: fixed;
-    top: 17vh;
-    right: 5vw;
-    width: 40px;
-    z-index: 1;
 } */
-
-
-
 
 /* MAIN */
 
@@ -130,10 +127,7 @@ body {
     flex-direction: column;
 }
 
-main {
-    background-color: blanchedalmond;
-}
-
+main {background-color: blanchedalmond;}
 
 ul {
     list-style-type: none;
@@ -151,11 +145,7 @@ ul {
     z-index: 3;
     position: relative;
     top: -10vh;
-
  }
-
-
-
 
 .boton {
     text-decoration: none;
@@ -207,7 +197,6 @@ ul {
 #email {
     block-size: 1cm;
     align-self: flex-end;
-    
 }
 
 #password {
@@ -215,11 +204,7 @@ ul {
     margin-block-end: auto
 }
 
-.Login {
-    text-align: left;
-
-
-}
+.Login {text-align: left;}
 
 .fotosPedido {
     background-size: contain;
@@ -269,26 +254,8 @@ ul {
 
 /* HEADER BOLSA--------------------------------------------------------------*/
 
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-    
-    background-image: url("/images/fondo_header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    
-    height: 28vh;
-    max-width: 100%;
 
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.marcaSP_bolsa {
+.marcaSP {
     position: relative;
     width: 85vw;
     max-width: 90%;
@@ -307,9 +274,9 @@ ul {
  
 }
 
-.instagram_bolsa,
-.facebook_bolsa,
-.whatsapp_bolsa {
+.instagram,
+.facebook,
+.whatsapp {
     height: 100%;
     padding: 0px 1rem;
 }
@@ -319,7 +286,7 @@ ul {
     padding: 0px 1rem;
 }
 
-.barra_menu_ppal_bolsa {
+.barra_menu {
     /*background-image: url("/images/barra_central.png");*/
     background-color: rgb(163, 31, 53);
     display: flex;
@@ -328,7 +295,7 @@ ul {
     
  }
  
- .ul_bolsa {
+ .ul_header {
     padding: 0px;
     
     flex-grow: 1;
@@ -339,7 +306,7 @@ div div nav ul {
     padding-inline-start: 0px;
 }
  
- .barra_menu_ppal_bolsa ul li {
+ .barra_menu ul li {
      display: inline-block;
      text-transform: uppercase;
      font-size: 12px;
@@ -349,7 +316,7 @@ div div nav ul {
      
     }
     
-.barra_menu_ppal_bolsa ul li a{
+.barra_menu ul li a{
     text-decoration: none;
     color: white; 
 }
@@ -417,33 +384,23 @@ div div nav ul {
     margin-bottom: 10px;    
     margin-left: auto;
     margin-right: auto;
-    
-
 }
 
-.titulos_detalle_bc label {
-    padding: 0 20px;
-}
+.titulos_detalle_bc label {padding: 0 20px;}
 
 .detalle_bolsa {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-  
     border-top: 2px solid rgb(163, 31, 53);
-    
 }
 
 .foto_producto_bolsa {
     width: 100%;
     max-width: 100px;
-    
-    
-    
 }
 
 .descripción_compra {
@@ -451,8 +408,6 @@ div div nav ul {
     margin-left: 0px;
     padding: 1px;
     font-size: 80%;
-    
-    
 }
 
 
@@ -472,14 +427,12 @@ main div section article input {
     justify-items: center;
     font-family: 'paris bold', 'paris';
     font-weight: bolder;
-    
 }
 
 
 main div section article {
     display: flex;
     margin: 10px 0px;
-    
 }
 
 .botones_bolsa {
@@ -493,16 +446,13 @@ main div section article {
         align-items: center;
         margin-bottom: 30px;
         margin: 10px;
-        
-        
 }
+
 .botones_mas_menos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 40%;
-    
-    
 }
 
 .restar_producto_bolsa {
@@ -510,10 +460,12 @@ main div section article {
     width: 33%;
     max-width: 40px;
 }
+
 .cantidad_producto_bolsa {
     width: 33%;
     max-width: 40px;
 }
+
 .sumar_producto_bolsa {
     border-radius: 0px 15px 15px 0px;
     width: 33%;
@@ -521,7 +473,6 @@ main div section article {
 }
 
 .eliminar_producto_bolsa {
-    
     margin-left: 10px;
     border-radius: 15px;
     width: 40%;
@@ -557,7 +508,6 @@ article h3 {
     
 }
 
-
 footer section article h3,
 footer section article h4 {
     margin: 0px;
@@ -570,8 +520,6 @@ footer section article p {
 
 
 /* ESTILOS REGISTER * -------------------------------------------------*/
-
-
 .cajaLogin {
     padding: 0px 20px;
     flex-direction: column;
@@ -624,14 +572,15 @@ footer section article p {
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
 
-@media (min-width: 360px) {.marcaSP_bolsa {width: 75%;}}
+@media (min-width: 360px) {.marcaSP {width: 75%;}}
+
 @media (min-width: 426px) {
-    .marcaSP_bolsa {width: 40%;}
+    .marcaSP {width: 40%;}
     .encabezado {width: 60%;}
 }
 
 @media (min-width: 769px) {
-    .marcaSP_bolsa {
+    .marcaSP {
         width: 30%;
         max-width: 300px;
         margin-left: 40px;
