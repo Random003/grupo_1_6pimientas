@@ -1,78 +1,40 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/images/logo.png">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>MENU</title>
-</head>
+<%- include('./partials/head') %> 
 <body>
-    
-
-
-
 <!-- MENU HAMBURGESA -->
-
-
-<div class="caja">
-    <label for="">Filtrar por precio</label><br>
-<p></p>
-    <input class="barraFiltro" type="range" value="FILTER" /><br>
-</p>
-    <!-- <label for="">aca va la barra</label><br> -->
-    <label for="">Nuestras Pastas</label>
-    <ul>
-        <li>Pastas Rellenas</li>
-        <li>Sorrentinos</li>
-        <li>Caseritos</li>
-        <li>Ravioles</li><br>
-        <li>Fideos</li>
-        <li>Ñoquis</li>
-        <li>Salsas</li>
-    </ul><br><br>
-    <label for="">Nuestra Cocina</label>
-    <ul>
-        <li>Empanadas</li>
-        <li>Lasagna</li>
-        <li>Canelones</li>
-    </ul><br><br>
-    <label for="">Productos Adicionales</label>
-    <ul>
-        <li>Queso</li>
-        <li>Bebidas</li>
-        <li>Delicatesen</li>
-        <li>Vino</li>
-        <li>Aceite de Oliva</li>
-
-    </ul>
-
-
-</div>
-
-<!-- MENU NUESTROS LOCALES -->
-<br><br><br><br><br>
-<div class="caja">
-    <label for="">Nuestros Locales</label><br>
-    <label>Fábrica:</label>
-    <p> Roque Saenz Peña 765 - Ciudad - Mendoza <br>
-        Tel.: +54 261 3463654
-    </p><br>
-
-    <p>Gutierrez 2465 - Guaymallén - Mendoza <br>
-        Tel.: +54 261  4677384
-    </p><br>
-
-    <p>Jorge A. Calle 123 - Ciudad - Mendoza <br>
-        Tel.: +54 261 3333333
-    </p><br><br>
-    <img class="fotosPedido" src="/images/mapa.jpg" alt="mapa">
-</div>
-
-
-
-
-
+    <div class="caja">
+        <label for="">Filtrar por precio</label><br>
+    <p></p>
+        <input class="barraFiltro" type="range" value="FILTER" /><br>
+    </p>
+        <!-- <label for="">aca va la barra</label><br> -->
+        <label for="">Nuestras Pastas</label>
+        <ul>
+            <li>Pastas Rellenas</li>
+            <li>Sorrentinos</li>
+            <li>Caseritos</li>
+            <li>Ravioles</li><br>
+            <li>Fideos</li>
+            <li>Ñoquis</li>
+            <li>Salsas</li>
+        </ul><br><br>
+        <label for="">Nuestra Cocina</label>
+        <ul>
+            <li>Empanadas</li>
+            <li>Lasagna</li>
+            <li>Canelones</li>
+        </ul><br><br>
+        <label for="">Productos Adicionales</label>
+        <ul>
+            <li>Queso</li>
+            <li>Bebidas</li>
+            <li>Delicatesen</li>
+            <li>Vino</li>
+            <li>Aceite de Oliva</li>
+        </ul>
+    </div>
+    <%- include('./partials/footer') %> 
 </body>
 </html>

@@ -1,43 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" href="/images/logo.png">
-    <title>Bolsa de Compras</title>
-</head>
-
+<%- include('./partials/head') %> 
 <body>
-    <section class="header_bolsa">
-        <img class="marcaSP_bolsa" src="/images/marcaSP.png" alt="Marca Seis Pimientas">
-        <nav class="barra_redes">
-            <img class="instagram_bolsa" src="/images/instagram.png" alt="Logo Instagram">
-            <img class="facebook_bolsa" src="/images/face.png" alt="Logo Facebook">
-            <img class="whatsapp_bolsa" src="/images/wsp.png" alt="Logo whatsapp">
-    </section>
-    <div class="barra_menu_ppal_bolsa">
-        <div class="ul_bolsa">
-            <nav>
-                <ul>
-                    <li><a href="/">Inicio</a></li>
-                    <li><a href="/productDetail1">Productos</a></li>
-                    <!--<li><a href="#">Nosotros</a></li>-->
-                    <li><a href="login">Iniciar Sesión</a></li>
-                    </li>
-                    <li><a href="/register">Registrarse</a></li>
-                    <li><a href="/productCart">Bolsa de compras</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="usuario_bolsa">
-            <i class="fas fa-user"></i>Luis
-        </div>
-    </div>
-
+    <%- include('./partials/header');%> 
     <main class="main_bc">
         <h3 class="h3_bolsa_de_compras">Bolsa de compras:</h3>
         <div class="contenido_bolsa">
@@ -81,39 +46,17 @@
                     <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
                 </article>
             </section>
-
-
         </div>
 
         <div class="botones_compra">
-
         </div>
-        <div class="resumen_compra">
 
+        <div class="resumen_compra">
         </div>
 
         <div class="medios_pagos">
-
         </div>
-
-
-
     </main>
-    <footer>
-        <!--<img class="back_footer" src="/images/img_footer.jpg" alt="Fondo !Footer">-->
-        <section class="back_footer">
-            <article class="texto_footer">
-                <h3>Contactanos:<img height="40px" src="/images/ico_maps.png" alt="Icono de Mapas"></h3> <br>
-                <h4>Fábrica:</h4>
-                <p>Roque Saenz Peña 765 - Ciudad - Mendoza<br>Tel.: +54 261 3463654</p>
-                <h4>Guaymallén:</h4>
-                <p>Gutierrez 2465 - Guaymallén - Mendoza<br>Tel.: +54 261 4677384</p>
-                <h4>6 Sección:</h4>
-                <p>Jorge A. Calle 123 - Ciudad - Mendoza<br>Tel.: +54 261 3333333</p>
-            </article>
-        </section>
-
-    </footer>
+    <%- include('./partials/footer') %> 
 </body>
-
 </html>
