@@ -7,5 +7,6 @@ router.get('/', indexController.index);
 
 router.post("/", indexController.indexPop);
 
+router.get('/home', indexController.home);
 
 module.exports = router;

@@ -7,5 +7,9 @@ module.exports = {
         // res.send(req.body);
         // para que mande directamente a la pagina principal dejar solo este
         res.render('index');
-      }
+      },
+    home: (req, res, next) => {
+        res.render('home');
+    }
+
 }

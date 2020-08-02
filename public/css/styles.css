@@ -233,7 +233,6 @@ ul {
     max-width: 100%;
     /* font-size: ; */
     color: rgb(163, 31, 53);
-    font-family: paris; 
     font-weight: bold;
 }
 
@@ -274,12 +273,36 @@ ul {
  
 }
 
+header a {
+    height: 100%;
+}
+
 .instagram,
 .facebook,
 .whatsapp {
     height: 100%;
-    padding: 0px 1rem;
+    margin: 0px 1rem;
+
 }
+
+.instagram {
+    border-radius: 20%;
+}
+
+.facebook {
+    border-radius: 10%;
+}
+
+.whatsapp {
+    border-radius: 50% 50% 50% 0%;
+}
+
+header img:hover {
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(200,200,200,1);
+    -moz-box-shadow: 0px 0px 15px 3px rgba(200,200,200,1);
+    box-shadow: 0px 0px 15px 3px rgba(200,200,200,1);
+}
+
 
 .bolsa_bolsa {
     height: 120%;
@@ -297,7 +320,6 @@ ul {
  
  .ul_header {
     padding: 0px;
-    
     flex-grow: 1;
     text-align: center;
 }
@@ -312,9 +334,7 @@ div div nav ul {
      font-size: 12px;
      padding: 5px;
      font-weight: bold;
-     
-     
-    }
+}
     
 .barra_menu ul li a{
     text-decoration: none;
@@ -322,15 +342,11 @@ div div nav ul {
 }
     
 
-
-
 .usuario_bolsa {
     color: white;
     text-align: center;
     padding: 0px;
-    margin: auto 20px auto 0px;
-
-    
+    margin: auto 20px auto 0px;    
 }
 
 /* MAIN BOLSA DE COMPRAS---------------------------------------------------------------------*/
@@ -345,7 +361,6 @@ div div nav ul {
     justify-content: center;
     background-color: #FFF5CE;
     width: 90%;
-    
 }
 
 .h3_bolsa_de_compras {
@@ -356,9 +371,8 @@ div div nav ul {
     color: rgb(163, 31, 53);
     font-size: 1.7rem;
     font-weight: bolder;
-    margin-bottom: 10px;
-    
-    
+    margin-bottom: 8px;
+    margin-top: 8px;    
 }
 
 .contenido_bolsa {
@@ -366,48 +380,63 @@ div div nav ul {
     flex-wrap: wrap;
     background-color: #FDE3B3;
     padding: 20px 20px;
-    
     justify-content: space-around;
-    
     width: 100%;
     max-width: 1280px;
     color: rgb(163, 31, 53);
     font-size: 1.1rem;
-    
-   
-}
-.titulos_detalle_bc {
-    display: inline;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 10px;    
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1rem;
 }
 
-.titulos_detalle_bc label {padding: 0 20px;}
+.titulos_detalle_bc {
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    margin-bottom: 10px;    
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    width: 100%;
+}
+
+
+.titulo_producto {
+    padding-left: 0.5rem;
+}
+
+.titulo_cantidad {
+    padding-right: 1.1rem;
+}
 
 .detalle_bolsa {
+    align-items: center;
+    border-top: 2px solid rgb(163, 31, 53);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    border-top: 2px solid rgb(163, 31, 53);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 .foto_producto_bolsa {
-    width: 100%;
+    width: 33%;
+    padding-top: 5px;
+    padding-left: 10px;
+    min-width: 100px;
     max-width: 100px;
 }
 
 .descripción_compra {
     text-align: left;
-    margin-left: 0px;
     padding: 1px;
+    padding-left: 1.3rem;
     font-size: 80%;
+    width: 33%;
+    min-width: 120px;
 }
 
 
@@ -416,36 +445,33 @@ main div section article input {
     width: 40px;
     height: 40px;
     border: 0;
-    text-decoration: 0;
-    outline: none;
+    
     overflow: hidden;
     text-transform: none;
     text-align: center;
     background-color: rgb(163, 31, 53) ;
     color: white;
-    font-size: 22px;
+    font-size: 1rem;
     justify-items: center;
-    font-family: 'paris bold', 'paris';
     font-weight: bolder;
 }
 
 
-main div section article {
-    display: flex;
-    margin: 10px 0px;
-}
 
 .botones_bolsa {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        position: relative;
-        height: 26%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
-        margin: 10px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 1rem;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 33%;
+    min-width: 15rem;
 }
 
 .botones_mas_menos {
@@ -473,7 +499,7 @@ main div section article {
 }
 
 .eliminar_producto_bolsa {
-    margin-left: 10px;
+    margin-left: 20px;
     border-radius: 15px;
     width: 40%;
     max-width: 120px;
@@ -494,6 +520,7 @@ main div section article {
 
 .texto_footer {
     padding: 1px;
+    padding-top: 10px;
     text-align: center;
     color: white;
     font-size: 15px;
@@ -568,32 +595,191 @@ footer section article p {
     background-color: #0022AA;
 }
 
-
-
-/* MEDIA QUIERIES * -------------------------------------------------*/
-
-@media (min-width: 360px) {.marcaSP {width: 75%;}}
-
-@media (min-width: 426px) {
-    .marcaSP {width: 40%;}
-    .encabezado {width: 60%;}
-}
-
-@media (min-width: 769px) {
-    .marcaSP {
-        width: 30%;
-        max-width: 300px;
-        margin-left: 40px;
-    }
-    .header {
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .encabezado {
-        justify-content: flex-start;
-        align-self: flex-end;
-    }  
+.home_carrousel div{
+    height: 300px;
+    width: auto;
+    color: #AA0044;
+    
     
 }
 
 
+/* MEDIA QUIERIES * -------------------------------------------------*/
+
+@media all and (min-width: 360px) {
+    .marcaSP {
+        width: 75%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .titulos_detalle_bc {
+        justify-content: space-around;
+
+    }
+    .titulo_cantidad {padding-left: 1.4rem;}
+    .detalle_bolsa {
+        justify-content: space-around;
+    }
+    .botones_bolsa {
+        width: 100%;
+        flex-direction: row;
+        min-width: 7rem;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-around;
+        
+    }
+    .botones_mas_menos {
+        padding-left: 0px;
+        margin-left: 0px;
+        width: 100%;
+        max-width: 110px;
+        padding: 5px 0;
+    }
+    .eliminar_producto_bolsa {
+        padding-left: 0px;
+        margin-left: 0px;
+        padding: 5px 0;
+        width: 100%;
+        max-width: 110px;
+    }
+}
+
+@media all and (min-width: 426px) {
+    .marcaSP {
+        width: 80%;
+        max-width: 330px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .encabezado {width: 60%;}
+    .titulos_detalle_bc {
+        justify-content: space-around;
+
+    }
+    .titulo_cantidad {padding-left: 1.4rem;}
+}
+
+@media all and (min-width: 470px) {
+    .titulos_detalle_bc {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0px;
+    }
+    .titulo_cantidad {padding-left: 0px;}
+    .detalle_bolsa {
+        justify-content: space-around;
+    }
+    .descripción_compra {
+        padding-left: 1rem;
+    }
+    .botones_bolsa {
+        width: 33%;
+        justify-content: space-around;
+        
+    }
+    .titulo_producto,
+    .titulo_cantidad {
+        width: 30%;
+        padding: 0px;
+    }
+    .titulo_producto {
+        width: 38%;
+        padding-left: 1.1rem;
+        text-align: left;
+    }
+
+}
+
+@media all and (min-width: 769px) {
+    .marcaSP {
+        width: 45%;
+        max-width: 350px;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .header {
+        justify-content: flex-start;
+        
+        align-items: center;
+    }
+    .barra_redes {
+        width: 100%;
+        justify-content: flex-end;
+        
+    }
+    
+    .titulo_producto,
+    .titulo_cantidad {
+        width: 38%;
+        
+    }
+    .titulo_producto {
+        width: 38%;
+        padding-left: 1.7rem;
+        text-align: left;
+    }
+    .botones_bolsa {
+        padding: 1rem;
+    }
+}
+
+@media all and (orientation: landscape) {
+    .marcaSP {
+        width: 25%;
+        max-width: 350px;
+        margin-left: 30px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .header {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .barra_redes {
+        width: 100%;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        
+    }
+    
+    .titulo_producto,
+    .titulo_cantidad {
+        width: 38%;
+        
+    }
+    .titulo_producto {
+        width: 38%;
+        padding-left: 1.7rem;
+        text-align: left;
+        
+    }
+    .botones_bolsa {
+        padding: 1rem;
+    }
+
+}
+
+@media all and (orientation: landscape) and (min-height: 320px) {
+    .marcaSP {
+        width: 25%;
+        top: 0px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .barra_redes {
+        width: 50%;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        
+    }
+    .header {
+        flex-direction: row;
+        
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
