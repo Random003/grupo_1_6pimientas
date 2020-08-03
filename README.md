@@ -53,14 +53,14 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Tablero Trello:** 
 
-<a href="https://trello.com/b/EJdaU8yL">Visitar el tablero de trabajo grupal en Trello</a>
+Visitar el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJdaU8yL">aquí</a>.
 
 
 ## **Retrospectiva:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">Visitar Retrospectiva</a>
+Visitar Retrospectiva <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>.
 
 
 ## **Daily / Weeky:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">Visitar Weekly</a>
+Visitar Weekly <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.
