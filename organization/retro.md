@@ -38,5 +38,5 @@ Utilizando como base las ideas y experiencias que nos ocurrieron en el sprint nu
 
 Nuevamente separamos las tareas en diferentes formas; la primera es potenciando individualmente lo que mejor sabe hacer cada uno, la segunda es que hicimos sesiones de coding en conjunto para que cada uno repase los temas dados mientas ayudábamos a resolver problemas o dudas de los mismos y asi lograr que todos los miembros del equipo estén en las mismas condiciones de conocimiento dentro del mismo y tercero nos dividimos las asignaturas en base a lo realizado en el sprint anterior.
 
-Mejoramos la organización interna del grupo a la vez que potenciamos también las reuniones diarias y semanales como se explica <a href="">aquí</a> para que no nos tome por sorpresa el tiempo de entrega del sprint presente y tampoco nos quedemos sin hacer nada por olvido o por no controlar tanto el tablero Trello como anteriormente nos pasaba.
+Mejoramos la organización interna del grupo a la vez que potenciamos también las reuniones diarias y semanales como se explica <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/daily.md">aquí</a> para que no nos tome por sorpresa el tiempo de entrega del sprint presente y tampoco nos quedemos sin hacer nada por olvido o por no controlar tanto el tablero Trello como anteriormente nos pasaba.
     
