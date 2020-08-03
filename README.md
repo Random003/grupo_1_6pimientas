@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/marca_curvas.png" alt="Marca en PNG"/>
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/marca_curvas.png" alt="Logo de la marca"/>
 </p>
-
 
 # **Grupo 1 "Seis Pimientas"**
 
 Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sitio web de fábrica de pastas "SeisPimientas". 
 Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3 sucursales adicionales.
+
 
 # **Objetivos del ecomerce:**
 -   Facilitar a los clientes la compra vía web con entregas a domicilio.
@@ -18,6 +18,7 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
     y las propuestas por los clientes.
 -   Se agregará una herramienta que guíe al consumidor para realizar
     una buena cocción de la pasta que haya adquirido.
+
 
 # **Target:**
 - El sitio está dirigido a público joven, con busca de un mejor servicio de compras y 
@@ -38,6 +39,7 @@ que busque este servicio.
  - Gaspar Valdes [@GitHub](https://github.com/Babart): 
  Tengo 31 años, nacido en Corrientes, pero vivo actualmente y hace más de 16 años en Mendoza, soy mendocino por adopción. Soy Bioquímico, trabajo en Cuerpo médico Forense de la provincia, y en un hospital privado. 
 
+
 ## **Sitios de Referencia:** 
 
 Nombre de la Empresa | Descripción | Dirección Web
@@ -48,16 +50,17 @@ Nombre de la Empresa | Descripción | Dirección Web
  La Cuyanita | Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica. | [Sitio](https://www.facebook.com/lacuyanitapastas/)
  Los Abuelos | Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. | [Sitio](https://www.losabuelos.com.uy/)
 
+
 ## **Tablero Trello:** 
 
-<a href="https://trello.com/b/EJdaU8yL"> Link al tablero de trabajo grupal en Trello</a>
+<a href="https://trello.com/b/EJdaU8yL">Visitar el tablero de trabajo grupal en Trello</a>
 
 
 ## **Retrospectiva:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">Link a Retrospectiva</a>
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">Visitar Retrospectiva</a>
 
 
 ## **Daily / Weeky:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/daily.md">Link a Daily</a>
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/daily.md">Visitar Weekly</a>
