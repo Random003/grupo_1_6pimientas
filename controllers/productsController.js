@@ -10,6 +10,11 @@ module.exports = {
     },
     promociones:  (req, res) => {
         res.render("promociones");
+    },
+    add:  (req, res) => {
+        res.render("add");
+    },
+    edit:  (req, res) => {
+        res.render("edit");
     }
-     
 }

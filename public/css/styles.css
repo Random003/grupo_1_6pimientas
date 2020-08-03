@@ -173,6 +173,11 @@ ul {
     position: relative;
     left: 25%;
     margin-left: -30px;
+    max-width: 500px;
+}
+
+.cajaflex {
+    display: flex;
 }
 
 /* cree la caja login en con la misma base de las otras cajas, veo que más le modifico para que me quede bien */
@@ -218,7 +223,6 @@ ul {
     background-size: contain;
     position: relative;
     background-position: center;
-    height: 20%;
     width: 60%;
 }
 
@@ -599,8 +603,6 @@ footer section article p {
     height: 300px;
     width: auto;
     color: #AA0044;
-    
-    
 }
 
 
@@ -643,6 +645,9 @@ footer section article p {
         width: 100%;
         max-width: 110px;
     }
+    .cajaflex {
+        align-self: center;
+    }
 }
 
 @media all and (min-width: 426px) {
@@ -658,6 +663,10 @@ footer section article p {
 
     }
     .titulo_cantidad {padding-left: 1.4rem;}
+    .cajaflex {
+        align-self: center;
+
+    }
 }
 
 @media all and (min-width: 470px) {
@@ -688,8 +697,18 @@ footer section article p {
         padding-left: 1.1rem;
         text-align: left;
     }
+    .cajaflex {
+        align-self: center;
+    }
 
 }
+
+@media all and (min-width: 760px) {
+    .cajaflex {
+        flex-direction: row;
+        display: inline-block;
+    }
+ }
 
 @media all and (min-width: 769px) {
     .marcaSP {
@@ -722,6 +741,10 @@ footer section article p {
     }
     .botones_bolsa {
         padding: 1rem;
+    }
+    .cajaflex {
+        flex-direction: row;
+        display: inline-block;
     }
 }
 
@@ -760,7 +783,6 @@ footer section article p {
     .botones_bolsa {
         padding: 1rem;
     }
-
 }
 
 @media all and (orientation: landscape) and (min-height: 320px) {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header');%> 
+    <main>
+        <form class="cajaLogin" action="/" method="POST">
+            <h3>
+                Editar un producto:
+            </h3>
+            <p>
+                <input class="ingreso" type="text" name="producto" id="producto" placeholder="Nombre del producto">
+
+                <p>
+                    <textarea class="ingreso" placeholder="Descripción"></textarea>
+                </p>
+                
+                <p>
+                    <input class="ingreso" type="file" id="imagen" name="imagen"></input>
+                </p>
+
+                <input class="ingreso" type="text" name="precio" id="precio" placeholder="Precio">
+
+                <div class="captcha">
+                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
+                </div>
+
+                <p>
+                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
+                    <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
+                </p>
+            </p>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %> 
+</body>
+</html>
