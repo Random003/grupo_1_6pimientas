@@ -1,6 +1,7 @@
 # **Grupo 1 "Seis Pimientas"**
 
-## **Breve Retrospectiva**
+## **Breve Retrospectiva: Sprint Numero 1**
+
 
  Luego de una puesta en común mediante varias video conferencias, llegamos a unificar conceptos en nuestras fortalezas, debilidades y problemas encontramos en el camino del proyecto y como lo solucionamos como equipo de trabajo. A continuación lo separaremos en Pros, Cons y finalmente Conclusiones.
 
@@ -28,7 +29,14 @@ Ademas también aprender a organizarse en el tiempo de cada proceso para logar m
 
 ### Jamboard Retrospectiva:
 
-
 <a href="https://jamboard.google.com/d/1gSiWsGhEW6OLD2pa5vIveuSdrlzMA62JwZjRDd6p6G4/viewer">Link</a>
 
 
+## **Breve Retrospectiva: Sprint Numero 2**
+
+Utilizando como base las ideas y experiencias que nos ocurrieron en el sprint numero 1 utilizamos el tablero Trello mucho mas para poder dividir las responsabilidades de cada uno en las partes a realizar en el proyecto. 
+
+Nuevamente separamos las tareas en diferentes formas; la primera es potenciando individualmente lo que mejor sabe hacer cada uno, la segunda es que hicimos sesiones de coding en conjunto para que cada uno repase los temas dados mientas ayudábamos a resolver problemas o dudas de los mismos y asi lograr que todos los miembros del equipo estén en las mismas condiciones de conocimiento dentro del mismo y tercero nos dividimos las asignaturas en base a lo realizado en el sprint anterior.
+
+Mejoramos la organización interna del grupo a la vez que potenciamos también las reuniones diarias y semanales como se explica <a href="">aquí</a> para que no nos tome por sorpresa el tiempo de entrega del sprint presente y tampoco nos quedemos sin hacer nada por olvido o por no controlar tanto el tablero Trello como anteriormente nos pasaba.
+    

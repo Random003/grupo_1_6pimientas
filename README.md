@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/code/public/images/marca_curvas.png" alt="Marca en PNG"/>
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/marca_curvas.png" alt="Marca en PNG"/>
 </p>
 
 
@@ -55,4 +55,9 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Retrospectiva:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/design/doc/retro.md">Link a Markdown de Retrospectiva</a>
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/design/doc/retro.md">Link a Retrospectiva</a>
+
+
+## **Daily / Weeky:** 
+
+<a href="">Link a Daily</a>
