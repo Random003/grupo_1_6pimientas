@@ -63,4 +63,4 @@ Nombre de la Empresa | Descripción | Dirección Web
 
 ## **Daily / Weeky:** 
 
-<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/daily.md">Visitar Weekly</a>
+<a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">Visitar Weekly</a>
