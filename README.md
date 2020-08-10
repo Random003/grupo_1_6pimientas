@@ -64,3 +64,8 @@ Visite Retrospectiva <a href="https://github.com/Random003/grupo_1_6pimientas/bl
 ## **Daily / Weeky:** 
 
 Visite Weekly <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.
+
+
+## Comentarios acerca del Tercer Sprint:
+
+Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> para conocer la forma de ingresar a las secciones de agregar y editar productos.

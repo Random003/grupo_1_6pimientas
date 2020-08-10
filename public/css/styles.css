@@ -160,6 +160,11 @@ ul {
     margin-bottom: 5px;
 }
 
+.cajaOculta {
+    flex-direction: row;
+    display: inline-block;
+}
+
 .caja {
     box-sizing: border-box;
     width: 70%;
@@ -660,12 +665,10 @@ footer section article p {
     .encabezado {width: 60%;}
     .titulos_detalle_bc {
         justify-content: space-around;
-
     }
     .titulo_cantidad {padding-left: 1.4rem;}
     .cajaflex {
         align-self: center;
-
     }
 }
 
@@ -685,7 +688,6 @@ footer section article p {
     .botones_bolsa {
         width: 33%;
         justify-content: space-around;
-        
     }
     .titulo_producto,
     .titulo_cantidad {
@@ -700,13 +702,15 @@ footer section article p {
     .cajaflex {
         align-self: center;
     }
-
 }
 
 @media all and (min-width: 760px) {
     .cajaflex {
         flex-direction: row;
         display: inline-block;
+    }
+    .botoz {
+        display:none;
     }
  }
 
@@ -745,6 +749,7 @@ footer section article p {
     .cajaflex {
         flex-direction: row;
         display: inline-block;
+        justify-content: space-between;
     }
 }
 
@@ -783,6 +788,10 @@ footer section article p {
     .botones_bolsa {
         padding: 1rem;
     }
+    .cajaflex {
+        flex-direction: row;
+        display: inline-block;
+    }
 }
 
 @media all and (orientation: landscape) and (min-height: 320px) {
@@ -799,9 +808,14 @@ footer section article p {
         
     }
     .header {
-        flex-direction: row;
-        
+        flex-direction: row; 
         justify-content: space-between;
         align-items: flex-end;
+    }
+}
+
+@media (max-width: 760px) {
+    .cajaOculta {
+        display:none;
     }
 }
