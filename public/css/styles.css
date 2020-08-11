@@ -113,7 +113,7 @@ body {
     background-image: url("/images/img_ppal.jpg");
     background-repeat: no-repeat;
     overflow: auto;
-
+    height: 4cm;
     background-size: 100%;
     width: 100%;
 }
