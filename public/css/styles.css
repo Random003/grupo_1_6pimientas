@@ -112,19 +112,33 @@ body {
 .banner {
     background-image: url("/images/img_ppal.jpg");
     background-repeat: no-repeat;
-    overflow: auto;
-
-    background-size: 100%;
+    overflow: hidden;
+    background-clip: border-box;
+    background-size: 140% 100%;
+    height: 150px;
     width: 100%;
+    
+    margin-bottom: auto;
+    margin-top: auto;
+    
+    
+    background-position: center;
+    
 }
 
 .banner p {
     color: white;
     text-align: right;
-    font-size: larger;
+    font-size: 1.5rem;
     padding-right: 10%;
     position: relative;
-    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 100%;
+    
+    
 }
 
 main {background-color: blanchedalmond;}
@@ -165,21 +179,6 @@ ul {
     display: inline-block;
 }
 
-.caja {
-    box-sizing: border-box;
-    width: 70%;
-    border: 1px hidden currentColor;
-    padding: 20px 0px 10px 0px;
-    margin: 60px;
-    text-align: center;
-    background-color: rgb(253, 227, 179);
-    color: rgb(163, 31, 53);
-    font-size: 20px;
-    position: relative;
-    left: 25%;
-    margin-left: -30px;
-    max-width: 500px;
-}
 
 .cajaflex {
     display: flex;
@@ -216,13 +215,6 @@ ul {
 
 .Login {text-align: left;}
 
-.fotosPedido {
-    background-size: contain;
-    position: relative;
-    background-position: center;
-    height: 30%;
-    width: 80%;
-}
 
 .agregarPedido {
     background-size: contain;
@@ -231,27 +223,87 @@ ul {
     width: 60%;
 }
 
-.titulos {
-    background-color: blanchedalmond;
-    max-width: 100%;
-    font-size: xx-large;
-}
+
 
 .tituloPromo {
     background-color: blanchedalmond;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 0px;
+    text-align: center;
     /* font-size: ; */
     color: rgb(163, 31, 53);
     font-weight: bold;
 }
 
+.cuerpoPromos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.caja {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 100%;
+    border: 1px hidden currentColor;
+    padding: 10px 0px 10px 0px;
+    margin: 30px;
+    text-align: center;
+    background-color: rgb(253, 227, 179);
+    color: rgb(163, 31, 53);
+    font-size: 20px;
+    position: relative;
+    left: 0px;
+}
+
+
+.fotosPedido {
+    background-size: auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    width: 80%;
+}
 .promo20 {
+    margin-top: 2rem;
+    margin-bottom: auto;
     font-family: sans-serif;
     color: rgb(163, 31, 53);
     font-weight: bold;
-    font-size: 26px
+    font-size: 1.5rem;
 }
 
+.titulos {
+    background-color: blanchedalmond;
+    max-width: 100%;
+    font-size: 180%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.precioPromo {
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.botonAgregarPedido {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+}
 
 /* FOOTER */
 
@@ -324,23 +376,31 @@ header img:hover {
     display: flex;
     margin: 10px auto;
     justify-content: center;
+    height: 6rem;
+    align-items: center;
+    
     
  }
  
  .ul_header {
     padding: 0px;
+    
     flex-grow: 1;
     text-align: center;
 }
 
-div div nav ul {
-    padding-inline-start: 0px;
+header div ul {
+    margin-bottom: 0px;
 }
+
+/* div div nav ul {
+    padding-inline-start: 0px;
+} */
  
  .barra_menu ul li {
      display: inline-block;
      text-transform: uppercase;
-     font-size: 12px;
+     font-size: 1rem;
      padding: 5px;
      font-weight: bold;
 }
@@ -670,6 +730,9 @@ footer section article p {
     .cajaflex {
         align-self: center;
     }
+    .banner {
+        background-size: 130% 100%;
+    }
 }
 
 @media all and (min-width: 470px) {
@@ -701,6 +764,9 @@ footer section article p {
     }
     .cajaflex {
         align-self: center;
+    }
+    .banner {
+        background-size: 110% 120%;
     }
 }
 
@@ -750,6 +816,16 @@ footer section article p {
         flex-direction: row;
         display: inline-block;
         justify-content: space-between;
+    }
+    .barra_menu ul li {
+        font-size: 1.1rem;
+
+    }
+    .banner {
+        background-size: 100% 140%;
+    }
+    .banner p {
+        font-size: 1.8rem;
     }
 }
 
