@@ -1,0 +1,32 @@
+Pastas:
+Sorrentino Jamón y mozzarella       - cargado
+Sorrentino Calabaza y mozzarella    - cargado
+Sorrentino 4 quesos                 - cargado
+Raviol Carne braseada 
+Raviol Verdura
+Raviol de cerdo braseado            - cargado
+Raviol Ricota y nuez                - cargado
+Raviol de Pollo braseado            - cargado
+Spaguetti al Huevo x 500 grs        - cargado
+Tallarines al Huevo x 500 grs       - cargado
+Papardelle al Huevo x 500 grs       - cargado
+Spaguetti de Espinaca x 500 grs     - cargado
+Tallarines de Espinaca x 500 grs    - cargado
+Papardelle de Espinaca x 500 grs    - cargado
+Ñoquis x 500 grs                    - cargado
+Lasagna de carne                    - cargado
+Lasagna de verduda                  - cargado
+Canelones de carne                  
+Canelones de verdura
+Raviolnino
+
+Salsas:
+Salsa Bolognesa                     - cargado
+Salsa Fileto                        - cargado
+Salsa Blanca                        - cargado
+
+Queso
+
+Varios:
+Sandwich Miga
+Empanadas Carne x 6 unidades
