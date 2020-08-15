@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "name": "Caseritos",
+        "description": "20 % OFF EN LA SEGUNDA UNIDAD!",
+        "price": 595,
+        "image": null
+    },
+    {
+        "id": "2",
+        "name": "Ravioles",
+        "description": "20 % OFF EN LA SEGUNDA UNIDAD!",
+        "price": 445,
+        "image": null
+    }
+   
+]
