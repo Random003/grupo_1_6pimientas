@@ -13,8 +13,12 @@ router.get("/productCart", productsController.productCart);
   
 router.get("/promociones", productsController.promociones);
 
+//router.put('/edit/:idPromociones', productsController.promociones)  Gaspar
+
 router.get("/add", productsController.add);
 
-router.get("/edit", productsController.edit);
+router.get("/edit/:idProduct", productsController.edit);
+
+// router.put('/edit/:id', productsController.edit); Gaspar
 
 module.exports = router;
