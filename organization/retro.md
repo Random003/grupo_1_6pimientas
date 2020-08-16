@@ -39,4 +39,10 @@ Utilizando como base las ideas y experiencias que nos ocurrieron en el sprint nu
 Nuevamente separamos las tareas en diferentes formas; la primera es potenciando individualmente lo que mejor sabe hacer cada uno, la segunda es que hicimos sesiones de coding en conjunto para que cada uno repase los temas dados mientas ayudábamos a resolver problemas o dudas de los mismos y asi lograr que todos los miembros del equipo estén en las mismas condiciones de conocimiento dentro del mismo y tercero nos dividimos las asignaturas en base a lo realizado en el sprint anterior.
 
 Mejoramos la organización interna del grupo a la vez que potenciamos también las reuniones diarias y semanales como se explica <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a> para que no nos tome por sorpresa el tiempo de entrega del sprint presente y tampoco nos quedemos sin hacer nada por olvido o por no controlar tanto el tablero Trello como anteriormente nos pasaba.
-    
+
+
+## **Breve Retrospectiva: Sprint Numero 3**   
+
+Este Sprint nos encontró con mas trabajo individual asi que nos enfocamos a separar trabajo de manera individual para realizar reuniones cada 4 dias para exponer el avance logrado y los problemas encontrados mientras lo realizábamos.
+
+ El uso de video llamada, la opción de LiveShare que ofrece Visual Studio Code, el tablero Trello y los mensajes del grupo de WhatsApp se convirtieron en este sprint en herramientas muy útiles para lograr llevar a cabo los puntos necesarios para el mismo.

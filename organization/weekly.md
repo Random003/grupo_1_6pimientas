@@ -29,3 +29,8 @@ Esto decidimos hacerlo para fomentar la mejor comunicación en el grupo, para po
 
 
 Este sistema de 4 patas nos permite flexibilidad para poder adecuarnos a las necesidades del grupo y modificar el formato como mejor sea necesario en el momento que sea necesario.
+
+
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 3:**
+
+Durante este Sprint como fue comentado en la Retrospectiva que se puede leer <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>, utilizamos reuniones semanales y comunicaciones diarias para poder reforzar las necesidades de organización debido a la imposibilidad de reunirnos todos los días durante esa semana. 

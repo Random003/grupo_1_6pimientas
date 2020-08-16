@@ -121,7 +121,7 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     
-    
+
     background-position: center;
     
 }
@@ -172,6 +172,23 @@ ul {
     align-items: center;
     justify-content: center;
     margin-bottom: 5px;
+    color: white;
+}
+
+
+.botoz2 {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 7rem;
+    border-radius: 50px;
+    align-self: center;
+    display: inline-block; 
+    color: white;
+}
+
+a {
+    color: white;
 }
 
 .cajaOculta {
@@ -182,6 +199,21 @@ ul {
 
 .cajaflex {
     display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    min-width: 300px;
+    height: 100%;
+    border: 1px hidden currentColor;
+    padding: 10px 0px 10px 0px;
+    margin: 30px;
+    text-align: center;
+    background-color: rgb(253, 227, 179);
+    color: rgb(163, 31, 53);
+    font-size: 20px;
+    position: relative;
+    left: 0px;
 }
 
 /* cree la caja login en con la misma base de las otras cajas, veo que más le modifico para que me quede bien */
@@ -304,6 +336,18 @@ ul {
     height: 3rem;
     border-radius: 10px;
 }
+
+.botonAgregarPedido2 {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    align-self: center;
+}
+
+
 
 /* FOOTER */
 
