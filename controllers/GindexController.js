@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const path = require('path'); 
 
-products: (req, res {
+products: (req, res) {
 
     let products = fs.readFileSync(path.join(__dirname, '../database/products-example.json'), 'utf-8'); 
 
@@ -12,7 +12,7 @@ products: (req, res {
 
     res.render('/products/id:');
 
-})
+}
 
 promociones: (req, res) {
    

@@ -32,6 +32,6 @@ router.post("/", upload.single('imagen'), productsController.store);
 
 router.get("/edit/:idProduct", productsController.edit);
 
-// router.put('/edit/:id', productsController.edit); Gaspar
+// router.put('/edit/:productId', productsController.edit); Gaspar
 
 module.exports = router;
