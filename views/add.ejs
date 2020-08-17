@@ -3,33 +3,59 @@
 <%- include('./partials/head') %> 
 <body>
     <%- include('./partials/header');%> 
-    <main>
-        <form class="cajaLogin" action="/" method="POST">
+    <main class="mainCreate">
+        <form class="cajaCreate" action="/" method="POST" enctype="multipart/form-data">
             <h3>
                 Agregar un producto:
             </h3>
-            <p>
-                <input class="ingreso" type="text" name="producto" id="producto" placeholder="Nombre del producto">
+            <div class="containerCreate">
+                <div>
+                    <p>
+                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre del producto">
+                    </p>
+    
+                    <p>
+                        <textarea class="ingresoCreate" name="description" placeholder="Descripción"></textarea>
+                    </p>
+                    
+                    <p>
+                        <input class="ingresoCreate" type="text" name="presentation"  placeholder="Presentación del producto">
+                    </p>
+                    <p>
+                        <input class="ingresoCreate" type="text" name="perforance"  placeholder="Rendimiento del producto">
+                    </p>
 
-                <p>
-                    <textarea class="ingreso" placeholder="Descripción"></textarea>
-                </p>
-                
-                <p>
-                    <input class="ingreso" type="file" id="imagen" name="imagen"></input>
-                </p>
-
-                <input class="ingreso" type="text" name="precio" id="precio" placeholder="Precio">
-
-                <div class="captcha">
-                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
                 </div>
+                <div class="variedades">
+                    <label for="">Variedades:</label>
+                    <input class="ingresoCreate" type="text" name="variedad1"  placeholder="Variedad del producto">
+                    <input class="ingresoCreate" type="text" name="variedad2"  placeholder="Variedad del producto">
+                    <input class="ingresoCreate" type="text" name="variedad3"  placeholder="Variedad del producto">
+                    <input class="ingresoCreate" type="text" name="variedad4"  placeholder="Variedad del producto">
+                    <input class="ingresoCreate" type="text" name="variedad5"  placeholder="Variedad del producto">
+                    <input class="ingresoCreate" type="text" name="variedad6"  placeholder="Variedad del producto">
+                </div>
+               
+                <p>
+                    <input class="ingresoCreate fileCreate" type="file" id="imagen" name="imagen"></input>
+                </p>
+                <p>
+
+                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio">
+                </p>
+
+                <!--<p class="captcha">
+                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
+                
+                </p> -->
 
                 <p>
-                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
-                    <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
+                    <button type="submit" class="ingresoCreate" id="botonIngreso">Enviar</button> 
+                    <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar</button>
                 </p>
-            </p>
+
+            </div>
+
         </form>
     </main>
 

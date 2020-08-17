@@ -1,3 +1,7 @@
+const path = require('path');
+const jsonTable = require ('../database/jsonTable'); 
+const productsModel = jsonTable('products');
+
 module.exports = {
     product1 : (req, res) => {
         res.render('productDetail1');
@@ -30,7 +34,7 @@ module.exports = {
            
         ]
 
-        let promocionesToEdit = promociones.[idPromociones];
+        //let promocionesToEdit = promociones.[idPromociones];
 
         // res.render('promocionesToEdit', (aca habría que hacer las vista ejs de productos y ahí modificar), {promocionesToEdit: promocionesToEdit});
         res.render('idPromociones'); 
@@ -38,6 +42,8 @@ module.exports = {
         res.render("promociones");
     },
     add:  (req, res) => {
+        //let prueba = productsModel.readFile();
+       
         res.render("add");
     },
     edit:  (req, res) => {
@@ -127,10 +133,14 @@ module.exports = {
             }
         ];
 
-        let productsToEdit = products.[idProduct];
+       // let productsToEdit = products.[idProduct];
 
        // res.render(productsToEdit (aca habría que hacer las vista ejs de productos y ahí modificar), {productsToEdit: productsToEdit});
 
         res.render(idProduct);
+    },
+    store: (req, res, next) => {
+    
+        res.send(req.body);
     }
 }

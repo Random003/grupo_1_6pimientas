@@ -103,10 +103,10 @@ body {
 
 
 .menu {
-   position: absolute;
-   height: 20px;
-   background-color: blanchedalmond ;
-   color: white;
+    position: absolute;
+    height: 20px;
+    background-color: blanchedalmond ;
+    color: white;
 }
 
 .banner {
@@ -121,7 +121,7 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     
-
+    
     background-position: center;
     
 }
@@ -159,7 +159,7 @@ ul {
     z-index: 3;
     position: relative;
     top: -10vh;
- }
+}
 
 .boton {
     text-decoration: none;
@@ -275,7 +275,7 @@ a {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-
+    
 }
 
 .caja {
@@ -375,7 +375,7 @@ a {
     width: 100%;
     position: relative;
     align-items: baseline;
- 
+    
 }
 
 header a {
@@ -387,7 +387,7 @@ header a {
 .whatsapp {
     height: 100%;
     margin: 0px 1rem;
-
+    
 }
 
 .instagram {
@@ -424,9 +424,9 @@ header img:hover {
     align-items: center;
     
     
- }
- 
- .ul_header {
+}
+
+.ul_header {
     padding: 0px;
     
     flex-grow: 1;
@@ -440,20 +440,20 @@ header div ul {
 /* div div nav ul {
     padding-inline-start: 0px;
 } */
- 
- .barra_menu ul li {
-     display: inline-block;
-     text-transform: uppercase;
-     font-size: 1rem;
-     padding: 5px;
-     font-weight: bold;
+
+.barra_menu ul li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 5px;
+    font-weight: bold;
 }
-    
+
 .barra_menu ul li a{
     text-decoration: none;
     color: white; 
 }
-    
+
 
 .usuario_bolsa {
     color: white;
@@ -532,7 +532,7 @@ header div ul {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-
+    
 }
 
 .foto_producto_bolsa {
@@ -679,12 +679,12 @@ footer section article p {
 }
 
 #botonReseteo {
-    width: 100%;
-    border-style: none;
-    padding: 10px;
-    margin: 20px 0px;
-    border-radius: 5px;
     color: white;
+    border: 0;
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    cursor: pointer;
     background-color: #AA0044;
 }
 
@@ -694,18 +694,23 @@ footer section article p {
 }
 
 #botonIngreso {
-    width: 100%;
-    border-style: none;
+    
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: #0044AA;*/
+    /*
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px;
-    color: white;
-    background-color: #0044AA;
-    cursor: pointer;
+    color: white;*/
 }
 
 #botonIngreso:hover {
     background-color: #0022AA;
+    cursor: pointer;
 }
 
 .home_carrousel div{
@@ -713,6 +718,73 @@ footer section article p {
     width: auto;
     color: #AA0044;
 }
+
+
+/* ESTILOS PARA ADD*/
+.mainCreate {
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.cajaCreate {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding: 1rem;
+    color: rgb(163, 31, 53);
+    text-align: center;
+    background-color: rgb(253, 227, 179);
+    margin: 1rem 0px;
+}
+
+.containerCreate {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.ingresoCreate {
+    width: 100%;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+}
+
+.cajaCreate p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.variedades {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+}
+
+.variedades label {
+    position: relative;
+    align-self: flex-start;
+    
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.variedades input {
+    margin: 0.5rem 0px;
+    
+}
+
 
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
@@ -725,7 +797,7 @@ footer section article p {
     }
     .titulos_detalle_bc {
         justify-content: space-around;
-
+        
     }
     .titulo_cantidad {padding-left: 1.4rem;}
     .detalle_bolsa {
@@ -822,7 +894,7 @@ footer section article p {
     .botoz {
         display:none;
     }
- }
+}
 
 @media all and (min-width: 769px) {
     .marcaSP {
@@ -863,13 +935,16 @@ footer section article p {
     }
     .barra_menu ul li {
         font-size: 1.1rem;
-
+        
     }
     .banner {
         background-size: 100% 140%;
     }
     .banner p {
         font-size: 1.8rem;
+    }
+    .cajaCreate {
+        max-width: 700px;
     }
 }
 
@@ -881,12 +956,12 @@ footer section article p {
         margin-top: auto;
         margin-bottom: auto;
     }
-
+    
     .header {
         justify-content: flex-start;
         align-items: center;
     }
-
+    
     .barra_redes {
         width: 100%;
         justify-content: flex-end;
