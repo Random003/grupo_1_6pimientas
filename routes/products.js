@@ -17,8 +17,8 @@ router.get("/promociones", productsController.promociones);
 
 router.get("/add", productsController.add);
 
-router.get("/edit/:idProduct", productsController.edit);
+router.get("/edit/:productId", productsController.edit);
 
-// router.put('/edit/:id', productsController.edit); Gaspar
+// router.put('/edit/:productId', productsController.edit); Gaspar
 
 module.exports = router;
