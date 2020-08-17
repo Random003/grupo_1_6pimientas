@@ -14,7 +14,7 @@ module.exports = {
 
         let promociones = []
 
-        let promocionesToEdit = promociones.[idPromociones];
+        // let promocionesToEdit = promociones.[idPromociones];
 
         
         res.render('promocionesToEdit', {promocionesToEdit: promocionesToEdit});
