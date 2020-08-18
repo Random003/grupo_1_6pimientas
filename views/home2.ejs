@@ -2,9 +2,32 @@
 <html lang="es">
 <%- include('./partials/head') %> 
 <body>
-    <%- include('./partials/header2');%> 
+    <%- include('./partials/header');%> 
     <main>
-        
+        <ul class="cajaLogin">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products/add">Alta de Producto</a></li>
+            <li><a href="/products/edit">Modificación de Producto</a></li>
+            <li><a href="/products/destroy">Borrado de Producto</a></li>
+            <li><a href="/products">Productos</a></li>
+
+            <!-- VER RUTA  -->
+            <li><a href="/sales/add">Alta de Promoción</a></li>
+
+            <!-- VER RUTA  -->
+            <li><a href="/sales/edit">Modificación de Promoción</a></li>
+
+            <!-- VER RUTA  -->
+            <li><a href="/sales/destroy">Borrado de Promoción</a></li>
+
+            <li><a href="/users/register">Registrar Usuario</a></li>
+
+            <!-- VER RUTA -->
+            <li><a href="/users/edit">Modificar Usuario</a></li>
+
+            <!-- VER RUTA  -->
+            <li><a href="/users/destroy">Borrar Usuario</a></li>
+        </ul>
     </main><br>
 
 </body>
