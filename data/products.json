@@ -7,7 +7,7 @@
         "presentation": "14 unidades",
         "performance": "rinde para 2 personas",
         "price": 350,
-        "image": "default.png"
+        "image": "sorrentinos.jpg"
     },
     {
         "id": "2",
@@ -17,7 +17,7 @@
         "presentation": "3 planchas",
         "performance": "rinde para 2 personas",
         "price": 330,
-        "image": "product-1597705509517.jpg"
+        "image": "caseritos.jpg"
     },
     {
         "id": "3",
@@ -27,7 +27,7 @@
         "presentation": "3 planchas",
         "performance": "rinde para 2 personas",
         "price": 260,
-        "image": "default.png"
+        "image": "ravioles.jpg"
     },
     {
         "id": "4",
@@ -37,7 +37,7 @@
         "presentation": "Paquete de 500 grs.",
         "performance": "rinde para 2 personas",
         "price": 160,
-        "image": "default.png"
+        "image": "fideos.jpg"
     },
     {
         "id": "5",
@@ -47,7 +47,7 @@
         "presentation": "Paquete de 500 grs.",
         "performance": "rinde para 2 personas",
         "price": 180,
-        "image": "default.png"
+        "image": "fideos.jpg"
     },
     {
         "id": "6",
@@ -57,7 +57,7 @@
         "presentation": "Bandeja de 500 grs.",
         "performance": "rinde para 2 personas",
         "price": 190,
-        "image": "default.png"
+        "image": "noquis.jpg"
     },
     {
         "id": "7",
@@ -67,7 +67,7 @@
         "presentation": "Pote de 250 grs.",
         "performance": "rinde para 2 personas",
         "price": 160,
-        "image": "default.png"
+        "image": "salsas.jpg"
     },
     {
         "id": "8",
