@@ -12,26 +12,24 @@ var storage = multer.diskStorage({
     }
   });
    
-var upload = multer({ storage: storage });
+var upload = multer({ storage });
 
 /* Páginas de productos */
 
-router.get("/productDetail1", productsController.product1);
+router.get("/", productsController.products);
   
-router.get("/ProductDetail2", productsController.product2);
   
 router.get("/productCart", productsController.productCart);
   
-router.get("/promociones", productsController.promociones);
-
-//router.put('/edit/:idPromociones', productsController.promociones)  Gaspar
-
 router.get("/add", productsController.add);
 
-router.post("/", upload.single('imagen'), productsController.store);
+router.post("/", upload.single('imagen'), productsController.store); 
 
-router.get("/edit/:idProduct", productsController.edit);
+router.get("/edit/:productId", productsController.edit);
 
-// router.put('/edit/:productId', productsController.edit); Gaspar
+//router.put('/edit/:idPromociones', productsController.promociones)  Gaspar
+//router.put("/edit/:idProduct", productsController.update); Gaspar
+
+//router.delete('/:productId', productsController.destroy); 
 
 module.exports = router;

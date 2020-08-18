@@ -7,7 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var indexProducts = require('./routes/products');
 var usersRouter = require('./routes/users');
+var salesRouter = require('./routes/sales');
 var error404Router = require('./routes/errors');
+const { add } = require('./controllers/productsController');
 
 var app = express();
 
@@ -23,11 +25,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Rutas:
 
-app.use('/', indexRouter);
+app.use('/', salesRouter);
 
-app.use('/', indexProducts);
+app.use('/products', indexProducts);
 
-app.use('/', usersRouter);
+app.use('/sales', salesRouter)
+
+app.use('/users', usersRouter);
 
 app.use('/', error404Router);
 

@@ -1,41 +1,37 @@
 const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
+const { read } = require('fs');
 const productsModel = jsonTable('products');
 
 module.exports = {
-    product1 : (req, res) => {
-        res.render('productDetail1');
+    products : (req, res) => {
+        let products = productsModel.all();
+        res.render('products', { products } );
     },
-    product2:  (req, res) => {
-        res.render('productDetail2');
-    },
+
     productCart:  (req, res) => {
         res.render('productCart');
     },
-    promociones:  (req, res) => {
+    // sales:  (req, res) => {
+    //     let idPromociones = req.params.idPromociones; 
 
-        let idPromociones = req.params.idPromociones; 
+    //     let promociones = []
 
-        let promociones = []
-
-<<<<<<< HEAD
-        //let promocionesToEdit = promociones.[idPromociones];
-=======
-        // let promocionesToEdit = promociones.[idPromociones];
->>>>>>> 369c0ff9de98dfb422cba265ef1b1dfbff53eb17
+    //     //let promocionesToEdit = promociones.[idPromociones];
 
         
-        res.render('promocionesToEdit', {promocionesToEdit: promocionesToEdit});
+    //     res.render('promocionesToEdit', {promocionesToEdit: promocionesToEdit});
         
-        res.render('idPromociones'); 
+    //     res.render('idPromociones'); 
         
-        res.render("promociones");
-    },
+    //     res.render("promociones");
+    // },
     add:  (req, res) => {
         //let prueba = productsModel.readFile();
        
         res.render("add");
     },
+
     edit:  (req, res) => {
 
         let productId = req.params.productId; 
@@ -52,12 +48,21 @@ module.exports = {
 
        // let productsToEdit = products.[productId];
 
-       res.render("productsToEdit", {productsToEdit: productsToEdit});
+       //res.render("productsToEdit", {productsToEdit: productsToEdit});
 
         res.render(idProduct);
     },
     store: (req, res, next) => {
-    
-        res.send(req.body);
+        
+        let product = req.body;
+        product.image = 'default.png';
+        if (req.file) {
+            product.image = req.file.filename;
+        }
+        let newId = productsModel.create(product);
+        
+    res.redirect('/products');
+
     }
+    
 }
