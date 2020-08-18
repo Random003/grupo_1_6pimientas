@@ -1,36 +1,80 @@
-const fs = require('fs');
+const path = require('path');
+const jsonTable = require ('../database/jsonTable'); 
+const { read } = require('fs');
+const productsModel = jsonTable('products');
 
-const path = require('path'); 
+module.exports = {
+    sales: (req, res) => {
+        let sales = salesModel.all();
+        res.render('sales', { sales } );
+    },
 
-products: (req, res) {
+    productCart:  (req, res) => {
+        res.render('productCart');
+    },
+    // sales:  (req, res) => {
+    //     let salesId = req.params.salesId; 
 
-    let products = fs.readFileSync(path.join(__dirname, '../database/products-example.json'), 'utf-8'); 
+    //     let sales = []
 
-    products = JSON.parse(products); 
+    //     //let salesToEdit = sales[salesId];
 
-    let products = products.find(products => products.id == req.params.id); 
+        
+    //     res.render('salesToEdit', {salesToEdit: salesToEdit});
+        
+    //     res.render('salesId'); 
+        
+    //     res.render("sales");
+    // },
+    add:  (req, res) => {
 
-    res.render('/products/id:');
+        let salesId = req.params.salesId; 
 
+        let sales =  {
+            "name": req.body.name,
+            "description": req.body.description,
+            "variety":req.body.variety,
+            "presentation": req.body.presentation,
+            "performance": req.body.performance,
+            "price": req.body.price,
+            "image": null
+        }
+        //let prueba = productsModel.readFile();
+       
+        res.render('/sales');
+    },
+
+    edit:  (req, res) => {
+
+        let salesId = req.params.salesId; 
+
+        let sales =  {
+            "name": req.body.name,
+            "description": req.body.description,
+            "variety":req.body.variety,
+            "presentation": req.body.presentation,
+            "performance": req.body.performance,
+            "price": req.body.price,
+            "image": null
+        }
+
+       // let productsToEdit = products.[productId];
+
+       //res.render("productsToEdit", {productsToEdit: productsToEdit});
+
+        res.render(idProduct);
+    },
+    store: (req, res, next) => {
+        
+        let sales = req.body;
+        product.image = 'default.png';
+        if (req.file) {
+            sales.image = req.file.filename;
+        }
+        let newId = productsModel.create(product);
+        
+    res.redirect('/sales');
+
+    }
+    
 }
-
-promociones: (req, res) {
-   
-    let promociones = fs.readFileSync(path.join(__dirname, '../database/sales-example.json'), 'utf-8'); 
-
-    promociones = JSON.parse(promociones); 
-
-    let promociones = products.find(promociones => promociones.id == req.params.id); 
-
-    res.render('/promociones/id:');
-
-
-
-}
-
-
-//para funcionamiento de envío  de formularios
-
-app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
-
