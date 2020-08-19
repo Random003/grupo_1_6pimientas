@@ -27,8 +27,7 @@ router.post("/", upload.single('imagen'), productsController.store);
 
 router.get("/edit/:productId", productsController.edit);
 
-//router.put('/edit/:idPromociones', productsController.promociones)  Gaspar
-//router.put("/edit/:idProduct", productsController.update); Gaspar
+router.put("/edit/:productId", productsController.edit); 
 
 //router.delete('/:productId', productsController.destroy); 
 
