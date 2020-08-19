@@ -67,11 +67,11 @@ module.exports = {
     store: (req, res, next) => {
         
         let sales = req.body;
-        product.image = 'default.png';
+        sales.image = 'default.png';
         if (req.file) {
             sales.image = req.file.filename;
         }
-        let newId = productsModel.create(product);
+        let newId = salesModel.create(sales);
         
     res.redirect('/sales');
 
