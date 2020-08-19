@@ -25,7 +25,7 @@ router.get("/add", productsController.add);
 
 router.post("/", upload.single('imagen'), productsController.store); 
 
-router.get("/edit/:productId", productsController.edit);
+router.get("/edit", productsController.edit);
 
 router.put("/edit/:productId", productsController.edit); 
 

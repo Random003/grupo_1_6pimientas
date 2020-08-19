@@ -50,7 +50,7 @@ module.exports = {
 
        //res.render("productsToEdit", {productsToEdit: productsToEdit});
 
-        res.render(idProduct);
+        res.render("edit");
     },
     store: (req, res, next) => {
         
