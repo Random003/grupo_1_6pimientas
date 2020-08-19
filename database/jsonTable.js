@@ -48,6 +48,18 @@ let model = function (tableName) {
             this.writeFile(rows);
         
             return row.id;
+        },
+
+        update(row) {
+            let rows = this.readFile();
+            let updatedRows = rows.map(r => r.id == row.id ? row : r);
+            this.writeFile(updatedRows);
+            return row.id;
+        },
+        delete(id) {
+            let rows = this.readFile();
+            let updatedRows = rows.filter(row => row.id != id);
+            this.writeFile(updatedRows);
         }
     
     }
