@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header');%> 
+    <main>
+        <form class="cajaLogin" action="/" method="POST">
+            <h3>
+                Editar un Usuario:
+            </h3>
+            <p>
+                <input class="ingreso" type="text" name="fullName" id="fullName" placeholder="Nombre y Apellido">
+
+                <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">
+
+                <input class="ingreso" type="confirEmail" name="confirEmail" id="confirmEmail" placeholder="Confirmar E-mail">
+
+                <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
+                
+                <input class="ingreso" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña">
+
+                <input class="ingreso" type="calle" name="calle" id="calle" placeholder="Calle">
+
+                <input class="ingreso" type="numero" name="numero" id="numero" placeholder="Número">
+
+                <input class="ingreso" type="piso" name="piso" id="piso" placeholder="Piso">
+
+                <input class="ingreso" type="departamento" name="departamento" id="departamento" placeholder="Departamento">
+
+                <input class="ingreso" type="localidad" name="localidad" id="localidad" placeholder="Localidad">
+
+                <div class="captcha">
+                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
+                </div>
+
+                <p>
+                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
+                    <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
+                </p>
+            </p>
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %> 
+</body>
+</html>
