@@ -37,7 +37,7 @@ que busque este servicio.
  Soy uno de los propietarios de SeisPimientas (Fábrica de pastas). 
 
  - Gaspar Valdes [@GitHub](https://github.com/Babart): 
- Tengo 31 años, nacido en Corrientes, pero vivo actualmente y hace más de 16 años en Mendoza, soy mendocino por adopción. Soy Bioquímico, trabajo en Cuerpo médico Forense de la provincia, y en un hospital privado. 
+ Tengo 31 años, nacido en Corrientes, pero vivo actualmente y hace más de 16 años en Mendoza, soy mendocino por adopción. De profesión Bioquímico, trabajo en Cuerpo médico Forense de la provincia, y en un hospital privado. 
 
 
 ## **Sitios de Referencia:** 

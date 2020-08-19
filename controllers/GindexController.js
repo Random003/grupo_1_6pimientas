@@ -1,7 +1,7 @@
 const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
-const productsModel = jsonTable('products');
+const salesModel = jsonTable('sales');
 
 module.exports = {
     sales: (req, res) => {
@@ -47,7 +47,7 @@ module.exports = {
     edit:  (req, res) => {
 
         let salesId = req.params.salesId; 
-
+//consultar de donde poronga viene esos name description? son clases? 
         let sales =  {
             "name": req.body.name,
             "description": req.body.description,
