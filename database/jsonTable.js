@@ -40,6 +40,15 @@ let model = function (tableName) {
             let rows = this.readFile();
             return rows.find(row => row.id == id);
         },
+
+        findByFields(fields, value) {
+            if(!fields || !value) { return []; }
+            let rows = this.readFile();
+            return rows.filter(row => 
+                fields.find(field => 
+                    row[field] && row[field].toLowerCase().includes(value.toLowerCase())
+                ));
+        },
         
         create(row) {
             let rows = this.readFile();
