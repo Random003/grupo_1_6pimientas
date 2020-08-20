@@ -321,6 +321,15 @@ a {
     padding-bottom: 0.8rem;
 }
 
+.titulosHome {
+    background-color: rgb(163, 31, 53);
+    max-width: 100%;
+    font-size: 180%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    font-family: paris;
+}
+
 .precioPromo {
     font-weight: bold;
     font-size: 1.9rem;
