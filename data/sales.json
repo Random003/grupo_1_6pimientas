@@ -4,14 +4,14 @@
         "name": "Caseritos",
         "description": "20 % OFF EN LA SEGUNDA UNIDAD!",
         "price": 595,
-        "image": null
+        "image": "caseritos.jpg"
     },
     {
         "id": "2",
         "name": "Ravioles",
         "description": "20 % OFF EN LA SEGUNDA UNIDAD!",
         "price": 445,
-        "image": null
+        "image": "ravioles.jpg"
     }
    
 ]

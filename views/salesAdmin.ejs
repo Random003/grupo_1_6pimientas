@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<body>
+<%- include('./partials/header');%> 
+    <main>
+        <div class="banner">   
+            <p>
+                NUESTRAS<br>
+                PROMOCIONES
+            </p>
+        </div>
+        <h1 class="tituloPromo">MARTES Y JUEVES!</h1>
+        <section class="cuerpoPromos">
+          <% for (let i = 0; i < sales.length; i++) {%>  
+               <div class="caja">
+                   <img class="fotosPedido" src="/images/products/<%= sales[i].image %>" alt="<%= sales[i].name %>">
+                   <h4 class="titulos">"<%= sales[i].name %>"</h4>
+                   <p>
+                      <label class="promo20" for=""><%= sales[i].description %></label><br>
+                      <label class="precioPromo" for="">Precio:$<%= sales [i].price %>,00</label><br>
+                    </p>
+                    <!-- VER LINKS DE RUTAS DE LOS BOTONES -->
+                    <p>
+                        <button type="button" class="btn btn-success btn-lg btn-block" href="/sales/edit">Editar</button>
+                        <button type="button" class="btn btn-danger btn-lg btn-block" href="/sales/destroy">Borrar</button>
+                    </p>
+              </div>
+           <% } %> 
+        </section>
+    </main>
+    <br>
+    <%- include('./partials/footer') %> 
+</body>
+</html>
