@@ -23,6 +23,8 @@ router.get("/add", salesController.add);
 
 router.post("/", upload.single('imagen'), salesController.store);
 
+router.get("/edit", salesController.edit);
+
 router.put('/edit/:salesId', salesController.edit)
 
 //router.post("/", indexController.indexPop);
