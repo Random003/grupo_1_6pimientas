@@ -8,6 +8,11 @@ module.exports = {
         let products = productsModel.all();
         res.render('products', { products } );
     },
+//agregado de ruta, no funciona, la dejo xq mañana sigo con esta historia
+    //admin: (req, res, next) => {
+    
+     //   res.render('productsAdmin')
+   // },
 
     productCart:  (req, res) => {
         res.render('productCart');

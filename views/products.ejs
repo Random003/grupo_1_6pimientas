@@ -10,7 +10,7 @@
                 PASTAS
             </p>
         </div>
-
+                       <!-- línea 24 tuve que borrar el .variety en el length xq no funcionaba página de productos -->
         <section class="cuerpoPromos">
             <% for (let i = 0; i < products.length; i++) {%> 
             
@@ -21,7 +21,7 @@
                         <b><label for="">Descripción:</label></b><br>
                         <label for=""><%= products[i].description %></label><br>
                         <b><label for="">Rellenos disponibles:</b></label><br>
-                        <% for (let x = 0; x < products[i].variety.length; x++)  {%> 
+                        <% for (let x = 0; x < products[i].length; x++)  {%>                    
                             <ul>
                                 <li><%= products[i].variety[x] %></li>
                             </ul>

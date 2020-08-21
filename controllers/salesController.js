@@ -42,7 +42,7 @@ module.exports = {
         }
         //let prueba = productsModel.readFile();
        
-        res.render('/sales');
+        res.render('add');            //ojo con esto que nos direcciona a la misma que productos, vamos a tener que hacer un addSales para diferenciar. 
     },
 
     edit:  (req, res) => {
@@ -60,7 +60,7 @@ module.exports = {
 
        //res.render("productsToEdit", {productsToEdit: productsToEdit});
 
-        res.render('edit');
+        res.render('editSales');
     },
     store: (req, res, next) => {
         
@@ -73,6 +73,10 @@ module.exports = {
         
     res.redirect('/sales');
 
+    },
+
+    destroy: (req, res, next) => {
+        res.render('deleteSales')
     }
     
 }

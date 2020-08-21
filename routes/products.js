@@ -17,8 +17,8 @@ var upload = multer({ storage });
 /* Páginas de productos */
 
 router.get("/", productsController.products);
-  
-  
+
+    
 router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);

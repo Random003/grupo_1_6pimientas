@@ -11,8 +11,9 @@
             </p>
         </div>
 
+        
         <section class="cuerpoPromos">
-            <% for (let i = 0; i < products.length; i++) {%> 
+             <% for (let i = 0; i < products.length; i++) {%>  
             
                 <div class="caja">
                     <img class="fotosPedido" src="/images/products/<%= products[i].image %>" alt="<%= products[i].name %>">
@@ -40,9 +41,11 @@
             <% } %> 
         </section>
 
+
         
       
     </main>
     <%- include('./partials/footer') %> 
 </body>
 </html>
+
