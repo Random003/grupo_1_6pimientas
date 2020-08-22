@@ -71,7 +71,7 @@ module.exports = {
         }
         let newId = salesModel.create(sales);
         
-    res.redirect('/sales');
+    res.redirect('sales');
 
     },
 
