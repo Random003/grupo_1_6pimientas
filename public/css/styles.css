@@ -161,6 +161,25 @@ ul {
     top: -10vh;
 }
 
+.flex-row-reverse {
+    margin-right: 20px;
+    margin-top: 20px;
+    
+}
+
+.buttonp {
+    position:relative;
+    padding:6px 15px;
+    /* left:-8px; */
+    border:1px solid rgb(163, 31, 53);
+    background-color:rgb(163, 31, 53);
+    color:#fafafa;
+}
+.buttonp:hover  {
+    background-color:#fafafa;
+    color:#FFF5CE;
+}
+
 .boton {
     text-decoration: none;
     list-style-type: none;
@@ -835,6 +854,12 @@ footer section article p {
     }
     .cajaflex {
         align-self: center;
+    }
+
+    .flex-row-reverse {
+        margin-right: 80px;
+        margin-top: 20px;
+        
     }
 }
 

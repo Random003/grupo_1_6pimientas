@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header');%> 
+    <main class="mainCreate">
+        
+        <form class="cajaCreate" action="/sales/add?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h3>
+                Crear una Promoción:
+            </h3>
+            <div class="containerCreate">
+                <div>
+                    <p>
+                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre del producto">
+                    </p>
+    
+                    <p>
+                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento"></textarea>
+                    </p>
+                </div>
+               
+                <p>
+                    <input class="ingresoCreate fileCreate" type="file" name="imagen"></input>
+                </p>
+                <p>
+                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio">
+                </p>
+
+                <p>
+                    <button type="submit" class="ingresoCreate" id="botonIngreso">Enviar</button> 
+                    <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar</button>
+                </p>
+
+            </div>
+
+        </form>
+    </main>
+
+    <%- include('./partials/footer') %> 
+</body>
+</html>
