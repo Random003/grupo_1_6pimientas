@@ -1,33 +1,58 @@
 <header>
     <section class="header">
         <img class="marcaSP" src="/images/marcaSP.png" alt="Marca Seis Pimientas">
+        <div>
+            <% if (locals.user) { %> 
+                
+                <label class="nameUser"><a href="/users/edit/:<%= locals.user.id %>"><%= locals.user.first_name %></a></label>
+                
+            <%} %> 
+        </div>
         <nav class="barra_redes">
             <a href="https://www.instagram.com/seispimientas/?hl=es-la"><img class="instagram" src="/images/instagram.png" alt="Logo Instagram"></a>
             <a href="https://www.facebook.com/Seis-Pimientas-Casa-de-Pastas-115735999808276"><img class="facebook" src="/images/face.png" alt="Logo Facebook"></a>
             <a href=""><img class="whatsapp" src="/images/wsp.png" alt="Logo whatsapp"></a>
+        </nav>
     </section>
     <div class="barra_menu">
         <div class="ul_header">
             <nav>
                 <ul>
                     <p>
-                        <li><a href="/">Inicio</a></li>
-                        <li><a href="/products">Productos</a></li>
-                        <!--<li><a href="#">Nosotros</a></li>-->
-                        <li><a href="/users/login">Iniciar Sesión</a></li>
-                        <li><a href="/users/register">Registrarse</a></li>
-                        <li><a href="/products/productCart">Bolsa de compras</a></li>
-                    </p>
-                    <p>
-                        <li><a href="/products/add">Alta de Producto</a></li>
-                        <li><a href="/products">Editar y Borrar Productos</a></li>
-
-                        <li><a href="/sales/add">Alta de Promoción</a></li>
-                        <li><a href="/sales">Editar y Borrar Promoción</a></li>
-
-                        <li><a href="/users/add">Alta de Usuario</a></li>
-                        <li><a href="/users/edit">Editar y Borrar Usuarios</a></li>
                         
+                        <% if (locals.user) {%>
+                            <% if(locals.user.category != 'admin') { %> %>    
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/products">Productos</a></li>
+                                <!--<li><a href="#">Nosotros</a></li>-->
+                                <li><a href="/sales">Promociones</a></li>
+                                <li><a href="/products/productCart">Bolsa de compras</a></li>
+                                <li><a href="/users/logout">Cerrar Sesión</a></li>
+                            <% }%>    
+                        <% } else { %>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href="/products">Productos</a></li>
+                            <!--<li><a href="#">Nosotros</a></li>-->
+                            <li><a href="/sales">Promociones</a></li>
+                            <li><a href="/products/productCart">Bolsa de compras</a></li>
+                            <li><a href="/users/register">Registrarse</a></li>
+                            <li><a href="/users/login">Iniciar Sesión</a></li>
+                        <% } %>
+                        
+                       
+                    </p>
+                    <p> 
+                        <% if (locals.user && locals.user.category == 'admin') { %> 
+                            <li><a href="/products/add">Alta de Producto</a></li>
+                            <li><a href="/products">Editar y Borrar Productos</a></li>
+
+                            <li><a href="/sales/add">Alta de Promoción</a></li>
+                            <li><a href="/sales">Editar y Borrar Promoción</a></li>
+
+                            <li><a href="/users/add">Alta de Usuario</a></li>
+                            <li><a href="/users/edit">Editar y Borrar Usuarios</a></li>
+                            <li><a href="/users/logout">Cerrar Sesión</a></li>
+                        <% } %> 
                     </p>
                 </ul>
             </nav>

@@ -45,6 +45,10 @@ module.exports = {
     editAdmin: (req, res) => {
         let users = usersModel.all;
        res.render ('usersAdmin', users);
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
 
 }

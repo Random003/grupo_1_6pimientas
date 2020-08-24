@@ -20,4 +20,6 @@ router.get("/", userController.createAdmin);
 
 router.get("/edit", userController.editAdmin);
 
+router.get ('/logout', userController.logout);
+
 module.exports = router;

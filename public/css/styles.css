@@ -480,6 +480,13 @@ header div ul {
     color: white; 
 }
 
+.nameUser {
+    position: absolute;
+    font-size: 2rem;
+    top: 10rem;
+    right: 5rem;
+    text-align: center;
+}
 
 .usuario_bolsa {
     color: white;
