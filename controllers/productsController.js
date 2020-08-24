@@ -68,6 +68,10 @@ module.exports = {
         
     res.redirect('/products');
 
+    },
+    productAdmin: (req, res, nex) => {
+        let products = productsModel.all();
+        res.render('productsAdmin', { products } );
     }
     
 }

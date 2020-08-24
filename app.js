@@ -10,6 +10,8 @@ var usersRouter = require('./routes/users');
 var salesRouter = require('./routes/sales');
 var error404Router = require('./routes/errors');
 const { add } = require('./controllers/productsController');
+const session = require('express-session');
+const sessionMidelware = require ('./middlewares/session');
 
 var app = express();
 
@@ -23,9 +25,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Sesiones y cookies
+app.use(session({
+  secret: 'Admin de usuarios',
+  resave: false, // no vuelve a guardar si no hay cambios
+  saveUninitialized: true, // guarda sessiones aunque todavía no haya datos
+}));
+
+app.use(sessionMidelware);
+
+
+
 //Rutas:
 
-app.use('/', salesRouter);
+app.use('/', indexRouter);
 
 app.use('/products', indexProducts);
 

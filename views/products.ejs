@@ -27,10 +27,12 @@
                         <b><label for="">Descripción:</label></b><br>
                         <label for=""><%= products[i].description %></label><br>
                         <b><label for="">Rellenos disponibles:</b></label><br>
-                        <% for (let x = 0; x < products[i].length; x++)  {%>                    
-                            <ul>
-                                <li><%= products[i].variety[x] %></li>
-                            </ul>
+                        <% if (products[i].variety) { %> 
+                            <% for (let x = 0; x < products[i].variety.length; x++)  {%>                    
+                                <ul>
+                                    <li><%= products[i].variety[x] %></li>
+                                </ul>
+                            <% } %> 
                         <% } %> 
                         <b><label for="">Presentación:</label></b><br>
                         <label for=""><%= products[i].presentation %></label><br>

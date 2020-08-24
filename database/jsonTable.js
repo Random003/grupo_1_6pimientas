@@ -6,6 +6,7 @@ let model = function (tableName) {
         filePath: path.join(__dirname,'../data/' + tableName + '.json'),
     
         readFile() {
+            console.log(this.filePath);
             let content = fs.readFileSync (this.filePath, 'utf-8');
             if (content) {
                 return JSON.parse(content);   
@@ -33,6 +34,7 @@ let model = function (tableName) {
         },
         
         all() {
+            
             return this.readFile();
         },
         
@@ -44,10 +46,12 @@ let model = function (tableName) {
         findByFields(fields, value) {
             if(!fields || !value) { return []; }
             let rows = this.readFile();
-            return rows.filter(row => 
-                fields.find(field => 
-                    row[field] && row[field].toLowerCase().includes(value.toLowerCase())
-                ));
+            return rows.find(row => row[fields] == value);
+            
+            //return rows.filter(row => 
+            //    fields.find(field => 
+            //        row[field] && row[field].toLowerCase().includes(value.toLowerCase())
+            //    ));
         },
         
         create(row) {

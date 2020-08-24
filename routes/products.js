@@ -22,8 +22,9 @@ router.get("/", productsController.products);
 router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);
-
 router.post("/", upload.single('imagen'), productsController.store); 
+
+router.get('/admin', productsController.productAdmin)
 
 router.get("/edit", productsController.edit);
 

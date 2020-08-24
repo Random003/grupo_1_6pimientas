@@ -5,6 +5,7 @@ const salesController = require ('../controllers/salesController')
 const path = require ('path');
 ////
 const multer = require('multer');
+const indexController = require('../controllers/indexController');
 var storage = multer.diskStorage({
     destination: path.join(__dirname, '../public/images/sales'),
     filename: function (req, file, cb) {
@@ -15,9 +16,9 @@ var storage = multer.diskStorage({
 var upload = multer({ storage });
 
 /* GET home page. */
-router.get('/', salesController.sales);
+//router.get('/', salesController.sales);
 
-router.get('/sales', salesController.sales);
+router.get('/', salesController.sales);
 
 router.get("/add", salesController.add);
 

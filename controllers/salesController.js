@@ -31,7 +31,8 @@ module.exports = {
     //     res.render("sales");
     // },
     add:  (req, res) => {
-
+        res.render('addSales')
+        return
         let salesId = req.params.salesId; 
 
         let sales =  {

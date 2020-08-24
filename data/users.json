@@ -1,4 +1,4 @@
-[{"id":1,"first_name":"Roland","last_name":"Lempenny","email":"rlempenny0@ovh.net","password":"LtsYNoVOjP","category":"user","image":"user_1.jpg"},
+[{"id":1,"first_name":"Luis","last_name":"Rufino","email":"luis@gmail.com","password":"$2a$10$3POvNuIKggWdSYiAbvjeguBC4RHL0LcN04QpiEL5jt8KROYduK8pW","category":"admin","image":"user_1.jpg"},
 {"id":2,"first_name":"Arlyne","last_name":"Canfer","email":"acanfer1@accuweather.com","password":"KcCs11Y","category":"user","image":"user_2.jpg"},
 {"id":3,"first_name":"Sonny","last_name":"Golding","email":"sgolding2@narod.ru","password":"dukP8ovVSMnE","category":"user","image":"user_3.jpg"},
 {"id":4,"first_name":"Letizia","last_name":"Odo","email":"lodo3@webnode.com","password":"uEaAFPAP","category":"user","image":"user_4.jpg"},

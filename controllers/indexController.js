@@ -6,7 +6,7 @@ const indexModel = jsonTable('index');
 module.exports = {
     
     home1: (req, res) => {
-        let indexModel = indexModel.all();
+        //let indexModel = indexModel.all();
         res.render('home1')
     },
     // indexPop: (req, res, next) => {
@@ -16,7 +16,7 @@ module.exports = {
     //     res.render('index');
     //   },
     home2: (req, res) => {
-        let indexModel = indexModel.all();
+        
         res.render('home2')
     },
 

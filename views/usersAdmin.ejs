@@ -17,34 +17,11 @@
         </form>
 
         <section class="cuerpoPromos">
-            <% for (let i = 0; i < products.length; i++) {%> 
-            
-                <div class="caja">
-                    <img class="fotosPedido" src="/images/products/<%= products[i].image %>" alt="<%= products[i].name %>">
-                    <h4 class="titulos"><%= products[i].name %></h4>
-                    <p>
-                        <b><label for="">Descripción:</label></b><br>
-                        <label for=""><%= products[i].description %></label><br>
-                        <b><label for="">Rellenos disponibles:</b></label><br>
-                        <% for (let x = 0; x < products[i].length; x++)  {%>                    
-                            <ul>
-                                <li><%= products[i].variety[x] %></li>
-                            </ul>
-                        <% } %> 
-                        <b><label for="">Presentación:</label></b><br>
-                        <label for=""><%= products[i].presentation %></label><br>
-                        <label for=""><%= products[i].performance %></label><br><br>
-                        <b><label for="">Precio:$<%= products[i].price %>,00</label></b><br><br>
-                        <button class="botonAgregarPedido2">Agregar Pedido!</button>
-                    </p>
-                </div>
-            <% } %> 
-
             <form class="cajaLogin" action="/" method="POST">
                 <h3>
                     Editar un Usuario:
                 </h3>
-                <% for (let i = 0; i < products.length; i++) {%> 
+                <% for (let i = 0; i < users.length; i++) {%> 
                 <div>
                     <img class="fotosPedido" src="/images/users/<%= users[i].image %>" alt="<%= users[i].name %>">
                     <h4 class="titulos"><%= users[i].name %></h4>
