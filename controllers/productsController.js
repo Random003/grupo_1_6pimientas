@@ -8,31 +8,12 @@ module.exports = {
         let products = productsModel.all();
         res.render('products', { products } );
     },
-//agregado de ruta, no funciona, la dejo xq mañana sigo con esta historia
-    //admin: (req, res, next) => {
-    
-     //   res.render('productsAdmin')
-   // },
 
     productCart:  (req, res) => {
         res.render('productCart');
     },
-    // sales:  (req, res) => {
-    //     let idPromociones = req.params.idPromociones; 
-
-    //     let promociones = []
-
-    //     //let promocionesToEdit = promociones.[idPromociones];
-
-        
-    //     res.render('promocionesToEdit', {promocionesToEdit: promocionesToEdit});
-        
-    //     res.render('idPromociones'); 
-        
-    //     res.render("promociones");
-    // },
+    
     add:  (req, res) => {
-        //let prueba = productsModel.readFile();
        
         res.render("add");
     },
@@ -51,9 +32,6 @@ module.exports = {
             "image": null
         }
 
-       // let productsToEdit = products.[productId];
-
-       //res.render("productsToEdit", {productsToEdit: productsToEdit});
 
         res.render("edit");
     },
@@ -72,6 +50,14 @@ module.exports = {
     productAdmin: (req, res, nex) => {
         let products = productsModel.all();
         res.render('productsAdmin', { products } );
+    },
+    destroy: (req, res) => {
+        //aca no se si les parece llamarlo por el Id del  producto 
+        
+        let id = req.params.id;
+        deleteImages(id);
+        productsModel.delete(id);
+        res.redirect('/products');
     }
     
 }
