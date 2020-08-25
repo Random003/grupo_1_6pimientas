@@ -9,9 +9,9 @@
    "Quatro Quesos"
   ],
   "presentation": "14 unidades",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 350,
-  "image": "sorrentinos.jpg"
+  "image": "sorrentinos2.jpg"
  },
  {
   "id": "2",
@@ -22,7 +22,7 @@
    "Verdura"
   ],
   "presentation": "3 planchas",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 330,
   "image": "caseritos.jpg"
  },
@@ -36,7 +36,7 @@
    "Ricota y nuez"
   ],
   "presentation": "3 planchas",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 260,
   "image": "ravioles.jpg"
  },
@@ -50,7 +50,7 @@
    "Pappardelle"
   ],
   "presentation": "Paquete de 500 grs.",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 160,
   "image": "fideos.jpg"
  },
@@ -64,7 +64,7 @@
    "Pappardelle"
   ],
   "presentation": "Paquete de 500 grs.",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 180,
   "image": "fideos.jpg"
  },
@@ -74,7 +74,7 @@
   "description": "Realizados con papa de manera artesanal.",
   "variety": "",
   "presentation": "Bandeja de 500 grs.",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 190,
   "image": "noquis.jpg"
  },
@@ -88,7 +88,7 @@
    "Blanca"
   ],
   "presentation": "Pote de 250 grs.",
-  "performance": "rinde para 2 personas",
+  "performance": "Rinde para 2 personas",
   "price": 160,
   "image": "salsas.jpg"
  },
@@ -101,59 +101,21 @@
    "Verdura"
   ],
   "presentation": "Bandeja de 250 grs.",
-  "performance": "rinde para 1 personas",
+  "performance": "Rinde para 1 personas",
   "price": 220,
-  "image": "default.png"
+  "image": "lasagna.jpg"
  },
  {
-  "name": "xxxxxxxx",
-  "description": "xxxxxxxxxxxxxxxx",
-  "presentation": "xxxxxx",
-  "performance": "xxxxxx",
+  "name": "Prueba sin foto",
+  "description": "descripción del producto ",
+  "presentation": "Bandeja de x grs.",
+  "performance": "Rinde para 1 persona",
   "variety": [
-   "xxxx",
-   "xxxx",
-   "",
-   "",
-   "",
-   ""
+   "variedad 1",
+   "variedad 2"
   ],
-  "price": "",
+  "price": "100",
   "image": "default.png",
   "id": 12
- },
- {
-  "name": "Fideos Gaspar",
-  "description": "Mansa la salsa",
-  "presentation": "3 planchas con un pepino ",
-  "performance": "9 personas",
-  "variety": [
-   "al huevo",
-   "al morron",
-   "a la bim bum bam",
-   "",
-   "",
-   ""
-  ],
-  "price": "1500",
-  "image": "default.png",
-  "id": 13
- },
- {
-  "name": "Sorrentinos Dos",
-  "description": "sdflajsdbfñaksdfñasdjfasñkdjf",
-  "presentation": "sdkfjbadskf",
-  "performance": "ksdbfksdbf",
-  "variety": [
-   "kbkjb",
-   "",
-   "kbkjb",
-   "",
-   "",
-   ""
-  ],
-  "price": "220",
-  "image": "product-1598224646277.jpg",
-  "id": 14
  }
 ]

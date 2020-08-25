@@ -10,25 +10,31 @@
                 Editar un producto:
             </h3>
             <p>
-                
+                <br>
+                <label>Nombre del producto</label>
                 <input class="ingreso" type="text" name="name" placeholder="Nombre del producto" value="<%= product.name %> ">
                 
+                <label>Descripción</label>
                 <textarea id="description" class="ingreso" placeholder="Descripción"><%= product.description %></textarea>
                 
+                <label>Variedad</label>
                 <% for (let i = 0; i < 5; i++) {%> 
                     <input class="ingreso" type="text" name="variedad" placeholder="Variedad del producto" value="<%= product.variety[i] %>">
                 <% } %> 
                 
+                <label>Presentación</label>
                 <input class="ingreso" type="text" name="presentacion"  placeholder="Presentación" value="<%= product.presentation %>">  
                 
+                <label>Performance</label>
                 <input class="ingreso" type="text" name="performance"  placeholder="Performance" value="<%= product.performance %>">
 
+                <label>Precio</label>
                 <input class="ingreso" type="text" name="precio" placeholder="Precio" value="$<%= product.price %>">
 
-                <p>
-                    <img name="images" src="/images/products/<%= product.image %>" alt="">
-                    
-                </p>
+                <div class="imagenEdit">
+                    <label>Imagen</label>
+                    <img class="imagenEdit" name="images" src="/images/products/<%= product.image %>" alt="">
+                </div>
 
                 <p>
                    

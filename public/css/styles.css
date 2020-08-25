@@ -22,12 +22,15 @@ body {
 
 .loginBody {background-color: white;}
 
-#noExiste {
-    height: 280px;
-    position: relative;
-    left: 25%;
-    margin-left: -55px;
-} 
+.letraError {
+    text-align: center;
+    font-family: paris;
+    font-weight: bold;
+    font-style: oblique;
+    color: rgb(163, 31, 53);
+    font-size: 2rem;
+    margin: 20px;
+}
 
 /* HEADER */
 
@@ -117,14 +120,16 @@ body {
     background-size: 140% 100%;
     height: 150px;
     width: 100%;
-    
     margin-bottom: auto;
     margin-top: auto;
-    
-    
     background-position: center;
     
 }
+
+.bannerHome { 
+    margin-top: 10px;
+}
+
 
 .banner p {
     color: white;
@@ -137,8 +142,6 @@ body {
     margin-bottom: auto;
     margin-top: auto;
     height: 100%;
-    
-    
 }
 
 main {background-color: blanchedalmond;}
@@ -341,12 +344,13 @@ a {
 }
 
 .titulosHome {
-    background-color: rgb(163, 31, 53);
-    max-width: 100%;
-    font-size: 180%;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
+    text-align: center;
     font-family: paris;
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(163, 31, 53);
+    font-size: 2rem;
+    margin: 20px;
 }
 
 .precioPromo {
@@ -359,7 +363,7 @@ a {
     color: white;
     border: 0;
     width: 13rem;
-    height: 3rem;
+    height: 6rem;
     border-radius: 10px;
 }
 
@@ -368,18 +372,27 @@ a {
     color: white;
     border: 0;
     width: 13rem;
-    height: 3rem;
+    height: 6rem;
     border-radius: 10px;
     align-self: center;
 }
 
-.editProduct,
-.deleteProduct {
-    background-color: rgb(163, 31, 53);
+.editProduct {
+    background-color: darkblue;
     color: white;
     border: 0;
     width: 13rem;
-    height: 3rem;
+    height: 5rem;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.deleteProduct {
+    background-color:darkred;
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 5rem;
     border-radius: 10px;
     align-self: center;
 }
@@ -388,6 +401,16 @@ a {
     display: none;
     
 }
+
+/* Edit Producto */
+
+.imagenEdit {
+    max-width: 250px;
+    max-height: 250px;
+    overflow: auto;
+    object-fit: contain;   
+}
+
 /* FOOTER */
 
 
@@ -748,7 +771,7 @@ footer section article p {
     color: white;
     border: 0;
     width: 13rem;
-    height: 3rem;
+    height: 5rem;
     border-radius: 10px;
     cursor: pointer;
     background-color: #AA0044;
@@ -764,7 +787,7 @@ footer section article p {
     color: white;
     border: 0;
     width: 13rem;
-    height: 3rem;
+    height: 5rem;
     border-radius: 10px;
     background-color: #0044AA;
     /*
