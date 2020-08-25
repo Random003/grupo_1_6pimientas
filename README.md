@@ -68,4 +68,4 @@ Visite Weekly <a href="https://github.com/Random003/grupo_1_6pimientas/blob/mast
 
 ## Comentarios a tener en cuenta en los Sprints:
 
-Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> para los comentarios dedicados a cada uno de los sprints a entregar.
+Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los sprints a entregar.
