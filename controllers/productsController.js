@@ -27,8 +27,8 @@ module.exports = {
     },
 
     store: (req, res, next) => {
-        console.log('entró')
-        return 
+        //console.log('entró')
+        
 
         let product = req.body;
         product.image = 'default.png';
@@ -44,12 +44,31 @@ module.exports = {
         let products = productsModel.all();
         res.render('productsAdmin', { products } );
     },
+    // update: (req, res) => {
+    //     let product = {
+    //         id: parseInt(req.params.id),
+    //         name: req.body.name,
+    //         price: parseFloat(req.body.price),
+    //         discount: req.body.discount,
+    //         description: req.body.description,
+    //         size: parseInt(req.body.size),
+    //         type: parseInt(req.body.type),
+    //         categories: parseCategories(req.body.categories)
+    //     };
+    //     let productId = productsModel.update(productId);
+    //     // Eliminar imágenes actuales
+    //     if(req.body.removeCurrentImages) {
+    //         deleteImages(proudctId);
+    //     }
+    //     // Guardar nuevas imágenes
+    //     req.files.forEach(file => productImagesModel.create({ prodId: id, name: file.filename }));
+    //     res.redirect('/products/' + id);
+    // },
     destroy: (req, res) => {
-        //aca no se si les parece llamarlo por el Id del  producto 
         
-        let id = req.params.id;
-        deleteImages(id);
-        productsModel.delete(id);
+        let productId = req.params.productId;
+        deleteImages(productId);
+        productsModel.delete(productId);
         res.redirect('/products');
     }
     
