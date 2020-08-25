@@ -23,6 +23,7 @@
                 <div class="caja">
                     <img class="fotosPedido" src="/images/products/<%= products[i].image %>" alt="<%= products[i].name %>">
                     <h4 class="titulos"><%= products[i].name %></h4>
+                    <input class="idProduct" type="hidden" name="idProduct" value="<%= products[i].id %>">
                     <p>
                         <b><label for="">Descripción:</label></b><br>
                         <label for=""><%= products[i].description %></label><br>
@@ -38,7 +39,14 @@
                         <label for=""><%= products[i].presentation %></label><br>
                         <label for=""><%= products[i].performance %></label><br><br>
                         <b><label for="">Precio:$<%= products[i].price %>,00</label></b><br><br>
-                        <button class="botonAgregarPedido2">Agregar Pedido!</button>
+                        <% if (locals.user && user.category == 'admin') {%> 
+                            <a class="editProduct" href="/products/edit/<%= products[i].id %>">Editar Producto</a>
+                            <a class="deleteProduct" href="/products/delete/<%= products[i].id %>">Eliminar Producto</a>
+                            
+                            
+                        <%} else {%> 
+                                <button class="botonAgregarPedido2">Agregar Pedido!</button>
+                        <% } %> 
                     </p>
                 </div>
             <% } %> 

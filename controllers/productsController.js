@@ -21,22 +21,15 @@ module.exports = {
     edit:  (req, res) => {
 
         let productId = req.params.productId; 
+        let product = productsModel.find(productId);
 
-        let products =  {
-            "name": req.body.name,
-            "description": req.body.description,
-            "variety":req.body.variety,
-            "presentation": req.body.presentation,
-            "performance": req.body.performance,
-            "price": req.body.price,
-            "image": null
-        }
-
-
-        res.render("edit");
+        res.render("edit", { product } );
     },
+
     store: (req, res, next) => {
-        
+        console.log('entró')
+        return 
+
         let product = req.body;
         product.image = 'default.png';
         if (req.file) {

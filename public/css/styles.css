@@ -373,8 +373,21 @@ a {
     align-self: center;
 }
 
+.editProduct,
+.deleteProduct {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 3rem;
+    border-radius: 10px;
+    align-self: center;
+}
 
-
+.idProduct {
+    display: none;
+    
+}
 /* FOOTER */
 
 

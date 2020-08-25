@@ -4,36 +4,37 @@
 <body>
     <%- include('./partials/header');%> 
     <main>
-                                       
-        <form class="cajaLogin" action="/products" method="POST">
+        
+        <form class="cajaLogin" action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h3>
                 Editar un producto:
             </h3>
             <p>
+                
+                <input class="ingreso" type="text" name="name" placeholder="Nombre del producto" value="<%= product.name %> ">
+                
+                <textarea id="description" class="ingreso" placeholder="Descripción"><%= product.description %></textarea>
+                
+                <% for (let i = 0; i < 5; i++) {%> 
+                    <input class="ingreso" type="text" name="variedad" placeholder="Variedad del producto" value="<%= product.variety[i] %>">
+                <% } %> 
+                
+                <input class="ingreso" type="text" name="presentacion"  placeholder="Presentación" value="<%= product.presentation %>">  
+                
+                <input class="ingreso" type="text" name="performance"  placeholder="Performance" value="<%= product.performance %>">
 
-                <input class="ingreso" type="text" name="producto" id="name" placeholder="Nombre del producto">
-                
-                <textarea id="description" class="ingreso" placeholder="Descripción"></textarea>
-                
-                <input class="ingreso" type="text" name="variedad" id="variety" placeholder="Variedad del producto">
-                
-                <input class="ingreso" type="text" name="presentacion" id="presentation" placeholder="Presentación">  
-                
-                <input class="ingreso" type="text" name="performance" id="performance" placeholder="Performance">
-
-                <input class="ingreso" type="text" name="precio" id="price" placeholder="Precio">
+                <input class="ingreso" type="text" name="precio" placeholder="Precio" value="$<%= product.price %>">
 
                 <p>
-                    <input class="ingreso" type="file" id="imagen" name="imagen"></input>
+                    <img name="images" src="/images/products/<%= product.image %>" alt="">
+                    
                 </p>
 
-                <div class="captcha">
-                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
-                </div>
-
                 <p>
-                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
-                    <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
+                   
+                <button type="submit" class="ingreso" id="botonIngreso">Enviar</button>
+                   
+                    <!--<button type="reset" class="ingreso" id="botonReseteo">Borrar</button>-->
                 </p>
             </p>
         </form>

@@ -26,9 +26,11 @@ router.post("/", upload.single('imagen'), productsController.store);
 
 router.get('/admin', productsController.productAdmin)
 
-router.get("/edit", productsController.edit);
+router.get("/edit/:productId", productsController.edit);
+
 // para editar
-router.put("/edit/:productId", upload.any('images'), productsController.edit); 
+router.put("/edit/:productId", upload.single('images'), productsController.store); 
+
 //para eliminar
 router.delete('/edit/:productId', productsController.destroy);
 
