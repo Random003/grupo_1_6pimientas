@@ -27,9 +27,10 @@ router.post("/", upload.single('imagen'), productsController.store);
 router.get('/admin', productsController.productAdmin)
 
 router.get("/edit", productsController.edit);
+// para editar
+router.put("/edit/:productId", upload.any('images'), productsController.edit); 
+//para eliminar
+router.delete('/edit/:productId', productsController.destroy);
 
-router.put("/edit/:productId", productsController.edit); 
-
-//router.delete('/:productId', productsController.destroy); 
 
 module.exports = router;
