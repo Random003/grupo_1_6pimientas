@@ -1,10 +1,29 @@
+const jsonTable = require ('../database/jsonTable'); 
+const usersModel = jsonTable('users');
+const usersTokensModel = jsonTable('usersTokens');
+
 module.exports = (req, res, next) => {
     
     if (req.session.user) {
         // Se lo paso a la vista
         res.locals.user = req.session.user;
-    } else {
-        res.locals.user = ''
+
+    } else if (req.cookies.userToken) {
+       let userToken = usersTokensModel.findByField('token', req.cookies.userToken);
+
+        if (userToken) {
+            let user = usersModel.find(userToken.userId);
+            
+            if (user) {
+                delete user.password;
+                
+                req.session.user = user;
+                res.locals.user = user;
+            }
+        // Si no existe el token en base, le borramos la cookie
+        } else {
+            res.clearCookie('userToken');
+        }
     }
     next();
 }

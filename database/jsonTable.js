@@ -4,15 +4,12 @@ const path = require('path');
 let model = function (tableName) {
     return {
         filePath: path.join(__dirname,'../data/' + tableName + '.json'),
-    
         readFile() {
-            console.log(this.filePath);
             let content = fs.readFileSync (this.filePath, 'utf-8');
             if (content) {
                 return JSON.parse(content);   
-            } else {
-                return [];
-            }
+            } 
+            return [];
 
         },
 
@@ -53,7 +50,14 @@ let model = function (tableName) {
             //        row[field] && row[field].toLowerCase().includes(value.toLowerCase())
             //    ));
         },
-        
+        findByField(field, value) {
+            let rows = this.readFile();
+            return rows.find(row => row[field] == value);
+        },
+        findAllByField(field, value) {
+            let rows = this.readFile();
+            return rows.filter(row => row[field] == value);
+        },
         create(row) {
             let rows = this.readFile();
             row.id = this.nextId();

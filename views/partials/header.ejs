@@ -15,8 +15,8 @@
         </nav>
     </section>
     <div class="barra_menu">
-        <div class="ul_header">
-            <nav>
+        <div >
+            <nav class="ul_header">
                 <ul>
                     <p>
                         
@@ -27,7 +27,7 @@
                                 <!--<li><a href="#">Nosotros</a></li>-->
                                 <li><a href="/sales">Promociones</a></li>
                                 <li><a href="/products/productCart">Bolsa de compras</a></li>
-                                <li><a href="/users/logout">Cerrar Sesión</a></li>
+                                <li id="logout"><a href="/users/logout">Cerrar<br>Sesión</a></li>
                             <% }%>    
                         <% } else { %>
                             <li><a href="/">Inicio</a></li>
@@ -43,15 +43,15 @@
                     </p>
                     <p> 
                         <% if (locals.user && locals.user.category == 'admin') { %> 
-                            <li><a href="/products/add">Alta de Producto</a></li>
-                            <li><a href="/products">Editar y Borrar Productos</a></li>
+                            <li><a href="/products/add">Alta<br>Producto</a></li>
+                            <li><a href="/products">Editar y Borrar<br>Productos</a></li>
 
-                            <li><a href="/sales/add">Alta de Promoción</a></li>
-                            <li><a href="/sales">Editar y Borrar Promoción</a></li>
+                            <li><a href="/sales/add">Alta<br>Promoción</a></li>
+                            <li><a href="/sales">Editar y Borrar<br>Promoción</a></li>
 
-                            <li><a href="/users/add">Alta de Usuario</a></li>
-                            <li><a href="/users/edit">Editar y Borrar Usuarios</a></li>
-                            <li><a href="/users/logout">Cerrar Sesión</a></li>
+                            <li><a href="/users/add">Alta<br>Usuario</a></li>
+                            <li><a href="/users/edit">Editar y Borrar<br>Usuarios</a></li>
+                            <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
                         <% } %> 
                     </p>
                 </ul>

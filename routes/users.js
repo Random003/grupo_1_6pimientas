@@ -16,8 +16,6 @@ router.get("/register", userController.register);
 router.get("/add", userController.createAdmin);
 //router.post("/", userController.userAdmin); para guardar
 
-router.get("/", userController.createAdmin);
-
 router.get("/edit", userController.editAdmin);
 
 router.get ('/logout', userController.logout);

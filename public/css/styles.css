@@ -453,14 +453,25 @@ header img:hover {
 }
 
 .ul_header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     padding: 0px;
-    
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
     flex-grow: 1;
     text-align: center;
+    
 }
 
+.logout {
+    align-self: center;
+}
 header div ul {
     margin-bottom: 0px;
+    
 }
 
 /* div div nav ul {
@@ -469,10 +480,17 @@ header div ul {
 
 .barra_menu ul li {
     display: inline-block;
+    
     text-transform: uppercase;
     font-size: 1rem;
     padding: 5px;
     font-weight: bold;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    justify-content: center;
+    align-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+
 }
 
 .barra_menu ul li a{
@@ -483,10 +501,12 @@ header div ul {
 .nameUser {
     position: absolute;
     font-size: 2rem;
-    top: 10rem;
+    top: 40%;
     right: 5rem;
     text-align: center;
 }
+
+
 
 .usuario_bolsa {
     color: white;
@@ -744,6 +764,10 @@ footer section article p {
 #botonIngreso:hover {
     background-color: #0022AA;
     cursor: pointer;
+}
+
+.field_remember {
+    text-align: left;
 }
 
 .home_carrousel div{

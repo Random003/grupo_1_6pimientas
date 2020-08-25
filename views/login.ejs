@@ -14,6 +14,11 @@
                 <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
                 <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
             </p>
+            <br>
+            <div>
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Recordame</label>
+            </div>
             <p>
                 <button type="submit" class="ingreso" id="botonIngreso">Ingresar</button> 
             </p>

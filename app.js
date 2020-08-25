@@ -12,6 +12,7 @@ var error404Router = require('./routes/errors');
 const { add } = require('./controllers/productsController');
 const session = require('express-session');
 const sessionMidelware = require ('./middlewares/session');
+const coockieParser = require('cookie-parser');
 
 var app = express();
 
@@ -31,7 +32,7 @@ app.use(session({
   resave: false, // no vuelve a guardar si no hay cambios
   saveUninitialized: true, // guarda sessiones aunque todavía no haya datos
 }));
-
+app.use(coockieParser());
 app.use(sessionMidelware);
 
 
