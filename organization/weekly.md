@@ -34,3 +34,8 @@ Este sistema de 4 patas nos permite flexibilidad para poder adecuarnos a las nec
 ## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 3:**
 
 Durante este Sprint como fue comentado en la Retrospectiva que se puede leer <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>, utilizamos reuniones semanales y comunicaciones diarias para poder reforzar las necesidades de organización debido a la imposibilidad de reunirnos todos los días durante esa semana. 
+
+
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 4:**
+
+Muy en sintonía a lo descrito en la Retrospectiva (que puede ser leída desde <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>) usamos reuniones diarias unidas a 2 sesiones semanales de codeo en conjunto entre todos los miembros del equipo para solucionar dudas de los mismos y arreglar posibles problemas en el código para la presentación de este Sprint.

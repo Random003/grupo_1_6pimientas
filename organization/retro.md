@@ -45,4 +45,13 @@ Mejoramos la organización interna del grupo a la vez que potenciamos también l
 
 Este Sprint nos encontró con mas trabajo individual asi que nos enfocamos a separar trabajo de manera individual para realizar reuniones cada 4 dias para exponer el avance logrado y los problemas encontrados mientras lo realizábamos.
 
- El uso de video llamada, la opción de LiveShare que ofrece Visual Studio Code, el tablero Trello y los mensajes del grupo de WhatsApp se convirtieron en este sprint en herramientas muy útiles para lograr llevar a cabo los puntos necesarios para el mismo.
+El uso de video llamada, la opción de LiveShare que ofrece Visual Studio Code, el tablero Trello y los mensajes del grupo de WhatsApp se convirtieron en este sprint en herramientas muy útiles para lograr llevar a cabo los puntos necesarios para el mismo.
+
+
+## **Breve Retrospectiva: Sprint Numero 4** 
+
+A diferencia de los Sprints anteriores, el pasado sprint nos llevo a un punto en el cual no pudimos descubrir como hacer para resolver una parte del código y eso llevo a que pasemos días viéndolo y aun asi no pudimos resolverlo.
+
+Asi que el mayor de los muros que tuvimos que aprender en este momento fue el aceptar la no solución de un problema hasta no encontrarlo después de que finaliza el sprint o preguntarlo a los profesores.
+
+También la adrenalina de estar a momentos de entregar un trabajo y buscar soluciones a diestra y siniestra muestra como creemos que debe ser el ambiente laboral en el dia a dia cercano a los momentos en los cuales se entregan productos a los clientes.
