@@ -69,6 +69,74 @@ module.exports = {
         req.session.destroy();
         
         return res.redirect('/')
+    },
+    createUser: (req, res) => {
+        let errorsCreateUser = validationResult (req);
+        if (!errorsCreateUser.isEmpty()) {
+            return res.render ('register', { errors: errorsCreateUser.mapped(), register: req.body } );
+
+        } else {
+            let user = {
+                id: 1,
+                full_name: req.body.fullName, 
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 12), 
+                street: req.body.street,
+                number: req.body.number,
+                floor: req.body.floor,
+                department: req.body.department,
+                city: req.body.city,
+                category: 'user',
+                image: 'default.jpg'
+
+            };
+            usersModel.create(user);
+            res.render ('login');
+        }
+
+    },
+    editUser: (req, res) => {
+        let user = usersModel.find(req.params.id);
+        res.render ('editUsers', { user: user });
+
+    },
+    updateUser: (req, res) => {
+        let oldUser = usersModel.find(req.params.id);
+
+        let category = '';
+        let password = '';
+        if (oldUser.category == 'admin') {
+            category = req.body.category;
+        } else {
+            category = 'user';
+        }
+       
+        if(req.body.password == '') {
+            password = oldUser.password;
+        } else {
+            password = bcrypt.hashSync(req.body.password, 12);
+        }
+        
+
+        let user = {
+            id: parseInt(req.params.id),
+            fullName: req.body.fullName,
+            email: req.body.email,
+            password: password,
+            street: req.body.street,
+            number: req.body.number,
+            floor: parseInt(req.body.floor),
+            department: req.body.department,
+            city: req.body.city,
+            category: category,
+            image: "default.jpg"
+        };
+
+         
+        usersModel.update(user);
+        res.render ('home1', { user: user });
+        //req.session.user = user;
+
     }
 
 }

@@ -4,24 +4,28 @@
 <body>
     <%- include('./partials/header');%> 
     <main>
-        <div class="cajaLogin">
-            <h1>Inicio de Sesión</h1>
-            <form action="/users/login" method="POST">
-            <p>
-                <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail" value="<%= locals.email && email %>">
-                <p><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
-                
-                <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
-                <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
-            </p>
-            <br>
-            <div>
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Recordame</label>
+        <div>
+            <form class="cajaLogin" action="/users/login" method="POST">
+            <h3>Inicio de Sesión</h3>
+            <div class="loginContainer">
+
+                <div>
+                    <label class="titleRegister">Email:</label><br>
+                    <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.email && email %>">
+                    <p><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
+                    <label class="titleRegister">Contraseña</label><br>
+                    <input class="ingreso" type="password" name="password"  placeholder="Contraseña">
+                    <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Recordame</label>
+                </div>
+                <div>
+                    <button type="submit" class="ingreso" id="botonIngreso">Ingresar</button> <br>
+                </div>
             </div>
-            <p>
-                <button type="submit" class="ingreso" id="botonIngreso">Ingresar</button> 
-            </p>
             </form>
         </div>
      </main>    

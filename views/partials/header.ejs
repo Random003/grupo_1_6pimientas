@@ -1,13 +1,7 @@
 <header>
     <section class="header">
         <img class="marcaSP" src="/images/marcaSP.png" alt="Marca Seis Pimientas">
-        <div>
-            <% if (locals.user) { %> 
-                
-                <label class="nameUser"><a href="/users/edit/:<%= locals.user.id %>"><%= locals.user.first_name %></a></label>
-                
-            <%} %> 
-        </div>
+        
         <nav class="barra_redes">
             <a href="https://www.instagram.com/seispimientas/?hl=es-la"><img class="instagram" src="/images/instagram.png" alt="Logo Instagram"></a>
             <a href="https://www.facebook.com/Seis-Pimientas-Casa-de-Pastas-115735999808276"><img class="facebook" src="/images/face.png" alt="Logo Facebook"></a>
@@ -18,7 +12,7 @@
         <div >
             <nav class="ul_header">
                 <ul>
-                    <p>
+                    <div>
                         
                         <% if (locals.user) {%>
                             <% if(locals.user.category != 'admin') { %> %>    
@@ -27,7 +21,7 @@
                                 <!--<li><a href="#">Nosotros</a></li>-->
                                 <li><a href="/sales">Promociones</a></li>
                                 <li><a href="/products/productCart">Bolsa de compras</a></li>
-                                <li id="logout"><a href="/users/logout">Cerrar<br>Sesión</a></li>
+                                <li id="logout"><a href="/users/logout">Cerrar Sesión</a></li>
                             <% }%>    
                         <% } else { %>
                             <li><a href="/">Inicio</a></li>
@@ -40,8 +34,8 @@
                         <% } %>
                         
                        
-                    </p>
-                    <p> 
+                    </div>
+                    <div> 
                         <% if (locals.user && locals.user.category == 'admin') { %> 
                             <li><a href="/products/add">Alta<br>Producto</a></li>
                             <li><a href="/products">Editar y Borrar<br>Productos</a></li>
@@ -53,10 +47,18 @@
                             <li><a href="/users/edit">Editar y Borrar<br>Usuarios</a></li>
                             <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
                         <% } %> 
-                    </p>
+                    </div>
                 </ul>
+               
             </nav>
+           
         </div>
-       
+        <div class="nameUser">
+            <% if (locals.user) { %> 
+                
+                <label ><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.fullName %></a></label>
+                
+            <%} %> 
+        </div>
     </div>
 </header>

@@ -29,7 +29,7 @@ router.get('/admin', productsController.productAdmin)
 router.get("/edit/:productId", productsController.edit);
 
 // para editar
-router.put("/edit/:productId", upload.single('images'), productsController.store); 
+router.post("/edit/:id", upload.single('image'), productsController.update); 
 
 //para eliminar
 router.delete('/:productId', productsController.destroy);

@@ -27,9 +27,6 @@ module.exports = {
     },
 
     store: (req, res, next) => {
-        //console.log('entró')
-        
-
         let product = req.body;
         product.image = 'default.png';
         if (req.file) {
@@ -37,33 +34,27 @@ module.exports = {
         }
         let newId = productsModel.create(product);
         
-    res.redirect('/products');
+        res.redirect('/products');
 
     },
     productAdmin: (req, res, nex) => {
         let products = productsModel.all();
         res.render('productsAdmin', { products } );
     },
-    // update: (req, res) => {
-    //     let product = {
-    //         id: parseInt(req.params.id),
-    //         name: req.body.name,
-    //         price: parseFloat(req.body.price),
-    //         discount: req.body.discount,
-    //         description: req.body.description,
-    //         size: parseInt(req.body.size),
-    //         type: parseInt(req.body.type),
-    //         categories: parseCategories(req.body.categories)
-    //     };
-    //     let productId = productsModel.update(productId);
-    //     // Eliminar imágenes actuales
-    //     if(req.body.removeCurrentImages) {
-    //         deleteImages(proudctId);
-    //     }
-    //     // Guardar nuevas imágenes
-    //     req.files.forEach(file => productImagesModel.create({ prodId: id, name: file.filename }));
-    //     res.redirect('/products/' + id);
-    // },
+    update: (req, res) => {
+        let product = req.body
+        product.id = req.params.id
+        
+        if (req.file) {
+            product.image = req.file.filename;
+        }
+        let productEdit = productsModel.update(product);
+
+        
+        res.redirect('/products');
+
+        
+    },
     destroy: (req, res) => {
         
         let productId = req.params.productId;

@@ -255,7 +255,13 @@ a {
     margin-left: -30px;
     border-style: solid;
 }
-
+.loginContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
 
 #email {
     block-size: 1cm;
@@ -480,6 +486,8 @@ header img:hover {
     /*background-image: url("/images/barra_central.png");*/
     background-color: rgb(163, 31, 53);
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     margin: 10px auto;
     justify-content: center;
     height: 6rem;
@@ -499,7 +507,7 @@ header img:hover {
     margin-bottom: auto;
     flex-grow: 1;
     text-align: center;
-    
+   
 }
 
 .logout {
@@ -535,11 +543,12 @@ header div ul {
 }
 
 .nameUser {
+    
     position: absolute;
-    font-size: 2rem;
-    top: 40%;
-    right: 5rem;
     text-align: center;
+    align-items: center;
+    right: 4.5rem;
+    font-size: 1.5rem;
 }
 
 
@@ -752,19 +761,35 @@ footer section article p {
 .cajaLogin {
     padding: 0px 20px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: auto;
     max-width: 400px;
     margin-top: 50px;
     margin-bottom: 20px;
+}
+.cajaLogin p {
+    text-align: start;
+}
+
+.cajaLogin h3 {
+    align-self: center;
+}
+.titleRegister {
+    margin-top: 1.5rem;
+}
+
+.cajaLogin label {
+    
 }
 
 .ingreso {
     width: 100%;
     border-style: none;
     padding: 10px;
-    margin: 20px 0px;
+    margin: 0px 0px 0px 0px;
     border-radius: 5px;
+    font-size: 1.5rem;
+    color: black;
 }
 
 #botonReseteo {
@@ -775,11 +800,14 @@ footer section article p {
     border-radius: 10px;
     cursor: pointer;
     background-color: #AA0044;
+    margin: 2rem;
+    
 }
 
 #botonReseteo:hover {
     background-color: #CC1155;
     cursor: pointer;
+    
 }
 
 #botonIngreso {
@@ -790,6 +818,7 @@ footer section article p {
     height: 5rem;
     border-radius: 10px;
     background-color: #0044AA;
+    margin: 2rem;
     /*
     padding: 10px;
     margin: 20px 0px;
@@ -805,6 +834,23 @@ footer section article p {
 .field_remember {
     text-align: left;
 }
+
+.feedBack {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    justify-items: flex-start;
+    margin-bottom: 0px;
+
+}
+.botonsRegister {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+/*-------*/
 
 .home_carrousel div{
     height: 300px;
@@ -877,8 +923,28 @@ footer section article p {
     margin: 0.5rem 0px;
     
 }
+/* EDIT USER------------------------------------------------------------*/
 
+.imgUserContainer {
+    width: 100%;
+    text-align: center;
+}
 
+.imgUser {
+    width: 150px;
+}
+.category_container {
+    width: 100%;
+    display:inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 1rem;
+}
+.edit_category {
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
 
@@ -1011,6 +1077,7 @@ footer section article p {
     .barra_redes {
         width: 100%;
         justify-content: flex-end;
+        padding-right: 2rem;
         
     }
     

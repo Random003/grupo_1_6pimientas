@@ -1,10 +1,41 @@
-[{"id":1,"first_name":"Luis","last_name":"Rufino","email":"luis@gmail.com","password":"$2a$10$3POvNuIKggWdSYiAbvjeguBC4RHL0LcN04QpiEL5jt8KROYduK8pW","category":"admin","image":"user_1.jpg"},
-{"id":2,"first_name":"Arlyne","last_name":"Canfer","email":"user@gmail.com","password":"$2a$10$3POvNuIKggWdSYiAbvjeguBC4RHL0LcN04QpiEL5jt8KROYduK8pW","category":"user","image":"user_2.jpg"},
-{"id":3,"first_name":"Sonny","last_name":"Golding","email":"sgolding2@narod.ru","password":"dukP8ovVSMnE","category":"user","image":"user_3.jpg"},
-{"id":4,"first_name":"Letizia","last_name":"Odo","email":"lodo3@webnode.com","password":"uEaAFPAP","category":"user","image":"user_4.jpg"},
-{"id":5,"first_name":"Kirsti","last_name":"Farlambe","email":"kfarlambe4@ow.ly","password":"SMqOGs","category":"user","image":"user_5.jpg"},
-{"id":6,"first_name":"Sisely","last_name":"Thorowgood","email":"sthorowgood5@globo.com","password":"bHLIzrADAPs8","category":"user","image":"user_6.jpg"},
-{"id":7,"first_name":"Malva","last_name":"Dutton","email":"mdutton6@fema.gov","password":"ZCgTZt3OCw","category":"user","image":"user_7.jpg"},
-{"id":8,"first_name":"Giffy","last_name":"Natte","email":"gnatte7@comsenz.com","password":"S2MUmVcu","category":"user","image":"user_8.jpg"},
-{"id":9,"first_name":"Cesya","last_name":"Mertgen","email":"cmertgen8@mac.com","password":"XO7yr4AmqCNS","category":"user","image":"user_9.jpg"},
-{"id":10,"first_name":"Selia","last_name":"Castanos","email":"scastanos9@toplist.cz","password":"DvkXcfPdH","category":"user","image":"user_10.jpg"}]
+[
+ {
+  "id": 1,
+  "fullName": "Lucho",
+  "email": "l@gmail.com",
+  "password": "$2a$12$.NFxyaN340iRD5SBJyX7v..0Kf/opOioAnOasop197bT8gUoahb6q",
+  "street": "Huarpes",
+  "number": "2830",
+  "floor": 1,
+  "department": "Mendoza",
+  "city": "Mendoza",
+  "category": "user",
+  "image": "default.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "Luis Rufino",
+  "email": "luis@gmail.com",
+  "password": "$2a$12$X9GbygPQr3/r0bekzkQsD..IODsB/LtsrblQHQAdG7ipzBtR2Fwny",
+  "street": "Huarpes",
+  "number": "2830",
+  "floor": 1,
+  "department": "Mendoza",
+  "city": "Mendoza",
+  "category": "admin",
+  "image": "default.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": "Laura Vaca",
+  "email": "laura@gmail.com",
+  "password": "$2a$12$88NCsTSlLL7wIewvgg15V.h7tmcNAep9NEP4GgQnHxFbgohZA9SYK",
+  "street": "Huarpes",
+  "number": "2830",
+  "floor": "",
+  "department": "Mendoza",
+  "city": "Mendoza",
+  "category": "user",
+  "image": "default.jpg"
+ }
+]

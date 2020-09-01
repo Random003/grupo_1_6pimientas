@@ -4,36 +4,98 @@
 <body>
     <%- include('./partials/header');%> 
     <main>
-        <form class="cajaLogin" action="/" method="POST">
+        <form class="cajaLogin" action="/users/edit/<%= locals.user && user.id %>?_method=PUT" method="POST">
             <h3>
                 Editar un Usuario:
             </h3>
             <p>
-                <input class="ingreso" type="text" name="fullName" id="fullName" placeholder="Nombre y Apellido">
+                <div class="imgUserContainer">
 
-                <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">
-
-                <input class="ingreso" type="confirEmail" name="confirEmail" id="confirmEmail" placeholder="Confirmar E-mail">
-
-                <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
-                
-                <input class="ingreso" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña">
-
-                <input class="ingreso" type="calle" name="calle" id="calle" placeholder="Calle">
-
-                <input class="ingreso" type="numero" name="numero" id="numero" placeholder="Número">
-
-                <input class="ingreso" type="piso" name="piso" id="piso" placeholder="Piso">
-
-                <input class="ingreso" type="departamento" name="departamento" id="departamento" placeholder="Departamento">
-
-                <input class="ingreso" type="localidad" name="localidad" id="localidad" placeholder="Localidad">
-
-                <div class="captcha">
-                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
+                    <img class="imgUser" src="/images/users/default.jpg" alt="">
                 </div>
+                <label class="titleRegister">Nombre y Apellido</label>
+                <input class="ingreso" type="text" name="fullName" placeholder="Nombre y Apellido" value="<%= locals.user && user.fullName %>">
+                <% if (locals.errors && errors.fullName) {%> 
+                    <label class="feedBack"><%= errors.fullName.msg %> </label><br>
+                <% } %> 
+                <label class="titleRegister">E-mail</label>
+                <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.user && user.email %>">
+                <% if (locals.errors && errors.email) {%> 
+                    <label class="feedBack"><%= errors.email.msg %> </label><br>
+                <% } %> 
 
-                <p>
+                <label class="titleRegister">Confirmar E-mail</label>
+                <input class="ingreso" type="email" name="confirmEmail"  placeholder="Confirmar E-mail" value="<%= locals.user && user.email %>">
+                <% if (locals.errors && errors.confirmEmail) {%> 
+                    <label class="feedBack"><%= errors.confirmEmail.msg %> </label><br>
+                <% } %> 
+
+                <label class="titleRegister">Contraseña</label>
+                <input class="ingreso" type="password" name="password"  placeholder="Contraseña" >
+                <% if (locals.errors && errors.password) {%> 
+                    <label class="feedBack"><%= errors.password.msg %> </label><br>
+                <% } %> 
+                
+                <label class="titleRegister">Confirmar Contraseña</label>
+                <input class="ingreso" type="password" name="confirmPassword"  placeholder="Confirmar Contraseña" >
+                <% if (locals.errors && errors.confirmPassword) {%> 
+                    <label class="feedBack"><%= errors.confirmPassword.msg %> </label><br>
+                <% } %> 
+
+                <label class="titleRegister">Calle</label>
+                <input class="ingreso" type="text" name="street"  placeholder="Calle" value="<%= locals.user && user.street %>">
+                <% if (locals.errors && errors.street) {%> 
+                    <label class="feedBack"><%= errors.street.msg %> </label><br>
+                <% } %> 
+
+                <label class="titleRegister">Numero</label>
+                <input class="ingreso" type="number" name="number"  placeholder="Número" value="<%= locals.user && user.number %>">
+                <% if (locals.errors && errors.number) {%> 
+                    <label class="feedBack"><%= errors.number.msg %> </label><br>
+                <% } %> 
+                
+                <label class="titleRegister">Piso</label>
+                <input class="ingreso" type="number" name="floor"  placeholder="Piso" value="<%= locals.user && user.floor %>">
+                <% if (locals.errors && errors.floor) {%> 
+                    <label class="feedBack"><%= errors.floor.msg %> </label><br>
+                <% } %> 
+
+                <label class="titleRegister">Departamento</label>
+                <input class="ingreso" type="text" name="department"  placeholder="Departamento" value="<%= locals.user && user.department %>">
+                <% if (locals.errors && errors.department) {%> 
+                    <label class="feedBack"><%= errors.department.msg %> </label><br>
+                <% } %> 
+
+                <label class="titleRegister">Localidad</label>
+                <input class="ingreso" type="text" name="city"  placeholder="Localidad" value="<%= locals.user && user.city %>">
+                <% if (locals.errors && errors.city) {%> 
+                    <label class="feedBack"><%= errors.city.msg %> </label><br>
+                <% } %>
+                <label class="titleRegister">Categoría</label>
+                <div class="category_container">
+                    <% if (locals.user && user.category == 'admin') { %> 
+                        <div>
+                            <input class="edit_category" type="radio" name="category" id="admin" value="admin" checked <%= user.category == 'admin' ? 'checked' : ' ' %>>
+                            <label class="edit_category" for="admin">admin</label>
+
+                        </div>
+                        <div>
+                            <input class="edit_category" type="radio" name="category" id="user" value="user" <%= user.category == 'user' ?  'checked' : ' ' %>>
+                            <label class="edit_category" for="user">user</label>
+
+                        </div>
+                    <% } %>
+                    
+                </div>
+                <br>
+                
+                <br>
+
+                <!-- <div class="captcha">
+                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
+                </div> -->
+              
+                <p class="botonsRegister">
                     <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
                     <button type="reset" class="ingreso" id="botonReseteo">Borrar</button>
                 </p>
