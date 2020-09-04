@@ -10,7 +10,7 @@
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "user",
-  "image": "default.jpg"
+  "image": "user_1.png"
  },
  {
   "id": 2,
@@ -23,7 +23,7 @@
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "admin",
-  "image": "default.jpg"
+  "image": "user_2.png"
  },
  {
   "id": 3,

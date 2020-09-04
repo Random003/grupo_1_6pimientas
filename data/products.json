@@ -1,17 +1,19 @@
 [
  {
-  "name": "Sorrentino ",
-  "variedad": [
+  "name": "Sorrentinos",
+  "variety": [
    "Jamón y Muzarella",
    "Calabaza y Muzarella",
    "Quatro Quesos",
    "",
    ""
   ],
-  "presentacion": "14 unidades",
+  "description": "Pasta rellena de forma circular.",
+  "presentation": "14 unidades",
   "performance": "Rinde para 2 personas",
-  "precio": "$100",
-  "id": "1"
+  "price": 100,
+  "id": "1",
+  "image": "sorrentinos1.jpg"
  },
  {
   "id": "2",
@@ -116,6 +118,6 @@
   ],
   "price": "100",
   "image": "default.png",
-  "id": 12
+  "id": 9
  }
 ]
