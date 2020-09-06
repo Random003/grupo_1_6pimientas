@@ -4,7 +4,7 @@
 <body>
     <%- include('./partials/header');%> 
     <main class="mainCreate">
-        <form class="cajaCreate" action="/products/:productsId?_method=DELETE" method="POST" enctype="multipart/form-data">
+        <form class="cajaCreate" action="/products/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <h3>
                 Borrar un Producto:
             </h3>
