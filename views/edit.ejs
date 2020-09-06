@@ -5,7 +5,7 @@
     <%- include('./partials/header');%> 
     <main>
         
-        <form class="cajaLogin" action="/products/edit/<%= product.id %>" method="POST" enctype="multipart/form-data">
+        <form class="cajaLogin" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h3>
                 Editar un producto:
             </h3>

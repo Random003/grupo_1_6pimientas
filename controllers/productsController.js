@@ -17,13 +17,12 @@ module.exports = {
        
         res.render("add");
     },
-
     edit:  (req, res) => {
 
-        let productId = req.params.productId; 
-        let product = productsModel.find(productId);
+        let productId = req.params.id; 
+        let product = productsModel.find(req.params.id);
 
-        res.render("edit", { product } );
+        res.render("/products/edit", { product } );
     },
 
     store: (req, res, next) => {
@@ -37,7 +36,7 @@ module.exports = {
         res.redirect('/products');
 
     },
-    productAdmin: (req, res, nex) => {
+    productAdmin: (req, res) => {
         let products = productsModel.all();
         res.render('productsAdmin', { products } );
     },
@@ -55,12 +54,10 @@ module.exports = {
 
         
     },
+
     destroy: (req, res) => {
-        
-        let productId = req.params.productId;
-        deleteImages(productId);
-        productsModel.delete(productId);
+        productsModel.destroy(req.params.id);
         res.redirect('/products');
-    }
+    },
     
 }
