@@ -19,10 +19,9 @@ module.exports = {
     },
     edit:  (req, res) => {
 
-        let productId = req.params.id; 
+        //let productId = req.params.id; 
         let product = productsModel.find(req.params.id);
-
-        res.render("/products/edit", { product } );
+        res.render("edit", { product } );
     },
 
     store: (req, res, next) => {
@@ -56,8 +55,9 @@ module.exports = {
     },
 
     destroy: (req, res) => {
-        productsModel.destroy(req.params.id);
+
+        productsModel.delete(req.params.id);
         res.redirect('/products');
-    },
+    }
     
 }

@@ -31,7 +31,7 @@ router.get("/edit/:id", productsController.edit);
 // para editar
 router.put("/:id", upload.single('image'), productsController.update); 
 //para eliminar
-router.delete('/:id', productsController.destroy);
+router.delete('/delete/:id', productsController.destroy);
 
 
 module.exports = router;

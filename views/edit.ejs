@@ -15,21 +15,21 @@
                 <input class="ingreso" type="text" name="name" placeholder="Nombre del producto" value="<%= product.name %> ">
                 
                 <label>Descripción</label>
-                <textarea id="description" class="ingreso" placeholder="Descripción"><%= product.description %></textarea>
+                <textarea id="description" class="ingreso" name="description" placeholder="Descripción"><%= product.description %></textarea>
                 
                 <label>Variedad</label>
                 <% for (let i = 0; i < 5; i++) {%> 
-                    <input class="ingreso" type="text" name="variedad" placeholder="Variedad del producto" value="<%= product.variety[i] %>">
+                    <input class="ingreso" type="text" name="variety" placeholder="Variedad del producto" value="<%= product.variety[i] %>">
                 <% } %> 
                 
                 <label>Presentación</label>
-                <input class="ingreso" type="text" name="presentacion"  placeholder="Presentación" value="<%= product.presentation %>">  
+                <input class="ingreso" type="text" name="presentation"  placeholder="Presentación" value="<%= product.presentation %>">  
                 
                 <label>Performance</label>
                 <input class="ingreso" type="text" name="performance"  placeholder="Performance" value="<%= product.performance %>">
 
                 <label>Precio</label>
-                <input class="ingreso" type="text" name="precio" placeholder="Precio" value="$<%= product.price %>">
+                <input class="ingreso" type="text" name="price" placeholder="Precio" value="$<%= product.price %>">
 
                 <div class="imagenEdit">
                     <label>Imagen</label>

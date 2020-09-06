@@ -75,10 +75,10 @@
   "name": "Ñoquis",
   "description": "Realizados con papa de manera artesanal.",
   "variety": [
-    "",
-    "",
-    ""
-   ],
+   "",
+   "",
+   ""
+  ],
   "presentation": "Bandeja de 500 grs.",
   "performance": "Rinde para 2 personas",
   "price": 190,
@@ -97,32 +97,5 @@
   "performance": "Rinde para 2 personas",
   "price": 160,
   "image": "salsas.jpg"
- },
- {
-  "id": "8",
-  "name": "Lasagnas",
-  "description": "Lasagnas listas para calentar y servir",
-  "variety": [
-   "Carne",
-   "Verdura"
-  ],
-  "presentation": "Bandeja de 250 grs.",
-  "performance": "Rinde para 1 personas",
-  "price": 220,
-  "image": "lasagna.jpg"
- },
- {
-  "name": "Prueba sin foto ",
-  "variedad": [
-   "variedad 1",
-   "variedad 2",
-   "",
-   "",
-   ""
-  ],
-  "presentacion": "Bandeja de x grs.",
-  "performance": "Rinde para 1 persona",
-  "precio": "$1000",
-  "id": "9"
  }
 ]

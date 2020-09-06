@@ -41,7 +41,11 @@
                         <b><label for="">Precio:$<%= products[i].price %>,00</label></b><br><br>
                         <% if (locals.user && user.category == 'admin') {%> 
                             <a class="editProduct" href="/products/edit/<%= products[i].id %>">Editar Producto</a>
-                            <a class="deleteProduct" href="/products/delete/<%= products[i].id %>">Eliminar Producto</a>
+
+                            <form action="/products/delete/<%= products[i].id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Productos</button>
+                                
+                            </form>
                             
                             
                         <%} else {%> 
