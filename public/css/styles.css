@@ -324,6 +324,10 @@ a {
 
 
 .fotosPedido {
+    width: 330px;
+    height: 330px;
+    object-fit: contain;
+    object-position: top;
     background-size: auto;
     position: relative;
     margin-left: auto;
@@ -331,7 +335,16 @@ a {
     margin-bottom: 2rem;
     padding-top: 2rem;
     width: 80%;
+    /* object-fit: scale-down; */
 }
+
+.pedidoImage {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+}
+
 .promo20 {
     margin-top: 2rem;
     margin-bottom: auto;
@@ -381,6 +394,9 @@ a {
     height: 6rem;
     border-radius: 10px;
     align-self: center;
+    
+    /* position: absolute; 
+    bottom: 10px;  */
 }
 
 .editProduct {
@@ -392,6 +408,9 @@ a {
     border-radius: 10px;
     align-self: center;
     margin: 4px;
+    font-size: smaller;
+    padding: 0.7rem;
+    padding-top: 1.3rem;
 }
 
 .deleteProduct {
@@ -1109,7 +1128,6 @@ footer section article p {
     .flex-row-reverse {
         margin-right: 80px;
         margin-top: 20px;
-        
     }
 }
 
@@ -1165,6 +1183,13 @@ footer section article p {
     }
     .banner {
         background-size: 110% 120%;
+    }
+
+    .pedidoImage {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: top;
     }
 }
 

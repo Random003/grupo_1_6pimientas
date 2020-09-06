@@ -97,5 +97,31 @@
   "performance": "Rinde para 2 personas",
   "price": 160,
   "image": "salsas.jpg"
+ },
+ {
+  "id": "8",
+  "name": "Lasagnas",
+  "description": "Lasagnas listas para calentar y servir",
+  "variety": [
+   "Carne",
+   "Verdura"
+  ],
+  "presentation": "Bandeja de 250 grs.",
+  "performance": "Rinde para 1 personas",
+  "price": 220,
+  "image": "lasagna.jpg"
+ },
+ {
+  "id": "9",
+  "name": "Prueba sin foto",
+  "description": "Descripción de producto",
+  "variety": [
+   "Variedad 1",
+   "Variedad 2"
+  ],
+  "presentation": "Bandeja de 250 grs.",
+  "performance": "Rinde para 10 personas",
+  "price": 999,
+  "image": "default.png"
  }
 ]

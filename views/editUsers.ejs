@@ -78,17 +78,17 @@
                     <% if (locals.errors && errors.city) {%> 
                         <label class="feedBack"><%= errors.city.msg %> </label><br>
                     <% } %>
-                    <label class="titleRegister">Categoría</label>
+                    <label class="titleRegister">Categoría de Usuario</label>
                     <div class="category_container">
                         <% if (locals.user && user.category == 'admin') { %> 
                             <div>
                                 <input class="edit_category" type="radio" name="category" id="admin" value="admin" checked <%= userToEdit.category == 'admin' ? 'checked' : ' ' %>>
-                                <label class="edit_category" for="admin">admin</label>
+                                <label class="edit_category" for="admin">Administrador</label>
 
                             </div>
                             <div>
                                 <input class="edit_category" type="radio" name="category" id="user" value="user" <%= userToEdit.category == 'user' ?  'checked' : ' ' %>>
-                                <label class="edit_category" for="user">user</label>
+                                <label class="edit_category" for="user">Cliente</label>
 
                             </div>
                         <% } %>
@@ -97,14 +97,14 @@
                     <br>
                             
                     <p class="botonsRegister">
-                        <button type="submit" class="ingreso" id="botonIngreso">Enviar</button> 
+                        <button type="submit" class="ingreso" id="botonIngreso">Editar Usuario</button> 
                        
                     </p>
                 </p>
             </form>
             <form class='deleteUser' action="/users/delete/<%= userToEdit.id %>?_method=DELETE" method="POST">
                 
-                    <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar usuario</button>
+                    <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Usuario</button>
                 
             </form>
         </div>

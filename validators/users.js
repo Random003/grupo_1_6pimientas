@@ -17,7 +17,7 @@ module.exports = {
     ],
     register: [
         
-        check('fullName')
+        check('full_name')
             .notEmpty().withMessage("Debes completar el cambo de nombre").bail()
             .isLength( {min: 5} ).withMessage("El nombre debe tener como mínimo 5 caracteres"),
         
@@ -50,7 +50,7 @@ module.exports = {
         
         ],
         editUser: [
-            check('fullName')
+            check('full_name')
             .notEmpty().withMessage("Debes completar el cambo de nombre").bail()
             .isLength( {min: 5} ).withMessage("El nombre debe tener como mínimo 5 caracteres"),
         

@@ -76,5 +76,31 @@
   "city": "",
   "category": "user",
   "image": "user-1599403475936.png"
+ },
+ {
+  "id": 8,
+  "full_name": "Random",
+  "email": "random@email.com",
+  "password": "$2a$12$l0JG4Qn6oMTcv4zhT9OdhuHDH9zVt6CR1acZOXGNYUiLsjgZe/7fm",
+  "street": "calle",
+  "number": "321",
+  "floor": "1",
+  "department": "Departamento",
+  "city": "Ciudad",
+  "category": "admin",
+  "image": "user_3.png"
+ },
+ {
+  "id": 9,
+  "full_name": "adsfasdfasdf",
+  "email": "mail@mail.com",
+  "password": "$2a$12$op9FB/DeyUi2gC757/Xu..N2WLhskayvpAt.qjIs.082eMKRSZFfW",
+  "street": "asda",
+  "number": "123",
+  "floor": "",
+  "department": "asda",
+  "city": "asda",
+  "category": "user",
+  "image": "default.jpg"
  }
 ]
