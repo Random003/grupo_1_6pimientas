@@ -391,6 +391,7 @@ a {
     height: 5rem;
     border-radius: 10px;
     align-self: center;
+    margin: 4px;
 }
 
 .deleteProduct {

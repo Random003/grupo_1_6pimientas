@@ -74,7 +74,11 @@
   "id": "6",
   "name": "Ñoquis",
   "description": "Realizados con papa de manera artesanal.",
-  "variety": "",
+  "variety": [
+    "",
+    "",
+    ""
+   ],
   "presentation": "Bandeja de 500 grs.",
   "performance": "Rinde para 2 personas",
   "price": 190,

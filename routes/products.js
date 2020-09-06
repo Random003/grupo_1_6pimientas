@@ -18,22 +18,20 @@ var upload = multer({ storage });
 /* Páginas de productos */
 
 router.get("/", productsController.products);
-
-    
+ 
 router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);
+
 router.post("/", upload.single('imagen'), productsController.store); 
 
 router.get('/admin', productsController.productAdmin)
 
-router.get("/edit/:productId", productsController.edit);
-
+router.get("/edit/:id", productsController.edit);
 // para editar
-router.post("/edit/:id", upload.single('image'), productsController.update); 
-
+router.put("/:id", upload.single('image'), productsController.update); 
 //para eliminar
-router.delete('/:productId', productsController.destroy);
+router.delete('/:id', productsController.destroy);
 
 
 module.exports = router;
