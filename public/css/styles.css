@@ -800,7 +800,7 @@ footer section article p {
     border-radius: 10px;
     cursor: pointer;
     background-color: #AA0044;
-    margin: 2rem;
+    margin: 1rem;
     
 }
 
@@ -818,7 +818,7 @@ footer section article p {
     height: 5rem;
     border-radius: 10px;
     background-color: #0044AA;
-    margin: 2rem;
+    margin: 1rem;
     /*
     padding: 10px;
     margin: 20px 0px;
@@ -848,6 +848,7 @@ footer section article p {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    margin: 1rem 0 0rem 0;
 
 }
 /*-------*/
@@ -928,10 +929,16 @@ footer section article p {
 .imgUserContainer {
     width: 100%;
     text-align: center;
+    overflow: hidden;
+
 }
 
 .imgUser {
     width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
 }
 .category_container {
     width: 100%;
@@ -945,6 +952,115 @@ footer section article p {
     font-size: 1.5rem;
     font-weight: lighter;
 }
+
+/* ESTILOS ADMIN USERS --------------------------------------*/
+.usersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.showUsers {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    max-width: 200px;
+    color: rgb(163, 31, 53);
+    background-color: rgb(253, 227, 179);
+    
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border: 1px solid rgb(163, 31, 53);
+    margin: 1rem;
+    padding: 2rem;
+   
+    
+}
+.imageContainerUsers {
+    width: 100%;
+    text-align: center;
+}
+
+.userImage {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    
+}
+.usersName {
+    width: 100%;
+    text-align: center;
+    color:rgb(163, 31, 53) ;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+}
+.botonsShowAll {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.editUserAll {
+    width: 50%;
+    border-style: none;
+    padding: 10px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: black;
+    font: -webkit-control;
+
+}
+.deleteUser {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+#butonEditUser {
+    color: white;
+    border: 0;
+    width: 10rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: #0044AA;
+    margin: 1rem;
+}
+#butonEditUser:hover {
+        background-color: #0022AA;
+        cursor: pointer;
+    
+}
+#butonEditUserDelete {
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 5rem;
+    padding: 0.5rem;
+    
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #AA0044;
+    margin: 1rem;
+}
+
+#butonEditUserDelete:hover {
+    background-color: #CC1155;
+    cursor: pointer;
+    
+}
+
+/*------------------------------------------------------------*/
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
 

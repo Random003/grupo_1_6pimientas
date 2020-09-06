@@ -16,6 +16,7 @@ module.exports = {
 
     ],
     register: [
+        
         check('fullName')
             .notEmpty().withMessage("Debes completar el cambo de nombre").bail()
             .isLength( {min: 5} ).withMessage("El nombre debe tener como mínimo 5 caracteres"),
@@ -28,8 +29,6 @@ module.exports = {
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
             .isEmail().withMessage("Debes ingresar un email válido"),
         
-        
-
         check('password')
             .notEmpty().withMessage("Debes completar el campo password").bail()
             .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),

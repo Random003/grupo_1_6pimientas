@@ -4,12 +4,21 @@
 <body>
     <%- include('./partials/header');%> 
     <main>
-        <form class="cajaLogin" action="/users" method="POST">
+        <form class="cajaLogin" action="/users" method="POST" enctype="multipart/form-data">
             <h3>
                 Registro de Usuario:
             </h3>
             <p>
-                
+                <div class="imgUserContainer">
+                    <img class="imgUser" src="/images/users/default.jpg" alt="imagen de usuario">
+                </div>
+                <div>
+                    <p>
+                        <br>
+                        <h4>Agregar una imagen</h4>
+                        <input class="ingresoCreate fileCreate" type="file" name="image"></input>
+                    </p>
+                </div>
                 <label class="titleRegister">Nombre y Apellido</label>
                 <input class="ingreso" type="text" name="fullName" placeholder="Nombre y Apellido" value="<%= locals.register && register.fullName %>">
                 <% if (locals.errors && errors.fullName) {%> 
@@ -34,37 +43,37 @@
                 <% } %> 
                 
                 <label class="titleRegister">Confirmar Contraseña</label>
-                <input class="ingreso" type="password" name="confirmPassword"  placeholder="Confirmar Contraseña" value="<%= locals.register && register.confirmPassword %>">
+                <input class="ingreso" type="password" name="confirmPassword"  placeholder="Confirmar Contraseña" value="<%= locals.register && register.password %>">
                 <% if (locals.errors && errors.confirmPassword) {%> 
                     <label class="feedBack"><%= errors.confirmPassword.msg %> </label><br>
                 <% } %> 
 
                 <label class="titleRegister">Calle</label>
-                <input class="ingreso" type="text" name="street"  placeholder="Calle" value="<%= locals.register && register.calle %>">
+                <input class="ingreso" type="text" name="street"  placeholder="Calle" value="<%= locals.register && register.street %>">
                 <% if (locals.errors && errors.street) {%> 
                     <label class="feedBack"><%= errors.street.msg %> </label><br>
                 <% } %> 
 
                 <label class="titleRegister">Numero</label>
-                <input class="ingreso" type="number" name="number"  placeholder="Número" value="<%= locals.register && register.numero %>">
+                <input class="ingreso" type="number" name="number"  placeholder="Número" value="<%= locals.register && register.number %>">
                 <% if (locals.errors && errors.number) {%> 
                     <label class="feedBack"><%= errors.number.msg %> </label><br>
                 <% } %> 
                 
                 <label class="titleRegister">Piso</label>
-                <input class="ingreso" type="number" name="floor"  placeholder="Piso" value="<%= locals.register && register.piso %>">
+                <input class="ingreso" type="number" name="floor"  placeholder="Piso" value="<%= locals.register && register.floor %>">
                 <% if (locals.errors && errors.floor) {%> 
                     <label class="feedBack"><%= errors.floor.msg %> </label><br>
                 <% } %> 
 
                 <label class="titleRegister">Departamento</label>
-                <input class="ingreso" type="text" name="department"  placeholder="Departamento" value="<%= locals.register && register.departamento %>">
+                <input class="ingreso" type="text" name="department"  placeholder="Departamento" value="<%= locals.register && register.department %>">
                 <% if (locals.errors && errors.department) {%> 
                     <label class="feedBack"><%= errors.department.msg %> </label><br>
                 <% } %> 
 
                 <label class="titleRegister">Localidad</label>
-                <input class="ingreso" type="text" name="city"  placeholder="Localidad" value="<%= locals.register && register.localidad %>">
+                <input class="ingreso" type="text" name="city"  placeholder="Localidad" value="<%= locals.register && register.city %>">
                 <% if (locals.errors && errors.city) {%> 
                     <label class="feedBack"><%= errors.city.msg %> </label><br>
                 <% } %> 

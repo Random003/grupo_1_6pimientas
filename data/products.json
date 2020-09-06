@@ -108,16 +108,17 @@
   "image": "lasagna.jpg"
  },
  {
-  "name": "Prueba sin foto",
-  "description": "descripción del producto ",
-  "presentation": "Bandeja de x grs.",
-  "performance": "Rinde para 1 persona",
-  "variety": [
+  "name": "Prueba sin foto ",
+  "variedad": [
    "variedad 1",
-   "variedad 2"
+   "variedad 2",
+   "",
+   "",
+   ""
   ],
-  "price": "100",
-  "image": "default.png",
-  "id": 9
+  "presentacion": "Bandeja de x grs.",
+  "performance": "Rinde para 1 persona",
+  "precio": "$1000",
+  "id": "9"
  }
 ]

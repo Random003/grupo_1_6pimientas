@@ -4,64 +4,31 @@
 <body>
     <%- include('./partials/header');%> 
     <main>
-        <div class="banner">   
-            <p >
-                NUESTRAS <br>
-                PASTAS
-            </p>
-        </div>
-
-        <form class="d-flex flex-row-reverse">
-            <input type="text" placeholder="Realiza tu búsqueda..." required>
-            <button class="buttonp" type="button" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-
-        <section class="cuerpoPromos">
-            <form class="cajaLogin" action="/" method="POST">
-                <h3>
-                    Editar un Usuario:
-                </h3>
-                <% for (let i = 0; i < users.length; i++) {%> 
-                <div>
-                    <img class="fotosPedido" src="/images/users/<%= users[i].image %>" alt="<%= users[i].name %>">
-                    <h4 class="titulos"><%= users[i].name %></h4>
-
-                    <input class="ingreso" type="text" name="fullName" id="fullName" placeholder="Nombre y Apellido">
-    
-                    <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">
-    
-                    <input class="ingreso" type="confirEmail" name="confirEmail" id="confirmEmail" placeholder="Confirmar E-mail">
-    
-                    <input class="ingreso" type="password" name="password" id="password" placeholder="Contraseña">
-                    
-                    <input class="ingreso" type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña">
-    
-                    <input class="ingreso" type="calle" name="calle" id="calle" placeholder="Calle">
-    
-                    <input class="ingreso" type="numero" name="numero" id="numero" placeholder="Número">
-    
-                    <input class="ingreso" type="piso" name="piso" id="piso" placeholder="Piso">
-    
-                    <input class="ingreso" type="departamento" name="departamento" id="departamento" placeholder="Departamento">
-    
-                    <input class="ingreso" type="localidad" name="localidad" id="localidad" placeholder="Localidad">
-    
-                    <!-- <div class="captcha">
-                        <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
-                    </div> -->
-    
-                    <p>
-                        <button type="button" class="btn btn-success btn-lg btn-block" href="/users/edit">Editar</button>
-                        <button type="button" class="btn btn-danger btn-lg btn-block" href="/users/destroy">Borrar</button>
+        
+        <section class="usersContainer">
+            <% users.forEach(user => { %>
+                <article class="showUsers">
+                    <p class="imageContainerUsers">
+                        <img class="userImage" src="../images/users/<%= user.image %>" alt="">
                     </p>
-                </div>
-                <% } %>
-            </form>
+                    <label class="usersName"><%= user.fullName %></label>
+                    <form action="/users/edit/<%= user.id %>" method="GET">
+                        <p class="botonsShowAll">
+                            <button type="submit" class="editUserAll" id="butonEditUser">Editar</button> 
+                        
+                        </p>
+                    </form>
+                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar usuario</button>
+                        
+                    </form>
+                </article>
+                
+            <% }); %> 
+                
         </section>
 
-        
-      
-    </main>
-    <%- include('./partials/footer') %> 
-</body>
-</html>
+        </main>
+        <%- include('./partials/footer') %> 
+    </body>
+    </html>

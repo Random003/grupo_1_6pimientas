@@ -10,7 +10,7 @@
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "user",
-  "image": "user_1.png"
+  "image": "user-1599403111122.jpg"
  },
  {
   "id": 2,
@@ -23,7 +23,7 @@
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "admin",
-  "image": "user_2.png"
+  "image": "user-1599403163208.jpg"
  },
  {
   "id": 3,
@@ -32,10 +32,49 @@
   "password": "$2a$12$88NCsTSlLL7wIewvgg15V.h7tmcNAep9NEP4GgQnHxFbgohZA9SYK",
   "street": "Huarpes",
   "number": "2830",
+  "floor": null,
+  "department": "Mendoza",
+  "city": "Mendoza",
+  "category": "user",
+  "image": "user-1599403434938.png"
+ },
+ {
+  "id": 4,
+  "fullName": "Renzo Rufino",
+  "email": "renro@gmail.com",
+  "password": "$2a$12$wH2u5NpS/MgZPncGZM03me0hslUYZb6ovUAkVRUhQtGWOiKJqc1o2",
+  "street": "Huarpes",
+  "number": "2830",
+  "floor": "",
+  "department": "Mendoza",
+  "city": "Mendoza",
+  "category": "user",
+  "image": "user_2.png"
+ },
+ {
+  "id": 5,
+  "fullName": "Renzo",
+  "email": "renro@gmail.com",
+  "password": "$2a$12$VToWZNlSz6zRpJv45jNbx.0vHOe2tUkbGwiGpXGiXqB9ce4/rKrP.",
+  "street": "Huarpes",
+  "number": "2830",
   "floor": "",
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "user",
   "image": "default.jpg"
+ },
+ {
+  "id": 7,
+  "fullName": "Anto Rufino",
+  "email": "a@gmail.com",
+  "password": "$2a$12$l0JG4Qn6oMTcv4zhT9OdhuHDH9zVt6CR1acZOXGNYUiLsjgZe/7fm",
+  "street": "qqqqq",
+  "number": "55555",
+  "floor": "",
+  "department": "",
+  "city": "",
+  "category": "user",
+  "image": "user-1599403475936.png"
  }
 ]

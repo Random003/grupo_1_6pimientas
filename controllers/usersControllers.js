@@ -4,6 +4,9 @@ const bcrypt = require ('bcryptjs');
 const crypto = require('crypto');
 const { validationResult } = require('express-validator');
 const jsonTable = require ('../database/jsonTable'); 
+const { localsName } = require('ejs');
+const { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } = require('constants');
+const { nextTick } = require('process');
 const usersModel = jsonTable('users');
 const usersTokensModel = jsonTable('usersTokens');
 
@@ -53,7 +56,7 @@ module.exports = {
     },
     createAdmin: (req, res) => {
         //levantar todos los usuarios y pasárselos a la vista
-        res.render ('addUsers');
+        res.render ('register');
     }, 
     editAdmin: (req, res) => {
         //let users = usersModel.all;
@@ -72,13 +75,19 @@ module.exports = {
     },
     createUser: (req, res) => {
         let errorsCreateUser = validationResult (req);
+        let file = '';
+        if (req.file) {
+            file = req.file.filename;
+        } else {
+            file = 'default.jpg';
+        }
         if (!errorsCreateUser.isEmpty()) {
             return res.render ('register', { errors: errorsCreateUser.mapped(), register: req.body } );
 
         } else {
-            let user = {
+            let userToCreate = {
                 id: 1,
-                full_name: req.body.fullName, 
+                fullName: req.body.fullName, 
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 12), 
                 street: req.body.street,
@@ -87,25 +96,35 @@ module.exports = {
                 department: req.body.department,
                 city: req.body.city,
                 category: 'user',
-                image: 'default.jpg'
+                image: file
 
             };
-            usersModel.create(user);
-            res.render ('login');
+            usersModel.create(userToCreate);
+            if (req.session.user && req.session.user.category == 'admin') {
+                console.log(req.session.user)
+                res.redirect ('/users/usersAdmin')
+            } else {
+                res.render ('login');
+            }
         }
 
     },
     editUser: (req, res) => {
-        let user = usersModel.find(req.params.id);
-        res.render ('editUsers', { user: user });
+
+        let userToEdit = usersModel.find(req.params.id);
+        
+        res.render ('editUsers', { userToEdit: userToEdit });
 
     },
     updateUser: (req, res) => {
+        
         let oldUser = usersModel.find(req.params.id);
 
         let category = '';
         let password = '';
-        if (oldUser.category == 'admin') {
+        let file = '';
+
+        if (req.session.user.category == 'admin') {
             category = req.body.category;
         } else {
             category = 'user';
@@ -116,9 +135,13 @@ module.exports = {
         } else {
             password = bcrypt.hashSync(req.body.password, 12);
         }
-        
+        if (req.file) {
+            file = req.file.filename;
+        } else {
+            file = oldUser.image;
+        }
 
-        let user = {
+        let userUpdate = {
             id: parseInt(req.params.id),
             fullName: req.body.fullName,
             email: req.body.email,
@@ -129,14 +152,40 @@ module.exports = {
             department: req.body.department,
             city: req.body.city,
             category: category,
-            image: "default.jpg"
+            image: file
         };
 
-         
-        usersModel.update(user);
-        res.render ('home1', { user: user });
-        //req.session.user = user;
+        let idUserUpdate = usersModel.update(userUpdate);
+        if (req.session.user.id == idUserUpdate) {
+            req.session.user = userUpdate;
+            res.render ('home1', { user: userUpdate });
 
+        } else {
+            
+            res.redirect ('/users/usersAdmin');
+        } 
+        
+
+    },
+    
+    showAll: (req, res, next) => {
+        let users = usersModel.all();
+        res.render ('usersAdmin', { users });
+
+    },
+    delete: (req, res) => {
+        usersModel.delete(req.params.id);
+        if (req.session.user.category == 'admin') {
+            res.redirect ('/users/usersAdmin');
+        } else {
+            req.session.destroy();
+            
+
+
+            res.redirect ('/');
+
+            
+
+        }
     }
-
 }
