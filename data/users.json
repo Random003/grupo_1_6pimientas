@@ -1,7 +1,7 @@
 [
  {
   "id": 1,
-  "fullName": "Lucho",
+  "full_name": "Lucho",
   "email": "l@gmail.com",
   "password": "$2a$12$.NFxyaN340iRD5SBJyX7v..0Kf/opOioAnOasop197bT8gUoahb6q",
   "street": "Huarpes",
@@ -14,7 +14,7 @@
  },
  {
   "id": 2,
-  "fullName": "Luis Rufino",
+  "full_name": "Luis Rufino",
   "email": "luis@gmail.com",
   "password": "$2a$12$X9GbygPQr3/r0bekzkQsD..IODsB/LtsrblQHQAdG7ipzBtR2Fwny",
   "street": "Huarpes",
@@ -27,7 +27,7 @@
  },
  {
   "id": 3,
-  "fullName": "Laura Vaca",
+  "full_name": "Laura Vaca",
   "email": "laura@gmail.com",
   "password": "$2a$12$88NCsTSlLL7wIewvgg15V.h7tmcNAep9NEP4GgQnHxFbgohZA9SYK",
   "street": "Huarpes",
@@ -40,7 +40,7 @@
  },
  {
   "id": 4,
-  "fullName": "Renzo Rufino",
+  "full_name": "Renzo Rufino",
   "email": "renro@gmail.com",
   "password": "$2a$12$wH2u5NpS/MgZPncGZM03me0hslUYZb6ovUAkVRUhQtGWOiKJqc1o2",
   "street": "Huarpes",
@@ -53,7 +53,7 @@
  },
  {
   "id": 5,
-  "fullName": "Renzo",
+  "full_name": "Renzo",
   "email": "renro@gmail.com",
   "password": "$2a$12$VToWZNlSz6zRpJv45jNbx.0vHOe2tUkbGwiGpXGiXqB9ce4/rKrP.",
   "street": "Huarpes",
@@ -66,7 +66,7 @@
  },
  {
   "id": 7,
-  "fullName": "Anto Rufino",
+  "full_name": "Anto Rufino",
   "email": "a@gmail.com",
   "password": "$2a$12$l0JG4Qn6oMTcv4zhT9OdhuHDH9zVt6CR1acZOXGNYUiLsjgZe/7fm",
   "street": "qqqqq",

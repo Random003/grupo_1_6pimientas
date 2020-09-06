@@ -13,9 +13,9 @@
             <p>
                 
                 <label class="titleRegister">Nombre y Apellido</label>
-                <input class="ingreso" type="text" name="fullName" placeholder="Nombre y Apellido" value="<%= locals.register && register.fullName %>">
-                <% if (locals.errors && errors.fullName) {%> 
-                    <label class="feedBack"><%= errors.fullName.msg %> </label><br>
+                <input class="ingreso" type="text" name="full_name" placeholder="Nombre y Apellido" value="<%= locals.register && register.full_name %>">
+                <% if (locals.errors && errors.full_name) {%> 
+                    <label class="feedBack"><%= errors.full_name.msg %> </label><br>
                 <% } %> 
                 <label class="titleRegister">E-mail</label>
                 <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.register && register.email %>">
@@ -91,7 +91,7 @@
             <!-- <p>
                 <br>
                 <label>Nombre y Apellido</label>
-                <input class="ingreso" type="text" name="fullName" id="fullName" placeholder="Nombre y Apellido">
+                <input class="ingreso" type="text" name="full_name" id="full_name" placeholder="Nombre y Apellido">
 
                 <label>E-mail</label>
                 <input class="ingreso" type="email" name="email" id="email" placeholder="E-mail">

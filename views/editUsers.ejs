@@ -21,9 +21,9 @@
                         </p>
                     </div>
                     <label class="titleRegister">Nombre y Apellido</label>
-                    <input class="ingreso" type="text" name="fullName" placeholder="Nombre y Apellido" value="<%= locals.userToEdit && userToEdit.fullName %>">
-                    <% if (locals.errors && errors.fullName) {%> 
-                        <label class="feedBack"><%= errors.fullName.msg %> </label><br>
+                    <input class="ingreso" type="text" name="full_name" placeholder="Nombre y Apellido" value="<%= locals.userToEdit && userToEdit.full_name %>">
+                    <% if (locals.errors && errors.full_name) {%> 
+                        <label class="feedBack"><%= errors.full_name.msg %> </label><br>
                     <% } %> 
                     <label class="titleRegister">E-mail</label>
                     <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.userToEdit && userToEdit.email %>">

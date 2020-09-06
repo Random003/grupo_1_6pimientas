@@ -87,7 +87,7 @@ module.exports = {
         } else {
             let userToCreate = {
                 id: 1,
-                fullName: req.body.fullName, 
+                full_name: req.body.full_name, 
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 12), 
                 street: req.body.street,
@@ -143,7 +143,7 @@ module.exports = {
 
         let userUpdate = {
             id: parseInt(req.params.id),
-            fullName: req.body.fullName,
+            full_name: req.body.full_name,
             email: req.body.email,
             password: password,
             street: req.body.street,
