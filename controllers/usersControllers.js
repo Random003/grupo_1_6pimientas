@@ -178,11 +178,8 @@ module.exports = {
         if (req.session.user.category == 'admin') {
             res.redirect ('/users/usersAdmin');
         } else {
-            req.session.destroy();
             
-
-
-            res.redirect ('/');
+            res.redirect ('/users/logout');
 
             
 

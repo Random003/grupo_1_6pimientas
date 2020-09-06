@@ -58,11 +58,11 @@
   "password": "$2a$12$VToWZNlSz6zRpJv45jNbx.0vHOe2tUkbGwiGpXGiXqB9ce4/rKrP.",
   "street": "Huarpes",
   "number": "2830",
-  "floor": "",
+  "floor": null,
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "user",
-  "image": "default.jpg"
+  "image": "user-1599425439456.jpg"
  },
  {
   "id": 7,
