@@ -89,18 +89,5 @@
   "city": "Ciudad",
   "category": "admin",
   "image": "user_3.png"
- },
- {
-  "id": 9,
-  "full_name": "adsfasdfasdf",
-  "email": "mail@mail.com",
-  "password": "$2a$12$op9FB/DeyUi2gC757/Xu..N2WLhskayvpAt.qjIs.082eMKRSZFfW",
-  "street": "asda",
-  "number": "123",
-  "floor": "",
-  "department": "asda",
-  "city": "asda",
-  "category": "user",
-  "image": "default.jpg"
  }
 ]
