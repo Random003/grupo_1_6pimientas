@@ -24,11 +24,13 @@ router.get("/add", salesController.add);
 
 router.post("/", upload.single('imagen'), salesController.store);
 
+router.get('/admin', salesController.salesAdmin)
+
 router.get("/editSales", salesController.edit);
 
-router.put('/editSales/:salesId', salesController.edit)
+router.put("/:id", upload.single('image'), salesController.update); 
 
-router.delete('/editSales/:salesId', salesController.destroy)
+router.delete('/deleteSales/:id', salesController.destroy)
 
 //router.post("/", indexController.indexPop);
 
