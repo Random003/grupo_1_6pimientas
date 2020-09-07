@@ -394,9 +394,25 @@ a {
     height: 6rem;
     border-radius: 10px;
     align-self: center;
-    
-    /* position: absolute; 
-    bottom: 10px;  */
+}
+
+
+
+.bot1 {
+    background-color: rgb(253, 227, 179);
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 6rem;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.botoComp {
+    position: absolute; 
+    bottom: 10px; 
+    display: flex;
+    /* margin-left: 185px; */
 }
 
 .editProduct {
@@ -436,6 +452,12 @@ a {
     overflow: auto;
     object-fit: contain;   
 }
+
+
+.dropdown-menu {
+    background-color: rgb(163, 31, 53);
+}
+
 
 /* FOOTER */
 
@@ -1084,6 +1106,13 @@ footer section article p {
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
 
+
+@media all and (min-width: 1px) {
+    .menuDesktop {
+        display: none;
+    }
+}
+
 @media all and (min-width: 360px) {
     .marcaSP {
         width: 75%;
@@ -1129,6 +1158,16 @@ footer section article p {
         margin-right: 80px;
         margin-top: 20px;
     }
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 85px;
+    }
+
+    .menuDesktop {
+        display: none;
+    }
 }
 
 @media all and (min-width: 426px) {
@@ -1148,6 +1187,12 @@ footer section article p {
     }
     .banner {
         background-size: 130% 100%;
+    }
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 107px;
     }
 }
 
@@ -1191,6 +1236,18 @@ footer section article p {
         object-fit: cover;
         object-position: top;
     }
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 123px;
+    }
+}
+
+@media (max-width: 760px) {
+    .cajaOculta {
+        display:none;
+    }
 }
 
 @media all and (min-width: 760px) {
@@ -1200,6 +1257,12 @@ footer section article p {
     }
     .botoz {
         display:none;
+    }
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 185px;
     }
 }
 
@@ -1253,6 +1316,15 @@ footer section article p {
     }
     .cajaCreate {
         max-width: 700px;
+    }
+}
+
+@media all and (min-width: 999px) {
+    .dropdown {
+        display: none;
+    }
+    .menuDesktop {
+        display: block  ;
     }
 }
 
@@ -1317,8 +1389,5 @@ footer section article p {
     }
 }
 
-@media (max-width: 760px) {
-    .cajaOculta {
-        display:none;
-    }
-}
+
+
