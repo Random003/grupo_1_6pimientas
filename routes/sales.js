@@ -32,8 +32,5 @@ router.put("/:id", upload.single('image'), salesController.update);
 
 router.delete('/deleteSales/:id', salesController.destroy)
 
-//router.post("/", indexController.indexPop);
-
-//router.get('/home', indexController.home); en construcción
 
 module.exports = router;
