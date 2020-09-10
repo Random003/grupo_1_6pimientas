@@ -89,18 +89,5 @@
   "city": "Ciudad",
   "category": "admin",
   "image": "user_3.png"
- },
- {
-  "id": 9,
-  "full_name": "Babart",
-  "email": "babart@babart.com",
-  "password": "$2a$12$IWaM9glZgHkt2mPmgHwG1e5j8ujhi4aceNTE2wnXziSlCOsd3bany",
-  "street": "cashe",
-  "number": "666",
-  "floor": null,
-  "department": "Ryle",
-  "city": "Boedo",
-  "category": "admin",
-  "image": "user-1599611080871.jpg"
  }
 ]
