@@ -411,6 +411,8 @@ a {
     font-size: smaller;
     padding: 0.7rem;
     padding-top: 1.3rem;
+    font: -webkit-control;
+
 }
 
 .deleteProduct {
@@ -796,6 +798,7 @@ footer section article p {
 }
 .titleRegister {
     margin-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .cajaLogin label {
@@ -915,6 +918,7 @@ footer section article p {
     padding: 10px;
     margin: 20px 0px;
     border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 .cajaCreate p {
@@ -1083,7 +1087,13 @@ footer section article p {
 /*------------------------------------------------------------*/
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
-
+@media all and (min-width: 320px) {
+    /* .nameUser {
+        left: 50px;
+        top: 155px;
+    } */
+}
+}
 @media all and (min-width: 360px) {
     .marcaSP {
         width: 75%;
@@ -1129,8 +1139,20 @@ footer section article p {
         margin-right: 80px;
         margin-top: 20px;
     }
+    .barra_menu {
+        height: 100px;
+    }
+    /* .nameUser {
+       
+    left: 50px;
+    top: 165px;
+
+    } */
 }
 
+@media all and (min-width: 380px) {
+   
+}
 @media all and (min-width: 426px) {
     .marcaSP {
         width: 80%;
@@ -1149,6 +1171,11 @@ footer section article p {
     .banner {
         background-size: 130% 100%;
     }
+
+    /* .nameUser {
+        left: 300px;
+        top: 195px;
+    } */
 }
 
 @media all and (min-width: 470px) {
@@ -1201,6 +1228,9 @@ footer section article p {
     .botoz {
         display:none;
     }
+    /* .nameUser {
+        top: 195px;
+    } */
 }
 
 @media all and (min-width: 769px) {
@@ -1254,6 +1284,12 @@ footer section article p {
     .cajaCreate {
         max-width: 700px;
     }
+    .barra_menu {
+        height: 70px;
+    }
+    /* .nameUser {
+        top: 160px;
+    } */
 }
 
 @media all and (orientation: landscape) {

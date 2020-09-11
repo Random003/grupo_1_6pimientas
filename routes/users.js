@@ -16,7 +16,7 @@ var upload = multer({ storage });
 
 
 const userController = require ('../controllers/usersControllers');
-const validateUsers = require ('../validators/users')
+const validateUsers = require ('../validators/users/users')
 
 /* GET users listing. */
 // router.get('/', function(req, res, next) {

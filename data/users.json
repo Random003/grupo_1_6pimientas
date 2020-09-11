@@ -62,7 +62,7 @@
   "department": "Mendoza",
   "city": "Mendoza",
   "category": "user",
-  "image": "user-1599425439456.jpg"
+  "image": "user-1599440226930.png"
  },
  {
   "id": 7,
@@ -91,16 +91,16 @@
   "image": "user_3.png"
  },
  {
-  "id": 9,
-  "full_name": "adsfasdfasdf",
-  "email": "mail@mail.com",
-  "password": "$2a$12$op9FB/DeyUi2gC757/Xu..N2WLhskayvpAt.qjIs.082eMKRSZFfW",
-  "street": "asda",
-  "number": "123",
+  "id": 10,
+  "full_name": "Jenifer",
+  "email": "j@j.com",
+  "password": "$2a$12$dmMTw66b45fMvAaSaiSrCu2kKvOws7hyEIPaV0r9bkKCpAIWTSA3C",
+  "street": "a",
+  "number": "2",
   "floor": "",
-  "department": "asda",
-  "city": "asda",
+  "department": "",
+  "city": "",
   "category": "user",
-  "image": "default.jpg"
+  "image": "user-1599436639475.jpeg"
  }
 ]
