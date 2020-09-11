@@ -13,7 +13,7 @@ const salesModel = jsonTable('sales');
 module.exports = {
     sales: (req, res) => {
         let sales = salesModel.all();
-        res.render('sales', { sales } );
+        res.render('./sales/sales', { sales } );
     },
 
     add:  (req, res) => {
@@ -27,14 +27,14 @@ module.exports = {
         // }
     
        
-        res.render('addSales')           
+        res.render('./sales/addSales')           
     },
 
     edit:  (req, res) => {
 
 
        let sales = salesModel.find(req.params.id);
-       res.render('editSales', { sales } );
+       res.render('./sales/editSales', { sales } );
 
     
     },
@@ -47,12 +47,12 @@ module.exports = {
         }
         let newId = salesModel.create(sales);
         
-    res.redirect('/sales');
+    res.redirect('../sales');
 
     },
     salesAdmin: (req, res) => {
         let sales= salesModel.all();
-        res.render('salesAdmin', { sales } );
+        res.render('./sales/salesAdmin', { sales } );
     },
     update: (req, res) => {
         let sales = req.body
@@ -64,14 +64,14 @@ module.exports = {
         let salesEdit = salesModel.update(sales);
 
         
-        res.redirect('/sales');
+        res.redirect('../sales');
 
         
     },
 
     destroy: (req, res) => {
         salesModel.delete(req.params.id);
-        res.redirect('/sales');
+        res.redirect('../sales');
     }
     
 }

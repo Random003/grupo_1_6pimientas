@@ -6,22 +6,22 @@ const productsModel = jsonTable('products');
 module.exports = {
     products : (req, res) => {
         let products = productsModel.all();
-        res.render('products', { products } );
+        res.render('./products/products', { products } );
     },
 
     productCart:  (req, res) => {
-        res.render('productCart');
+        res.render('./products/productCart');
     },
     
     add:  (req, res) => {
        
-        res.render("add");
+        res.render("./products/add");
     },
     edit:  (req, res) => {
 
         //let productId = req.params.id; 
         let product = productsModel.find(req.params.id);
-        res.render("edit", { product } );
+        res.render("./products/edit", { product } );
     },
 
     store: (req, res, next) => {
@@ -37,7 +37,7 @@ module.exports = {
     },
     productAdmin: (req, res) => {
         let products = productsModel.all();
-        res.render('productsAdmin', { products } );
+        res.render('./products/productsAdmin', { products } );
     },
     update: (req, res) => {
         let product = req.body

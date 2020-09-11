@@ -26,19 +26,6 @@
   "image": "user-1599403163208.jpg"
  },
  {
-  "id": 3,
-  "full_name": "Laura Vaca",
-  "email": "laura@gmail.com",
-  "password": "$2a$12$88NCsTSlLL7wIewvgg15V.h7tmcNAep9NEP4GgQnHxFbgohZA9SYK",
-  "street": "Huarpes",
-  "number": "2830",
-  "floor": null,
-  "department": "Mendoza",
-  "city": "Mendoza",
-  "category": "user",
-  "image": "user-1599403434938.png"
- },
- {
   "id": 4,
   "full_name": "Renzo Rufino",
   "email": "renro@gmail.com",
@@ -50,19 +37,6 @@
   "city": "Mendoza",
   "category": "user",
   "image": "user_2.png"
- },
- {
-  "id": 5,
-  "full_name": "Renzo",
-  "email": "renro@gmail.com",
-  "password": "$2a$12$VToWZNlSz6zRpJv45jNbx.0vHOe2tUkbGwiGpXGiXqB9ce4/rKrP.",
-  "street": "Huarpes",
-  "number": "2830",
-  "floor": null,
-  "department": "Mendoza",
-  "city": "Mendoza",
-  "category": "user",
-  "image": "user-1599440226930.png"
  },
  {
   "id": 7,
@@ -91,19 +65,6 @@
   "image": "user_3.png"
  },
  {
-<<<<<<< HEAD
-  "id": 10,
-  "full_name": "Jenifer",
-  "email": "j@j.com",
-  "password": "$2a$12$dmMTw66b45fMvAaSaiSrCu2kKvOws7hyEIPaV0r9bkKCpAIWTSA3C",
-  "street": "a",
-  "number": "2",
-  "floor": "",
-  "department": "",
-  "city": "",
-  "category": "user",
-  "image": "user-1599436639475.jpeg"
-=======
   "id": 9,
   "full_name": "Babart",
   "email": "babart@babart.com",
@@ -115,6 +76,5 @@
   "city": "Muchas",
   "category": "admin",
   "image": "user-1599802507754.jpg"
->>>>>>> 5a95eeda9352b05cf5504bf49c27b25a12cc2003
  }
 ]

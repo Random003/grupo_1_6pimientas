@@ -14,10 +14,11 @@ const usersTokensModel = jsonTable('usersTokens');
 
 module.exports = {
     login: (req, res) => {
-        res.render("login");
+        res.render("./users/login");
     },
     authenticate: (req, res) => {
         let errorsLogin = validationResult(req);
+        
         if (errorsLogin.isEmpty()) {
             let user = usersModel.findByFields('email', req.body.email);
             
@@ -38,25 +39,25 @@ module.exports = {
                     return res.redirect('/products');
 
                 } else {
-                    res.render ('login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
+                    res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
                 }
                 
             } else {
-                res.render ('login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
+                res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
             }
         } else {
             
-            res.render ('login', { errors: errorsLogin.mapped(), email: req.body.email });
+            res.render ('./users/login', { errors: errorsLogin.mapped(), email: req.body.email });
         }
-        //res.send(req.body);
+        
     },
     register: (req, res) => {
         let errors = validationResult(req);
-        res.render("register");
+        res.render("./users/register");
     },
     createAdmin: (req, res) => {
         //levantar todos los usuarios y pasárselos a la vista
-        res.render ('register');
+        res.render ('./users/register');
     }, 
     editAdmin: (req, res) => {
         //let users = usersModel.all;
@@ -82,7 +83,7 @@ module.exports = {
             file = 'default.jpg';
         }
         if (!errorsCreateUser.isEmpty()) {
-            return res.render ('register', { errors: errorsCreateUser.mapped(), register: req.body } );
+            return res.render ('./users/register', { errors: errorsCreateUser.mapped(), register: req.body } );
 
         } else {
             let userToCreate = {
@@ -102,9 +103,9 @@ module.exports = {
             usersModel.create(userToCreate);
             if (req.session.user && req.session.user.category == 'admin') {
                 console.log(req.session.user)
-                res.redirect ('/users/usersAdmin')
+                res.redirect ('../usersAdmin')
             } else {
-                res.render ('login');
+                res.render ('./users/login');
             }
         }
 
@@ -113,7 +114,7 @@ module.exports = {
 
         let userToEdit = usersModel.find(req.params.id);
         
-        res.render ('editUsers', { userToEdit: userToEdit });
+        res.render ('./users/editUsers', { userToEdit: userToEdit });
 
     },
     updateUser: (req, res) => {
@@ -162,7 +163,7 @@ module.exports = {
 
         } else {
             
-            res.redirect ('/users/usersAdmin');
+            res.redirect ('../usersAdmin');
         } 
         
 
@@ -170,16 +171,16 @@ module.exports = {
     
     showAll: (req, res, next) => {
         let users = usersModel.all();
-        res.render ('usersAdmin', { users });
+        res.render ('./users/usersAdmin', { users });
 
     },
     delete: (req, res) => {
         usersModel.delete(req.params.id);
         if (req.session.user.category == 'admin') {
-            res.redirect ('/users/usersAdmin');
+            res.redirect ('../usersAdmin');
         } else {
             
-            res.redirect ('/users/logout');
+            res.redirect ('../logout');
 
             
 

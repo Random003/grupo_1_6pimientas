@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %> 
+<%- include('../partials/head') %> 
 <body>
-    <%- include('./partials/header');%> 
+    <%- include('../partials/header');%> 
     <main>
         
         <form class="cajaLogin" action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -46,6 +46,6 @@
         </form>
     </main>
 
-    <%- include('./partials/footer') %> 
+    <%- include('../partials/footer') %> 
 </body>
 </html>

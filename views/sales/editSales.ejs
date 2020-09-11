@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %> 
+<%- include('../partials/head') %> 
 <body>
-    <%- include('./partials/header');%> 
+    <%- include('../partials/header');%> 
     <main class="mainCreate">
         
         <form class="cajaCreate" action="/sales/editSales/<%= sales.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -40,6 +40,6 @@
         </form>
     </main>
 
-    <%- include('./partials/footer') %> 
+    <%- include('../partials/footer') %> 
 </body>
 </html>
