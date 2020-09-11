@@ -13,4 +13,4 @@ Muchas gracias.
 
 ## Comentarios Sexto Sprint:
 
-Para poder ver diagrama de base de datos por favor dirigirse <a href="">aquí</a>. 
+Para poder ver diagrama de base de datos por favor dirigirse <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/design/dbd/pimientas.jpg">aquí</a>. 

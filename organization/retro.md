@@ -1,6 +1,6 @@
 # **Grupo 1 "Seis Pimientas"**
 
-## **Breve Retrospectiva: Sprint Numero 1**
+## **Breve Retrospectiva: Sprint Numero 1, entregable para Sprint numero2**
 
 
  Luego de una puesta en común mediante varias video conferencias, llegamos a unificar conceptos en nuestras fortalezas, debilidades y problemas encontramos en el camino del proyecto y como lo solucionamos como equipo de trabajo. A continuación lo separaremos en Pros, Cons y finalmente Conclusiones.

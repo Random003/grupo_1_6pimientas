@@ -429,6 +429,34 @@ a {
     padding-top: 1.3rem;
 }
 
+.editProduct:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
+.editSale {
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    height: 5rem;
+    border-radius: 10px;
+    align-self: center;
+    margin: 4px;
+    font-size: smaller;
+    padding: 0.7rem;
+    padding-top: 1.3rem;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.editSale:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
 .deleteProduct {
     background-color:darkred;
     color: white;
@@ -441,7 +469,6 @@ a {
 
 .idProduct {
     display: none;
-    
 }
 
 /* Edit Producto */
@@ -869,7 +896,7 @@ footer section article p {
 }
 
 #botonIngreso:hover {
-    background-color: #0022AA;
+    background-color: #3370cc;
     cursor: pointer;
 }
 
@@ -1060,8 +1087,8 @@ footer section article p {
     font-size: 1.5rem;
     color: black;
     font: -webkit-control;
-
 }
+
 .deleteUser {
     width: 100%;
     justify-content: center;
@@ -1079,7 +1106,7 @@ footer section article p {
     margin: 1rem;
 }
 #butonEditUser:hover {
-        background-color: #0022AA;
+        background-color: #3778da;
         cursor: pointer;
     
 }
