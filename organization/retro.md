@@ -32,7 +32,7 @@ Ademas también aprender a organizarse en el tiempo de cada proceso para logar m
 Visite el Jamboard de clase sobre retrospectiva <a href="https://jamboard.google.com/d/1gSiWsGhEW6OLD2pa5vIveuSdrlzMA62JwZjRDd6p6G4/viewer">aquí</a>.
 
 
-## **Breve Retrospectiva: Sprint Numero 2**
+## **Breve Retrospectiva: Para Sprint Numero 3**
 
 Utilizando como base las ideas y experiencias que nos ocurrieron en el sprint numero 1 utilizamos el tablero Trello mucho mas para poder dividir las responsabilidades de cada uno en las partes a realizar en el proyecto. 
 
@@ -41,17 +41,26 @@ Nuevamente separamos las tareas en diferentes formas; la primera es potenciando 
 Mejoramos la organización interna del grupo a la vez que potenciamos también las reuniones diarias y semanales como se explica <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a> para que no nos tome por sorpresa el tiempo de entrega del sprint presente y tampoco nos quedemos sin hacer nada por olvido o por no controlar tanto el tablero Trello como anteriormente nos pasaba.
 
 
-## **Breve Retrospectiva: Sprint Numero 3**   
+## **Breve Retrospectiva: Para Sprint Numero 4**   
 
 Este Sprint nos encontró con mas trabajo individual asi que nos enfocamos a separar trabajo de manera individual para realizar reuniones cada 4 dias para exponer el avance logrado y los problemas encontrados mientras lo realizábamos.
 
 El uso de video llamada, la opción de LiveShare que ofrece Visual Studio Code, el tablero Trello y los mensajes del grupo de WhatsApp se convirtieron en este sprint en herramientas muy útiles para lograr llevar a cabo los puntos necesarios para el mismo.
 
 
-## **Breve Retrospectiva: Sprint Numero 4** 
+## **Breve Retrospectiva: Para Sprint Numero 5** 
 
 A diferencia de los Sprints anteriores, el pasado sprint nos llevo a un punto en el cual no pudimos descubrir como hacer para resolver una parte del código y eso llevo a que pasemos días viéndolo y aun asi no pudimos resolverlo.
 
 Asi que el mayor de los muros que tuvimos que aprender en este momento fue el aceptar la no solución de un problema hasta no encontrarlo después de que finaliza el sprint o preguntarlo a los profesores.
 
 También la adrenalina de estar a momentos de entregar un trabajo y buscar soluciones a diestra y siniestra muestra como creemos que debe ser el ambiente laboral en el dia a dia cercano a los momentos en los cuales se entregan productos a los clientes.
+
+
+## **Breve Retrospectiva: Para Sprint Numero 6** 
+
+Este Sprint nos encontró con parte del trabajo realizado del Sprint anterior asi que lo que decidimos es separarnos diferentes problemas o arreglos que veníamos acarreando en el sitio desde antes y tratar de resolverlos para tenerlo lo mas ordenado y funcional que se pueda con la cantidad de conocimientos de los que disponemos en este momento. 
+
+Ademas utilizamos una especie de Hackatlon para resolver este Sprint en un solo momento, esto lo hicimos para testear si es que era posible realizarse de manera realista.
+
+Entonces lo que tratamos de realizar desde este punto de vista en este Sprint es ver si es que podíamos trabajar todos a la vez al mismo tiempo sobre partes diferentes de la pagina o sobre el mismo tema desde diferentes perspectivas.
