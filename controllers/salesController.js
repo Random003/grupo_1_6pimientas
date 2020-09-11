@@ -33,8 +33,8 @@ module.exports = {
     edit:  (req, res) => {
 
 
-       let sale = salesModel.find(req.params.id);
-       res.render("edit", { sale } );
+       let sales = salesModel.find(req.params.id);
+       res.render('editSales', { sales } );
 
     
     },

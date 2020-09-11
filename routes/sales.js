@@ -26,7 +26,7 @@ router.post("/", upload.single('imagen'), salesController.store);
 
 router.get('/admin', salesController.salesAdmin)
 
-router.get("/edit/:id", salesController.edit);
+router.get("/editSales/:id", salesController.edit);
 
 router.put("/:id", upload.single('image'), salesController.update); 
 
