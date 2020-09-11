@@ -39,7 +39,7 @@
             <% for (let i = 0; i < sales.length; i++) {%> 
                <div class="caja">
                     <img class="fotosPedido" src="/images/products/<%= sales[i].image %>" alt="<%= sales[i].name %>">
-                    <h4 class="titulos">"<%= sales[i].name %>"</h4>
+                    <h4 class="titulos"><%= sales[i].name %></h4>
                     <p>
                         <label class="promo20" for=""><%= sales[i].discount %></label><br>
                         <label class="precioPromo" for="">Precio:$<%= sales[i].price %>,00</label><br>
@@ -49,7 +49,7 @@
                         <a class="editSale" href="/sales/edit/<%= sales[i].id %>">Editar Promoción</a>
 
                         <form action="/sales/delete/<%= sales[i].id %>?_method=DELETE" method="POST">
-                            <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Promocion</button>
+                            <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Promoción</button>
                             
                         </form>
                         

@@ -676,7 +676,6 @@ header div ul {
     margin-bottom: 10px;    
     margin-left: 10px;
     margin-right: 10px;
-    
     width: 100%;
 }
 
@@ -699,7 +698,6 @@ header div ul {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    
 }
 
 .foto_producto_bolsa {
@@ -725,7 +723,6 @@ main div section article input {
     width: 40px;
     height: 40px;
     border: 0;
-    
     overflow: hidden;
     text-transform: none;
     text-align: center;
@@ -920,6 +917,13 @@ footer section article p {
     margin: 1rem 0 0rem 0;
 
 }
+
+.registerUser {
+    color: rgb(163, 31, 53);
+    text-decoration: none;
+    text-align: center;
+}
+
 /*-------*/
 
 .home_carrousel div{
