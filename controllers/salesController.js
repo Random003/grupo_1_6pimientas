@@ -32,19 +32,11 @@ module.exports = {
 
     edit:  (req, res) => {
 
-        // let salesId = req.params.salesId; 
 
-        // let sales =  {
-        //     "name": req.body.name,
-        //     "promo": req.body.promo,
-        //     "pricePromo": req.body.pricePromo,
-        //     "image": null
-        // }
+       let sale = salesModel.find(req.params.id);
+       res.render("edit", { sale } );
 
-       let sales = salesModel.find(req.params.id);
-       res.render("editSales", { sales } );
-
-        res.render('editSales');
+    
     },
     store: (req, res, next) => {
         
@@ -55,11 +47,11 @@ module.exports = {
         }
         let newId = salesModel.create(sales);
         
-    res.redirect('sales');
+    res.redirect('/sales');
 
     },
     salesAdmin: (req, res) => {
-        let sales = salesModel.all();
+        let sales= salesModel.all();
         res.render('salesAdmin', { sales } );
     },
     update: (req, res) => {
@@ -67,7 +59,7 @@ module.exports = {
         sales.id = req.params.id
         
         if (req.file) {
-            product.image = req.file.filename;
+            sales.image = req.file.filename;
         }
         let salesEdit = salesModel.update(sales);
 
@@ -77,8 +69,9 @@ module.exports = {
         
     },
 
-    destroy: (req, res, next) => {
-        res.render('deleteSales')
+    destroy: (req, res) => {
+        salesModel.delete(req.params.id);
+        res.redirect('/sales');
     }
     
 }

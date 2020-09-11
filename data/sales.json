@@ -12,33 +12,5 @@
   "discount": "20 % OFF EN LA SEGUNDA UNIDAD!",
   "price": 445,
   "image": "ravioles.jpg"
- },
- {
-  "name": "Fetucchini",
-  "discount": "25%OFF",
-  "price": "",
-  "image": "sales-1599762634293.jpg",
-  "id": 3
- },
- {
-  "name": "Fetucchini 2",
-  "discount": "25% OFF",
-  "price": "250",
-  "image": "sales-1599762835499.jpg",
-  "id": 4
- },
- {
-  "name": "Fetucchini 3 ",
-  "discount": "25% OFF!!",
-  "price": "150",
-  "image": "sales-1599764075334.jpg",
-  "id": 5
- },
- {
-  "name": "xxxxxxxx",
-  "discount": "xxxxxxxxxxxxxxxxxx",
-  "price": "500",
-  "image": "sales-1599764293572.jpg",
-  "id": 6
  }
 ]

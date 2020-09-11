@@ -26,11 +26,11 @@ router.post("/", upload.single('imagen'), salesController.store);
 
 router.get('/admin', salesController.salesAdmin)
 
-router.get("/editSales", salesController.edit);
+router.get("/edit/:id", salesController.edit);
 
 router.put("/:id", upload.single('image'), salesController.update); 
 
-router.delete('/deleteSales/:id', salesController.destroy)
+router.delete('/delete/:id', salesController.destroy)
 
 
 module.exports = router;
