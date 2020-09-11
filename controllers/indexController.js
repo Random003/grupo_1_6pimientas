@@ -7,17 +7,7 @@ module.exports = {
     
     home1: (req, res) => {
         //let indexModel = indexModel.all();
-        res.render('home1')
-    },
-    // indexPop: (req, res, next) => {
-    //     // para que haga el JSON dejar este solamente
-    //     // res.send(req.body);
-    //     // para que mande directamente a la pagina principal dejar solo este
-    //     res.render('index');
-    //   },
-    home2: (req, res) => {
-        
-        res.render('home2')
+        res.render('./home/home1')
     },
 
 }

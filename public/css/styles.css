@@ -10,7 +10,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     position: relative;
-    background-image: url("/images/fondo_header.jpg");
+    background-image: url("/images/home/fondo_header.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -113,7 +113,7 @@ body {
 }
 
 .banner {
-    background-image: url("/images/img_ppal.jpg");
+    background-image: url("/images/home/img_ppal.jpg");
     background-repeat: no-repeat;
     overflow: hidden;
     background-clip: border-box;
@@ -790,7 +790,7 @@ main div section article input {
 
 
 .back_footer {
-    background-image: url("/images/img_footer.jpg");
+    background-image: url("/images/home/img_footer.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -16,19 +16,6 @@ var storage = multer.diskStorage({
    
 var upload = multer({ storage });
 
-
-
-
-/* GET home page. */
-//console.log(res.locals.user);
-//if(locals.user && user.category == 'user') {
-  router.get('/', indexController.home1);
-//} else {
-  router.get('/home2', indexController.home2);
-//}
-
-
-//router.post("/", indexController.indexPop);
-
+router.get('/', indexController.home1);
 
 module.exports = router;
