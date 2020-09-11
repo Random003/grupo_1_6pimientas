@@ -35,7 +35,31 @@
                         
                        
                     </div>
-                    <div> 
+
+
+                    <div class="dropdown">
+                        <% if (locals.user && locals.user.category == 'admin') { %>
+                        <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          
+                            <li><a href="/products/add">Alta<br>Producto</a></li>
+                            <li><a href="/products">Editar y Borrar<br>Productos</a></li>
+
+                            <li><a href="/sales/add">Alta<br>Promoción</a></li>
+                            <li><a href="/sales">Editar y Borrar<br>Promoción</a></li>
+
+                            <li><a href="/users/register">Alta<br>Usuarios</a></li>
+                            <li><a href="/users/usersAdmin">Editar y Borrar<br>Usuarios</a></li>
+                            <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
+
+                            <% } %> 
+                        </div>
+                    </div>
+
+
+                    <div class="menuDesktop"> 
                         <% if (locals.user && locals.user.category == 'admin') { %> 
                             <li><a href="/products/add">Alta<br>Producto</a></li>
                             <li><a href="/products">Editar y Borrar<br>Productos</a></li>

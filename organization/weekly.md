@@ -31,11 +31,16 @@ Esto decidimos hacerlo para fomentar la mejor comunicación en el grupo, para po
 Este sistema de 4 patas nos permite flexibilidad para poder adecuarnos a las necesidades del grupo y modificar el formato como mejor sea necesario en el momento que sea necesario.
 
 
-## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 3:**
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 3, entregable para el Sprint 4:**
 
 Durante este Sprint como fue comentado en la Retrospectiva que se puede leer <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>, utilizamos reuniones semanales y comunicaciones diarias para poder reforzar las necesidades de organización debido a la imposibilidad de reunirnos todos los días durante esa semana. 
 
 
-## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 4:**
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 4, entregable para el Sprint 5:**
 
 Muy en sintonía a lo descrito en la Retrospectiva (que puede ser leída desde <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>) usamos reuniones diarias unidas a 2 sesiones semanales de codeo en conjunto entre todos los miembros del equipo para solucionar dudas de los mismos y arreglar posibles problemas en el código para la presentación de este Sprint.
+
+
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 5, entregable para el Sprint 6:**
+
+Decidimos aceitar mas el sistema de Weekly / Daily utilizando reuniones por WhatsApp diariamente y una reunión semanal fuerte en la cual llevamos todos los problemas que nos quedaron sin resolver a una mesa en común para poder entre todos lograr esa resolución. Como todo la practica hace al maestro y probar diferentes formas de organización nos da la flexibilidad de que podemos encontrar la mejor forma para un momento determinado o un problema determinado.

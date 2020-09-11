@@ -16,52 +16,27 @@ module.exports = {
         res.render('sales', { sales } );
     },
 
-    // sales:  (req, res) => {
-    //     let salesId = req.params.salesId; 
-
-    //     let sales = []
-
-    //     //let salesToEdit = sales[salesId];
-
-        
-    //     res.render('salesToEdit', {salesToEdit: salesToEdit});
-        
-    //     res.render('salesId'); 
-        
-    //     res.render("sales");
-    // },
     add:  (req, res) => {
-        res.render('addSales')
-        return
-        let salesId = req.params.salesId; 
+        
 
-        let sales =  {
-            "name": req.body.name,
-            "promo": req.body.promo,
-            "pricePromo": req.body.pricePromo,
-            "image": null
-        }
-        //let prueba = productsModel.readFile();
+        // let sales =  {
+        //     "name": req.body.name,
+        //     "promo": req.body.promo,
+        //     "pricePromo": req.body.pricePromo,
+        //     "image": null
+        // }
+    
        
-        res.render('add');            //ojo con esto que nos direcciona a la misma que productos, vamos a tener que hacer un addSales para diferenciar. 
+        res.render('addSales')           
     },
 
     edit:  (req, res) => {
 
-        let salesId = req.params.salesId; 
 
-        let sales =  {
-            "name": req.body.name,
-            "promo": req.body.promo,
-            "pricePromo": req.body.pricePromo,
-            "image": null
-        }
+       let sales = salesModel.find(req.params.id);
+       res.render('editSales', { sales } );
 
-       // let productsToEdit = products.[productId];
-
-       //res.render("productsToEdit", {productsToEdit: productsToEdit});
-
-        res.render('editSales');
+    
     },
     store: (req, res, next) => {
         
@@ -72,12 +47,31 @@ module.exports = {
         }
         let newId = salesModel.create(sales);
         
-    res.redirect('sales');
+    res.redirect('/sales');
 
     },
+    salesAdmin: (req, res) => {
+        let sales= salesModel.all();
+        res.render('salesAdmin', { sales } );
+    },
+    update: (req, res) => {
+        let sales = req.body
+        sales.id = req.params.id
+        
+        if (req.file) {
+            sales.image = req.file.filename;
+        }
+        let salesEdit = salesModel.update(sales);
 
-    destroy: (req, res, next) => {
-        res.render('deleteSales')
+        
+        res.redirect('/sales');
+
+        
+    },
+
+    destroy: (req, res) => {
+        salesModel.delete(req.params.id);
+        res.redirect('/sales');
     }
     
 }

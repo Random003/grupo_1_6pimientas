@@ -394,9 +394,25 @@ a {
     height: 6rem;
     border-radius: 10px;
     align-self: center;
-    
-    /* position: absolute; 
-    bottom: 10px;  */
+}
+
+
+
+.bot1 {
+    background-color: rgb(253, 227, 179);
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 6rem;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.botoComp {
+    position: absolute; 
+    bottom: 10px; 
+    display: flex;
+    /* margin-left: 185px; */
 }
 
 .editProduct {
@@ -415,6 +431,34 @@ a {
 
 }
 
+.editProduct:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
+.editSale {
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    height: 5rem;
+    border-radius: 10px;
+    align-self: center;
+    margin: 4px;
+    font-size: smaller;
+    padding: 0.7rem;
+    padding-top: 1.3rem;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.editSale:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
 .deleteProduct {
     background-color:darkred;
     color: white;
@@ -427,7 +471,6 @@ a {
 
 .idProduct {
     display: none;
-    
 }
 
 /* Edit Producto */
@@ -438,6 +481,12 @@ a {
     overflow: auto;
     object-fit: contain;   
 }
+
+
+.dropdown-menu {
+    background-color: rgb(163, 31, 53);
+}
+
 
 /* FOOTER */
 
@@ -629,7 +678,6 @@ header div ul {
     margin-bottom: 10px;    
     margin-left: 10px;
     margin-right: 10px;
-    
     width: 100%;
 }
 
@@ -652,7 +700,6 @@ header div ul {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    
 }
 
 .foto_producto_bolsa {
@@ -678,7 +725,6 @@ main div section article input {
     width: 40px;
     height: 40px;
     border: 0;
-    
     overflow: hidden;
     text-transform: none;
     text-align: center;
@@ -850,7 +896,7 @@ footer section article p {
 }
 
 #botonIngreso:hover {
-    background-color: #0022AA;
+    background-color: #3370cc;
     cursor: pointer;
 }
 
@@ -874,6 +920,13 @@ footer section article p {
     margin: 1rem 0 0rem 0;
 
 }
+
+.registerUser {
+    color: rgb(163, 31, 53);
+    text-decoration: none;
+    text-align: center;
+}
+
 /*-------*/
 
 .home_carrousel div{
@@ -1042,8 +1095,8 @@ footer section article p {
     font-size: 1.5rem;
     color: black;
     font: -webkit-control;
-
 }
+
 .deleteUser {
     width: 100%;
     justify-content: center;
@@ -1061,7 +1114,7 @@ footer section article p {
     margin: 1rem;
 }
 #butonEditUser:hover {
-        background-color: #0022AA;
+        background-color: #3778da;
         cursor: pointer;
     
 }
@@ -1087,13 +1140,14 @@ footer section article p {
 /*------------------------------------------------------------*/
 
 /* MEDIA QUIERIES * -------------------------------------------------*/
-@media all and (min-width: 320px) {
-    /* .nameUser {
-        left: 50px;
-        top: 155px;
-    } */
+
+
+@media all and (min-width: 1px) {
+    .menuDesktop {
+        display: none;
+    }
 }
-}
+
 @media all and (min-width: 360px) {
     .marcaSP {
         width: 75%;
@@ -1139,15 +1193,16 @@ footer section article p {
         margin-right: 80px;
         margin-top: 20px;
     }
-    .barra_menu {
-        height: 100px;
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 85px;
     }
-    /* .nameUser {
-       
-    left: 50px;
-    top: 165px;
 
-    } */
+    .menuDesktop {
+        display: none;
+    }
 }
 
 @media all and (min-width: 380px) {
@@ -1171,11 +1226,12 @@ footer section article p {
     .banner {
         background-size: 130% 100%;
     }
-
-    /* .nameUser {
-        left: 300px;
-        top: 195px;
-    } */
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 107px;
+    }
 }
 
 @media all and (min-width: 470px) {
@@ -1218,6 +1274,18 @@ footer section article p {
         object-fit: cover;
         object-position: top;
     }
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 123px;
+    }
+}
+
+@media (max-width: 760px) {
+    .cajaOculta {
+        display:none;
+    }
 }
 
 @media all and (min-width: 760px) {
@@ -1228,9 +1296,12 @@ footer section article p {
     .botoz {
         display:none;
     }
-    /* .nameUser {
-        top: 195px;
-    } */
+    .botoComp {
+        position: absolute; 
+        bottom: 10px; 
+        display: flex;
+        margin-left: 185px;
+    }
 }
 
 @media all and (min-width: 769px) {
@@ -1292,6 +1363,15 @@ footer section article p {
     } */
 }
 
+@media all and (min-width: 999px) {
+    .dropdown {
+        display: none;
+    }
+    .menuDesktop {
+        display: block  ;
+    }
+}
+
 @media all and (orientation: landscape) {
     .marcaSP {
         width: 25%;
@@ -1350,11 +1430,5 @@ footer section article p {
         flex-direction: row; 
         justify-content: space-between;
         align-items: flex-end;
-    }
-}
-
-@media (max-width: 760px) {
-    .cajaOculta {
-        display:none;
     }
 }

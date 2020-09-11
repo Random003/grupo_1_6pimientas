@@ -51,21 +51,23 @@ Nombre de la Empresa | Descripción | Dirección Web
  Los Abuelos | Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. | [Sitio](https://www.losabuelos.com.uy/)
 
 
-## **Tablero Trello:** 
-
-Visite el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJdaU8yL">aquí</a>.
 
 
-## **Retrospectiva:** 
+# **Retrospectiva:** 
 
 Visite Retrospectiva <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/retro.md">aquí</a>.
 
 
-## **Daily / Weeky:** 
+# **Daily / Weeky:** 
 
-Visite Weekly <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.
+Visite Daily <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.
 
 
-## Comentarios a tener en cuenta en los Sprints:
+# **Tablero Trello:** 
 
-Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los sprints a entregar.
+Visite el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJdaU8yL">aquí</a>.
+
+
+# Comentarios a tener en cuenta en los Sprints:
+
+Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los Sprints a entregar, como por ejemplo wireframes o pedidos de entregables determinados que no tengan un lugar especifico en el Readme, gracias.

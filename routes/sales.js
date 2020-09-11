@@ -24,14 +24,13 @@ router.get("/add", salesController.add);
 
 router.post("/", upload.single('imagen'), salesController.store);
 
-router.get("/editSales", salesController.edit);
+router.get('/admin', salesController.salesAdmin)
 
-router.put('/editSales/:salesId', salesController.edit)
+router.get("/editSales/:id", salesController.edit);
 
-router.delete('/editSales/:salesId', salesController.destroy)
+router.put("/:id", upload.single('image'), salesController.update); 
 
-//router.post("/", indexController.indexPop);
+router.delete('/delete/:id', salesController.destroy)
 
-//router.get('/home', indexController.home); en construcción
 
 module.exports = router;

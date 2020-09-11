@@ -5,31 +5,34 @@
     <%- include('./partials/header');%> 
     <main class="mainCreate">
         
-        <form class="cajaCreate" action="/sales/edit?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="cajaCreate" action="/sales/editSales/<%= sales.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <h3>
                 Editar una Promoción:
             </h3>
             <div class="containerCreate">
                 <div>
                     <p>
-                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre del producto">
+                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre de la Promoción" value="<%= sales.name %>">
                     </p>
     
+
                     <p>
-                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento"></textarea>
+                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento" value="<%= sales.discount %>"></textarea>
                     </p>
                 </div>
                
                 <p>
-                    <input class="ingresoCreate fileCreate" type="file" name="imagen"></input>
+                    <input class="ingresoCreate fileCreate" type="file" name="image" src="/images/products/<%= sales.image %>" alt=""></input>
                 </p>
                 <p>
-                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio">
+                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio" value="<%= sales.price %>">
                 </p>
 
                 <p>
+                    <button type="submit" class="ingreso" id="botonIngreso">Enviar</button>
+                    <!-- <button type="submit" class="ingreso" id="botonIngreso">Editar</button>
                     <button type="submit" class="ingresoCreate" id="botonIngreso">Editar</button> 
-                    <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar</button>
+                    <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar</button> -->
                 </p>
 
             </div>

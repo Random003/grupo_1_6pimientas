@@ -91,6 +91,7 @@
   "image": "user_3.png"
  },
  {
+<<<<<<< HEAD
   "id": 10,
   "full_name": "Jenifer",
   "email": "j@j.com",
@@ -102,5 +103,18 @@
   "city": "",
   "category": "user",
   "image": "user-1599436639475.jpeg"
+=======
+  "id": 9,
+  "full_name": "Babart",
+  "email": "babart@babart.com",
+  "password": "$2a$12$ofa88oGISrRe4PLBKBuAeOsdFUg0H2hP8zQcy0G2u8u2TxfoJlhSG",
+  "street": "La Calle",
+  "number": "123",
+  "floor": 1,
+  "department": "ese",
+  "city": "Muchas",
+  "category": "admin",
+  "image": "user-1599802507754.jpg"
+>>>>>>> 5a95eeda9352b05cf5504bf49c27b25a12cc2003
  }
 ]
