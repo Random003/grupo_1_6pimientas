@@ -429,6 +429,34 @@ a {
     padding-top: 1.3rem;
 }
 
+.editProduct:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
+.editSale {
+    background-color: darkblue;
+    color: white;
+    border: 0;
+    height: 5rem;
+    border-radius: 10px;
+    align-self: center;
+    margin: 4px;
+    font-size: smaller;
+    padding: 0.7rem;
+    padding-top: 1.3rem;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.editSale:hover {
+    color: white;
+    background-color: #0044AA;
+    text-decoration: none;
+}
+
 .deleteProduct {
     background-color:darkred;
     color: white;
@@ -441,7 +469,6 @@ a {
 
 .idProduct {
     display: none;
-    
 }
 
 /* Edit Producto */
@@ -649,7 +676,6 @@ header div ul {
     margin-bottom: 10px;    
     margin-left: 10px;
     margin-right: 10px;
-    
     width: 100%;
 }
 
@@ -672,7 +698,6 @@ header div ul {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    
 }
 
 .foto_producto_bolsa {
@@ -698,7 +723,6 @@ main div section article input {
     width: 40px;
     height: 40px;
     border: 0;
-    
     overflow: hidden;
     text-transform: none;
     text-align: center;
@@ -869,7 +893,7 @@ footer section article p {
 }
 
 #botonIngreso:hover {
-    background-color: #0022AA;
+    background-color: #3370cc;
     cursor: pointer;
 }
 
@@ -893,6 +917,13 @@ footer section article p {
     margin: 1rem 0 0rem 0;
 
 }
+
+.registerUser {
+    color: rgb(163, 31, 53);
+    text-decoration: none;
+    text-align: center;
+}
+
 /*-------*/
 
 .home_carrousel div{
@@ -1060,8 +1091,8 @@ footer section article p {
     font-size: 1.5rem;
     color: black;
     font: -webkit-control;
-
 }
+
 .deleteUser {
     width: 100%;
     justify-content: center;
@@ -1079,7 +1110,7 @@ footer section article p {
     margin: 1rem;
 }
 #butonEditUser:hover {
-        background-color: #0022AA;
+        background-color: #3778da;
         cursor: pointer;
     
 }

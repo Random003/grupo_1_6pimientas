@@ -89,5 +89,18 @@
   "city": "Ciudad",
   "category": "admin",
   "image": "user_3.png"
+ },
+ {
+  "id": 9,
+  "full_name": "Babart",
+  "email": "babart@babart.com",
+  "password": "$2a$12$ofa88oGISrRe4PLBKBuAeOsdFUg0H2hP8zQcy0G2u8u2TxfoJlhSG",
+  "street": "La Calle",
+  "number": "123",
+  "floor": 1,
+  "department": "ese",
+  "city": "Muchas",
+  "category": "admin",
+  "image": "user-1599802507754.jpg"
  }
 ]
