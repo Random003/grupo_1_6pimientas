@@ -12,12 +12,5 @@
   "discount": "20 % OFF EN LA SEGUNDA UNIDAD!",
   "price": 445,
   "image": "ravioles.jpg"
- },
- {
-  "name": "Mega raviolones",
-  "discount": "25% OFF en la 7 unidad",
-  "price": "140",
-  "image": "default.png",
-  "id": 4
  }
 ]

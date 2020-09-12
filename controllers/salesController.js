@@ -34,7 +34,7 @@ module.exports = {
 
 
        let sales = salesModel.find(req.params.id);
-       res.render('./sales/editSales', { sales } );
+       res.render('/sales/editSales', { sales } );
 
     
     },
@@ -71,7 +71,7 @@ module.exports = {
 
     destroy: (req, res) => {
         salesModel.delete(req.params.id);
-        res.redirect('../sales');
+        res.redirect('/sales');
     }
     
 }
