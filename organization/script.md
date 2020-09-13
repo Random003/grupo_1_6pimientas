@@ -1,0 +1,18 @@
+# **Grupo 1 "Seis Pimientas"**
+
+## **Para Sprint 6**
+
+### SCRIPT DE CREACIÓN DE ESTRUCTURA DE BASE DE DATOS:
+
+
+
+### CREACIÓN DE LA BASE DE DATOS Y DE TODAS LAS TABLAS - 
+
+
+
+### TABLA DE USUARIOS - 
+
+
+
+### TABLAS SECUNDARIAS - 
+

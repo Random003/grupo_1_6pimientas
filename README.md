@@ -20,7 +20,7 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
     una buena cocción de la pasta que haya adquirido.
 
 
-# **Target:**
+## **Target:**
 - El sitio está dirigido a público joven, con busca de un mejor servicio de compras y 
 a la generación X que cada vez se adapta más a este formato de servicios.
 - Teniendo en cuenta el aislamiento social, tiene que ser amigable a cualquier tipo de público
@@ -36,7 +36,7 @@ que busque este servicio.
  Programador y Analista de Sistemas.
  Soy uno de los propietarios de SeisPimientas (Fábrica de pastas). 
 
- - Gaspar Valdes [@GitHub](https://github.com/Babart): 
+ - Gaspar Valdés [@GitHub](https://github.com/Babart): 
  Tengo 31 años, nacido en Corrientes, pero vivo actualmente y hace más de 16 años en Mendoza, soy mendocino por adopción. De profesión Bioquímico, trabajo en Cuerpo médico Forense de la provincia, y en un hospital privado. 
 
 
