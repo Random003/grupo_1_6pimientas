@@ -34,7 +34,7 @@ module.exports = {
 
 
        let sales = salesModel.find(req.params.id);
-       res.render('/sales/editSales', { sales } );
+       res.render('./sales/editSales', { sales } );
 
     
     },

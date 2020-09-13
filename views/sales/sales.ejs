@@ -46,9 +46,10 @@
                          <!-- <button class="botonAgregarPedido">Agregar Pedido!</button> -->
                     </p>
                     <% if (locals.user && user.category == 'admin') {%> 
-                        <form action="/sales/editSales/<%= sales[i].id %>?_method=PUT" method="POST">
+                        <a class="editProduct" href="/sales/editSales/<%= sales[i].id %>">Editar Promo</a>
+                        <!-- <form action="/sales/editSales/<%= sales[i].id %>?_method=PUT" method="POST">
                             <button type="submit" class="editUserAll" id="butonEditUser">Editar Promo</button> 
-                        </form>
+                        </form> -->
                         <!-- <a class="editProduct" href="/sales/edit/<%= sales[i].id %>">Editar Promocion</a> -->
 
                         <form action="/sales/delete/<%= sales[i].id %>?_method=DELETE" method="POST">
