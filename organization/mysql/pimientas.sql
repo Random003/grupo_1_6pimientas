@@ -49,7 +49,7 @@ UNLOCK TABLES;
 -- Table structure for table `products_variety`
 --
 
-DROP TABLE IF EXISTS `products_variety`;
+DROP TABLE IF EXISTS `product_variety`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `products_variety` (
@@ -64,7 +64,7 @@ CREATE TABLE `products_variety` (
 -- Dumping data for table `products_variety`
 --
 
-LOCK TABLES `products_variety` WRITE;
+LOCK TABLES `product_variety` WRITE;
 /*!40000 ALTER TABLE `products_variety` DISABLE KEYS */;
 /*!40000 ALTER TABLE `products_variety` ENABLE KEYS */;
 UNLOCK TABLES;
