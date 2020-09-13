@@ -11,7 +11,7 @@ Utilizamos el tablero de trabajo para separar lo que cada integrante del equipo 
 
 ### 2 - Grupo en WhatsApp ###
 
-El grupo de WhatsApp es utilizado primariamente para comunicaciones urgentes o para avisar que uno esta empezando a codear, terminando, haciendo push o pull del proyecto desde o hacia GitHub. Todo esto para evitar pisar el proyecto entre los miembros con el consiguiente perdida de tiempo y arreglos de posibles errores en el código resultante.
+El grupo de WhatsApp es utilizado primariamente para comunicaciones urgentes o para avisar que uno esta empezando a codear, terminando, haciendo push o pull del proyecto desde o hacia GitHub. Todo esto para evitar pisar el proyecto entre los miembros con la consiguiente perdida de tiempo y arreglos de posibles errores en el código resultante. Además el grupo ha servido como ayuda mutua entre los miembros del equipo, ya que la experiencia de unos ayuda a otros y viceversa. El grupo ha favorecido notablemente la interacción entre los participantes, incluso llegando a compartir experiencias de vida fuera de la programación, lo que genera un vínculo más fuerte a la hora de trabajar. 
 
 
 ### 3 - Daily ###
@@ -23,7 +23,7 @@ Las reuniones diarias decidimos utilizarlas solo si son necesarias por si existe
 
 Las reuniones semanales son las que decidimos utilizar en vez de las diarias por que nos permiten reunirnos por mucho mas tiempo y lograr mayores resultados en relación tiempo/objetivos. 
 
-Nombrare como ejemplo la realizada el sábado 1 de Agosto: Comenzamos la reunión a las 15hs con la lectura del tablero Trello comentando lo que ya habíamos hecho cada uno de ahi, detallamos lo que cada uno realizaría después dando un marco de espacio temporal para lograrlo, seguidamente delineamos la tarea a realizar en el dia y como se realizaría; en este caso seria una sesión de live coding en la cual mediante video conferencia uno de los integrantes realizaría el codeo mientras los otros dos ayudarían en los errores posibles a presentar y buscarían soluciones a los problemas que no se supiera solucionar con la información presente en el curso. Ademas cada uno iba explicando lo que se iba haciendo, ofreciendo posibles mejoras o comentando como hizo el código en la misma situación.
+Nombrare como ejemplo la realizada el sábado 1 de Agosto: Comenzamos la reunión a las 15hs con la lectura del tablero Trello comentando lo que ya habíamos hecho cada uno de ahi, detallamos lo que cada uno realizaría después dando un marco de espacio temporal para lograrlo, seguidamente delineamos la tarea a realizar en el dia y como se realizaría; en este caso seria una sesión de live coding en la cual mediante video conferencia uno de los integrantes realizaría el codeo mientras los otros dos ayudarían en los errores posibles a presentar y buscarían soluciones a los problemas que no se supiera solucionar con la información presente en el curso. Ademas cada uno iba explicando lo que se iba haciendo, ofreciendo posibles mejoras o comentando como hizo el código en la misma situación. El live coding nos ha favorecido para trabajar los 3 en simultáneo, resolviendo problemas en vivo con el aporte de todos los miembros del grupo. 
 
 Esto decidimos hacerlo para fomentar la mejor comunicación en el grupo, para poder compartir buenas practicas, mejorar la homogeneidad del código del proyecto, ayudar en las dudas posibles que alguno de los miembros tenga y que seria mas lenta la respuesta de hacerla por medio de mensaje o esperar a la reunión diaria o semanal siguiente.
 
