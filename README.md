@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/marca_curvas.png" alt="Logo de la marca"/>
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/home/marca_curvas.png" alt="Logo de la marca"/>
 </p>
 
 # **Grupo 1 "Seis Pimientas"**
@@ -8,7 +8,7 @@ Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sit
 Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3 sucursales adicionales.
 
 
-# **Objetivos del ecomerce:**
+# **Objetivos del e-comerce:**
 -   Facilitar a los clientes la compra vía web con entregas a domicilio.
 -   Ofrecerles un espacio para que puedan interactuar con otros consumidores,
     compartiendo recetas, comentarios y/o sugerencias referidos a los productos ofrecidos. 
@@ -45,7 +45,7 @@ que busque este servicio.
 Nombre de la Empresa | Descripción | Dirección Web
 :------------------: | :---------: | :-----------:
  La Bolognesa | Sitio con portfolio de productos, no ofrece compra online, dispone de canal de wsp online. | [Sitio](http://labolognesa.com.ar/)
- D`ancona | Sitio con portfolio de productos, ofrece ecomerce y pagos con tarjetas. | [Sitio](https://dancona.com.ar/)
+ D`ancona | Sitio con portfolio de productos, ofrece e-comerce y pagos con tarjetas. | [Sitio](https://dancona.com.ar/)
  Pascucci | Sitio de Google Business con portfolio de productos, con reseñas de clientes y canales de contacto. | [Sitio](https://business.google.com/v/pastas-frescas-pascucci/011086785476995587146/9f49/_?exp=1769939&bc=8&caid=1693702734&agid=68919136220&dvc=c&dvcmdl=&plmt=&kwd=%2Bfabrica%20%2Bde%20%2Bpasta&adpstn=&fiid=&tgtid=kwd-340679252818&locint=1000092&locphy=20017&mt=b&ntwk=g&gclid=EAIaIQobChMIlv2UmaKb6gIVxoKRCh1r2QW4EAAYASAAEgIMRPD_BwE)
  La Cuyanita | Micro sitio de Facebook, ofrece propaganda de los productos que ofrece y ademas formas de contacto por Facebook y de manera telefonica. | [Sitio](https://www.facebook.com/lacuyanitapastas/)
  Los Abuelos | Página versátil, ofrece productos frescos, y recetas. Además, posee imágenes reales y video ilustrativo. Muy completo. | [Sitio](https://www.losabuelos.com.uy/)
@@ -70,4 +70,4 @@ Visite el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJda
 
 # Comentarios a tener en cuenta en los Sprints:
 
-Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los Sprints a entregar, como por ejemplo wireframes o pedidos de entregables determinados que no tengan un lugar especifico en el Readme, gracias.
+Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los Sprints a entregar, como por ejemplo wireframes o pedidos de entregables determinados que no tengan un lugar especifico en el readme, gracias.
