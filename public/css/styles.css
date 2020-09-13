@@ -416,7 +416,7 @@ a {
 }
 
 .editProduct {
-    background-color: darkblue;
+    background-color: rgb(209, 146, 28);
     color: white;
     border: 0;
     width: 13rem;
@@ -433,7 +433,7 @@ a {
 
 .editProduct:hover {
     color: white;
-    background-color: #0044AA;
+    background-color: orange;
     text-decoration: none;
 }
 
@@ -886,7 +886,7 @@ footer section article p {
     width: 13rem;
     height: 5rem;
     border-radius: 10px;
-    background-color: #0044AA;
+    background-color: chocolate;
     margin: 1rem;
     /*
     padding: 10px;
@@ -896,7 +896,7 @@ footer section article p {
 }
 
 #botonIngreso:hover {
-    background-color: #3370cc;
+    background-color: rgb(243, 105, 7);
     cursor: pointer;
 }
 
@@ -1110,11 +1110,11 @@ footer section article p {
     height: 4rem;
     padding: 0.5rem;
     border-radius: 10px;
-    background-color: #0044AA;
+    background-color: rgb(209, 146, 28);
     margin: 1rem;
 }
 #butonEditUser:hover {
-        background-color: #3778da;
+        background-color: orange;
         cursor: pointer;
     
 }

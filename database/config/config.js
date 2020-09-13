@@ -7,8 +7,8 @@ module.exports = {
     "host": "127.0.0.1",
     "dialect": "mysql",
     "define": {
-      // "timestamps": false,
-      // "undescored" : true
+      "timestamps": false,
+      "undescored" : true
     }
   },
   "test": {
@@ -27,4 +27,4 @@ module.exports = {
   }
 }
 
-//esta todo configurado para poder cargar nuestros datos en nuestra base de datos, que redundante cuack!
+//Hay que ver si es que los datos estan bien, estan segun lo que hicimos esta tarde pero workbench hace lo que quiere aveces jajajaj
