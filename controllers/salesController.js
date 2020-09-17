@@ -2,6 +2,7 @@ const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
 const salesModel = jsonTable('sales');
+const { sales } = require('../database/models');
 
 // module.exports = {
 //     index: (req, res, next) => {
