@@ -3,7 +3,8 @@ const jsonTable = require ('../database/jsonTable');
 const { read } = require('fs');
 const salesModel = jsonTable('sales');
 const { sales } = require('../database/models');
-
+const db = require('../database/models');
+//let db = require('../database/models')
 // module.exports = {
 //     index: (req, res, next) => {
 //         res.render('sales');
@@ -13,8 +14,12 @@ const { sales } = require('../database/models');
 // }
 module.exports = {
     sales: (req, res) => {
-        let sales = salesModel.all();
-        res.render('./sales/sales', { sales } );
+       // let sales = salesModel.all();
+        sales.findAll()
+            .then(function (sales_db)){
+                res.render('./sales/sales', { sales: sales } );
+            }
+             
     },
 
     add:  (req, res) => {
@@ -40,6 +45,15 @@ module.exports = {
     
     },
     store: (req, res, next) => {
+        
+        // db.sales.create({
+        //     id: req.body.id,
+        //     name: req.body.name,
+        //     discount: req.body.discount,
+        //     price: req.body.price,
+        // })
+        // res.redirect('../sales');
+        
         
         let sales = req.body;
         sales.image = 'default.png';
