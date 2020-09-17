@@ -2,11 +2,15 @@ const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
 const productsModel = jsonTable('products');
+const { product } = require ('../database/models');
 
 module.exports = {
     products : (req, res) => {
-        let products = productsModel.all();
-        res.render('./products/products', { products } );
+        //let products = productsModel.all();
+        product.findAll()
+            .then (products => {
+                res.render('./products/products', { products } );
+            });
     },
 
     productCart:  (req, res) => {

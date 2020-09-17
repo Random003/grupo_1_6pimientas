@@ -11,7 +11,6 @@ let model = function (tableName) {
                 return JSON.parse(content);   
             } 
             return [];
-
         },
 
         writeFile(rows) {

@@ -73,16 +73,17 @@
                         <% } %> 
                     </div>
                 </ul>
-               
+                
+                <div class="nameUser">
+                    
+                    <% if (locals.user) { %> 
+                        
+                        <label ><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></label>
+                        
+                    <%} %> 
+                </div>
             </nav>
            
-        </div>
-        <div class="nameUser">
-            <% if (locals.user) { %> 
-                
-                <label ><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></label>
-                
-            <%} %> 
         </div>
     </div>
 </header>

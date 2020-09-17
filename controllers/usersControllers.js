@@ -9,6 +9,7 @@ const { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } = require('constants');
 const { nextTick } = require('process');
 const usersModel = jsonTable('users');
 const usersTokensModel = jsonTable('usersTokens');
+const { user, user_token } = require ('../database/models');
 
 
 
@@ -20,31 +21,43 @@ module.exports = {
         let errorsLogin = validationResult(req);
         
         if (errorsLogin.isEmpty()) {
-            let user = usersModel.findByFields('email', req.body.email);
-            
-            if(user) {
-                if (bcrypt.compareSync(req.body.password, user.password)) {
-                    delete user.password;
-                    req.session.user = user; //guardo el usuario en sesión
-                    
-                    //si elige remember
-                    if (req.body.remember == 'on') {
-                        const token = crypto.randomBytes(64).toString('base64'); // creo el token
-
-                        usersTokensModel.create({userId: user.id, token }); //lo almaceno en un archivo usando el model
-
-                        res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
+            //let user = usersModel.findByFields('email', req.body.email);
+            user.findOne({ where: { email: req.body.email } })
+                .then((user_db) => {
+                    if(user_db) {
+                        if (bcrypt.compareSync(req.body.password, user_db.password)) {
+                            delete user_db.password;
+                            req.session.user = user_db; //guardo el usuario en sesión
+                            console.log('Usuario en sesión  ' + user_db.full_name);
+                            console.log('Usuario con categoría  ' + user_db.category);
+                           
+                            
+                            //si elige remember
+                            if (req.body.remember == 'on') {
+                                const token = crypto.randomBytes(64).toString('base64'); // creo el token
+        
+                                //usersTokensModel.create({userId: user.id, token }); //lo almaceno en un archivo usando el model
+                                user_token.create({
+                                    user_id: user_db.id,
+                                    token: token
+                                })
+                                .then ((new_token) =>{
+                                    res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
+                                });
+        
+                                
+                            }
+                            return res.redirect('/products');
+        
+                        } else {
+                            res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
+                        }
                         
+                    } else {
+                        res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
                     }
-                    return res.redirect('/products');
-
-                } else {
-                    res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
-                }
-                
-            } else {
-                res.render ('./users/login', { errors: { password: {msg: 'Usuario o clave incorrecta'} }, email: req.body.email });
-            }
+            });
+            
         } else {
             
             res.render ('./users/login', { errors: errorsLogin.mapped(), email: req.body.email });
@@ -64,10 +77,11 @@ module.exports = {
         //res.render ('usersAdmin', users);
     },
     logout: (req, res) => {
-        let userTokens = usersTokensModel.findAllByField('userId', req.session.user.id);
-        userTokens.forEach(userToken => {
-            usersTokensModel.delete(userToken.id);
-        });
+        // let userTokens = usersTokensModel.findAllByField('userId', req.session.user.id);
+        // userTokens.forEach(userToken => {
+        //     usersTokensModel.delete(userToken.id);
+        // });
+        user_token.destroy({ where: { user_id: req.session.user.id }})
         res.clearCookie('userToken');
         
         req.session.destroy();
@@ -87,7 +101,6 @@ module.exports = {
 
         } else {
             let userToCreate = {
-                id: 1,
                 full_name: req.body.full_name, 
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 12), 
@@ -100,10 +113,13 @@ module.exports = {
                 image: file
 
             };
-            usersModel.create(userToCreate);
+            //usersModel.create(userToCreate);
+            user.create(userToCreate);
+            console.log(req.session.user);
+            console.log(req.session.user.category);
+            
             if (req.session.user && req.session.user.category == 'admin') {
-                console.log(req.session.user)
-                res.redirect ('../usersAdmin')
+                res.redirect ('../users/usersAdmin')
             } else {
                 res.render ('./users/login');
             }
@@ -112,70 +128,91 @@ module.exports = {
     },
     editUser: (req, res) => {
 
-        let userToEdit = usersModel.find(req.params.id);
-        
-        res.render ('./users/editUsers', { userToEdit: userToEdit });
+        //let userToEdit = usersModel.find(req.params.id);
+        user.findByPk(req.params.id)
+            .then ((userToEdit) =>{
+                res.render ('./users/editUsers', { userToEdit: userToEdit });
+            });
+
 
     },
     updateUser: (req, res) => {
         
-        let oldUser = usersModel.find(req.params.id);
+        //let oldUser = usersModel.find(req.params.id);
+        user.findByPk(req.params.id)
+            .then ((oldUser)=>{
+                
+                let old_category = '';
+                let password = '';
+                let file = '';
+        
+                if (req.session.user.category == 'admin') {
+                    old_category = req.body.category;
+                } else {
+                    old_category = 'user';
+                }
+               
+                if(req.body.password == '') {
+                    password = oldUser.password;
+                } else {
+                    password = bcrypt.hashSync(req.body.password, 12);
+                }
+                if (req.file) {
+                    file = req.file.filename;
+                } else {
+                    file = oldUser.image;
+                }
+        
+                let userUpdate = {
+                    id: req.params.id,
+                    full_name: req.body.full_name,
+                    email: req.body.email,
+                    password: password,
+                    street: req.body.street,
+                    number: req.body.number,
+                    floor: parseInt(req.body.floor),
+                    department: req.body.department,
+                    city: req.body.city,
+                    category: old_category,
+                    image: file
 
-        let category = '';
-        let password = '';
-        let file = '';
 
-        if (req.session.user.category == 'admin') {
-            category = req.body.category;
-        } else {
-            category = 'user';
-        }
-       
-        if(req.body.password == '') {
-            password = oldUser.password;
-        } else {
-            password = bcrypt.hashSync(req.body.password, 12);
-        }
-        if (req.file) {
-            file = req.file.filename;
-        } else {
-            file = oldUser.image;
-        }
-
-        let userUpdate = {
-            id: parseInt(req.params.id),
-            full_name: req.body.full_name,
-            email: req.body.email,
-            password: password,
-            street: req.body.street,
-            number: req.body.number,
-            floor: parseInt(req.body.floor),
-            department: req.body.department,
-            city: req.body.city,
-            category: category,
-            image: file
-        };
-
-        let idUserUpdate = usersModel.update(userUpdate);
-        if (req.session.user.id == idUserUpdate) {
-            req.session.user = userUpdate;
-            res.render ('home1', { user: userUpdate });
-
-        } else {
+                };
+                
+                //let idUserUpdate = usersModel.update(userUpdate);
+                user.update(userUpdate, { where: { id: parseInt(req.params.id) } })
+                .then(updateUser => {
+                    
+                    if (req.session.user.id == req.params.id) {
+                        req.session.user = userUpdate;
+                        res.render ('./home/home1', { user: userUpdate });
+                    } else {
+                        res.redirect ('../usersAdmin');
+                    } 
+        
+                });
+            }
             
-            res.redirect ('../usersAdmin');
-        } 
+            );
+        
         
 
     },
     
     showAll: (req, res, next) => {
-        let users = usersModel.all();
-        res.render ('./users/usersAdmin', { users });
+        //let users = usersModel.all();
+        user.findAll()
+            .then (users=>{
+                res.render ('./users/usersAdmin', { users });
+
+            });
 
     },
     delete: (req, res) => {
-        usersModel.delete(req.params.id);
+        //usersModel.delete(req.params.id);
+        user.destroy({
+            where: { id: req.params.id }
+        });
         if (req.session.user.category == 'admin') {
             res.redirect ('../usersAdmin');
         } else {
