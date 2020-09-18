@@ -24,13 +24,6 @@ module.exports = {
 
     add:  (req, res) => {
         
-
-        // let sales =  {
-        //     "name": req.body.name,
-        //     "promo": req.body.promo,
-        //     "pricePromo": req.body.pricePromo,
-        //     "image": null
-        // }
     
        
         res.render('./sales/addSales')           
@@ -46,7 +39,7 @@ module.exports = {
     },
     store: (req, res, next) => {
         
-        // db.sales.create({
+        // sales.create({
         //     id: req.body.id,
         //     name: req.body.name,
         //     discount: req.body.discount,
@@ -66,6 +59,12 @@ module.exports = {
 
     },
     salesAdmin: (req, res) => {
+
+        // sales.findAll()
+        //     .then(function (sales_db)){
+        //         res.render('./sales/salesAdmin', { sales } );
+        //     }
+
         let sales= salesModel.all();
         res.render('./sales/salesAdmin', { sales } );
     },
@@ -85,6 +84,15 @@ module.exports = {
     },
 
     destroy: (req, res) => {
+
+        // sales.delete({
+        //     where: { id: req.params.id }
+        // });
+        // // .then(function (sales)){
+        // //   res.redirect('/sales')
+        // // }
+
+
         salesModel.delete(req.params.id);
         res.redirect('/sales');
     }
