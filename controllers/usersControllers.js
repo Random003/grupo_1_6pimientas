@@ -28,20 +28,18 @@ module.exports = {
                         if (bcrypt.compareSync(req.body.password, user_db.password)) {
                             delete user_db.password;
                             req.session.user = user_db; //guardo el usuario en sesión
-                            console.log('Usuario en sesión  ' + user_db.full_name);
-                            console.log('Usuario con categoría  ' + user_db.category);
-                           
                             
                             //si elige remember
                             if (req.body.remember == 'on') {
                                 const token = crypto.randomBytes(64).toString('base64'); // creo el token
-        
+                                console.log('entró en remember')
                                 //usersTokensModel.create({userId: user.id, token }); //lo almaceno en un archivo usando el model
                                 user_token.create({
                                     user_id: user_db.id,
                                     token: token
                                 })
                                 .then ((new_token) =>{
+                                    console.log('crea el usuario')
                                     res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
                                 });
         
@@ -115,8 +113,6 @@ module.exports = {
             };
             //usersModel.create(userToCreate);
             user.create(userToCreate);
-            console.log(req.session.user);
-            console.log(req.session.user.category);
             
             if (req.session.user && req.session.user.category == 'admin') {
                 res.redirect ('../users/usersAdmin')

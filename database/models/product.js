@@ -1,7 +1,8 @@
 'use strict';
+const { TooManyRequests } = require('http-errors');
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class products extends Model {
+  class product extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -9,10 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      this.hasMany(models.variety, {
+        as: 'variety',
+        foreignKey: 'product_id',
+        timestamps: false
+
+      });
       
     }
   };
-  products.init({
+  product.init({
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     presentation: DataTypes.STRING,
@@ -21,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'products',
+    modelName: 'product',
   });
-  return products;
+  return product;
 };

@@ -16,9 +16,9 @@ module.exports = {
     sales: (req, res) => {
        // let sales = salesModel.all();
         sales.findAll()
-            .then(function (sales_db)){
-                res.render('./sales/sales', { sales: sales } );
-            }
+            .then(function (sales_db) {
+                res.render('./sales/sales', { sales: sales_db } );
+            });
              
     },
 

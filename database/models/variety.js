@@ -12,10 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       
+   
     }
   };
   variety.init({
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    product_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'variety',

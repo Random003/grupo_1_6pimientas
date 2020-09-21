@@ -487,6 +487,10 @@ a {
     background-color: rgb(163, 31, 53);
 }
 
+.id_variety_hidden {
+    display: none;
+}
+
 
 /* FOOTER */
 
