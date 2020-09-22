@@ -64,3 +64,5 @@ Este Sprint nos encontró con parte del trabajo realizado del Sprint anterior as
 Ademas utilizamos una especie de Hackatlon para resolver este Sprint en un solo momento, esto lo hicimos para testear si es que era posible realizarse de manera realista.
 
 Entonces lo que tratamos de realizar desde este punto de vista en este Sprint es ver si es que podíamos trabajar todos a la vez al mismo tiempo sobre partes diferentes de la pagina o sobre el mismo tema desde diferentes perspectivas.
+
+Por otro lado, en este sprint quedó demostrado el espíritu colaborador del equipo, que se apoyo mutuamente en difíciles situaciones de índole familiar y/o salud que les ha tocado atravesar a algunos de sus miembros. Consideramos esto un aspecto fundamental a la hora de trabajar, generando lazos más fuertes entre sus participantes. 
