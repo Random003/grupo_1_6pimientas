@@ -309,7 +309,7 @@ a {
     display: flex;
     flex-direction: column;
     width: 80%;
-    max-width: 500px;
+    max-width: 300px;
     min-width: 300px;
     border: 1px hidden currentColor;
     padding: 10px 0px 10px 0px;
@@ -357,7 +357,7 @@ a {
 .titulos {
     background-color: blanchedalmond;
     max-width: 100%;
-    font-size: 180%;
+    font-size: 110%;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
 }
@@ -1273,8 +1273,8 @@ footer section article p {
     }
 
     .pedidoImage {
-        width: 350px;
-        height: 350px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
         object-position: top;
     }
