@@ -345,6 +345,14 @@ a {
     object-position: top;
 }
 
+.pedidoImage2 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    align-self: center;
+}
+
 .promo20 {
     margin-top: 2rem;
     margin-bottom: auto;
@@ -1316,6 +1324,11 @@ footer section article p {
     .botonAgregarPedido2{
         margin-left: -95px;
     }
+    .carousel {
+        width:640px;
+        margin: auto;
+        text-align: center;
+      }
 }
 
 @media all and (min-width: 769px) {

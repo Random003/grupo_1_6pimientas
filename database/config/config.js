@@ -3,7 +3,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    // para funcionamiento con password determinado
+    // para funcionamiento con password determinado (colocar password en linea siguiente)
     // "password": "root",
     "database": "pimientas",
     "host": "127.0.0.1",

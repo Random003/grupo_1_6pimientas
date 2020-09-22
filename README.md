@@ -68,6 +68,6 @@ Visite Daily <a href="https://github.com/Random003/grupo_1_6pimientas/blob/maste
 Visite el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJdaU8yL">aquí</a>.
 
 
-# Comentarios a tener en cuenta en los Sprints:
+# Comentarios a tener en cuenta para las entregas de Sprints:
 
 Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los Sprints a entregar, como por ejemplo wireframes o pedidos de entregables determinados que no tengan un lugar especifico en el readme, gracias.
