@@ -32,14 +32,14 @@ module.exports = {
                             //si elige remember
                             if (req.body.remember == 'on') {
                                 const token = crypto.randomBytes(64).toString('base64'); // creo el token
-                                console.log('entró en remember')
+                            
                                 //usersTokensModel.create({userId: user.id, token }); //lo almaceno en un archivo usando el model
                                 user_token.create({
                                     user_id: user_db.id,
                                     token: token
                                 })
                                 .then ((new_token) =>{
-                                    console.log('crea el usuario')
+                                    
                                     res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
                                 });
         

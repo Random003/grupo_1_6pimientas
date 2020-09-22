@@ -4,50 +4,60 @@
 <body>
     <%- include('../partials/header');%> 
     <main class="main_bc">
-        <h3 class="h3_bolsa_de_compras">Bolsa de compras:</h3>
-        <div class="contenido_bolsa">
-            <div class="titulos_detalle_bc">
-                <label class="titulo_producto" for="">Producto:</label>
-                <label class="titulo_cantidad" for="">Cantidad:</label>
+        <% if(detailShoppingBag && detailShoppingBag.length > 0 ) {%> 
+            <h3 class="h3_bolsa_de_compras">Bolsa de compras:</h3>
+            <div class="contenido_bolsa">
+                <div class="titulos_detalle_bc">
+                    <label class="titulo_producto" for="">Producto:</label>
+                    <label class="titulo_cantidad" for="">Cantidad:</label>
+                </div>
+                <section class="detalle_bolsa">
+                    <article>
+                        <img class="foto_producto_bolsa" src="/images/products/sorrentinos.jpg" alt="Foto sorrentinos">
+                    </article>
+                    <article class="descripción_compra">
+                        Sorrentino <br>
+                        de jamón y muzarella<br>
+                        x 1 - $350,00<br>
+                    </article>
+                    <article class="botones_bolsa">
+                        <nav class="botones_mas_menos">
+                            <input class="restar_producto_bolsa" type="button" value="-">
+                            <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
+                            <input class="sumar_producto_bolsa" type="button" value="+">
+                        </nav>
+                        <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
+                    </article>
+                </section>
+                <section class="detalle_bolsa">
+                    <article>
+                        <img class="foto_producto_bolsa" src="/images/products/caseritos.jpg" alt="Foto sorrentinos">
+                    </article>
+                    <article class="descripción_compra">
+                        Caserito <br>
+                        de carne braseada<br>
+                        x 1 - $330,00<br>
+                    </article>
+                    <article class="botones_bolsa">
+                        <nav class="botones_mas_menos">
+                            <input class="restar_producto_bolsa" type="button" value="-">
+                            <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
+                            <input class="sumar_producto_bolsa" type="button" value="+">
+                        </nav>
+                        <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
+                    </article>
+                </section>
             </div>
-            <section class="detalle_bolsa">
-                <article>
-                    <img class="foto_producto_bolsa" src="/images/products/sorrentinos.jpg" alt="Foto sorrentinos">
-                </article>
-                <article class="descripción_compra">
-                    Sorrentino <br>
-                    de jamón y muzarella<br>
-                    x 1 - $350,00<br>
-                </article>
-                <article class="botones_bolsa">
-                    <nav class="botones_mas_menos">
-                        <input class="restar_producto_bolsa" type="button" value="-">
-                        <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
-                        <input class="sumar_producto_bolsa" type="button" value="+">
-                    </nav>
-                    <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
-                </article>
-            </section>
-            <section class="detalle_bolsa">
-                <article>
-                    <img class="foto_producto_bolsa" src="/images/products/caseritos.jpg" alt="Foto sorrentinos">
-                </article>
-                <article class="descripción_compra">
-                    Caserito <br>
-                    de carne braseada<br>
-                    x 1 - $330,00<br>
-                </article>
-                <article class="botones_bolsa">
-                    <nav class="botones_mas_menos">
-                        <input class="restar_producto_bolsa" type="button" value="-">
-                        <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
-                        <input class="sumar_producto_bolsa" type="button" value="+">
-                    </nav>
-                    <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
-                </article>
-            </section>
-        </div>
+        <% } else { %>
+            <form action="/">
+                <div class="contenido_bolsa">
+                <h3 class="h3_bolsa_de_compras">Bolsa de compras vacía</h3>
+                  
+                <input class="eliminar_producto_bolsa" type="submit" id="" value="Ir a Productos">
+                </div>
 
+            </form>
+        <% } %> 
         <div class="botones_compra">
         </div>
 

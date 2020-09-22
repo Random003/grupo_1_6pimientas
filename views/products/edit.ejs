@@ -32,11 +32,16 @@
                 <label>Precio</label>
                 <input class="ingreso" type="text" name="price" placeholder="Precio" value="<%= product.price %>">
 
+
                 <div class="imagenEdit">
                     <label>Imagen</label>
                     <img class="imagenEdit" name="image" src="/images/products/<%= product.image %>" alt="">
                 </div>
-
+                 <p>
+                    <br>
+                    <label>Agregar una imagen</label>
+                    <input class="ingresoCreate fileCreate" type="file" name="image"></input>
+                </p>
                 <p>
                    
                 <button type="submit" class="ingreso" id="botonIngreso">Enviar</button>

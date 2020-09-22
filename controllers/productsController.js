@@ -3,7 +3,7 @@ const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
 const productsModel = jsonTable('products');
-const { product, variety, product_variety } = require ('../database/models');
+const { product, variety, product_variety, detail_shopping_bag, shopping_bag } = require ('../database/models');
 const { promiseImpl } = require('ejs');
 
 module.exports = {
@@ -16,8 +16,38 @@ module.exports = {
             });
     },
 
-    productCart:  (req, res) => {
-        res.render('./products/productCart');
+    productCart: async (req, res) => {
+        // buscar compras con estado abierto para el usuario logueado, si no hay informar carrito vacío
+        
+        if (req.session.user) {
+            let shoppingBag = await shopping_bag.findAll( { 
+                where: { 
+                    user_id: req.session.user.id, 
+                    status: 'abierto' 
+                }
+            });
+           console.log(shoppingBag);
+            
+            if (shoppingBag.length > 0) {
+                let detailShoppingBag = await detail_shopping_bag.findAll( { 
+                    where: {
+                        shopping_bag_id: shoppingBag[0].id
+                    }
+                });
+                if (detailShoppingBag) {
+                    res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag} );
+                } else {
+                    res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: []} );
+                };
+    
+            } else {
+                res.render('./products/productCart', { detailShoppingBag: [], shoppingBag: []} );
+            };
+            
+        } else {
+            res.redirect('../users/login');
+        }
+
     },
     
     add:  (req, res) => {
@@ -72,16 +102,17 @@ module.exports = {
     update: async (req, res) => {
         //let product = req.body
         //product.id = req.params.id
-        // if (req.file) {
-        //     product.image = req.file.filename;
-        // }
         // let productEdit = productsModel.update(product);
-
+        
         let editProduct = req.body;
-                
+               
         if (req.file) {
             editProduct.image = req.file.filename;
+        } else {
+            let product_old_db = await product.findByPk(req.params.id); 
+            editProduct.image = product_old_db.image;
         }
+
         //genero objeto con id de variedades
         let tempIdVarieties = [
             { id: req.body.id_variety[0] },

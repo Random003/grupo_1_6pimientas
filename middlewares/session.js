@@ -4,7 +4,7 @@ const usersTokensModel = jsonTable('usersTokens');
 const { user, userToken } = require('../database/models')
 
 module.exports = (req, res, next) => {
-    console.log(req.cookies);
+    
     if (req.session.user) {
         // Se lo paso a la vista
         res.locals.user = req.session.user;
@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
     } else if (req.cookies.userToken) {
        //let userToken = usersTokensModel.findByField('token', req.cookies.userToken);
        let exitsUserToken = userToken.findOne( { where: { token: req.cookies.userToken}})
-       console.log(exitsUserToken);
+       
         if (exitsUserToken) {
             //let user = usersModel.find(userToken.userId);
             let userLog = user.findByPk(exitsUserToken.id)
