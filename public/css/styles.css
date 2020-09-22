@@ -394,6 +394,7 @@ a {
     height: 6rem;
     border-radius: 10px;
     align-self: center;
+    /* margin-left: -95px; */
 }
 
 
@@ -1236,6 +1237,9 @@ footer section article p {
         display: flex;
         margin-left: 107px;
     }
+    .botonAgregarPedido2{
+        margin-left: -20px;
+    }
 }
 
 @media all and (min-width: 470px) {
@@ -1284,6 +1288,9 @@ footer section article p {
         display: flex;
         margin-left: 123px;
     }
+    .botonAgregarPedido2{
+        margin-left: -40px;
+    }
 }
 
 @media (max-width: 760px) {
@@ -1305,6 +1312,9 @@ footer section article p {
         bottom: 10px; 
         display: flex;
         margin-left: 185px;
+    }
+    .botonAgregarPedido2{
+        margin-left: -95px;
     }
 }
 
