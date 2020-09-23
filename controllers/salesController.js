@@ -15,29 +15,48 @@ const db = require('../database/models');
 module.exports = {
     sales: (req, res) => {
        // let sales = salesModel.all();
-        sales.findAll()
-            .then(function (sales_db) {
-                res.render('./sales/sales', { sales: sales_db } );
-            });
-             
-    },
+
+       sales.findAll( { order: ['id']})
+       .then (sales => {
+           res.render('./sales/sales', { sales } );
+           
+       });
+},
+
 
     add:  (req, res) => {
-        
     
-       
         res.render('./sales/addSales')           
     },
 
     edit:  (req, res) => {
 
 
-       let sales = salesModel.find(req.params.id);
-       res.render('./sales/editSales', { sales } );
+
+        sales.findByPk(req.params.id)
+            .then (salesEdit => {
+                res.render("./sales/editSales", { sales: salesEdit } );
+            });
+
+
+    //    let sales = salesModel.find(req.params.id);
+    //    res.render('./sales/editSales', { sales } );
 
     
     },
-    store: (req, res, next) => {
+    store: async (req, res, next) => {
+
+
+        let newSale = req.body;
+                
+        newSale.image = 'default.png';
+        if (req.file) {
+            newSale.image = req.file.filename;
+        }
+        let newSale_db = await sales.create(newSale);
+
+         //sales.create(newSale);
+         res.redirect('sales');
         
         // sales.create({
         //     id: req.body.id,
@@ -47,15 +66,15 @@ module.exports = {
         // })
         // res.redirect('../sales');
         
+        //Modelo viejo
+    //     let sales = req.body;
+    //     sales.image = 'default.png';
+    //     if (req.file) {
+    //         sales.image = req.file.filename;
+    //     }
+    //     let newId = salesModel.create(sales);
         
-        let sales = req.body;
-        sales.image = 'default.png';
-        if (req.file) {
-            sales.image = req.file.filename;
-        }
-        let newId = salesModel.create(sales);
-        
-    res.redirect('../sales');
+    // res.redirect('../sales');
 
     },
     salesAdmin: (req, res) => {
@@ -68,22 +87,42 @@ module.exports = {
         let sales= salesModel.all();
         res.render('./sales/salesAdmin', { sales } );
     },
-    update: (req, res) => {
-        let sales = req.body
-        sales.id = req.params.id
-        
+    update: async(req, res) => {
+
+        let editSale = req.body;
+               
         if (req.file) {
-            sales.image = req.file.filename;
+            editSale.image = req.file.filename;
+        } else {
+            let sale_old_db = await sales.findByPk(req.params.id); 
+            editSale.image = sale_old_db.image;
         }
-        let salesEdit = salesModel.update(sales);
+
+        //actualizo producto
+        let newSale_db = await sales.update(editSale, { where: { id: req.params.id } });
+
+        res.redirect('/sales');
+
+        // let sales = req.body
+        // sales.id = req.params.id
+        
+        // if (req.file) {
+        //     sales.image = req.file.filename;
+        // }
+        // let salesEdit = salesModel.update(sales);
 
         
-        res.redirect('../sales');
+        // res.redirect('../sales');
 
         
     },
 
-    destroy: (req, res) => {
+    destroy: async (req, res) => {
+
+        existingSale= await sales.findByPk(req.params.id);
+        if(existingSale.image != 'default.png') {
+            let imagePath = path.join(__dirname, '../public/images/products/' + existingSale.image);
+        }
 
         // sales.delete({
         //     where: { id: req.params.id }
@@ -92,9 +131,20 @@ module.exports = {
         // //   res.redirect('/sales')
         // // }
 
-
-        salesModel.delete(req.params.id);
+        // borrar producto
+        sales.destroy({ where: { id: req.params.id } })
+        .then(deletedGroup => {
+            if (fs.existsSync(imagePath)) {
+                fs.unlinkSync(imagePath)
+            }
+        });
+        // borrar categorías
+        
         res.redirect('/sales');
+
+
+        // salesModel.delete(req.params.id);
+        // res.redirect('/sales');
     }
     
 }
