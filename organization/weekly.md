@@ -44,3 +44,10 @@ Muy en sintonía a lo descrito en la Retrospectiva (que puede ser leída desde <
 ## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 5, entregable para el Sprint 6:**
 
 Decidimos aceitar mas el sistema de Weekly / Daily utilizando reuniones por WhatsApp diariamente y una reunión semanal fuerte en la cual llevamos todos los problemas que nos quedaron sin resolver a una mesa en común para poder entre todos lograr esa resolución. Como todo la practica hace al maestro y probar diferentes formas de organización nos da la flexibilidad de que podemos encontrar la mejor forma para un momento determinado o un problema determinado.
+
+
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 6, entregable para el Sprint 7:**
+
+En este periodo logramos ya aceitar el proceso de reuniones diarias y semanales del equipo para poder realizar de manera lo mas eficiente posible el trabajo integrador nos encontramos que en los últimos sprints varios miembros del grupo tuvieron problemas médicos o familiares y tuvimos que modificar no tan solo la forma en la que realizábamos el trabajo sino también como era la forma y los tiempos en los que nos reuníamos por que habían momentos en los que no todos podían estar en la reunión en los momentos que estaban estipulados. 
+
+Logramos crear un sistema en el cual las decisiones eran tomadas por los miembros presentes y dejadas por escrito para luego el miembro que no pudo asistir lo pudiera ver y si es que tenia algún comentario o agregar alguna idea que podía ayudar al resto tomarla en cuenta en la próxima reunión o en su defecto llamar a una nueva extraordinaria. Nuevamente marcando la flexibilidad del grupo y también el compañerismo en momentos duros y complicados de los miembros del mismo.
