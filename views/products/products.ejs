@@ -30,11 +30,12 @@
                     <p>
                         <b><label for="">Descripción:</label></b><br>
                         <label for=""><%= products[i].description %></label><br>
-                        <b><label for="">Rellenos disponibles:</b></label><br>
+                        <b><label class="titulo_rellenos" for="">Rellenos disponibles:</b></label><br>
                         <% if (products[i].variety) { %> 
                             <% for (let x = 0; x < products[i].variety.length; x++)  {%>                    
                                 <ul>
-                                    <li><%= products[i].variety[x].name %></li>
+                                    <li><%= products[i].variety[x].name %>   
+                                    
                                 </ul>
                             <% } %> 
                         <% } %> 
@@ -53,8 +54,8 @@
                             
                         <%} else {%>  
                                 <p class="bot1">
-                                 <p class="botoComp">
-                                     <button class="botonAgregarPedido2">Agregar Pedido!</button>
+                                 <p class="botonCompra">
+                                     <button class="botonAgregarPedido2" id="<%= products[i].id %>">Agregar al Pedido!</button>
                                  </p>
                                 </p>    
                         <% } %> 

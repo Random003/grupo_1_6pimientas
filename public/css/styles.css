@@ -404,8 +404,30 @@ a {
     align-self: center;
     /* margin-left: -95px; */
 }
+.titulo_rellenos {
+    
+}
 
-
+.lista_variedades {
+    display: flex;
+    width: 100%;
+}
+.variedades_productos{
+    display: table;
+    margin-left: 2rem;
+}
+.botonAgregarPedidoVariedad {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    margin-right: -2rem;
+}
+.fa-shopping-bag{
+    color: white;
+}
 
 .bot1 {
     background-color: rgb(253, 227, 179);
@@ -417,7 +439,7 @@ a {
     align-self: center;
 }
 
-.botoComp {
+.botonCompra {
     position: absolute; 
     bottom: 10px; 
     display: flex;
@@ -1206,7 +1228,7 @@ footer section article p {
         margin-right: 80px;
         margin-top: 20px;
     }
-    .botoComp {
+    .botonCompra {
         position: absolute; 
         bottom: 10px; 
         display: flex;
@@ -1239,7 +1261,7 @@ footer section article p {
     .banner {
         background-size: 130% 100%;
     }
-    .botoComp {
+    .botonCompra {
         position: absolute; 
         bottom: 10px; 
         display: flex;
@@ -1290,7 +1312,7 @@ footer section article p {
         object-fit: cover;
         object-position: top;
     }
-    .botoComp {
+    .botonCompra {
         position: absolute; 
         bottom: 10px; 
         display: flex;
@@ -1315,7 +1337,7 @@ footer section article p {
     .botoz {
         display:none;
     }
-    .botoComp {
+    .botonCompra {
         position: absolute; 
         bottom: 10px; 
         display: flex;
