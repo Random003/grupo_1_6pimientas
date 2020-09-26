@@ -413,6 +413,16 @@ a {
     align-self: center;
     /* margin-left: -95px; */
 }
+.botonAgregarPedido3 {
+    background-color: rgb(163, 31, 53);
+    color: white;
+    border: 0;
+    width: 17rem;
+    height: 6rem;
+    border-radius: 15px;
+    align-self: center;
+    /* margin-left: -95px; */
+}
 .titulo_rellenos {
     
 }
@@ -939,6 +949,21 @@ footer section article p {
     border-radius: 5px;
     color: white;*/
 }
+#botonCancelar {
+    
+    color: white;
+    border: 0;
+    width: 13rem;
+    height: 5rem;
+    border-radius: 10px;
+    background-color: rgb(41, 22, 8);
+    margin: 1rem;
+    /*
+    padding: 10px;
+    margin: 20px 0px;
+    border-radius: 5px;
+    color: white;*/
+}
 
 #botonIngreso:hover {
     background-color: rgb(243, 105, 7);
@@ -1194,6 +1219,9 @@ footer section article p {
     .botonAgregarPedido2{
         margin-left: 65px;
     }
+    .botonAgregarPedido3{
+        margin-left: 65px;
+    }
 }
 
 @media all and (min-width: 360px) {
@@ -1253,6 +1281,9 @@ footer section article p {
     .botonAgregarPedido2{
         margin-left: -20px;
     }
+    .botonAgregarPedido3{
+        margin-left: -20px;
+    }
 }
 
 @media all and (min-width: 380px) {
@@ -1283,6 +1314,9 @@ footer section article p {
         margin-left: 107px;
     }
     .botonAgregarPedido2{
+        margin-left: -40px;
+    }
+    .botonAgregarPedido3{
         margin-left: -40px;
     }
 }
@@ -1336,6 +1370,9 @@ footer section article p {
     .botonAgregarPedido2{
         margin-left: -60px;
     }
+    .botonAgregarPedido3{
+        margin-left: -60px;
+    }
 }
 
 @media (max-width: 760px) {
@@ -1360,6 +1397,9 @@ footer section article p {
     }
     .botonAgregarPedido2{
         margin-left: -115px;
+    }
+    .botonAgregarPedido3{
+        margin-left: 8px;
     }
     .carousel {
         width:640px;
