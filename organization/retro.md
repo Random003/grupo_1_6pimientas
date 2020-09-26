@@ -66,3 +66,8 @@ Ademas utilizamos una especie de Hackatlon para resolver este Sprint en un solo 
 Entonces lo que tratamos de realizar desde este punto de vista en este Sprint es ver si es que podíamos trabajar todos a la vez al mismo tiempo sobre partes diferentes de la pagina o sobre el mismo tema desde diferentes perspectivas.
 
 Por otro lado, en este sprint quedó demostrado el espíritu colaborador del equipo, que se apoyo mutuamente en difíciles situaciones de índole familiar y/o salud que les ha tocado atravesar a algunos de sus miembros. Consideramos esto un aspecto fundamental a la hora de trabajar, generando lazos más fuertes entre sus participantes. 
+
+
+## **Breve Retrospectiva: Para Sprint Numero 7** 
+
+Continuando con las bases de ayuda mutua que fueron comentadas en la retrospectiva del sprint anterior, se dividieron los trabajos de los miembros con problemas familiares entre los demás miembros del grupo, demostrando no solo la flexibilidad del grupo para la toma de decisiones y acción de las mismas de manera rápida y eficaz, sino también la solidaridad de los mismos para ponerse la responsabilidad al hombro en momentos complicados brindando apoyo y ayuda entre si no solo en lo referente al trabajo integrador sino también en el aspecto humano. Para poder leer mas en detalle el proceso por favor visite la "## Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 6, entregable para el Sprint 7" que se encuentra <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.

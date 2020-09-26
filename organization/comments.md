@@ -17,6 +17,8 @@ Para poder ver diagrama de base de datos por favor dirigirse <a href="https://gi
 
 Para poder ver los Scripts de la Base de datos por favor dirigirse <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/script.md">aquí</a>. 
 
+Para poder descargar la base de datos por favor dirigirse <a href="https://github.com/Random003/grupo_1_6pimientas/tree/master/organization/mysql">aquí</a>. 
+
 Para poder ingresar al sitio como administrador o usuario, se puede ingresar con:
 Para administrador: admin@admin.com - pass: 123456
 Para usuario: user@user.com - pass: 123456

@@ -407,9 +407,9 @@ a {
     background-color: rgb(163, 31, 53);
     color: white;
     border: 0;
-    width: 13rem;
+    width: 17rem;
     height: 6rem;
-    border-radius: 10px;
+    border-radius: 15px;
     align-self: center;
     /* margin-left: -95px; */
 }
@@ -468,7 +468,7 @@ a {
     padding: 0.7rem;
     padding-top: 1.3rem;
     font: -webkit-control;
-
+    
 }
 
 .editProduct:hover {
@@ -519,7 +519,8 @@ a {
     max-width: 250px;
     max-height: 250px;
     overflow: auto;
-    object-fit: contain;   
+    object-fit: contain; 
+    align-self: center;  
 }
 
 
@@ -1150,7 +1151,7 @@ footer section article p {
 #butonEditUser {
     color: white;
     border: 0;
-    width: 10rem;
+    width: 13rem;
     height: 4rem;
     padding: 0.5rem;
     border-radius: 10px;
@@ -1189,6 +1190,9 @@ footer section article p {
 @media all and (min-width: 1px) {
     .menuDesktop {
         display: none;
+    }
+    .botonAgregarPedido2{
+        margin-left: 65px;
     }
 }
 
@@ -1243,9 +1247,11 @@ footer section article p {
         display: flex;
         margin-left: 85px;
     }
-
     .menuDesktop {
         display: none;
+    }
+    .botonAgregarPedido2{
+        margin-left: -20px;
     }
 }
 
@@ -1277,7 +1283,7 @@ footer section article p {
         margin-left: 107px;
     }
     .botonAgregarPedido2{
-        margin-left: -20px;
+        margin-left: -40px;
     }
 }
 
@@ -1328,7 +1334,7 @@ footer section article p {
         margin-left: 123px;
     }
     .botonAgregarPedido2{
-        margin-left: -40px;
+        margin-left: -60px;
     }
 }
 
@@ -1353,7 +1359,7 @@ footer section article p {
         margin-left: 185px;
     }
     .botonAgregarPedido2{
-        margin-left: -95px;
+        margin-left: -115px;
     }
     .carousel {
         width:640px;
@@ -1424,7 +1430,7 @@ footer section article p {
         display: none;
     }
     .menuDesktop {
-        display: block  ;
+        display: block;
     }
 }
 

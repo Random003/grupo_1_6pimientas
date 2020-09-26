@@ -8,6 +8,26 @@ Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sit
 Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3 sucursales adicionales.
 
 
+---
+
+# **Instrucciones para inicializar proyecto:**
+
+
+- Para poder descargar la base de datos por favor dirigirse <a href="https://github.com/Random003/grupo_1_6pimientas/tree/master/organization/mysql">aquí</a>. 
+
+- Descargar los paquetes con "npm install" desde la terminal.
+
+- Si Workbench tiene contraseña modificar la linea 7 comentando la linea 5 de "config.js" <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/database/config/config.js">aquí</a>. 
+
+- Para hacer correr el código ingresar "npm run startdev" en la terminal y colocar en el navegador "localhost/5001".
+
+- Para poder ingresar al sitio como administrador o usuario, se puede ingresar con:
+Para administrador: admin@admin.com - pass: 123456
+Para usuario: user@user.com - pass: 123456
+
+---
+
+
 # **Objetivos del e-comerce:**
 -   Facilitar a los clientes la compra vía web con entregas a domicilio.
 -   Ofrecerles un espacio para que puedan interactuar con otros consumidores,

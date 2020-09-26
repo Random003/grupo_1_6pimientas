@@ -12,25 +12,25 @@
             <p>
                 <br>
                 <label>Nombre del producto</label>
-                <input class="ingreso" type="text" name="name" placeholder="Nombre del producto" value="<%= product.name %> ">
+                <input class="ingreso" type="text" name="name" placeholder="Nombre del producto" value="<%= product.name %> "><br><br>
                 
                 <label>Descripción</label>
-                <textarea id="description" class="ingreso" name="description" placeholder="Descripción"><%= product.description %></textarea>
+                <textarea id="description" class="ingreso" name="description" placeholder="Descripción"><%= product.description %></textarea><br><br>
                 
                 <label>Variedad</label> <br>
                 <% for (let i = 0; i < 5; i++) {%> 
                     <input class="id_variety_hidden" type="text" name="id_variety" value="<%= product.variety[i] && product.variety[i].id %>">
-                    <input class="ingreso" type="text" name="variety" placeholder="Variedad del producto" value="<%= product.variety[i] && product.variety[i].name %>">
+                    <input class="ingreso" type="text" name="variety" placeholder="Variedad del producto" value="<%= product.variety[i] && product.variety[i].name %>"><br><br>
                 <% } %> 
                 
                 <label>Presentación</label>
-                <input class="ingreso" type="text" name="presentation"  placeholder="Presentación" value="<%= product.presentation %>">  
+                <input class="ingreso" type="text" name="presentation"  placeholder="Presentación" value="<%= product.presentation %>"><br><br>  
                 
                 <label>Performance</label>
-                <input class="ingreso" type="text" name="performance"  placeholder="Performance" value="<%= product.performance %>">
+                <input class="ingreso" type="text" name="performance"  placeholder="Performance" value="<%= product.performance %>"><br><br>
 
                 <label>Precio</label>
-                <input class="ingreso" type="text" name="price" placeholder="Precio" value="<%= product.price %>">
+                <input class="ingreso" type="text" name="price" placeholder="Precio" value="<%= product.price %>"><br><br>
 
 
                 <div class="imagenEdit">
