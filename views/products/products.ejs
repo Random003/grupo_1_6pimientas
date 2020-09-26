@@ -12,12 +12,17 @@
         </div>
 
 
-        <form class="d-flex flex-row-reverse">
-            <input type="text" placeholder="Realiza tu búsqueda..." required>
-            <button  class="buttonp" type="button" type="submit"><i class="fa fa-search" ></i></button>
+        <form class="d-flex flex-row-reverse" action="../products">
+            <input 
+            type="text" 
+            name="search"
+            placeholder="Realiza tu búsqueda..." 
+            value="<%= search ? search : "" %>"
+            >
+            <button  class="buttonp" type="submit"><i class="fa fa-search" ></i></button>
         </form> 
         
-              <!-- línea 24 tuve que borrar el .variety en el length xq no funcionaba página de productos -->
+              
         <section class="cuerpoPromos">
             <% for (let i = 0; i < products.length; i++) {%> 
             
@@ -44,7 +49,9 @@
                         <label for=""><%= products[i].performance %></label><br><br>
                         <b><label for="">Precio:$<%= products[i].price %>,00</label></b><br><br>
                         <% if (locals.user && user.category == 'admin') {%> 
-                            <a class="editProduct" href="/products/edit/<%= products[i].id %>">Editar Producto</a>
+                            <form action="/products/edit" method="POST">
+                                <button class="editProduct" type="submit" name='id_product' value="<%= products[i].id %>">Editar Producto</button>
+                            </form>
 
                             <form action="/products/delete/<%= products[i].id %>?_method=DELETE" method="POST">
                                 <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Producto</button>

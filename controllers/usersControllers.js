@@ -123,9 +123,9 @@ module.exports = {
 
     },
     editUser: (req, res) => {
-
+        
         //let userToEdit = usersModel.find(req.params.id);
-        user.findByPk(req.params.id)
+        user.findByPk(req.body.id_user_edit)
             .then ((userToEdit) =>{
                 res.render ('./users/editUsers', { userToEdit: userToEdit });
             });

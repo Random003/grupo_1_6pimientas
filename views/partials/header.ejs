@@ -1,6 +1,6 @@
 <header>
     <section class="header">
-        <img class="marcaSP" src="/images/home/marcaSP.png" alt="Marca Seis Pimientas">
+        <img  class="marcaSP" src="/images/home/marcaSP.png" alt="Marca Seis Pimientas">
         
         <nav class="barra_redes">
             <a href="https://www.instagram.com/seispimientas/?hl=es-la"><img class="instagram" src="/images/home/instagram.png" alt="Logo Instagram"></a>
@@ -77,8 +77,18 @@
                 <div class="nameUser">
                     
                     <% if (locals.user) { %> 
-                        
-                        <label ><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></label>
+                        <span>
+                            <form action="/users/edit" method="POST" >
+                                <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>" >
+                                <input 
+                                class="imgUserBar" 
+                                name="edit_user_bar" 
+                                type="image" 
+                                src="/images/users/<%= locals.user.image %>">
+                                
+                                
+                            </form>
+                        </span>
                         
                     <%} %> 
                 </div>

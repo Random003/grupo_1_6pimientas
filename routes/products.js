@@ -27,7 +27,7 @@ router.post("/", upload.single('image'), productsController.store);
 
 router.get('/admin', productsController.productAdmin)
 
-router.get("/edit/:id", productsController.edit);
+router.post("/edit", productsController.edit);
 // para editar
 router.put("/:id", upload.single('image'), productsController.update); 
 //para eliminar

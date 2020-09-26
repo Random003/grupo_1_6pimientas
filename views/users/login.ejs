@@ -11,10 +11,10 @@
 
                 <div>
                     <label class="titleRegister">Email:</label><br>
-                    <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.email && email %>">
+                    <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="luis@gmail.com<%= locals.email && email %>">
                     <p><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
                     <label class="titleRegister">Contraseña</label><br>
-                    <input class="ingreso" type="password" name="password"  placeholder="Contraseña">
+                    <input class="ingreso" type="password" name="password"  placeholder="Contraseña" value="134256">
                     <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
                 </div>
                 <br>

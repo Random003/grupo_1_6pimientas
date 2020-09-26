@@ -5,13 +5,22 @@ const { read } = require('fs');
 const productsModel = jsonTable('products');
 const { product, variety, product_variety, detail_shopping_bag, shopping_bag } = require ('../database/models');
 const { promiseImpl } = require('ejs');
+const { Op } = require("sequelize")
 
 module.exports = {
     products : (req, res) => {
         //let products = productsModel.all();
+        if(req.query.search) {
+            product.findAll ( {
+                where: { name: { [Op.like] : `%${req.query.search}%` }}
+            })
+            .then (products => {
+                res.render('./products/products', { products, search: req.query.search } );    
+            })
+        };
         product.findAll( { order: ['id'], include: 'variety' })
             .then (products => {
-                res.render('./products/products', { products } );
+                res.render('./products/products', { products, search: '' } );
                 
             });
     },
@@ -57,8 +66,7 @@ module.exports = {
 
         //let productId = req.params.id; 
         //let product = productsModel.find(req.params.id);
-        
-        product.findByPk(req.params.id, { include: 'variety' } )
+        product.findByPk(req.body.id_product, { include: 'variety' } )
             .then (productEdit => {
                 res.render("./products/edit", { product: productEdit } );
             });
