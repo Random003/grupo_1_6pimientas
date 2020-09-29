@@ -423,9 +423,7 @@ a {
     align-self: center;
     /* margin-left: -95px; */
 }
-.titulo_rellenos {
-    
-}
+
 
 .lista_variedades {
     display: flex;
@@ -536,6 +534,11 @@ a {
 
 .dropdown-menu {
     background-color: rgb(163, 31, 53);
+    
+}
+
+.dropdown-menu li a {
+    color: white;
 }
 
 .id_variety_hidden {
@@ -902,9 +905,7 @@ footer section article p {
     font-size: 1.5rem;
 }
 
-.cajaLogin label {
-    
-}
+
 
 .ingreso {
     width: 100%;

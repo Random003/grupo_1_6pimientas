@@ -64,12 +64,12 @@ module.exports = {
         
         check('password')
             .notEmpty().withMessage("Debes completar el campo password").bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
 
         check('confirmPassword')
             .notEmpty().withMessage("Debes completar el campo password")
             .bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
         
         check('street')
             .notEmpty().withMessage("Debes completar el campo calle")
