@@ -12,7 +12,40 @@
         <div >
             <nav class="ul_header">
                 <ul>
-                    <div>
+
+                    <div  class="dropdown">
+
+                        <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        
+                        <% if (locals.user) {%>
+                            <% if(locals.user.category != 'admin') { %> %>    
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/products">Productos</a></li>
+                                <!--<li><a href="#">Nosotros</a></li>-->
+                                <li><a href="/sales">Promociones</a></li>
+                                <li><a href="/products/productCart">Bolsa de compras</a></li>
+                                <li id="logout"><a href="/users/logout">Cerrar Sesión</a></li>
+                            <% }%>    
+                        <% } else { %>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href="/products">Productos</a></li>
+                            <!--<li><a href="#">Nosotros</a></li>-->
+                            <li><a href="/sales">Promociones</a></li>
+                            <li><a href="/products/productCart">Bolsa de compras</a></li>
+                            <li><a href="/users/register">Registrarse</a></li>
+                            <li><a href="/users/login">Iniciar Sesión</a></li>
+                        <% } %>
+                        
+                       </div>
+                    </div>        
+
+
+
+
+                    <div class="menuDesktop">
                         
                         <% if (locals.user) {%>
                             <% if(locals.user.category != 'admin') { %> %>    

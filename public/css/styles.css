@@ -994,7 +994,8 @@ footer section article p {
 .registerUser {
     color: rgb(163, 31, 53);
     text-decoration: none;
-    text-align: center;
+    text-align: justify;
+    font-size: 0.875em;
 }
 
 /*-------*/
