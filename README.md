@@ -21,9 +21,9 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
 
 - Para hacer correr el código ingresar "npm run startdev" en la terminal y colocar en el navegador "localhost/5001".
 
-- Para poder ingresar al sitio como administrador o usuario, se puede ingresar con:
-Para administrador: admin@admin.com - pass: 123456
-Para usuario: user@user.com - pass: 123456
+- Para poder ingresar al sitio como administrador o usuario, se puede ingresar con: <br>
+ _ Para administrador: admin@admin.com - pass: 123456 <br>
+ _ Para usuario: user@user.com - pass: 123456 <br>
 
 ---
 
