@@ -4,6 +4,8 @@ const { read } = require('fs');
 const salesModel = jsonTable('sales');
 const { sales } = require('../database/models');
 const db = require('../database/models');
+const { promiseImpl } = require('ejs');
+const { Op } = require("sequelize")
 //let db = require('../database/models')
 // module.exports = {
 //     index: (req, res, next) => {
@@ -103,16 +105,6 @@ module.exports = {
 
         res.redirect('/sales');
 
-        // let sales = req.body
-        // sales.id = req.params.id
-        
-        // if (req.file) {
-        //     sales.image = req.file.filename;
-        // }
-        // let salesEdit = salesModel.update(sales);
-
-        
-        // res.redirect('../sales');
 
         
     },
@@ -124,12 +116,6 @@ module.exports = {
             let imagePath = path.join(__dirname, '../public/images/products/' + existingSale.image);
         }
 
-        // sales.delete({
-        //     where: { id: req.params.id }
-        // });
-        // // .then(function (sales)){
-        // //   res.redirect('/sales')
-        // // }
 
         // borrar producto
         sales.destroy({ where: { id: req.params.id } })
