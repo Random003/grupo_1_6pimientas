@@ -1,32 +1,28 @@
-var createError = require('http-errors');
-var express = require('express');
+const createError = require('http-errors');
+const express = require('express');
 const methodOverride = require('method-override');
 
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var indexProducts = require('./routes/products');
-var usersRouter = require('./routes/users');
-var salesRouter = require('./routes/sales');
-var error404Router = require('./routes/errors');
+const indexRouter = require('./routes/index');
+const indexProducts = require('./routes/products');
+const usersRouter = require('./routes/users');
+const salesRouter = require('./routes/sales');
+const error404Router = require('./routes/errors');
 const { add } = require('./controllers/productsController');
 const session = require('express-session');
 const sessionMidelware = require ('./middlewares/session');
-const coockieParser = require('cookie-parser');
 
-var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+const app = express();
+
 
 app.use(methodOverride('_method')); 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Sesiones y cookies
@@ -35,20 +31,25 @@ app.use(session({
   resave: false, // no vuelve a guardar si no hay cambios
   saveUninitialized: true, // guarda sessiones aunque todavía no haya datos
 }));
-app.use(coockieParser());
+
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+app.use(cookieParser());
 app.use(sessionMidelware);
-
-
 
 //Rutas:
 
-app.use('/', indexRouter);
 
 app.use('/products', indexProducts);
 
 app.use('/sales', salesRouter)
 
 app.use('/users', usersRouter);
+
+app.use('/', indexRouter);
 
 app.use('/', error404Router);
 

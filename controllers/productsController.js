@@ -35,7 +35,7 @@ module.exports = {
                     status: 'abierto' 
                 }
             });
-           console.log(shoppingBag);
+           
             
             if (shoppingBag.length > 0) {
                 let detailShoppingBag = await detail_shopping_bag.findAll( { 
@@ -180,6 +180,9 @@ module.exports = {
         // borrar categorías
         
         res.redirect('/products');
+    },
+    addProduct: (req, resp) => {
+        console.log(req.body.id_product_add);
     }
     
 }

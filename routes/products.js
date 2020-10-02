@@ -18,12 +18,12 @@ var upload = multer({ storage });
 /* Páginas de productos */
 
 router.get("/", productsController.products);
+router.post("/", upload.single('image'), productsController.store); 
  
 router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);
 
-router.post("/", upload.single('image'), productsController.store); 
 
 router.get('/admin', productsController.productAdmin)
 
@@ -33,5 +33,6 @@ router.put("/:id", upload.single('image'), productsController.update);
 //para eliminar
 router.delete('/delete/:id', productsController.destroy);
 
+router.post('/productCart', productsController.addProduct);
 
 module.exports = router;

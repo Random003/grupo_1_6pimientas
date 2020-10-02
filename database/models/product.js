@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 const { TooManyRequests } = require('http-errors');
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {

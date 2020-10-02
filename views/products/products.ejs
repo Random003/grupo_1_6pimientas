@@ -59,12 +59,15 @@
                             </form>
                             
                             
-                        <%} else {%>  
-                                <p class="bot1">
-                                 <p class="botonCompra">
-                                     <button class="botonAgregarPedido2" id="<%= products[i].id %>">Agregar al Pedido!</button>
-                                 </p>
-                                </p>    
+                        <%} else {%>
+                                <form action="/products/productCart" method="POST">
+                                    <p class="bot1">
+                                        <p class="botonCompra">
+                                            <input type="hidden" name="id_product_add" value="<%= products[i].id %>">
+                                            <button class="botonAgregarPedido2" id="<%= products[i].id %>">Agregar al Pedido!</button>
+                                        </p>
+                                    </p>    
+                                </form>  
                         <% } %> 
                     </p>
                 </div>

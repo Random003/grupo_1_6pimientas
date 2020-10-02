@@ -13,7 +13,6 @@
             <nav class="ul_header">
                 <ul>
                     <div>
-                        
                         <% if (locals.user) {%>
                             <% if(locals.user.category != 'admin') { %> %>    
                                 <li><a href="/">Inicio</a></li>
@@ -79,12 +78,8 @@
                     <% if (locals.user) { %> 
                         <span>
                             <form action="/users/edit" method="POST" >
-                                <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>" >
-                                <input 
-                                class="imgUserBar" 
-                                name="edit_user_bar" 
-                                type="image" 
-                                src="/images/users/<%= locals.user.image %>">
+                                <input type="hidden" name="id_user_edit" id="id_user" value="<%= locals.user.id %>" >
+                                <input class="imgUserBar" name="edit_user_bar" type="image" src="/images/users/<%= locals.user.image %>">
                                 
                                 
                             </form>

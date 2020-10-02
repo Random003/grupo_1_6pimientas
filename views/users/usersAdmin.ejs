@@ -12,7 +12,8 @@
                         <img class="userImage" src="../images/users/<%= user.image %>" alt="">
                     </p>
                     <label class="usersName"><%= user.full_name %></label>
-                    <form action="/users/edit/<%= user.id %>" method="GET">
+                    <form action="/users/edit" method="POST">
+                        <input type="hidden" name="id_user_edit" value="<%= user.id %>">
                         <p class="botonsShowAll">
                             <button type="submit" class="editUserAll" id="butonEditUser">Editar</button> 
                         

@@ -17,7 +17,7 @@ module.exports = {
     login: (req, res) => {
         res.render("./users/login");
     },
-    authenticate: (req, res) => {
+    authenticate: async (req, res) => {
         let errorsLogin = validationResult(req);
         
         if (errorsLogin.isEmpty()) {
@@ -34,14 +34,12 @@ module.exports = {
                                 const token = crypto.randomBytes(64).toString('base64'); // creo el token
                             
                                 //usersTokensModel.create({userId: user.id, token }); //lo almaceno en un archivo usando el model
+                                res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
                                 user_token.create({
                                     user_id: user_db.id,
                                     token: token
                                 })
-                                .then ((new_token) =>{
-                                    
-                                    res.cookie('userToken', token, { maxAge: 1000 * 60 * 60 * 24 * 30 * 3 } ); //genero la cookie
-                                });
+                                .catch(e => console.log(e));
         
                                 
                             }
@@ -81,8 +79,8 @@ module.exports = {
         // });
         user_token.destroy({ where: { user_id: req.session.user.id }})
         res.clearCookie('userToken');
-        
         req.session.destroy();
+        
         
         return res.redirect('/')
     },

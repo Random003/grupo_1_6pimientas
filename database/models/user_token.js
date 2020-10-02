@@ -1,7 +1,6 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+'use strict'; 
+
+const {  Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class user_token extends Model {
     /**
