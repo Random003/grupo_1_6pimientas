@@ -3,6 +3,7 @@ var router = express.Router();
 
 const path = require ('path');
 const productsController = require ('../controllers/productsController')
+const validateProducts = require ('../validators/products/products')
 
 const multer = require('multer');
 var storage = multer.diskStorage({
@@ -23,13 +24,13 @@ router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);
 
-router.post("/", upload.single('image'), productsController.store); 
+router.post("/", upload.single('image'), validateProducts.create, validateProducts.editProduct, validateProducts.addToCart, productsController.store);
 
 router.get('/admin', productsController.productAdmin)
 
-router.post("/edit", productsController.edit);
+router.post("/edit", validateProducts.editProduct, validateProducts.addToCart, productsController.edit);
 // para editar
-router.put("/:id", upload.single('image'), productsController.update); 
+router.put("/:id", upload.single('image'), validateProducts.editProduct, validateProducts.addToCart, productsController.update);
 //para eliminar
 router.delete('/delete/:id', productsController.destroy);
 

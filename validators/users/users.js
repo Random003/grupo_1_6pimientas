@@ -1,4 +1,5 @@
-const {check, body} = require ('express-validator'); //chequeo campos del form de loguin
+const {check, body} = require ('express-validator'); //chequeo campos del form de login
+const path = require('path');
 
 
 
