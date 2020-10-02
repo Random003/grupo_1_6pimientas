@@ -1,4 +1,5 @@
-const {check, body} = require ('express-validator'); //chequeo campos del form de loguin
+const {check, body} = require ('express-validator'); //chequeo campos del form de login
+const path = require('path');
 
 
 
@@ -23,7 +24,18 @@ module.exports = {
         
         check('email')
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
-            .isEmail().withMessage("Debes ingresar un email válido"),
+            .isEmail().withMessage("Debes ingresar un email válido")
+            .custom((value) => {
+                return User.findOne({
+                  where: {
+                    email: value,
+                  },
+                }).then((user) => {
+                  if (user) {
+                    return Promise.reject("Email ya registrado");
+                  }
+                });
+              }),
         
         check('confirmEmail')
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
@@ -46,7 +58,20 @@ module.exports = {
             .notEmpty().withMessage("Debes completar el campo número")
             .bail()
             .isInt().withMessage("Debes ingresar un número válido"),
-        
+
+        check("image")
+            .custom((value, { req }) => {
+              if (req.file != undefined) {
+                const acceptedExtensions = [".jpg", ".jpeg", ".png"];
+                const ext = path.extname(req.file.originalname);
+                return acceptedExtensions.includes(ext);
+              }
+      
+              return true;
+            })
+            .withMessage(
+              "La imagen debe ser en uno de los siguientes formatos: JPG, JPEG, PNG"
+            ),    
         
         ],
         editUser: [
@@ -56,7 +81,18 @@ module.exports = {
         
         check('email')
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
-            .isEmail().withMessage("Debes ingresar un email válido"),
+            .isEmail().withMessage("Debes ingresar un email válido")
+            .custom((value) => {
+                return User.findOne({
+                  where: {
+                    email: value,
+                  },
+                }).then((user) => {
+                  if (user) {
+                    return Promise.reject("Email ya registrado");
+                  }
+                });
+              }),
         
         check('confirmEmail')
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
@@ -64,12 +100,12 @@ module.exports = {
         
         check('password')
             .notEmpty().withMessage("Debes completar el campo password").bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
 
         check('confirmPassword')
             .notEmpty().withMessage("Debes completar el campo password")
             .bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
         
         check('street')
             .notEmpty().withMessage("Debes completar el campo calle")
@@ -78,7 +114,21 @@ module.exports = {
         check('number')
             .notEmpty().withMessage("Debes completar el campo número")
             .bail()
-            .isInt().withMessage("Debes ingresar un número válido"),    
+            .isInt().withMessage("Debes ingresar un número válido"),
+            
+        check("image")
+            .custom((value, { req }) => {
+              if (req.file != undefined) {
+                const acceptedExtensions = [".jpg", ".jpeg", ".png"];
+                const ext = path.extname(req.file.originalname);
+                return acceptedExtensions.includes(ext);
+              }
+      
+              return true;
+            })
+            .withMessage(
+              "La imagen debe ser en uno de los siguientes formatos: JPG, JPEG, PNG"
+            ),     
         ],
 
         checkEmail: (req, res, next) => {

@@ -41,4 +41,5 @@ router.delete('/delete/:id', userController.delete)
 
 router.get ('/logout', userController.logout);
 
+
 module.exports = router;

@@ -90,7 +90,11 @@
                 </p>
 
                 <div>
-                    <a class="registerUser" href="/users/login">Si ya tienes una cuenta, ingresa aquí!</a>
+                    <% if (locals.user && locals.user.category == 'admin') { %>
+                        <p></p>
+                    <%} else {%>
+                        <a class="registerUser" href="/users/login">Si ya tienes una cuenta, por favor ingresa aquí!</a>
+                    <% } %>    
                 </div>
             </p>
         </form>

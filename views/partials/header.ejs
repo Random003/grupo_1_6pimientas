@@ -12,7 +12,45 @@
         <div >
             <nav class="ul_header">
                 <ul>
+<<<<<<< HEAD
                     <div>
+=======
+
+                    <div  class="dropdown">
+                        
+                        <% if (locals.user) {%>
+                            <% if(locals.user.category != 'admin') { %> %>   
+                                <button class="btn btn-secondary dropdown-toggle btn-danger" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Menu
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+                                <li><a href="/">Inicio</a></li>
+                                <li><a href="/products">Productos</a></li>
+                                <!--<li><a href="#">Nosotros</a></li>-->
+                                <li><a href="/sales">Promociones</a></li>
+                                <li><a href="/products/productCart">Bolsa de compras</a></li>
+                                <li><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></li>
+                                <li id="logout"><a href="/users/logout">Cerrar Sesión</a></li>
+                                </div>
+                            <% }%>    
+                        <% } else { %>
+                            <li><a href="/">Inicio</a></li>
+                            <li><a href="/products">Productos</a></li>
+                            <!--<li><a href="#">Nosotros</a></li>-->
+                            <li><a href="/sales">Promociones</a></li>
+                            <li><a href="/products/productCart">Bolsa de compras</a></li>
+                            <li><a href="/users/register">Registrarse</a></li>
+                            <li><a href="/users/login">Iniciar Sesión</a></li>
+                        <% } %>
+                        
+                    </div>        
+
+
+
+
+                    <div class="menuDesktop">
+                        
+>>>>>>> 1f2059ebb2ec5001ed051e92d4bdf661d07cd1a9
                         <% if (locals.user) {%>
                             <% if(locals.user.category != 'admin') { %> %>    
                                 <li><a href="/">Inicio</a></li>
@@ -51,6 +89,7 @@
 
                             <li><a href="/users/register">Alta<br>Usuarios</a></li>
                             <li><a href="/users/usersAdmin">Editar y Borrar<br>Usuarios</a></li>
+                            <li><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></li>
                             <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
 
                             <% } %> 
