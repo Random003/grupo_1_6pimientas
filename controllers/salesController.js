@@ -100,7 +100,7 @@ module.exports = {
             editSale.image = sale_old_db.image;
         }
 
-        //actualizo producto
+        //actualizo la promoción
         let newSale_db = await sales.update(editSale, { where: { id: req.params.id } });
 
         res.redirect('/sales');
