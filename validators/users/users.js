@@ -1,6 +1,6 @@
 const {check, body} = require ('express-validator'); //chequeo campos del form de login
 const path = require('path');
-
+const { user } = require('../../database/models');
 
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
             .notEmpty().withMessage("Debes completar el cambo de email").bail()
             .isEmail().withMessage("Debes ingresar un email válido")
             .custom((value) => {
-                return User.findOne({
+                return user.findOne({
                   where: {
                     email: value,
                   },
@@ -132,13 +132,21 @@ module.exports = {
         ],
 
         checkEmail: (req, res, next) => {
+           
+            
             if (req.body.email != req.body.confirmEmail) {
-                return res.render('register', { 
-                    errors: { email: { msg: 'El email y la confirmacíon deben ser iguales' }, confirEmail: { msg: 'El email y la confirmacíon deben ser iguales' } } ,
-                    register: req.body 
+                return res.render('./users/register', { 
+                    errors: { 
+                        email: { msg: 'El email y la confirmacíon deben ser iguales' }, 
+                        confirmEmail: { msg: 'El email y la confirmacíon deben ser iguales' } 
+                    },
+                    register:  req.body  
+                
                 });
+                            
+            } else {
+                next();
             }
-            next();
         },
         checkPass: (req, res, next) => {
             if (req.body.password != req.body.confirmPassword) {
@@ -152,7 +160,7 @@ module.exports = {
         checkEmailEdit: (req, res, next) => {
             if (req.body.email != req.body.confirmEmail) {
                 return res.render('editUsers', { 
-                    errors: { email: { msg: 'El email y la confirmacíon deben ser iguales' }, confirEmail: { msg: 'El email y la confirmacíon deben ser iguales' } } ,
+                    errors: { email: { msg: 'El email y la confirmacíon deben ser iguales' }, confirmEmail: { msg: 'El email y la confirmacíon deben ser iguales' } } ,
                     user: req.body 
                 });
             }

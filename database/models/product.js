@@ -16,7 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
 
       });
-      
+      this.belongsToMany(models.detail_shopping_bag, {
+        as: 'detail_shopping_bags',
+        through: 'detail_shopping_bag_product',
+        foreignKey: 'product_id',
+        otherKey: 'detail_shopping_bag_id',
+        timestamps: false
+      })
     }
   };
   product.init({

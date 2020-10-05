@@ -28,7 +28,7 @@ router.get("/login", userController.login);
 router.post('/login', validateUsers.login, userController.authenticate)
 
 router.get("/register", userController.register);
-router.post("/", upload.single('image'), validateUsers.register, validateUsers.checkEmail, validateUsers.checkPass, userController.createUser); //guardo usuarios nuevos tipos User NO ADMIN
+router.post("/register", upload.single('image'), validateUsers.register, validateUsers.checkEmail, validateUsers.checkPass, userController.createUser); //guardo usuarios nuevos tipos User NO ADMIN
 // ,
 //router.get("/add", userController.createAdmin);
 

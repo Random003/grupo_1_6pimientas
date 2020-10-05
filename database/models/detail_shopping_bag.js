@@ -13,7 +13,16 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       this.belongsTo(models.shopping_bag, { 
         as: 'shopping_bag',
-        foreignKey: 'shopping_bag_id' });
+        foreignKey: 'shopping_bag_id' 
+      });
+
+      this.belongsToMany(models.product, {
+        as: 'products',
+        through: 'detail_shopping_bag_product',
+        foreignKey: 'detail_shopping_bag_id',
+        otherKey: 'product_id',
+        timestamps: false
+      });
     }
   };
   detail_shopping_bag.init({

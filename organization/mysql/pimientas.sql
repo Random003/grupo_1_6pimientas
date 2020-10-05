@@ -18,6 +18,31 @@ USE `pimientas`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `detail_shopping_bag_products`
+--
+
+DROP TABLE IF EXISTS `detail_shopping_bag_products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `detail_shopping_bag_products` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `detail_shopping_bag_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `detail_shopping_bag_products`
+--
+
+LOCK TABLES `detail_shopping_bag_products` WRITE;
+/*!40000 ALTER TABLE `detail_shopping_bag_products` DISABLE KEYS */;
+INSERT INTO `detail_shopping_bag_products` VALUES (204,228,4),(206,230,6),(211,235,4);
+/*!40000 ALTER TABLE `detail_shopping_bag_products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `detail_shopping_bags`
 --
 
@@ -28,11 +53,11 @@ CREATE TABLE `detail_shopping_bags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `shopping_bag_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `variety_id` int(11) NOT NULL,
+  `variety_id` int(11) DEFAULT NULL,
   `quantity` int(11) NOT NULL,
   `u_price` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +66,7 @@ CREATE TABLE `detail_shopping_bags` (
 
 LOCK TABLES `detail_shopping_bags` WRITE;
 /*!40000 ALTER TABLE `detail_shopping_bags` DISABLE KEYS */;
-INSERT INTO `detail_shopping_bags` VALUES (1,1,1,1,1,100);
+INSERT INTO `detail_shopping_bags` VALUES (228,5,4,NULL,1,NULL),(230,4,6,NULL,1,NULL),(235,4,4,NULL,1,NULL);
 /*!40000 ALTER TABLE `detail_shopping_bags` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +86,7 @@ CREATE TABLE `products` (
   `price` float DEFAULT NULL,
   `image` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +95,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Sorrentinos  ','Pasta rellena de forma circular.','14 unidades','Rinde para 2 personas',0,'sorrentinos1.jpg'),(2,'Caseritoss','Pasta rellena de forma rectangular.','3 planchas','Rinde para 2 personas',330,'caseritos.jpg'),(3,'Ravioles','Pasta rellena de forma cuadrada.','3 planchas','Rinde para 2 personas',260,'ravioles.jpg'),(4,'Fideos al huevo','Realizados con huevo.','Paquete de 500 grs.','Rinde para 2 personas',160,'fideos.jpg'),(5,'Fideos de espinaca ','Realizados con huevo.','Paquete de 500 grs.','Rinde para 2 personas',180,'fideos.jpg'),(6,'Ñoquis','Realizados con papa de manera artesanal.','Bandeja de 500 grs.','Rinde para 2 personas',190,'noquis.jpg'),(7,'Salsas','Salsas listas para acompañar nuestras pastas.','Pote de 250 grs.','Rinde para 2 personas',160,'salsas.jpg'),(8,'Lasagnas','Lasagnas listas para calentar y servir','Bandeja de 250 grs.','Rinde para 1 personas',220,'lasagna.jpg'),(10,'Producto de Prueba BD  ','Descripción','16 unidades','2 personas',300,'product-1600723585253.jpg');
+INSERT INTO `products` VALUES (1,'Sorrentinos         ','Pasta rellena de forma circular.','14 unidades','Rinde para 2 personas',350,'product-1601380420032.jpg'),(2,'Caseritoss  ','Pasta rellena de forma rectangular.','3 planchas','Rinde para 2 personas',330,'product-1601089622097.jpg'),(3,'Ravioles','Pasta rellena de forma cuadrada.','3 planchas','Rinde para 2 personas',260,'ravioles.jpg'),(4,'Fideos al huevo','Realizados con huevo.','Paquete de 500 grs.','Rinde para 2 personas',160,'fideos.jpg'),(5,'Fideos de espinaca ','Realizados con huevo.','Paquete de 500 grs.','Rinde para 2 personas',180,'fideos.jpg'),(6,'Ñoquis ','Realizados con papa de manera artesanal.','Bandeja de 500 grs.','Rinde para 2 personas',190,'product-1601088191782.jpg'),(7,'Salsas','Salsas listas para acompañar nuestras pastas.','Pote de 250 grs.','Rinde para 2 personas',160,'salsas.jpg'),(8,'Lasagnas','Lasagnas listas para calentar y servir','Bandeja de 250 grs.','Rinde para 1 personas',220,'lasagna.jpg'),(10,'Producto de Prueba','Descripción','16 unidades','2 personas',300,'product-1601089757187.jpg');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -112,13 +137,13 @@ CREATE TABLE `shopping_bags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `date_purchase` datetime NOT NULL,
   `user_id` int(11) NOT NULL,
-  `delivery_type` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `delivery_address` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `delivery_type` varchar(100) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `delivery_address` varchar(250) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
   `way_to_pay` varchar(45) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `status` varchar(45) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `total` float NOT NULL,
+  `total` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +152,7 @@ CREATE TABLE `shopping_bags` (
 
 LOCK TABLES `shopping_bags` WRITE;
 /*!40000 ALTER TABLE `shopping_bags` DISABLE KEYS */;
-INSERT INTO `shopping_bags` VALUES (1,'2020-09-21 00:00:00',1,'retira en sucursal','','efectivo','cerrado',100);
+INSERT INTO `shopping_bags` VALUES (1,'2020-09-21 00:00:00',1,'retira en sucursal','','efectivo','cerrado',100),(4,'2020-10-03 16:15:57',1,NULL,NULL,'','abierto',NULL),(5,'2020-10-04 13:39:20',10,NULL,NULL,'','abierto',NULL);
 /*!40000 ALTER TABLE `shopping_bags` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -141,9 +166,9 @@ DROP TABLE IF EXISTS `user_tokens`;
 CREATE TABLE `user_tokens` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL,
-  `token` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `token` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,6 +177,7 @@ CREATE TABLE `user_tokens` (
 
 LOCK TABLES `user_tokens` WRITE;
 /*!40000 ALTER TABLE `user_tokens` DISABLE KEYS */;
+INSERT INTO `user_tokens` VALUES (61,1,'Yr3Rigi5uHlxPJv2WQV22ZNtpKe8mm+A/SG2lb+sLCEpsCVBGjIkMAUpae0vEkQCNCw5RZBfj/KitKq7BSxK9g==');
 /*!40000 ALTER TABLE `user_tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -184,7 +210,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Lucho','l@gmail.com','$2a$12$K4.CJ2wz6ZB5qX5wVgwwGeoprfCh1YlBKhQAjMJWzzZ72DDX9ANUK','Huarpes',2830,'1','Mendoza','Mendoza','user','user_1.png'),(2,'Luis Rufino','luis@gmail.com','$2a$12$h6S.39iBZZSRnbsDP4wa0u1K9415EtGIf75cn01Z46ZYAlkdPMEaO','Huarpes',2830,'1','Mendoza','Mendoza','admin','user_2.png'),(8,'Random','random@email.com','$2a$12$l0JG4Qn6oMTcv4zhT9OdhuHDH9zVt6CR1acZOXGNYUiLsjgZe/7fm','calle',321,'1','Departamento','Ciudad','admin','user_3.png'),(9,'Babart','babart@babart.com','$2a$12$ofa88oGISrRe4PLBKBuAeOsdFUg0H2hP8zQcy0G2u8u2TxfoJlhSG','LaCalle',123,'1','ese','Muchas','admin','user-1599802507754.jpg'),(10,'user','user@user.com','$2a$12$fDPCyLGuMPN3K5AcehAdguMVhVuGBQEnhzLCrxzlNgxVRmnZ7We1m','Calle ',1234,'1','Mendoza','Mendoza','user','user_1.png'),(11,'admin','admin@admin.com','$2a$12$CiHLD.JToU.qdhV7D3hF2eejf3XKdOMIsrcdiUjlYGWEho/SsvnmO','Calle ',1234,'1','Mendoza','Mendoza','admin','user_1.png');
+INSERT INTO `users` VALUES (1,'Lucho','l@gmail.com','$2a$12$K4.CJ2wz6ZB5qX5wVgwwGeoprfCh1YlBKhQAjMJWzzZ72DDX9ANUK','Huarpes',2830,'1','Mendoza','Mendoza','user','user-1601088958088.png'),(2,'Luis Rufino','luis@gmail.com','$2a$12$h6S.39iBZZSRnbsDP4wa0u1K9415EtGIf75cn01Z46ZYAlkdPMEaO','Huarpes',2830,'1','Mendoza','Mendoza','admin','user-1601503651261.png'),(8,'Random','random@email.com','$2a$12$l0JG4Qn6oMTcv4zhT9OdhuHDH9zVt6CR1acZOXGNYUiLsjgZe/7fm','calle',321,'1','Departamento','Ciudad','admin','user_3.png'),(9,'Babart','babart@babart.com','$2a$12$ofa88oGISrRe4PLBKBuAeOsdFUg0H2hP8zQcy0G2u8u2TxfoJlhSG','LaCalle',123,'1','ese','Muchas','admin','user-1599802507754.jpg'),(10,'user','user@user.com','$2a$12$fDPCyLGuMPN3K5AcehAdguMVhVuGBQEnhzLCrxzlNgxVRmnZ7We1m','Calle ',1234,'1','Mendoza','Mendoza','user','user_1.png'),(11,'admin','admin@admin.com','$2a$12$CiHLD.JToU.qdhV7D3hF2eejf3XKdOMIsrcdiUjlYGWEho/SsvnmO','Calle ',1234,'1','Mendoza','Mendoza','admin','user_1.png');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -200,7 +226,7 @@ CREATE TABLE `varieties` (
   `name` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL,
   `product_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +235,7 @@ CREATE TABLE `varieties` (
 
 LOCK TABLES `varieties` WRITE;
 /*!40000 ALTER TABLE `varieties` DISABLE KEYS */;
-INSERT INTO `varieties` VALUES (6,'Pollo Braseado',3),(7,'Cerdo Braseado',3),(8,'Ricota y nuez',3),(9,'Spaguetti',4),(10,'Tallarín',4),(11,'Pappardelle',4),(12,'Bolognesa',7),(13,'Fileto',7),(14,'Blanca',7),(15,'Carne',8),(19,'Jamón y Muzarella',1),(20,'Calabaza y Muzarella',1),(21,'Quatro Quesos',1),(22,'Palta y tomate',1),(33,'Agregado de Variedad',9),(34,'Agregado de variedad 3',9),(41,'Spaguetti',5),(42,'Pappardelle',5),(43,'Carne Braseada',2),(44,'Verdura',2),(45,'Jamón y Queso',10),(47,'Palta y tomates',10);
+INSERT INTO `varieties` VALUES (6,'Pollo Braseado',3),(7,'Cerdo Braseado',3),(8,'Ricota y nuez',3),(9,'Spaguetti',4),(10,'Tallarín',4),(11,'Pappardelle',4),(12,'Bolognesa',7),(13,'Fileto',7),(14,'Blanca',7),(15,'Carne',8),(33,'Agregado de Variedad',9),(34,'Agregado de variedad 3',9),(41,'Spaguetti',5),(42,'Pappardelle',5),(64,'Var 1',13),(65,'Var 2',13),(68,'Carne Braseada',2),(69,'Verdura',2),(82,'Jamón y Queso',10),(83,'Palta y tomates',10),(84,'Jamón y Muzarella',1),(85,'Calabaza y Muz',1),(86,'Quatro Quesos',1),(87,'Palta y tomate',1);
 /*!40000 ALTER TABLE `varieties` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -226,4 +252,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-23 21:30:52
+-- Dump completed on 2020-10-04 22:47:43

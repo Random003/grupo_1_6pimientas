@@ -125,16 +125,18 @@ module.exports = {
     },
     createUser: (req, res) => {
         let errorsCreateUser = validationResult (req);
-        let file = '';
-        if (req.file) {
-            file = req.file.filename;
-        } else {
-            file = 'default.jpg';
-        }
+        
+
         if (!errorsCreateUser.isEmpty()) {
             return res.render ('./users/register', { errors: errorsCreateUser.mapped(), register: req.body } );
 
         } else {
+            let file = '';
+            if (req.file) {
+                file = req.file.filename;
+            } else {
+                file = 'default.jpg';
+            }
             let userToCreate = {
                 full_name: req.body.full_name, 
                 email: req.body.email,

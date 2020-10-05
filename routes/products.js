@@ -37,4 +37,5 @@ router.delete('/delete/:id', productsController.destroy);
 
 router.post('/productCart', productsController.addProduct);
 
+router.delete('/productCart', productsController.deleteProductBag);
 module.exports = router;
