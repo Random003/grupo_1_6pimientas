@@ -5,21 +5,28 @@
     <%- include('../partials/header');%> 
     <main class="mainCreate">
         
-        <form class="cajaCreate" action="/sales" method="POST" enctype="multipart/form-data">
+        <form class="cajaCreate" id="createSale" action="/sales" method="POST" enctype="multipart/form-data">
             <h3>
                 Crear una Promoción:
             </h3>
             <div class="containerCreate">
                 <div>
+                                          <!-- en nombre cambiaste el id de producto por name, GIL -->
                     <p>
                         <br>
                         <label>Nombre del producto</label>
-                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre del producto">
+                        <input class="ingresoCreate" type="text" name="name" id="name"  placeholder="Nombre del producto"
+                        value="<%= locals.sales ? sales.name : '' %>"
+                            class="<%= locals.errors && errors.name ? 'danger' : '' %>">
+                        <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
                     </p>
     
                     <p>
                         <label>Descuento</label>
-                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento"></textarea>
+                        <textarea class="ingresoCreate" name="discount" id="discount" placeholder="Descuento"
+                        value="<%= locals.sales ? sales.discount: '' %>"
+                            class="<%= locals.errors && errors.discount? 'danger' : '' %>"></textarea>
+                        <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
                     </p>
                 </div>
                
@@ -29,7 +36,10 @@
                 </p>
                 <p>
                     <label>Precio</label>
-                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio">
+                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio"
+                    value="<%= locals.sales ? sales.price: '' %>"
+                            class="<%= locals.errors && errors.price? 'danger' : '' %>">
+                    <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span>
                 </p>
 
                 <p>

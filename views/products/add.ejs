@@ -4,7 +4,7 @@
 <body>
     <%- include('../partials/header');%> 
     <main class="mainCreate">
-        <form class="cajaCreate" action="/products" method="POST" enctype="multipart/form-data">
+        <form class="cajaCreate" id="createProduct" action="/products" method="POST" enctype="multipart/form-data">
             <h3>
                 Agregar un producto:
             </h3>
@@ -13,21 +13,31 @@
                     <p>
                         <br>
                         <label>Nombre del producto</label>
-                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre del producto">
+                        <input class="ingresoCreate" type="text" name="name" id="name" placeholder="Nombre del producto"
+                        value="<%= locals.product ? product.name : '' %>"
+                            class="<%= locals.errors && errors.name ? 'danger' : '' %>">
+                        <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span>
                     </p>
     
                     <p>
                         <label>Descripción</label>
-                        <textarea class="ingresoCreate" name="description" placeholder="Descripción"></textarea>
+                        <textarea class="ingresoCreate" id="description" name="description" placeholder="Descripción"
+                        value="<%= locals.product ? product.description : '' %>"
+                            class="<%= locals.errors && errors.description ? 'danger' : '' %>"></textarea>
+                        <span class="error"><%= locals.errors && errors.description ? errors.description.msg : '' %> </span>
                     </p>
                     
                     <p>
                         <label>Presentación</label>
-                        <input class="ingresoCreate" type="text" name="presentation"  placeholder="Presentación del producto">
+                        <input class="ingresoCreate" type="text" id="presentation" name="presentation"  placeholder="Presentación del producto" value="<%= locals.product ? product.presentation : '' %>"
+                        class="<%= locals.errors && errors.presentation ? 'danger' : '' %>">
+                        <span class="error"><%= locals.errors && errors.presentation ? errors.presentation.msg : '' %> </span>
                     </p>
                     <p>
                         <label>Rendimiento</label>
-                        <input class="ingresoCreate" type="text" name="performance"  placeholder="Rendimiento del producto">
+                        <input class="ingresoCreate" type="text" id="performance" name="performance"  placeholder="Rendimiento del producto" value="<%= locals.product ? product.performance : '' %>"
+                        class="<%= locals.errors && errors.performance ? 'danger' : '' %>">
+                        <span class="error"><%= locals.errors && errors.performance ? errors.performance.msg : '' %> </span>
                     </p>
 
                 </div>
@@ -52,7 +62,10 @@
                 </p>
                 <p>
                     <label>Precio</label>
-                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio">
+                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio"
+                    value="<%= locals.product ? product.price: '' %>"
+                            class="<%= locals.errors && errors.price? 'danger' : '' %>">
+                    <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span> 
                 </p>
 
                 <p>
