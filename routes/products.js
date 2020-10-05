@@ -25,10 +25,7 @@ router.get("/productCart", productsController.productCart);
   
 router.get("/add", productsController.add);
 
-<<<<<<< HEAD
-=======
 router.post("/", upload.single('image'), validateProducts.create, validateProducts.editProduct, validateProducts.addToCart, productsController.store);
->>>>>>> 1f2059ebb2ec5001ed051e92d4bdf661d07cd1a9
 
 router.get('/admin', productsController.productAdmin)
 
