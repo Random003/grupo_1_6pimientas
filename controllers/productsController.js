@@ -3,9 +3,9 @@ const path = require('path');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
 const productsModel = jsonTable('products');
-const { product, variety, product_variety, detail_shopping_bag, shopping_bag } = require ('../database/models');
+const { product, variety, product_variety, detail_shopping_bag, shopping_bag, detail_shopping_bag_product } = require ('../database/models');
 const { promiseImpl } = require('ejs');
-const { Op } = require("sequelize")
+const { Op, DATE } = require("sequelize")
 
 module.exports = {
     products : (req, res) => {
@@ -38,16 +38,22 @@ module.exports = {
            
             
             if (shoppingBag.length > 0) {
-                let detailShoppingBag = await detail_shopping_bag.findAll( { 
-                    where: {
-                        shopping_bag_id: shoppingBag[0].id
-                    }
-                });
-                if (detailShoppingBag) {
-                    res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag} );
-                } else {
-                    res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: []} );
-                };
+                  // busco todas los items
+            let detailShoppingBag = await detail_shopping_bag.findAll( { 
+                where: {
+                    shopping_bag_id: shoppingBag[0].id
+                },
+                include: ['products'] 
+            });
+            
+            for (let x=0; x < detailShoppingBag.length; x++) {
+                let varieties = await variety.findAll({ where: { product_id: detailShoppingBag[x].products[0].id }});
+                if (varieties.length > 0) {
+                    detailShoppingBag[x].products[0].varieties = varieties; 
+                }
+            }
+            
+            res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag } );
     
             } else {
                 res.render('./products/productCart', { detailShoppingBag: [], shoppingBag: []} );
@@ -181,8 +187,69 @@ module.exports = {
         
         res.redirect('/products');
     },
-    addProduct: (req, resp) => {
-        console.log(req.body.id_product_add);
+    addProduct: async (req, res) => {
+        //preguntar si existe alguna bolsa de compras abierta, si existe, traer detalle de bolsa y agregar item, 
+        //si no existe, crearla tomar el id de la bolsa y agregar el item como nuevo detalle
+        if (req.session.user) {
+            let shoppingBag = await shopping_bag.findAll( { 
+                where: { 
+                    user_id: req.session.user.id, 
+                    status: 'abierto' 
+                }
+            });
+           
+            
+            if (!shoppingBag.length > 0) {
+                let newShoppingBag = {
+                    date_purchase: Date.now(),
+                    user_id: req.session.user.id,
+                    status: 'abierto',
+                    
+                }
+                shoppingBag = await shopping_bag.create(newShoppingBag)
+            }
+            let newItemDetailAdd = {
+                shopping_bag_id: shoppingBag[0].id,
+                product_id: Number(req.body.id_product_add),
+                quantity: 1,
+            } 
+            let newItemDetail = await detail_shopping_bag.create(newItemDetailAdd);
+            // genero relación tabla muchos a muchos
+            let newRelation = {
+                detail_shopping_bag_id: newItemDetail.id,
+                product_id: newItemDetail.product_id 
+            }
+            
+            let newRelationSBP = await detail_shopping_bag_product.create(newRelation);
+
+            // busco todas los items
+            let detailShoppingBag = await detail_shopping_bag.findAll( { 
+                where: {
+                    shopping_bag_id: shoppingBag[0].id
+                },
+                include: ['products'] 
+            });
+            
+            for (let x=0; x < detailShoppingBag.length; x++) {
+                let varieties = await variety.findAll({ where: { product_id: detailShoppingBag[x].products[0].id }});
+                if (varieties.length > 0) {
+                    detailShoppingBag[x].products[0].varieties = varieties; 
+                }
+            }
+            
+            res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag } );
+            
+        } else {
+            res.redirect('../users/login');
+        }
+
+    },
+    deleteProductBag: async (req, res) => {
+        
+        let regDelete = await detail_shopping_bag.destroy({ where: { id: req.body.id_delete } } );
+        let relDelete = await detail_shopping_bag_product.destroy ( { where: { detail_shopping_bag_id: req.body.id_delete } } );
+        res.redirect('../products/productCart');
     }
     
+
 }

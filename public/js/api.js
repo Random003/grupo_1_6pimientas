@@ -11,24 +11,6 @@ window.addEventListener ('load', function () {
                 
                 let id_user = document.getElementById('id_user');
                 if (id_user && id_user.value != '') {
-                    
-                    // let shop_bag = JSON.parse(localStorage.getItem('shopBag' + id_user.value));
-                    // if (shop_bag) {
-                        
-                    //     let product_temp = shop_bag.id_products;
-                    //     product_temp.push (boton_compra.id);
-                    //     shop_bag.id_products = product_temp;
-                    //     localStorage.setItem('shopBag' + id_user.value, JSON.stringify(shop_bag));
-                    //     console.log(localStorage.getItem('shopBag' + id_user.value));
-                    //     console.log(JSON.parse(localStorage.getItem('shopBag' + id_user.value)));
-                    // } else {
-                    //     shop_bag = {
-                    //         id_user: id_user.value,
-                    //         id_products: [boton_compra.id]
-                    //     };
-                    //     localStorage.setItem('shopBag' + id_user.value, JSON.stringify(shop_bag));
-                    // }
-                        
 
                 } else {
                     
@@ -45,7 +27,6 @@ window.addEventListener ('load', function () {
         input_user_image_edit.addEventListener('change', function () {
         let imgUser = document.getElementById("userImageEdit");
         let fileUser = this.files[0];
-        console.log(fileUser);
         imgUser.classList.add("obj");
         imgUser.file = fileUser;
         let readerUser = new FileReader();
@@ -97,8 +78,57 @@ window.addEventListener ('load', function () {
         })
     };
     
+    //capturo el evento click de los botones más y menos de la bolsa de compras
+    
+    
+    
+    const pUnit = document.querySelectorAll('.p_unit');
+    const subTotal =  document.querySelectorAll('.sub_total');
+    const inputQuantities = document.querySelectorAll('.cantidad_producto_bolsa');
+    
+    if (inputQuantities) {
+        
+        inputQuantities.forEach(inputQuantity => {
+            inputQuantity.addEventListener('change', function() {
+                let indexQuantity = inputQuantity.id.substr(11); 
+                if (this.value > 0 ) {
+                    subTotal[indexQuantity].value = "$" + Number(this.value) * Number(pUnit[indexQuantity].value.substr(1));
+                } else {
+                    this.value = 1;
+                }
+            })
+        });
+    }
 
+    
+    const buttonsLess = document.querySelectorAll('.restar_producto_bolsa');
+    if (buttonsLess) {
+        buttonsLess.forEach(buttonLess => {
+            buttonLess.addEventListener('click', function () {
+                let indexLess = buttonLess.id.substr(10);
+                if (inputQuantities[indexLess].value > 1) {
+                    inputQuantities[indexLess].value = inputQuantities[indexLess].value - 1; 
+                    subTotal[indexLess].value = "$" + Number(inputQuantities[indexLess].value) * Number(pUnit[indexLess].value.substr(1));
+                }
+            
+            });
+
+    })
+    }
+
+    const buttonsAdd = document.querySelectorAll('.sumar_producto_bolsa');
+    if (buttonsAdd) {
+        buttonsAdd.forEach(buttonAdd => {
+            buttonAdd.addEventListener('click', function () {
+                let indexAdd = buttonAdd.id.substr(9);
+                inputQuantities[indexAdd].value = Number(inputQuantities[indexAdd].value) + 1; 
+                subTotal[indexAdd].value = "$" + Number(inputQuantities[indexAdd].value) * Number(pUnit[indexAdd].value.substr(1));
+            });
+    
+        });    
+    };
+
+    
+    
    
-
 });
-window.addEventListener

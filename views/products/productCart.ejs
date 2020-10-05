@@ -2,52 +2,69 @@
 <html lang="en">
 <%- include('../partials/head') %> 
 <body>
-    <%- include('../partials/header');%> 
+    <%- include('../partials/header') %> 
     <main class="main_bc">
+        
         <% if(detailShoppingBag && detailShoppingBag.length > 0 ) {%> 
-        <!--    <h3 class="h3_bolsa_de_compras">Bolsa de compras:</h3>
+            <h3 class="h3_bolsa_de_compras">Bolsa de compras:</h3>
             <div class="contenido_bolsa">
                 <div class="titulos_detalle_bc">
                     <label class="titulo_producto" for="">Producto:</label>
+                    <label class="titulo_producto" for="">Variedad:</label>
+                    <label class="titulo_producto" for="">Precio Unitario:</label>
+                    <label class="titulo_cantidad" for="">Subtotal:</label>
                     <label class="titulo_cantidad" for="">Cantidad:</label>
                 </div>
-                <section class="detalle_bolsa">
-                    <article>
-                        <img class="foto_producto_bolsa" src="/images/products/sorrentinos.jpg" alt="Foto sorrentinos">
-                    </article>
-                    <article class="descripción_compra">
-                        Sorrentino <br>
-                        de jamón y muzarella<br>
-                        x 1 - $350,00<br>
-                    </article>
-                    <article class="botones_bolsa">
-                        <nav class="botones_mas_menos">
-                            <input class="restar_producto_bolsa" type="button" value="-">
-                            <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
-                            <input class="sumar_producto_bolsa" type="button" value="+">
-                        </nav>
-                        <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
-                    </article>
-                </section>
-                <section class="detalle_bolsa">
-                    <article>
-                        <img class="foto_producto_bolsa" src="/images/products/caseritos.jpg" alt="Foto sorrentinos">
-                    </article>
-                    <article class="descripción_compra">
-                        Caserito <br>
-                        de carne braseada<br>
-                        x 1 - $330,00<br>
-                    </article>
-                    <article class="botones_bolsa">
-                        <nav class="botones_mas_menos">
-                            <input class="restar_producto_bolsa" type="button" value="-">
-                            <input class="cantidad_producto_bolsa" type="number" value="0" name="cantidad_bolsa">
-                            <input class="sumar_producto_bolsa" type="button" value="+">
-                        </nav>
-                        <input class="eliminar_producto_bolsa" type="button" name="eliminar" id="" value="Eliminar">
-                    </article>
-                </section>
-            </div> -->
+                <% let i = 0; %> 
+                <% detailShoppingBag.forEach(itemDetail => { %>
+                    
+                    <section class="detalle_bolsa">
+                        <article>
+                            
+                            <img class="foto_producto_bolsa" src="../../images/products/<%= itemDetail.products[0].image %>" alt="Foto">
+                        </article>
+                        <article class="descripción_compra">
+                            <div><%= itemDetail.products[0].name %></div>
+                            <div><%= itemDetail.products[0].description %></div>
+                        </article>
+                        <article>
+                            <% if (itemDetail.products[0].varieties) {  %>
+                                <select name="" id="">
+                                    <% itemDetail.products[0].varieties.forEach(varietiesProduct => { %>
+                                        <option value="<%= varietiesProduct.id %>"><%= varietiesProduct.name %></option>
+                                    
+                                    <% }) %>
+
+                                </select>
+                            <% } %> 
+                        </article>
+                        <article>
+                            <div>
+                                <input class="p_unit" id="p_unit<%= i %>" value="$<%= itemDetail.products[0].price %>" readonly>
+                            </div>
+                            
+                        </article>
+                        <article>
+                            <div>
+                                <input class="sub_total" type="text" name="subTotal<%= i %>" id="subTotal<%= i %>" value=$<%= itemDetail.products[0].price %> readonly >
+                            </div>
+                        </article>
+                        <article class="botones_bolsa">
+                            <nav class="botones_mas_menos">
+                                <input class="restar_producto_bolsa" name="buttonLess<%= i %>" id="buttonLess<%= i %>" type="button" value="-">
+                                <input class="cantidad_producto_bolsa" name="quantityBag<%= i %>" id="quantityBag<%= i %>" type="number" value="1" >
+                                <input class="sumar_producto_bolsa" name="buttonAdd<%= i %>" id="buttonAdd<%= i %>" type="button" value="+">
+                            </nav>
+                            <form action="/products/productCart?_method=DELETE" method="POST">
+                                <input type="hidden" name="id_delete" value="<%= itemDetail.id %>">
+                                <input class="eliminar_producto_bolsa" type="submit" name="buttonDelete<%= i %>" id="delete<%= i %>" value="Eliminar">
+                            </form>
+                        </article>
+                    </section>
+                    <% i++; %> 
+                <% }); %> 
+                
+            </div>
         <% } else { %>
             <form action="/products" method="GET">
                 <div class="contenido_bolsa">
