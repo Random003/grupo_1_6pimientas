@@ -1,7 +1,7 @@
 const {check, body} = require ('express-validator');
 const path = require('path');
 
-
+   
 module.exports = {
     create: [
         check('name')
@@ -9,13 +9,18 @@ module.exports = {
         .isLength({min:8}).withMessage('El nombre debe tener al menos 8 caracteres'),
     
         check('description')
-        .isLength({min:10}).withMessage('La descripción debe tener al menos 10 caracteres').bail(),
+        .notEmpty().withMessage('Debes completar el campo de descripción').bail()
+        .isLength({min:10}).withMessage('La descripción debe tener al menos 10 caracteres'),
     
         check('price')
         .notEmpty().withMessage('Debes completar el precio').bail()
         .isNumeric().withMessage('El precio debe ser un numero')
-        .custom((value, { req }) => req.body.price > 0).withMessage("No se aceptan números negativos"),
-       
+        .custom((value, { req }) => req.body.price > 0).withMessage("El precio debe ser mayor a 0"),
+        
+        check('performance')
+        .notEmpty().withMessage('Debes completar el campo de rendimiento').bail(),
+        
+
        check("image")
        .custom((value, { req }) => req.file)
        .withMessage("Debes ingresar una imagen para tu producto")

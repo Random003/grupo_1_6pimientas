@@ -5,14 +5,13 @@
     <%- include('../partials/header');%> 
     <main>
         <div>
-            <form class="cajaLogin" action="/users/login" method="POST">
+            <form class="cajaLogin" action="/users/login" method="POST" id="formLogin">
             <h3>Inicio de Sesión</h3>
             <div class="loginContainer">
-
                 <div>
                     <label class="titleRegister">Email:</label><br>
-                    <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.email && email %>">
-                    <p><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
+                    <input class="ingreso" type="email" name="email" id="emailLogin" placeholder="E-mail" value="<%= locals.email && email %>">
+                    <p id="feedbackEmailLogin"><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
                     <label class="titleRegister">Contraseña</label><br>
                     <input class="ingreso" type="password" name="password"  placeholder="Contraseña" value="">
                     <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>

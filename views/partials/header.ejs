@@ -26,7 +26,11 @@
                                 <!--<li><a href="#">Nosotros</a></li>-->
                                 <li><a href="/sales">Promociones</a></li>
                                 <li><a href="/products/productCart">Bolsa de compras</a></li>
-                                <li><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></li>
+                                <form action="/users/edit/" method="POST">
+                                    <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>">
+                                    
+                                    <li><input type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
+                                </form>
                                 <li id="logout"><a href="/users/logout">Cerrar Sesión</a></li>
                                 </div>
                             <% }%>    
@@ -85,7 +89,11 @@
 
                             <li><a href="/users/register">Alta<br>Usuarios</a></li>
                             <li><a href="/users/usersAdmin">Editar y Borrar<br>Usuarios</a></li>
-                            <li><a href="/users/edit/<%= locals.user.id %>"><%= locals.user.full_name %></a></li>
+                            <form action="/users/edit/" method="POST">
+                                <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>">
+                                
+                                <li><input type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
+                            </form>
                             <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
 
                             <% } %> 

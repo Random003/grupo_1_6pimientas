@@ -29,7 +29,7 @@
                         </article>
                         <article>
                             <% if (itemDetail.products[0].varieties) {  %>
-                                <select name="" id="">
+                                <select name="" id="selectVariety<%= i %>">
                                     <% itemDetail.products[0].varieties.forEach(varietiesProduct => { %>
                                         <option value="<%= varietiesProduct.id %>"><%= varietiesProduct.name %></option>
                                     
