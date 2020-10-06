@@ -36,7 +36,7 @@
                 </p>
                 <p>
                     <label>Precio</label>
-                    <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio"
+                    <input class="ingresoCreate" type="number" name="price" id="price" placeholder="Precio"
                     value="<%= locals.sales ? sales.price: '' %>"
                             class="<%= locals.errors && errors.price? 'danger' : '' %>">
                     <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span>

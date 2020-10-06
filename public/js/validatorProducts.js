@@ -3,9 +3,12 @@ window.addEventListener('load', function(){
     let createProduct = document.getElementById('createProduct');
     let name = document.getElementById('name');
     let description = document.getElementById('description');
-    let performance = document.getElementById('performance')
+    let performance = document.getElementById('performance');
+    // let variety = document.getElementById('variety');
     let price = document.getElementById('price');
     let images = document.getElementById('inputProductAddImage');
+
+  //dejo comentado lo de variedades hasta definir como encararlo 
 
     let validateName = function (){
         let feedback = '';
@@ -33,7 +36,7 @@ window.addEventListener('load', function(){
         let feedback = '';
 
         if(validator.isEmpty(price.value, {ignore_whitespace:true })) {
-            feedback = 'Debes completar el precio';
+            feedback = 'Debes completar el precio con números';
         }else if(!validator.isFloat(price.value))  {
             feedback = 'El precio debe ser un numero';
         }else if (price.value < 0 ) {
@@ -43,15 +46,34 @@ window.addEventListener('load', function(){
 
         handleFeedback(price, feedback)
     }
+    let validatePresentation = function (){
+        let feedback = '';
+ 
+        if(validator.isEmpty(presentation.value, {ignore_whitespace:true })) {
+            feedback = 'El campo de presentación no puede estar vacío';
+        };
+
+        handleFeedback(presentation, feedback);
+    }
+
     let validatePerformance = function (){
         let feedback = '';
  
         if(validator.isEmpty(performance.value, {ignore_whitespace:true })) {
-            feedback = 'El campo no puede estar vacío';
+            feedback = 'El campo de rendimiento no puede estar vacío';
         };
 
         handleFeedback(performance, feedback);
     }
+    // let validateVariety = function (){
+    //     let feedback = '';
+ 
+    //     if(validator.isEmpty(variety.value, {ignore_whitespace:true })) {
+    //         feedback = 'El campo de rendimiento no puede estar vacío';
+    //     };
+
+    //     handleFeedback(variety, feedback);
+    // }
 
 //     check("image")
 //     .custom((value, { req }) => req.file)
@@ -84,6 +106,7 @@ window.addEventListener('load', function(){
 
 
      //Modularizar la funcion para mostrar feedback 
+
      let handleFeedback = function (element, feedback){
         let feedbackElement = element.nextElementSibling;
 
@@ -107,10 +130,12 @@ window.addEventListener('load', function(){
         validateName();
         validateDescription();
         validatePrice();
+        validatePresentation();
         validatePerformance();
         validateImages();
+        // validateVariety();
 
-        if(object.keys(errors).length) { //objeto con arrays de propiedades
+        if(object.keys(errors).length) {                 
             e.preventDefault();                // prevenir el envío de formulario
         }
     };
@@ -120,8 +145,10 @@ window.addEventListener('load', function(){
     name.addEventListener('blur', validateName);
     description.addEventListener('blur', validateDescription);
     price.addEventListener('blur', validatePrice);
-    performance.addEventListener('blur', validatePerformance)
-    images.addEventListener('change', validateImages)
+    presentation.addEventListener('blur', validatePresentation);
+    performance.addEventListener('blur', validatePerformance);
+    images.addEventListener('change', validateImages);
+    // variety.addEventListener('blur', validateVariety);
 
     createProduct.addEventListener('submit', validateCreateProduct);
 }) 

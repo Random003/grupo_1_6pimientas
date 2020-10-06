@@ -5,7 +5,7 @@ window.addEventListener('load', function(){
     let name = document.getElementById('name');
     let discount = document.getElementById('discount');
     let price = document.getElementById('price');
-    let images = document.getElementById('images');  //no funca
+    let images = document.getElementById('images');  // si funciona
 
     let validateName = function (){
         let feedback = '';
@@ -43,13 +43,30 @@ window.addEventListener('load', function(){
     }
    
     //no funcaaaaaaaaa!
+
     let validateImages = function() {
-        let feedbackElement = '';
+        let feedback = '';
 
-        if(validator.isFile){
-
+        if(validator.isFile(images.value)) {
+            let acceptedExtensions = [".jpg", ".jpeg", ".png"];
+            let ext = images.value.substr(-4);
+          
+            if(!acceptedExtensions.includes(ext)) {
+                feedback = 'La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG';
+            };
         }
+        console.log(ext);
+        handleFeedback(images, feedback);
     }
+
+    // let validateImages = function() {
+    //     let feedbackElement = '';
+
+    //     if(validator.isFile){
+
+    //     }
+    // }
+
      //Modularizar la funcion para mostrar feedback 
      let handleFeedback = function (element, feedback){
         let feedbackElement = element.nextElementSibling;
@@ -76,7 +93,7 @@ window.addEventListener('load', function(){
         validatePrice();
         validateImages();
 
-        if(object.keys(errors).length) { //objeto con arrays de propiedades
+        if(object.keys(errors).length) { 
             e.preventDefault();                // prevenir el envío de formulario
         }
     };
