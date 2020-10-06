@@ -1,7 +1,7 @@
 const {check, body} = require ('express-validator'); //chequeo campos del form de login
 const path = require('path');
 const { user } = require('../../database/models');
-
+ 
 
 module.exports = {
     
@@ -38,17 +38,17 @@ module.exports = {
               }),
         
         check('confirmEmail')
-            .notEmpty().withMessage("Debes completar el cambo de email").bail()
+            .notEmpty().withMessage("Debes completar el campo de email").bail()
             .isEmail().withMessage("Debes ingresar un email válido"),
         
         check('password')
             .notEmpty().withMessage("Debes completar el campo password").bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
 
         check('confirmPassword')
             .notEmpty().withMessage("Debes completar el campo password")
             .bail()
-            .isLength( {min: 6} ).withMessage("La contraseña debe tener 6 caracteres como mínimo"),
+            .isLength( {min: 8} ).withMessage("La contraseña debe tener 8 caracteres como mínimo"),
         
         check('street')
             .notEmpty().withMessage("Debes completar el campo calle")

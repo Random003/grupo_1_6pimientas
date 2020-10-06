@@ -53,19 +53,6 @@ window.addEventListener('load', function(){
         handleFeedback(performance, feedback);
     }
 
-//     check("image")
-//     .custom((value, { req }) => req.file)
-//     .withMessage("Debes ingresar una imagen para tu producto")
-//     .bail()
-//     .custom((value, { req }) => {
-//      const acceptedExtensions = [".jpg", ".jpeg", ".png"];
-//      const ext = path.extname(req.file.originalname);
-//      return acceptedExtensions.includes(ext);
-//     })
-//    .withMessage(
-//      "La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG"
-//    )
-
 
     let validateImages = function() {
         let feedback = '';

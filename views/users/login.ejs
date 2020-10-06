@@ -13,7 +13,7 @@
                     <input class="ingreso" type="email" name="email" id="emailLogin" placeholder="E-mail" value="<%= locals.email && email %>">
                     <p id="feedbackEmailLogin"><%= locals.errors && errors.email ? errors.email.msg : '' %></p>
                     <label class="titleRegister">Contraseña</label><br>
-                    <input class="ingreso" type="password" name="password"  placeholder="Contraseña" value="">
+                    <input class="ingreso" type="password" name="password" id="passwordLogin" placeholder="Contraseña" value="">
                     <p><%= locals.errors && errors.password ? errors.password.msg : '' %></p>
                 </div>
                 <br>

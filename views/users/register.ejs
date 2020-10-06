@@ -4,7 +4,7 @@
 <body>
     <%- include('../partials/header');%> 
     <main>
-        <form class="cajaLogin" action="/users/register" method="POST" enctype="multipart/form-data">
+        <form class="cajaLogin" action="/users/register" method="POST" enctype="multipart/form-data" id="formRegister">
             <h3>
                 Registro de Usuario:
             </h3>
@@ -17,76 +17,41 @@
                         <br>
                         <h4>Agregar una imagen</h4>
                         <input class="ingresoCreate fileCreate" type="file" name="image" id="inputImgAddUser" accept="image/x-png,image/gif,image/jpeg"></input>
-                        <% if (locals.errors && errors.image) {%> 
-                            <label class="feedBack"><%= errors.image.msg %> </label><br>
-                        <% } %> 
+                        <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br> 
                     </p>
                 </div>
                 <label class="titleRegister">Nombre y Apellido</label>
-                <input class="ingreso" type="text" name="full_name" placeholder="Nombre y Apellido" value="<%= locals.register && register.full_name %>">
-                <% if (locals.errors && errors.full_name) {%> 
-                    <label class="feedBack"><%= errors.full_name.msg %> </label><br>
-                <% } %> 
+                <input class="ingreso" type="text" name="full_name" placeholder="Nombre y Apellido" id="full_nameRegister" value="<%= locals.register && register.full_name %>">
+                <label class="feedBack"><%= locals.errors && errors.full_name ? errors.full_name.msg : ''%> </label><br>
                 <label class="titleRegister">E-mail</label>
-                <input class="ingreso" type="email" name="email"  placeholder="E-mail" value="<%= locals.register && register.email %>">
-                <% if (locals.errors && errors.email) {%> 
-                    <label class="feedBack"><%= errors.email.msg %> </label><br>
-                <% } %> 
-
+                <input class="ingreso" type="email" name="email"  placeholder="E-mail" id="emailRegister" value="<%= locals.register && register.email %>">
+                <label class="feedBack"><%= locals.errors && errors.email ? errors.email.msg : ''%> </label><br>
                 <label class="titleRegister">Confirmar E-mail</label>
-                <input class="ingreso" type="email" name="confirmEmail"  placeholder="Confirmar E-mail" value="<%= locals.register && register.confirEmail %>">
-                <% if (locals.errors && errors.confirmEmail) {%> 
-                    <label class="feedBack"><%= errors.confirmEmail.msg %> </label><br>
-                <% } %> 
-
+                <input class="ingreso" type="email" name="confirmEmail"  placeholder="Confirmar E-mail" id="confirmEmailRegister" value="<%= locals.register && register.confirEmail %>">
+                <label class="feedBack"><%= locals.errors && errors.confirmEmail ? errors.confirmEmail.msg : ''%> </label><br>
                 <label class="titleRegister">Contraseña</label>
-                <input class="ingreso" type="password" name="password"  placeholder="Contraseña" value="<%= locals.register && register.password %>">
-                <% if (locals.errors && errors.password) {%> 
-                    <label class="feedBack"><%= errors.password.msg %> </label><br>
-                <% } %> 
-                
+                <input class="ingreso" type="password" name="password"  placeholder="Contraseña" id="passwordRegister" value="<%= locals.register && register.password %>">
+                <label class="feedBack"><%= locals.errors && errors.password ? errors.password.msg : ''%> </label><br>
                 <label class="titleRegister">Confirmar Contraseña</label>
-                <input class="ingreso" type="password" name="confirmPassword"  placeholder="Confirmar Contraseña" value="<%= locals.register && register.password %>">
-                <% if (locals.errors && errors.confirmPassword) {%> 
-                    <label class="feedBack"><%= errors.confirmPassword.msg %> </label><br>
-                <% } %> 
-
+                <input class="ingreso" type="password" name="confirmPassword"  placeholder="Confirmar Contraseña" id="confirmPasswordRegister" value="<%= locals.register && register.password %>">
+                <label class="feedBack"><%= locals.errors && errors.confirmPassword ? errors.confirmPassword.msg : ''%> </label><br>
                 <label class="titleRegister">Calle</label>
-                <input class="ingreso" type="text" name="street"  placeholder="Calle" value="<%= locals.register && register.street %>">
-                <% if (locals.errors && errors.street) {%> 
-                    <label class="feedBack"><%= errors.street.msg %> </label><br>
-                <% } %> 
-
+                <input class="ingreso" type="text" name="street"  placeholder="Calle" id="streetRegister" value="<%= locals.register && register.street %>">
+                <label class="feedBack"><%= locals.errors && errors.street ? errors.street.msg : ''%> </label><br>
                 <label class="titleRegister">Numero</label>
-                <input class="ingreso" type="number" name="number"  placeholder="Número" value="<%= locals.register && register.number %>">
-                <% if (locals.errors && errors.number) {%> 
-                    <label class="feedBack"><%= errors.number.msg %> </label><br>
-                <% } %> 
-                
+                <input class="ingreso" type="number" name="number"  placeholder="Número" id="numberRegister" value="<%= locals.register && register.number %>">
+                <label class="feedBack"><%= locals.errors && errors.number ? errors.number.msg : ''%> </label><br>
                 <label class="titleRegister">Piso</label>
                 <input class="ingreso" type="number" name="floor"  placeholder="Piso" value="<%= locals.register && register.floor %>">
-                <% if (locals.errors && errors.floor) {%> 
-                    <label class="feedBack"><%= errors.floor.msg %> </label><br>
-                <% } %> 
-
+                <label class="feedBack"><%= locals.errors && errors.floor ? errors.floor.msg : ''%> </label><br>
                 <label class="titleRegister">Departamento</label>
                 <input class="ingreso" type="text" name="department"  placeholder="Departamento" value="<%= locals.register && register.department %>">
-                <% if (locals.errors && errors.department) {%> 
-                    <label class="feedBack"><%= errors.department.msg %> </label><br>
-                <% } %> 
-
+                <label class="feedBack"><%= locals.errors && errors.department ? errors.department.msg : ''%> </label><br>
                 <label class="titleRegister">Localidad</label>
                 <input class="ingreso" type="text" name="city"  placeholder="Localidad" value="<%= locals.register && register.city %>">
-                <% if (locals.errors && errors.city) {%> 
-                    <label class="feedBack"><%= errors.city.msg %> </label><br>
-                <% } %> 
+                <label class="feedBack"><%= locals.errors && errors.city ? errors.city.msg : ''%> </label><br>
                 <br>
                 <br>
-
-                <!-- <div class="captcha">
-                    <img width="180px" src="/images/captcha.png" alt="imagen de captcha">
-                </div> -->
-              
                 <p class="botonsRegister">
                     <button type="submit" class="ingreso" id="botonIngreso">Crear Usuario</button> 
                     <button type="reset" class="ingreso" id="botonReseteo">Borrar Campos</button>
