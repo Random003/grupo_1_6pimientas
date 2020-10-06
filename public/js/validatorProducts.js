@@ -1,10 +1,10 @@
 window.addEventListener('load', function(){
     let errors = {};
+
     let createProduct = document.getElementById('createProduct');
     let name = document.getElementById('name');
     let description = document.getElementById('description');
     let performance = document.getElementById('performance');
-    // let variety = document.getElementById('variety');
     let price = document.getElementById('price');
     let images = document.getElementById('inputProductAddImage');
 
@@ -65,78 +65,73 @@ window.addEventListener('load', function(){
 
         handleFeedback(performance, feedback);
     }
-    // let validateVariety = function (){
-    //     let feedback = '';
- 
-    //     if(validator.isEmpty(variety.value, {ignore_whitespace:true })) {
-    //         feedback = 'El campo de rendimiento no puede estar vacío';
-    //     };
 
-    //     handleFeedback(variety, feedback);
-    // }
-
-
-    let validateImages = function() {
+    let validateInputProductAddImage = function() {
         let feedback = '';
-
-        if(validator.isFile(images.value)) {
+        if(!validator.isEmpty(inputImgAddUser.value)) {
             let acceptedExtensions = [".jpg", ".jpeg", ".png"];
-            let ext = images.value.substr(-4);
-          
+            let ext = inputImgAddUser.value.substr(-4);
             if(!acceptedExtensions.includes(ext)) {
                 feedback = 'La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG';
             };
         }
-        console.log(ext);
         handleFeedback(images, feedback);
     }
+  
+    // let validateImages = function() {
+    //     let feedback = '';
+
+    //     if(validator.isFile(images.value)) {
+    //         let acceptedExtensions = [".jpg", ".jpeg", ".png"];
+    //         let ext = images.value.substr(-4);
+          
+    //         if(!acceptedExtensions.includes(ext)) {
+    //             feedback = 'La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG';
+    //         };
+    //     }
+    //     console.log(ext);
+    //     handleFeedback(images, feedback);
+    // }
 
 
-     //Modularizar la funcion para mostrar feedback 
-
-     let handleFeedback = function (element, feedback){
-        let feedbackElement = element.nextElementSibling;
-
-        if(feedback != ''){
-            element.classList.add('error');
-            feedbackElement.classList.add('error');
-            errors[element.name] = feedback; //[element. nombre del imput]
-
-        }else{
-            element.classList.remove('error');
-            feedbackElement.classList.remove('error');
-            delete errors.password;
-        }
-
-        feedbackElement.innerText = feedback;
-        console.log(errors);
-    };
+       //Eventos  
+       name.addEventListener('blur', validateName);
+       description.addEventListener('blur', validateDescription);
+       price.addEventListener('blur', validatePrice);
+       presentation.addEventListener('blur', validatePresentation);
+       performance.addEventListener('blur', validatePerformance);
+       images.addEventListener('change', validateInputProductAddImage);
 
 
-    let validateCreateProduct = function(e){
+    // let validateCreateProduct = function (event){
+    createProduct.addEventListener('submit', function (event) { 
         validateName();
         validateDescription();
         validatePrice();
         validatePresentation();
         validatePerformance();
-        validateImages();
-        // validateVariety();
-
-        if(object.keys(errors).length) {                 
-            e.preventDefault();                // prevenir el envío de formulario
+        validateInputProductAddImage();
+        
+         if (Object.keys(errors).length) {                 
+                event.preventDefault();                // prevenir el envío de formulario
         }
-    };
+    });
 
-    //Agregado de listeners 
+    
 
-    name.addEventListener('blur', validateName);
-    description.addEventListener('blur', validateDescription);
-    price.addEventListener('blur', validatePrice);
-    presentation.addEventListener('blur', validatePresentation);
-    performance.addEventListener('blur', validatePerformance);
-    images.addEventListener('change', validateImages);
-    // variety.addEventListener('blur', validateVariety);
+//Funcion comun
 
-    createProduct.addEventListener('submit', validateCreateProduct);
+    let handleFeedback = function (element, feedback) {
+        let feedbackElement = element.nextElementSibling;
+
+        if (feedback) {
+            errors[element.name] = feedback;
+        } else {
+            delete errors[element.name];
+        }
+        feedbackElement.innerText = feedback;
+    }
+
+    // createProduct.addEventListener('submit', validateCreateProduct);
 }) 
     
