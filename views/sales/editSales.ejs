@@ -12,19 +12,28 @@
             <div class="containerCreate">
                 <div>
                     <p>
+                        <label>Nombre</label>
                         <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre de la Promoción" value="<%= sales.name %>">
                     </p>
     
 
                     <p>
+                        <label>Descuento</label>
                         <textarea class="ingresoCreate" name="discount" placeholder="Descuento" value="<%= sales.discount %>"></textarea>
                     </p>
                 </div>
                
+                <div class="imagenEdit2">
+                    <label>Imagen</label>
+                    <img class="ingresoCreate fileCreate" type="file" name="image" src="/images/products/<%= sales.image %>" alt="">
+                </div>
                 <p>
-                    <input class="ingresoCreate fileCreate" type="file" name="image" src="/images/products/<%= sales.image %>" alt=""></input>
+                    <br>
+                    <label>Agregar una imagen</label>
+                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductImageEdit"></input>
                 </p>
                 <p>
+                    <label>Precio</label>
                     <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio" value="<%= sales.price %>">
                 </p>
 

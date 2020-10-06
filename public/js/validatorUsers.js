@@ -32,6 +32,12 @@ window.addEventListener('load', function() {
             let feedback = '';
             if (validator.isEmpty(passwordLogin.value, { ignore_whitespace:true })) {
                 feedback = 'Debes completar el campo password';
+                
+            //  CHEQUEAR SI ES PROBLEMA DESPUES CON EL RESTO    
+            // } else if (!((fld.value.search(/(a-z)+/)) && (fld.value.search(/(0-9)+/)))) {
+            //     feedback = 'La contraseña debe tener al menos un número';
+            // };
+
             };
     
             handleFeedback(passwordLogin, feedback);

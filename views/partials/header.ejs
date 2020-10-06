@@ -29,7 +29,7 @@
                                 <form action="/users/edit/" method="POST">
                                     <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>">
                                     
-                                    <li><input type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
+                                    <li><input class="userMenu" type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
                                 </form>
                                 <li id="logout"><a href="/users/logout">Cerrar Sesión</a></li>
                                 </div>
@@ -92,7 +92,7 @@
                             <form action="/users/edit/" method="POST">
                                 <input type="hidden" name="id_user_edit" value="<%= locals.user.id %>">
                                 
-                                <li><input type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
+                                <li><input class="userMenu" type="submit" name="" id="" value="<%= locals.user.full_name %>" readonly></li>
                             </form>
                             <li><a href="/users/logout">Cerrar<br>Sesión</a></li>
 
@@ -120,7 +120,7 @@
                     
                     <% if (locals.user) { %> 
                         <span>
-                            <form action="/users/edit" method="POST" >
+                            <form action="/users/edit" method="POST" class="menuDesktop">
                                 <input type="hidden" name="id_user_edit" id="id_user" value="<%= locals.user.id %>" >
                                 <input class="imgUserBar" name="edit_user_bar" type="image" src="/images/users/<%= locals.user.image %>">
                                 

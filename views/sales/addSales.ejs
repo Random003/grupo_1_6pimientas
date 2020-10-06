@@ -29,10 +29,17 @@
                         <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
                     </p>
                 </div>
+
+                <div class="imagenEdit2">
+                    <label>Imagen</label>
+                    <img class="imagenEdit" name="imageView" src="../../images/products/default.png" alt="" id="">
+                </div><br>
                
                 <p>
-                    <label>Agregue una imagen</label>
-                    <input class="ingresoCreate fileCreate" type="file" name="imagen"></input>
+                    <br><br>
+                    <label>Agregar una imagen</label>
+                    <input class="ingresoCreate fileCreate" type="file" name="imagen" accept="image/x-png,image/gif,image/jpeg"></input>
+                    <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br>
                 </p>
                 <p>
                     <label>Precio</label>

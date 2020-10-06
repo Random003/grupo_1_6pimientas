@@ -68,14 +68,14 @@ window.addEventListener('load', function(){
 
     let validateInputProductAddImage = function() {
         let feedback = '';
-        if(!validator.isEmpty(inputImgAddUser.value)) {
+        if(!validator.isEmpty(inputProductAddImage.value)) {
             let acceptedExtensions = [".jpg", ".jpeg", ".png"];
-            let ext = inputImgAddUser.value.substr(-4);
+            let ext = inputProductAddImage.value.substr(-4);
             if(!acceptedExtensions.includes(ext)) {
                 feedback = 'La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG';
             };
         }
-        handleFeedback(images, feedback);
+        handleFeedback(inputProductAddImage, feedback);
     }
   
     // let validateImages = function() {
@@ -100,7 +100,7 @@ window.addEventListener('load', function(){
        price.addEventListener('blur', validatePrice);
        presentation.addEventListener('blur', validatePresentation);
        performance.addEventListener('blur', validatePerformance);
-       images.addEventListener('change', validateInputProductAddImage);
+       images.addEventListener('change', validateInputProductAddImage)
 
 
     // let validateCreateProduct = function (event){
@@ -113,7 +113,7 @@ window.addEventListener('load', function(){
         validateInputProductAddImage();
         
          if (Object.keys(errors).length) {                 
-                event.preventDefault();                // prevenir el envío de formulario
+                event.preventDefault();   // prevenir el envío de formulario
         }
     });
 

@@ -531,10 +531,17 @@ a {
     align-self: center;  
 }
 
+.imagenEdit2 {
+    max-width: 250px;
+    max-height: 300px;
+    overflow: auto;
+    object-fit: contain; 
+    align-self: center;
+}
+
 
 .dropdown-menu {
     background-color: rgb(163, 31, 53);
-    
 }
 
 .dropdown-menu li a {
@@ -543,6 +550,16 @@ a {
 
 .id_variety_hidden {
     display: none;
+}
+
+.userMenu {
+    color: white;
+    background-color: rgb(163, 31, 53);
+    font-family: 'Roboto', sans-serif;
+    padding-left: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none
 }
 
 
