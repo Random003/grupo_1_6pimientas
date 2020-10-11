@@ -51,3 +51,12 @@ Decidimos aceitar mas el sistema de Weekly / Daily utilizando reuniones por What
 En este periodo logramos ya aceitar el proceso de reuniones diarias y semanales del equipo para poder realizar de manera lo mas eficiente posible el trabajo integrador nos encontramos que en los últimos sprints varios miembros del grupo tuvieron problemas médicos o familiares y tuvimos que modificar no tan solo la forma en la que realizábamos el trabajo sino también como era la forma y los tiempos en los que nos reuníamos por que habían momentos en los que no todos podían estar en la reunión en los momentos que estaban estipulados. 
 
 Logramos crear un sistema en el cual las decisiones eran tomadas por los miembros presentes y dejadas por escrito para luego el miembro que no pudo asistir lo pudiera ver y si es que tenia algún comentario o agregar alguna idea que podía ayudar al resto tomarla en cuenta en la próxima reunión o en su defecto llamar a una nueva extraordinaria. Nuevamente marcando la flexibilidad del grupo y también el compañerismo en momentos duros y complicados de los miembros del mismo.
+
+
+## **Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 6, entregable para el Sprint 7:**
+
+Para este ultimo entregable de Daily/Weekly el comentario que mayor pesa en las reuniones es el compañerismo y la ayuda mutua entre los miembros del equipo, ante cada circunstancia que alguno tenga los demás salen a ayudarlo y completar la parte de ese miembro.
+
+Otro aspecto a destacar es que las reuniones son mas orgánicas, puesto que nos conocemos mucho mas entre los miembros y sabemos las fortalezas y debilidades de cada uno y eso nos ayuda a dividirnos los trabajos de cada sprint de manera mas productiva.
+
+Muchas gracias por habernos entregado las herramientas para poder desarrollar todas estas metodologías de trabajo y también por haber leído como fueron puestas en marcha a lo largo de todos los sprints del cursado.

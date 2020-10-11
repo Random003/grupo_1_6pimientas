@@ -28,5 +28,3 @@ module.exports = {
     "dialect": "mysql"
   }
 }
-
-//Hay que ver si es que los datos estan bien, estan segun lo que hicimos esta tarde pero workbench hace lo que quiere aveces jajajaj

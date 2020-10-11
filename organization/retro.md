@@ -71,3 +71,8 @@ Por otro lado, en este sprint quedó demostrado el espíritu colaborador del equ
 ## **Breve Retrospectiva: Para Sprint Numero 7** 
 
 Continuando con las bases de ayuda mutua que fueron comentadas en la retrospectiva del sprint anterior, se dividieron los trabajos de los miembros con problemas familiares entre los demás miembros del grupo, demostrando no solo la flexibilidad del grupo para la toma de decisiones y acción de las mismas de manera rápida y eficaz, sino también la solidaridad de los mismos para ponerse la responsabilidad al hombro en momentos complicados brindando apoyo y ayuda entre si no solo en lo referente al trabajo integrador sino también en el aspecto humano. Para poder leer mas en detalle el proceso por favor visite la "## Breve descripción de las reuniones Diarias y Semanales del equipo durante el Sprint numero 6, entregable para el Sprint 7" que se encuentra <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/weekly.md">aquí</a>.
+
+
+## **Breve Retrospectiva: Para Sprint Numero 7** 
+
+Para este ultimo entregable el detalle sobre el ultimo anterior es que debido a complicaciones personales y mayor carga horaria laboral de los miembros, unido a la mayor cantidad de trabajo en el entregable llegamos a terminar el sprint horas antes de la entrega y eso nos enseño a organizarnos de una manera mas eficiente para encarar este sprint. De igual manera que fue comenta do en el Daily/Weekly les damos las gracias por estas metodologías de trabajo y las herramientas con las que vinieron acompañadas.
