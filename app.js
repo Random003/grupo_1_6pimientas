@@ -14,9 +14,10 @@ const error404Router = require('./routes/errors');
 const { add } = require('./controllers/productsController');
 const session = require('express-session');
 const sessionMidelware = require ('./middlewares/session');
-
+const apiProductsRouter = require('./routes/api/apiProductsRouter')
 
 const app = express();
+
 
 
 app.use(methodOverride('_method')); 
@@ -42,6 +43,7 @@ app.use(sessionMidelware);
 
 //Rutas:
 
+app.use('/api/products', apiProductsRouter);
 
 app.use('/products', indexProducts);
 
