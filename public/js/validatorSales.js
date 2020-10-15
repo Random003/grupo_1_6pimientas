@@ -93,7 +93,7 @@ window.addEventListener('load', function(){
         validatePrice();
         validateImages();
 
-        if(object.keys(errors).length) { 
+        if(Object.keys(errors).length) { 
             e.preventDefault();                // prevenir el envío de formulario
         }
     };
