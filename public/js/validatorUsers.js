@@ -276,9 +276,6 @@ window.addEventListener('load', function() {
             let feedback = '';
             if (validator.isEmpty(passwordEdit.value, { ignore_whitespace:true })) {
                 feedback = 'Debes completar el campo contraseña';
-            } else if (!validator.isLength(passwordEdit.value, {min: 8} )) {
-                feedback = 'La contraseña debe tener 8 caracteres como mínimo';
-
             };
     
             handleFeedback(passwordEdit, feedback);

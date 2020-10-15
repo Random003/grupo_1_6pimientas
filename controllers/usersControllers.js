@@ -1,5 +1,5 @@
+const fs = require('fs');
 const path = require('path');
-const { read } = require('fs');
 const bcrypt = require ('bcryptjs');
 const crypto = require('crypto');
 const { validationResult } = require('express-validator');
@@ -230,7 +230,6 @@ module.exports = {
             
             );
         
-        
 
     },
     
@@ -243,10 +242,20 @@ module.exports = {
             });
 
     },
-    delete: (req, res) => {
+    delete: async (req, res) => {
         //usersModel.delete(req.params.id);
-        user.destroy({
-            where: { id: req.params.id }
+        let existUser = await user.findByPk(req.params.id);
+        let imagePath = '';
+          
+        if (existUser.image != 'default.png') {
+            imagePath = path.join(__dirname, '../public/images/users/' + existUser.image);
+        }
+
+        user.destroy({ where: { id: req.params.id } })
+        .then(deleteUser => {
+            if (fs.existsSync(imagePath)) {
+                fs.unlinkSync(imagePath)
+            }
         });
         if (req.session.user.category == 'admin') {
             res.redirect ('../usersAdmin');

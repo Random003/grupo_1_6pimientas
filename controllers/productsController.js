@@ -178,13 +178,13 @@ module.exports = {
         
         // borrar producto
         product.destroy({ where: { id: req.params.id } })
-        .then(deletedGroup => {
+        .then(deletedProduct => {
             if (fs.existsSync(imagePath)) {
                 fs.unlinkSync(imagePath)
             }
         });
         // borrar categorías
-        
+        variety.destroy({ where: { product_id: req.params.id } });
         res.redirect('/products');
     },
     addProduct: async (req, res) => {
