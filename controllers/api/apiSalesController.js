@@ -31,7 +31,7 @@ module.exports = {
             })
         };
         
-        sales.findAndCountAll( { order: ['id'])
+        sales.findAndCountAll( { order: ['id'], include: 'discount' })
         .then (sales => {
             if (sales) {
                 res.status(200).json(
