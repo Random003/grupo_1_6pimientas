@@ -27,6 +27,16 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
 
 ---
 
+# **Instrucciones para inicializar el Dashboard:**
+
+_ npm start - en la carpeta "dashboard"
+
+_ debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000).
+
+- Para mayor información acerca del Dashboard creado en React leer su Readme en esta <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/dashboard/README.md">dirección</a>.
+
+---
+
 
 # **Objetivos del e-comerce:**
 -   Facilitar a los clientes la compra vía web con entregas a domicilio.

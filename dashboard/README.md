@@ -1,3 +1,23 @@
+<p align="center">
+  <img src="https://github.com/Random003/grupo_1_6pimientas/blob/master/public/images/home/marca_curvas.png" alt="Logo de la marca"/>
+</p>
+
+# **Grupo 1 "Seis Pimientas"**
+
+Proyecto integrador de Curso Full Stack de "Digital House". Dashboard realizado en react para ser utilizado en conjunto con el sitio web en <a href="https://github.com/Random003/grupo_1_6pimientas">esta</a> dirección.
+
+
+# **Instrucciones para inicializar el Dashboard:**
+
+npm start - en la carpeta "dashboard"
+
+debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000).
+
+
+---
+
+## **Documentación de React:** 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
