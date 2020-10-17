@@ -14,10 +14,8 @@ module.exports = {
                                 url: req.originalUrl,
                                 status: 200,
                                 count: 1 
-            
                             },
                             data: sales
-                            
                         }    
                     );
     
@@ -40,10 +38,8 @@ module.exports = {
                             url: req.originalUrl,
                             status: 200,
                             count: products.count 
-        
                         },
                         data: sales.rows
-                        
                     }    
                 );
 
@@ -56,6 +52,4 @@ module.exports = {
             return res.status(500).json( { error: 'Could not connect to database' } );;
         })
     }
-
-
 }
