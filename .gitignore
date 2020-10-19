@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 /database/products.json
 /database/sales.json
+*/.DS_Store

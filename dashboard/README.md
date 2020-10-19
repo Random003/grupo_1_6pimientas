@@ -4,14 +4,15 @@
 
 # **Grupo 1 "Seis Pimientas"**
 
-Proyecto integrador de Curso Full Stack de "Digital House". Dashboard realizado en react para ser utilizado en conjunto con el sitio web en <a href="https://github.com/Random003/grupo_1_6pimientas">esta</a> dirección.
+Proyecto integrador de Curso Full Stack de "Digital House". 
+Dashboard realizado en React para ser utilizado en conjunto con el sitio web alojado en <a href="https://github.com/Random003/grupo_1_6pimientas">esta</a> dirección.
 
 
 # **Instrucciones para inicializar el Dashboard:**
 
-npm start - en la carpeta "dashboard"
+- Colocar "npm start" en la terminal dentro de la carpeta "dashboard" del proyecto.
 
-debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000).
+- Debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000) donde aparecerá el Dashboard.
 
 
 ---

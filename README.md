@@ -29,9 +29,9 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
 
 # **Instrucciones para inicializar el Dashboard:**
 
-_ npm start - en la carpeta "dashboard"
+- Colocar "npm start" en la terminal dentro de la carpeta "dashboard" del proyecto.
 
-_ debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000).
+- Debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000) donde aparecerá el Dashboard.
 
 - Para mayor información acerca del Dashboard creado en React leer su Readme en esta <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/dashboard/README.md">dirección</a>.
 
