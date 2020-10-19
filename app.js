@@ -15,6 +15,7 @@ const { add } = require('./controllers/productsController');
 const session = require('express-session');
 const sessionMidelware = require ('./middlewares/session');
 const apiProductsRouter = require('./routes/api/apiProductsRouter');
+const apiSalesRouter = require('./routes/api/apiSalesRouter')
 const apiUsersRouter = require('./routes/api/apiUsersRouter')
 
 const app = express();
@@ -48,7 +49,9 @@ app.use('/api/products', apiProductsRouter);
 
 app.use('/products', indexProducts);
 
-app.use('/sales', salesRouter)
+app.use('/api/sales', apiSalesRouter);
+
+app.use('/sales', salesRouter);
 
 app.use('/users', usersRouter);
 
