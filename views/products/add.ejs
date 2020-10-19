@@ -15,7 +15,7 @@
                         <label>Nombre del producto</label>
                         <input class="ingresoCreate" type="text" name="name" id="nameProduct" placeholder="Nombre del producto"
                         value="<%= locals.product ? product.name : '' %>"
-                            class="<%= locals.errors && errors.name ? 'danger' : '' %>">
+                            class="<%= locals.errors && errors.name ? 'danger' : '' %>"><br>
                         <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span>
                     </p>
     
@@ -23,20 +23,20 @@
                         <label>Descripción</label>
                         <textarea class="ingresoCreate" id="descriptionProduct" name="description" placeholder="Descripción"
                         value="<%= locals.product ? product.description : '' %>"
-                            class="<%= locals.errors && errors.description ? 'danger' : '' %>"></textarea>
+                            class="<%= locals.errors && errors.description ? 'danger' : '' %>"></textarea><br>
                         <span class="error"><%= locals.errors && errors.description ? errors.description.msg : '' %> </span>
                     </p>
                     
                     <p>
                         <label>Presentación</label>
                         <input class="ingresoCreate" type="text" id="presentationProduct" name="presentation"  placeholder="Presentación del producto" value="<%= locals.product ? product.presentation : '' %>"
-                        class="<%= locals.errors && errors.presentation ? 'danger' : '' %>">
+                        class="<%= locals.errors && errors.presentation ? 'danger' : '' %>"><br>
                         <span class="error"><%= locals.errors && errors.presentation ? errors.presentation.msg : '' %> </span>
                     </p>
                     <p>
                         <label>Rendimiento</label>
                         <input class="ingresoCreate" type="text" id="performanceProduct" name="performance"  placeholder="Rendimiento del producto" value="<%= locals.product ? product.performance : '' %>"
-                        class="<%= locals.errors && errors.performance ? 'danger' : '' %>">
+                        class="<%= locals.errors && errors.performance ? 'danger' : '' %>"><br>
                         <span class="error"><%= locals.errors && errors.performance ? errors.performance.msg : '' %> </span>
                     </p>
 
@@ -57,14 +57,14 @@
                 <p>
                     <br>
                     <label>Agregar una imagen</label>
-                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
+                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input><br>
                     <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br> 
                 </p>
                 <p>
                     <label>Precio</label>
                     <input class="ingresoCreate" type="number" name="price" id="price" placeholder="Precio"
                     value="<%= locals.product ? product.price: '' %>"
-                            class="<%= locals.errors && errors.price? 'danger' : '' %>">
+                            class="<%= locals.errors && errors.price? 'danger' : '' %>"><br>
                     <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span> 
                 </p>
 
