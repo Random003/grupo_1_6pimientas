@@ -1,6 +1,3 @@
-function crear_bolsa() {
-
-};
 
 window.addEventListener ('load', function () {
     //captura cuando el usuario hace click en el botón agregar producto a la compra
@@ -78,6 +75,8 @@ window.addEventListener ('load', function () {
         })
     };
     
+    
+    
     //capturo el evento click de los botones más y menos de la bolsa de compras
     
     
@@ -85,6 +84,9 @@ window.addEventListener ('load', function () {
     const pUnit = document.querySelectorAll('.p_unit');
     const subTotal =  document.querySelectorAll('.sub_total');
     const inputQuantities = document.querySelectorAll('.cantidad_producto_bolsa');
+    const total = document.getElementById('Total');
+
+    
     
     if (inputQuantities) {
         
@@ -93,6 +95,7 @@ window.addEventListener ('load', function () {
                 let indexQuantity = inputQuantity.id.substr(11); 
                 if (this.value > 0 ) {
                     subTotal[indexQuantity].value = "$" + Number(this.value) * Number(pUnit[indexQuantity].value.substr(1));
+                    
                 } else {
                     this.value = 1;
                 }
@@ -109,6 +112,7 @@ window.addEventListener ('load', function () {
                 if (inputQuantities[indexLess].value > 1) {
                     inputQuantities[indexLess].value = inputQuantities[indexLess].value - 1; 
                     subTotal[indexLess].value = "$" + Number(inputQuantities[indexLess].value) * Number(pUnit[indexLess].value.substr(1));
+                    
                 }
             
             });
@@ -123,10 +127,18 @@ window.addEventListener ('load', function () {
                 let indexAdd = buttonAdd.id.substr(9);
                 inputQuantities[indexAdd].value = Number(inputQuantities[indexAdd].value) + 1; 
                 subTotal[indexAdd].value = "$" + Number(inputQuantities[indexAdd].value) * Number(pUnit[indexAdd].value.substr(1));
+                actualizar_total(buttonAdd.id.substr(9));
             });
     
         });    
     };
+    function actualizar_total (indexSub) {
+        total.array.forEach(subtotal => {
+                         
+                console.log(indexSub);
+                
+        });
+    }
 
     
     

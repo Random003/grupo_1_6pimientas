@@ -249,6 +249,10 @@ module.exports = {
         let regDelete = await detail_shopping_bag.destroy({ where: { id: req.body.id_delete } } );
         let relDelete = await detail_shopping_bag_product.destroy ( { where: { detail_shopping_bag_id: req.body.id_delete } } );
         res.redirect('../products/productCart');
+    },
+
+    purchase: (req, res) => {
+        console.log(req.body);
     }
     
 

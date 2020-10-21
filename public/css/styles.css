@@ -602,6 +602,43 @@ a {
     
 }
 
+.titulo_total_compra {
+    text-align: right;
+    width: 70%;
+}
+.monto_total_compra {
+    margin: 0;
+    border: 0;
+    text-transform: none;
+    text-align: left;
+    background-color: #FDE3B3;
+    font-size: 2rem;
+    justify-items: center;
+    color: rgb(163, 31, 53);
+    width: 15%;
+}
+
+.finaliza_compra {
+
+    border-radius: 15px;
+    width: 40%;
+    height: 5rem;
+    max-width: 120px;
+    border: 0;
+    overflow: hidden;
+    text-transform: none;
+    text-align: center;
+    background-color: rgb(163, 31, 53) ;
+    color: white;
+    font-size: 1rem;
+    justify-items: center;
+    font-weight: bolder;
+}
+
+.container_fin_compra {
+    width: 100%;
+}
+
 /* HEADER BOLSA--------------------------------------------------------------*/
 
 
