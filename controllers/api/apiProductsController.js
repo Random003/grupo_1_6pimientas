@@ -1,5 +1,7 @@
 const { product } = require ('../../database/models');
 const { Op } = require("sequelize")
+const fs = require('fs');
+const path = require('path');
 
 module.exports = {
     productsAll: (req, res) => {
@@ -31,7 +33,7 @@ module.exports = {
             })
         };
         
-        product.findAndCountAll( { order: ['id'], include: 'variety' })
+        product.findAll( { order: ['id'], include: 'variety' })
         .then (products => {
             if (products) {
                 res.status(200).json(
@@ -39,10 +41,10 @@ module.exports = {
                         meta: {
                             url: req.originalUrl,
                             status: 200,
-                            count: products.count 
+                            count: products.length 
         
                         },
-                        data: products.rows
+                        data: products
                         
                     }    
                 );
@@ -59,9 +61,14 @@ module.exports = {
 
 
     lastProduct: (req, res) => {
-        product.findAll( { order: [ ['id', 'DESC'] ], limit: [1], include: 'variety' })
+        product.findAll( { order: [ ['id', 'DESC'] ], limit: [1], raw: true}) //, nest: true, include: 'variety' 
         .then (products => {
-            console.log(products);
+            let appPath = 'http://localhost:5001/images/products/'
+            let imageURL =  appPath + products[0].image;
+            let lastProduct = products[0];
+            lastProduct.imageURL = imageURL;
+
+            console.log(lastProduct);
             if (product) {
                 res.status(200).json(
                     {
@@ -71,7 +78,7 @@ module.exports = {
                             count: 1 
         
                         },
-                        data: products
+                        data: lastProduct
                         
                     }    
                 );

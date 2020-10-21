@@ -6,7 +6,7 @@ class LastProduct extends Component {
     constructor() {
         super();
         this.state = {
-            lastProduct: 0
+            lastProduct: ''
           };
     }
     /* Funcion para llamar a la API, hacemos una func porq vamos a llamar a varias */
@@ -23,15 +23,17 @@ class LastProduct extends Component {
         fetch("http://localhost:5001/api/products/lastProduct", { method: "POST"} )
                 .then(response => response.json())
                 .then(data => {
-                        console.log(data)
-                        this.setState(
-                            {
-                                count: 1,
-                                lastProduct: data.products
-                                
-                            }
-                        )})
-
+                    this.setState(
+                        {
+                            count: 1,
+                            lastProduct: data.data
+                            
+                        }
+                    )
+                    
+                
+                })
+                        
                 .catch(error => console.log(error));
         
     }
@@ -46,11 +48,13 @@ class LastProduct extends Component {
                         </div>
                         <div className="card-body">
                             <div className="text-center">
-                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '25rem' }} src="images/lasagna.jpg" alt="lasagna" />
+                                <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '25rem' }} src={this.state.lastProduct.imageURL} alt="" />
                             </div>
-                            <p>Descripción del producto</p>
-                            {/* <p>{this.state.lastProduct.description}</p> */}
-                            <a target="_blank" rel="nofollow" href="/" className="title-sp">Ver detalle de producto</a>
+                            <h6 className="title-sp">Nombre del producto:</h6>
+                            <p>{this.state.lastProduct.name}</p>
+                            <h6 className="title-sp">Descripción del producto:</h6>
+                            <p>{this.state.lastProduct.description}</p>
+                            
                         </div>
                     </div>
                 </div>

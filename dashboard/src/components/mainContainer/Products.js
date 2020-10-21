@@ -18,7 +18,7 @@ class Products extends Component {
         fetch("http://localhost:5001/api/products/", { method: "POST"} )
                 .then(response => response.json())
                 .then(data => {
-                        console.log(data)
+                        
                         this.setState(
                             {
                                 count: data.meta.count,
