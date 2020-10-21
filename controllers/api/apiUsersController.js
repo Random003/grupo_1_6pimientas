@@ -1,11 +1,12 @@
-const { product } = require ('../../database/models');
- const { Op } = require("sequelize")
+const { user } = require ('../../database/models');
+const { Op } = require("sequelize")
 
+ 
  module.exports = {
      usersAll: (req, res) => {
 
          if(req.params.id) {
-             users.findByPk (req.params.id )
+             user.findByPk (req.params.id )
              .then (users => {
                  if (users) {
                      res.status(200).json(
@@ -30,7 +31,7 @@ const { product } = require ('../../database/models');
              })
          };
 
-         user.findAndCountAll({ order: ['id'] })
+         user.findAll({ order: ['id'] })
          .then (users => {
              if (users) {
                  res.status(200).json(
@@ -38,9 +39,9 @@ const { product } = require ('../../database/models');
                          meta: {
                              url: req.originalUrl,
                              status: 200,
-                             count: users.count 
+                             count: users.length
                          },
-                         data: users.rows
+                         data: users
                      }    
                  );
 

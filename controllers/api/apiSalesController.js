@@ -1,4 +1,4 @@
-const { product } = require ('../../database/models');
+const { sales } = require ('../../database/models');
 const { Op } = require("sequelize")
 
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
             })
         };
         
-        sales.findAndCountAll( { order: ['id'], include: 'discount' })
+        sales.findAll( { order: ['id'] } )
         .then (sales => {
             if (sales) {
                 res.status(200).json(
@@ -37,9 +37,9 @@ module.exports = {
                         meta: {
                             url: req.originalUrl,
                             status: 200,
-                            count: products.count 
+                            count: sales.length 
                         },
-                        data: sales.rows
+                        data: sales
                     }    
                 );
 

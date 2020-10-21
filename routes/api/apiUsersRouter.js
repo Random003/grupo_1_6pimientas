@@ -5,12 +5,11 @@ const express = require('express');
 
 
 
-
  router.get("/", (req, res) =>{ res.redirect('/')}); 
+ router.post("/:id", apiUsersController.usersAll); 
 
  router.post("/", apiUsersController.usersAll); 
 
- router.post("/:id", apiUsersController.usersAll); 
 
 
  module.exports = router; 

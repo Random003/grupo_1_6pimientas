@@ -6,10 +6,10 @@ const apiProductsController = require('../../controllers/api/apiProductsControll
 /* Páginas de productos */
 
 router.post("/lastProduct", apiProductsController.lastProduct); 
+router.post("/:id", apiProductsController.productsAll); 
 
 router.post("/", apiProductsController.productsAll); 
 
-router.post("/:id", apiProductsController.productsAll); 
 
  
 
