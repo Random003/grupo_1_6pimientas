@@ -49,14 +49,17 @@
                         <label for=""><%= products[i].performance %></label><br><br>
                         <b><label for="">Precio:$<%= products[i].price %>,00</label></b><br><br>
                         <% if (locals.user && user.category == 'admin') {%> 
-                            <form action="/products/edit" method="POST">
-                                <button class="editProduct" type="submit" name='id_product' value="<%= products[i].id %>">Editar Producto</button>
-                            </form>
+                            <div class="containerButtons">
+                                <form action="/products/edit" method="POST">
+                                    <button class="editProduct" type="submit" name='id_product' value="<%= products[i].id %>">Editar Producto</button>
+                                </form>
+    
+                                <form action="/products/delete/<%= products[i].id %>?_method=DELETE" method="POST">
+                                    <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Producto</button>
+                                    
+                                </form>
 
-                            <form action="/products/delete/<%= products[i].id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Producto</button>
-                                
-                            </form>
+                            </div>
                             
                         <%} else {%>
                                 <form action="/products/productCart" method="POST">
@@ -74,10 +77,7 @@
         </section>
 
 
-        <!-- por si necesitamos hacer botones a una segunda pagina  -->
-        <!-- <div class="botoz">
-            <button type="button" class="botoz2"><a class="boton" href="/productDetail1">Pagina 1</a></button>
-        </div> -->
+        
         
         
     </main>

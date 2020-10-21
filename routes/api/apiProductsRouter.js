@@ -4,11 +4,13 @@ const apiProductsController = require('../../controllers/api/apiProductsControll
 
 
 /* Páginas de productos */
-router.get("/", (req, res) =>{ res.redirect('/')}); 
+
+router.post("/lastProduct", apiProductsController.lastProduct); 
 
 router.post("/", apiProductsController.productsAll); 
 
 router.post("/:id", apiProductsController.productsAll); 
+
  
 
 module.exports = router;

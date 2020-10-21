@@ -55,6 +55,35 @@ module.exports = {
             console.log(error);
             return res.status(500).json( { error: 'Could not connect to database' } );;
         })
+    },
+
+
+    lastProduct: (req, res) => {
+        product.findAll( { order: [ ['id', 'DESC'] ], limit: [1], include: 'variety' })
+        .then (products => {
+            console.log(products);
+            if (product) {
+                res.status(200).json(
+                    {
+                        meta: {
+                            url: req.originalUrl,
+                            status: 200,
+                            count: 1 
+        
+                        },
+                        data: products
+                        
+                    }    
+                );
+
+            } else {
+                res.status(400).json( {error: 'No results found'} );
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            return res.status(500).json( { error: 'Could not connect to database' } );;
+        })
     }
 
 

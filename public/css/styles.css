@@ -522,6 +522,15 @@ a {
     display: none;
 }
 
+.containerButtons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: auto;
+    
+}   
+
 /* Edit Producto */
 
 .imagenEdit {

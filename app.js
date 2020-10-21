@@ -17,10 +17,10 @@ const sessionMidelware = require ('./middlewares/session');
 const apiProductsRouter = require('./routes/api/apiProductsRouter');
 const apiSalesRouter = require('./routes/api/apiSalesRouter')
 const apiUsersRouter = require('./routes/api/apiUsersRouter')
-
+const cors = require('cors');
 const app = express();
 
-
+app.use(cors());
 
 app.use(methodOverride('_method')); 
 app.use(logger('dev'));

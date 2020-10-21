@@ -8,7 +8,7 @@ function NavBar () {
         
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div className="sidebar-brand-icon">
-                    <i><img className="img-profile rounded-circle" src="images/logo.png" width="60" /></i>
+                    <i><img className="img-profile rounded-circle" src="images/logo.png" width="60" alt="" /></i>
                 </div>
                 <div className="sidebar-brand-text mx-3">Seis Pimientas</div>
                 </a>
