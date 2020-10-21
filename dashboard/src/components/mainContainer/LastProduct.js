@@ -49,7 +49,7 @@ class LastProduct extends Component {
                                 <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{ width: '25rem' }} src="images/lasagna.jpg" alt="lasagna" />
                             </div>
                             <p>Descripción del producto</p>
-                            <p>{this.state.lastProduct.description}</p>
+                            {/* <p>{this.state.lastProduct.description}</p> */}
                             <a target="_blank" rel="nofollow" href="/" className="title-sp">Ver detalle de producto</a>
                         </div>
                     </div>
