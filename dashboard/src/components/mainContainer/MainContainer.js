@@ -12,7 +12,7 @@ function MainContainer() {
 
 
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 className="h3 mb-0 title-sp">Dashboard administración de Seis Pimientas</h1>
+                    <h1 className="h3 mb-0 title-sp" Text style={{fontStyle: 'italic', fontWeight: 'bold'}}>Dashboard de Administración</h1>
                 </div>
                 <div className="row">
                     <Products />

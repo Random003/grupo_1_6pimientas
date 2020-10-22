@@ -584,7 +584,7 @@ a {
     text-transform: none;
     text-align: center;
     background-color: #FDE3B3;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     justify-items: center;
     color: rgb(163, 31, 53);
     
@@ -596,7 +596,7 @@ a {
     text-transform: none;
     text-align: center;
     background-color: #FDE3B3;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     justify-items: center;
     color: rgb(163, 31, 53);
     
@@ -858,7 +858,7 @@ header div ul {
     text-align: left;
     padding: 1px;
     padding-left: 1rem;
-    font-size: 80%;
+    font-size: 150%;
     width: 20%;
     min-width: 120px;
 }

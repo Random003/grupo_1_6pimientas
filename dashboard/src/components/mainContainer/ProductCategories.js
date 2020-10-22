@@ -6,7 +6,7 @@ function ProductsCategories() {
             <div className="col-lg-6 mb-4">
                 <div className="card shadow mb-4">
                     <div className="card-header py-3">
-                        <h6 className="m-0 font-weight-bold title-sp">Categorías de productos</h6>
+                        <h6 className="m-0 font-weight-bold title-sp">Categorías en Productos</h6>
                     </div>
                     <div className="card-body">
                         <div className="row">
@@ -17,27 +17,35 @@ function ProductsCategories() {
                             </div>
                             <div className="col-lg-6 mb-4">
                                 <div className="card bg-info text-white shadow">
-                                    <div className="card-body bgcat">Producto menos vendido:</div>
+                                    <div className="card-body bgcat">Producto menos Vendido:</div>
                                 </div>
                             </div>
                             <div className="col-lg-6 mb-4">
                                 <div className="card bg-info text-white shadow">
-                                    <div className="card-body bgcat">Variedad más vendida:</div>
+                                    <div className="card-body bgcat">Variedad más Vendida:</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card-header py-3">
+                        <h6 className="m-0 font-weight-bold title-sp">Categorías en Usuarios</h6>
+                    </div>
+                    <div className="card-body">
+                        <div className="row">
+                        <div className="col-lg-6 mb-4">
+                                <div className="card bg-info text-white shadow">
+                                    <div className="card-body bgcat">Usuarios con más Compras:</div>  
                                 </div>
                             </div>
                             <div className="col-lg-6 mb-4">
                                 <div className="card bg-info text-white shadow">
-                                    <div className="card-body bgcat">Usuario con más compras:</div>
+                                    <div className="card-body bgcat">Usuarios con menos Compras:</div>
                                 </div>
                             </div>
                             <div className="col-lg-6 mb-4">
                                 <div className="card bg-info text-white shadow">
-                                    <div className="card-body bgcat">Usuarios con más compras</div>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 mb-4">
-                                <div className="card bg-info text-white shadow">
-                                    <div className="card-body bgcat">Usuarios con menos compras</div>
+                                    <div className="card-body bgcat">Usuarios con menos Compras:</div>
                                 </div>
                             </div>
                         </div>
