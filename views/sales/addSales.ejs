@@ -16,16 +16,15 @@
                         <br>
                         <label>Nombre del producto</label>
                         <input class="ingresoCreate" type="text" name="name" id="name"  placeholder="Nombre del producto"
-                        value="<%= locals.sales ? sales.name : '' %>"
-                            class="<%= locals.errors && errors.name ? 'danger' : '' %>">
+                        value="<%= locals.sales ? sales.name : '' %>">
                         <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
                     </p>
     
                     <p>
                         <label>Descuento</label>
                         <textarea class="ingresoCreate" name="discount" id="discount" placeholder="Descuento"
-                        value="<%= locals.sales ? sales.discount: '' %>"
-                            class="<%= locals.errors && errors.discount? 'danger' : '' %>"></textarea>
+                        ><%= locals.sales ? sale.discount : '' %></textarea>
+                        
                         <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
                     </p>
                 </div>
@@ -44,8 +43,7 @@
                 <p>
                     <label>Precio</label>
                     <input class="ingresoCreate" type="number" name="price" id="price" placeholder="Precio"
-                    value="<%= locals.sales ? sales.price: '' %>"
-                            class="<%= locals.errors && errors.price? 'danger' : '' %>">
+                    value="<%= locals.sales ? sales.price: '' %>">
                     <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span>
                 </p>
 
