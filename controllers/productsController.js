@@ -142,7 +142,6 @@ module.exports = {
             
             res.render('./products/edit', { errors: errorsEditProducts.mapped(), product: req.body } );
 
-            
         } else {
 
 

@@ -31,7 +31,7 @@ router.post("/", upload.single('imagen'), validateSales.create, salesController.
 
 router.get("/editSales/:id", salesController.edit);
 
-router.put("/:id", upload.single('image'), validateSales.create, validateSales.editSale, salesController.update); 
+router.put("/:id", upload.single('image'), validateSales.editSale, salesController.update); 
 
 router.delete('/delete/:id', salesController.destroy)
 

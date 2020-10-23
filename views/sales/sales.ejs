@@ -12,30 +12,19 @@
         </div>
         <h1 class="tituloPromo">MARTES Y JUEVES!</h1>
         <section class="cuerpoPromos">
-
-            
-
-            <!-- ESTE ES CON FUNCIONALIDAD DESCOMENTAR -->
-
             <% for (let i = 0; i < sales.length; i++) {%> 
                <div class="caja">
-                    <img class="pedidoImage2" src="/images/products/<%= sales[i].image %>" alt="<%= sales[i].name %>">
+                    <img class="pedidoImage2" src="/images/sales/<%= sales[i].image %>" alt="<%= sales[i].name %>">
                     <h4 class="titulos"><%= sales[i].name %></h4>
                     <p>
                         <label class="promo20" for=""><%= sales[i].discount %></label><br>
                         <label class="precioPromo" for="">Precio:$<%= sales[i].price %>,00</label><br>
-                         <!-- <button class="botonAgregarPedido">Agregar Pedido!</button> -->
                     </p>
                     <% if (locals.user && user.category == 'admin') {%> 
                         <a class="editProduct" href="/sales/editSales/<%= sales[i].id %>">Editar Promo</a>
-                       
-
                         <form action="/sales/delete/<%= sales[i].id %>?_method=DELETE" method="POST">
                             <button type="submit" class="editUserAll" id="butonEditUserDelete">Eliminar Promoción</button>
-                            
                         </form>
-                        
-                        
                     <%} else {%>  
                             <p class="bot1">
                              <p class="botoComp">

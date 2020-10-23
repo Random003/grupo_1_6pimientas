@@ -1,37 +1,11 @@
 
 window.addEventListener ('load', function () {
-    //captura cuando el usuario hace click en el botón agregar producto a la compra
-    let botones_compra = document.querySelectorAll('.botonAgregarPedido2');
-    if (botones_compra) {
-        botones_compra.forEach(boton_compra => {
-            boton_compra.addEventListener('click', function() {
-                
-                let id_user = document.getElementById('id_user');
-                if (id_user && id_user.value != '') {
-
-                } else {
-                    
-                    window.location.href = ('/users/login');
-                }
-            });
-            
-        });
-    }
+    
+    
+    //EVENTOS DE IMÁGENES DE USUARIOS--------------------------------------------------
 
     // captura de imágenes cuando el usuario quiere cambiarla
-    let input_user_image_edit = document.getElementById('inputUserImageEdit');
-    if (input_user_image_edit) {
-        input_user_image_edit.addEventListener('change', function () {
-        let imgUser = document.getElementById("userImageEdit");
-        let fileUser = this.files[0];
-        imgUser.classList.add("obj");
-        imgUser.file = fileUser;
-        let readerUser = new FileReader();
-        readerUser.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(imgUser);
-        readerUser.readAsDataURL(fileUser);
-        
-        }); 
-    };
+   
 
     // captura de imágenes cuando se registra un usuario nuevo
     let input_img_add_user = document.getElementById('inputImgAddUser')
@@ -46,6 +20,9 @@ window.addEventListener ('load', function () {
             readerAddUser.readAsDataURL(fileAddUser);
         })
     };
+
+
+    //EVENTOS IMÁGENES DE PRODUCTOS-----------------------------------------------------------
 
     // captura de imágenes cuando el Administrador quiere cambiar una imágen de un producto
     let input_product_image_edit = document.getElementById('inputProductImageEdit');
@@ -76,35 +53,42 @@ window.addEventListener ('load', function () {
     };
     
     
-    
+    //EVENTOS BOLSA DE COMPRA--------------------------------------------------
+
+    //captura cuando el usuario hace click en el botón agregar producto a la compra
+    let botones_compra = document.querySelectorAll('.botonAgregarPedido2');
+    if (botones_compra) {
+        botones_compra.forEach(boton_compra => {
+            boton_compra.addEventListener('click', function() {
+                let id_user = document.getElementById('id_user');
+                if (id_user && id_user.value != '') {
+                } else {
+                    window.location.href = ('/users/login');
+                }
+            });
+        });
+    };
+
     //capturo el evento click de los botones más y menos de la bolsa de compras
-    
-    
-    
     const pUnit = document.querySelectorAll('.p_unit');
     const subTotal =  document.querySelectorAll('.sub_total');
     const inputQuantities = document.querySelectorAll('.cantidad_producto_bolsa');
     const total = document.getElementById('Total');
-
-    
-    
     if (inputQuantities) {
-        
         inputQuantities.forEach(inputQuantity => {
             inputQuantity.addEventListener('change', function() {
                 let indexQuantity = inputQuantity.id.substr(11); 
                 if (this.value > 0 ) {
+                    total.value = 0
                     subTotal[indexQuantity].value = "$" + Number(this.value) * Number(pUnit[indexQuantity].value.substr(1));
-                    total.value = subTotal[indexQuantity].value.substr(1)
-                    
+                    total.value += subTotal[indexQuantity].value.substr(1)
                 } else {
                     this.value = 1;
                 }
             })
         });
-    }
+    };
 
-    
     const buttonsLess = document.querySelectorAll('.restar_producto_bolsa');
     if (buttonsLess) {
         buttonsLess.forEach(buttonLess => {
@@ -113,13 +97,10 @@ window.addEventListener ('load', function () {
                 if (inputQuantities[indexLess].value > 1) {
                     inputQuantities[indexLess].value = inputQuantities[indexLess].value - 1; 
                     subTotal[indexLess].value = "$" + Number(inputQuantities[indexLess].value) * Number(pUnit[indexLess].value.substr(1));
-                    
                 }
-            
             });
-
-    })
-    }
+    });
+    };
 
     const buttonsAdd = document.querySelectorAll('.sumar_producto_bolsa');
     if (buttonsAdd) {
@@ -133,6 +114,7 @@ window.addEventListener ('load', function () {
     
         });    
     };
+
     function actualizar_total (indexSub) {
         // inputQuantities.forEach(buttonAdd => { 
         //     let indexQuantity = inputQuantity.id.substr(11); 

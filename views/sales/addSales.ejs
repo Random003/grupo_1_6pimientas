@@ -11,34 +11,32 @@
             </h3> 
             <div class="containerCreate">
                 <div>
-                                          <!-- en nombre cambiaste el id de producto por name, GIL -->
+                                          
                     <p>
                         <br>
-                        <label>Nombre del producto</label>
-                        <input class="ingresoCreate" type="text" name="name" id="name"  placeholder="Nombre del producto"
+                        <label>Nombre de la promoción</label>
+                        <input class="ingresoCreate" type="text" name="name" id="name"  placeholder="Nombre de la promoción"
                         value="<%= locals.sales ? sales.name : '' %>">
                         <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
                     </p>
-    
                     <p>
-                        <label>Descuento</label>
+                        <label>Descripción</label>
                         <textarea class="ingresoCreate" name="discount" id="discount" placeholder="Descuento"
-                        ><%= locals.sales ? sale.discount : '' %></textarea>
-                        
+                        ><%= locals.sales ? sales.discount : '' %></textarea>
                         <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
                     </p>
                 </div>
 
                 <div class="imagenEdit2">
                     <label>Imagen</label>
-                    <img class="imagenEdit" name="imageView" src="../../images/products/default.png" alt="" id="imagesSales">
+                    <img class="imagenEdit" name="imageView" src="../../images/sales/default.png" alt="" id="imagesSales">
                 </div><br>
                
                 <p>
                     <br><br>
                     <label>Agregar una imagen</label>
                     <input class="ingresoCreate fileCreate" type="file" name="imagen" accept="image/x-png,image/gif,image/jpeg" id="inputImageSales"></input>
-                    <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br>
+                    <span class="error"><%= locals.errors && errors.image ? errors.image.msg : '' %>  </span><br>
                 </p>
                 <p>
                     <label>Precio</label>

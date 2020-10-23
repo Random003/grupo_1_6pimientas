@@ -5,44 +5,49 @@
     <%- include('../partials/header');%> 
     <main class="mainCreate">
         
-        <form class="cajaCreate" action="/sales/<%= sales.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <form class="cajaCreate" action="/sales/<%= sales.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEditSale">
             <h3>
                 Editar una Promoción:
             </h3>
             <div class="containerCreate">
                 <div>
                     <p>
-                        <label>Nombre</label>
-                        <input class="ingresoCreate" type="text" name="name" id="producto" placeholder="Nombre de la Promoción" value="<%= sales.name %>">
+                        <label>Nombre de la promoción</label>
+                        <input class="ingresoCreate" type="text" name="name" id="idSale" placeholder="Nombre de la Promoción" value="<%= sales.name %>">
+                        <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
                     </p>
-    
-
                     <p>
-                        <label>Descuento</label>
-                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento" value="<%= sales.discount %>"></textarea>
+                        <label>Descripción</label>
+                        <textarea class="ingresoCreate" name="discount" placeholder="Descuento"><%= sales.discount %></textarea>
+                        <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
                     </p>
                 </div>
                
+
+                
                 <div class="imagenEdit2">
                     <label>Imagen</label>
-                    <img class="ingresoCreate fileCreate" type="file" name="image" src="/images/products/<%= sales.image %>" alt="">
+                    <img class="ingresoCreate fileCreate" name="imageView" src="/images/sales/<%= sales.image %>" alt="" id="imgSaleEdit">
+                    
                 </div>
+
+
                 <p>
                     <br>
-                    <label>Agregar una imagen</label>
-                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductImageEdit"></input>
+                    <label>Cambiar imagen</label>
+                    <input class="ingresoCreate fileCreate" type="file" name="image" accept="image/x-png,image/gif,image/jpeg" id="inputSaleImageEdit"></input>
+                    <span class="error"><%= locals.errors && errors.image ? errors.image.msg : '' %>  </span><br>
+                   
                 </p>
                 <p>
                     <label>Precio</label>
                     <input class="ingresoCreate" type="number" name="price" id="precio" placeholder="Precio" value="<%= sales.price %>">
+                    <span class="error"><%= locals.errors && errors.price ? errors.price.msg : '' %> </span>
                 </p>
 
                 <p>
                     <button type="submit" class="ingreso" id="botonIngreso">Enviar</button>
-                    <!-- <button type="submit" class="ingreso" id="botonIngreso">Editar</button>
-                    <button type="submit" class="ingresoCreate" id="botonIngreso">Editar</button> 
-                    <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar</button> -->
-                    <button type="submit" class="ingreso" id="botonCancelar">Cancelar</button>
+                    <button type="reset" class="ingreso" id="botonCancelar">Cancelar</button>
                 </p>
 
             </div>
