@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <%- include('../partials/head') %> 
 <body>
     <%- include('../partials/header');%> 
@@ -9,36 +9,33 @@
                 Agregar un producto:
             </h3>
             <div class="containerCreate">
-                <div>
+                <div> 
                     <p>
                         <br>
                         <label>Nombre del producto</label>
                         <input class="ingresoCreate" type="text" name="name" id="nameProduct" placeholder="Nombre del producto"
-                        value="<%= locals.product ? product.name : '' %>"
-                            class="<%= locals.errors && errors.name ? 'danger' : '' %>"><br>
-                        <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span>
-                    </p>
+                        value="<%= locals.product ? product.name : '' %>">
+                        <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
+                    </p> <br>
     
                     <p>
                         <label>Descripción</label>
-                        <textarea class="ingresoCreate" id="descriptionProduct" name="description" placeholder="Descripción"
-                        value="<%= locals.product ? product.description : '' %>"
-                            class="<%= locals.errors && errors.description ? 'danger' : '' %>"></textarea><br>
+                        <textarea class="ingresoCreate" name="description" id="descriptionProduct"  placeholder="Descripción"
+                        ><%= locals.product ? product.description : '' %></textarea>
+                        
                         <span class="error"><%= locals.errors && errors.description ? errors.description.msg : '' %> </span>
-                    </p>
+                    </p><br>
                     
                     <p>
                         <label>Presentación</label>
-                        <input class="ingresoCreate" type="text" id="presentationProduct" name="presentation"  placeholder="Presentación del producto" value="<%= locals.product ? product.presentation : '' %>"
-                        class="<%= locals.errors && errors.presentation ? 'danger' : '' %>"><br>
+                        <input class="ingresoCreate" type="text" id="presentationProduct" name="presentation"  placeholder="Presentación del producto" value="<%= locals.product ? product.presentation : '' %>">
                         <span class="error"><%= locals.errors && errors.presentation ? errors.presentation.msg : '' %> </span>
-                    </p>
+                    </p><br>
                     <p>
                         <label>Rendimiento</label>
-                        <input class="ingresoCreate" type="text" id="performanceProduct" name="performance"  placeholder="Rendimiento del producto" value="<%= locals.product ? product.performance : '' %>"
-                        class="<%= locals.errors && errors.performance ? 'danger' : '' %>"><br>
+                        <input class="ingresoCreate" type="text" id="performanceProduct" name="performance"  placeholder="Rendimiento del producto" value="<%= locals.product ? product.performance : '' %>">
                         <span class="error"><%= locals.errors && errors.performance ? errors.performance.msg : '' %> </span>
-                    </p>
+                    </p><br>
 
                 </div>
                 <div class="variedades">
@@ -52,12 +49,12 @@
                 </div>
                 <div class="imagenEdit2">
                     <label>Imagen</label>
-                    <img class="imagenEdit" name="imageView" src="../../images/products/default.png" alt="" id="inputProductAddImage">
+                    <img class="imagenEdit" name="imageView" src="../../images/products/default.png" alt="" id="productImageAdd">
                 </div><br>
                 <p>
-                    <br>
+                    <br> 
                     <label>Agregar una imagen</label>
-                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input><br>
+                    <input class="ingresoCreate fileCreate" type="file" name="image" id="inputProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
                     <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br> 
                 </p>
                 <p>

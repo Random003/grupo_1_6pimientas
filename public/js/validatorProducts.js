@@ -10,14 +10,14 @@ window.addEventListener('load', function(){
          let descriptionProduct = document.getElementById('descriptionProduct');
          let presentationProduct = document.getElementById('presentationProduct');
          let performanceProduct = document.getElementById('performanceProduct');
-         let priceProduct = document.getElementById('priceProduct');
+         let priceProduct = document.getElementById('price');
          let inputProductAddImage = document.getElementById('inputProductAddImage');
 
-
+ 
 
                 //Validaciones en Products
 
-    let validateName = function (){
+        let validateName = function (){
         let feedback = '';
 
         if(validator.isEmpty(nameProduct.value, {ignore_whitespace:true })) {
@@ -83,7 +83,7 @@ window.addEventListener('load', function(){
             };
         }
         handleFeedback(inputProductAddImage, feedback);
-    };
+    }; 
   
 
 
@@ -94,6 +94,7 @@ window.addEventListener('load', function(){
        presentationProduct.addEventListener('blur', validatePresentation);
        performanceProduct.addEventListener('blur', validatePerformance);
        inputProductAddImage.addEventListener('change', validateInputProductAddImage)
+
 
 
     // let validateCreateProduct = function (event){
@@ -108,13 +109,14 @@ window.addEventListener('load', function(){
         
          if (Object.keys(errors).length) {                 
                 event.preventDefault();   // prevenir el envío de formulario
+                
         }
     });
 }
     
 
 //Funcion comun
-
+ 
     let handleFeedback = function (element, feedback) {
         let feedbackElement = element.nextElementSibling;
 

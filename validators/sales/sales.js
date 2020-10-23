@@ -1,31 +1,36 @@
-const {check, body} = require ('express-validator');
+const { check } = require ('express-validator');
 const path = require('path');
 
 
 module.exports = {
     create: [
-    check("discount")
-    .notEmpty()
-    .withMessage("Campo obligatorio")
-    .bail()
-    .isNumeric()
-    .withMessage("Solo se aceptan números")
-    .bail()
-    .custom((value) => parseInt(value, 10) >= 0)
-    .withMessage("No se aceptan números negativos")
-    .bail()
-    .custom((value) => parseInt(value, 1) < 99)
-    .withMessage("El descuento no puede ser mayor e igual al 100%"),
-    body("category").notEmpty().withMessage("Campo obligatorio"),
-    body("description")
-    .notEmpty()
-    .withMessage("Campo obligatorio")
-    .bail()
-    .isLength({ min: 30 })
-    .withMessage("La descripción debe tener al menos 30 carácteres")
-    .bail()
-    .isLength({ max: 100 })
-    .withMessage("La descripción debe tener menos de 100 carácteres"),],
+      check('name')
+        .notEmpty().withMessage('Debes completar el campo de nombre').bail()
+        .isLength({min:8}).withMessage('El nombre debe tener al menos 8 caracteres'),
+
+      check("discount")
+        .notEmpty()
+        .withMessage("Campo obligatorio").bail()
+        .isNumeric()
+        .withMessage("Solo se aceptan números")
+        .bail()
+        .custom((value) => parseInt(value, 10) >= 0)
+        .withMessage("No se aceptan números negativos")
+        .bail()
+        .custom((value) => parseInt(value, 1) < 99)
+        .withMessage("El descuento no puede ser mayor e igual al 100%"),
+      
+      check("category")
+        .notEmpty().withMessage("Campo obligatorio"),
+      
+      check("description")
+        .notEmpty()
+        .withMessage("Campo obligatorio").bail()
+        .isLength({ min: 30 })
+        .withMessage("La descripción debe tener al menos 30 carácteres").bail()
+        .isLength({ max: 100 })
+        .withMessage("La descripción debe tener menos de 100 carácteres"),
+  ],
 
     editSale: [ 
     check('name')
@@ -51,7 +56,7 @@ module.exports = {
    })
   .withMessage(
     "La imagen debe tener uno de los siguientes formatos: JPG, JPEG, PNG"
-  ),],
+  ),]
 
     
 }

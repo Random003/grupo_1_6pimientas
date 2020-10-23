@@ -34,8 +34,8 @@ router.post("/register", upload.single('image'), validateUsers.register, validat
 
 router.get('/usersAdmin', userController.showAll);
 
-router.post("/edit", userController.editUser);
-router.put('/edit/:id', upload.single('image'), validateUsers.editUser, validateUsers.checkEmailEdit, validateUsers.checkPassEdit, userController.updateUser)
+router.post("/edit", validateUsers.editUser, validateUsers.checkEmailEdit, validateUsers.checkPassEdit, userController.editUser);
+//router.put('/edit/:id', upload.single('image'), validateUsers.editUser, validateUsers.checkEmailEdit, validateUsers.checkPassEdit, userController.updateUser)
 
 router.delete('/delete/:id', userController.delete)
 

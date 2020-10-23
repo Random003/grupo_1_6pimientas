@@ -11,7 +11,7 @@ const usersModel = jsonTable('users');
 const usersTokensModel = jsonTable('usersTokens');
 const { user, user_token } = require ('../database/models');
 
-
+ 
 
 module.exports = {
     login: (req, res) => {
@@ -65,40 +65,7 @@ module.exports = {
         res.render("./users/register");
     },
 
-    // CHECKEAR SI FUNCIONA
 
-//     register:  async (req,res) => {
-//         try {
-//             let errors = validationResult(req);
-//             if (errors.isEmpty()) {
-//                 let exist = await user.findOne({ where: { email: req.body.email }});
-//                 if(exist)
-//                     return res.render("./users/register", { errors: { email: { msg: "Ya existe un cliente con esa dirección de correo." }}, user: req.body });
-//                 let encryptedPassword = bcrypt.hashSync(req.body.password, 6);
-//                 let newUser = {
-//                         full_name: req.body.full_name,
-//                         email: req.body.email,
-//                         password: encryptedPassword,
-//                         street: req.body.street,
-//                         number: req.body.number,
-//                         floor: req.body.floor,
-//                         department: req.body.department,
-//                         city: req.body.city,
-//                         category: req.body.category,
-//                         image: req.body.image
-            
-//                }
-//                let userResult = await user.create(newUser);
-//                req.session.user = { id: userResult.id, name: userResult.full_name, category: 1 };
-//                res.redirect('/');
-//            } else {
-//                res.render("./users/register", { errors: errors.mapped(), user: req.body });
-//            }
-//        } catch (error) {
-//            console.log(error);
-//            res.status(500).render('error-500', {error});
-//        }
-//    },
 
     createAdmin: (req, res) => {
         //levantar todos los usuarios y pasárselos a la vista
@@ -107,10 +74,7 @@ module.exports = {
 
     // COPIAR Y PEGAR EL REGISTER DE ARRIBA PARA HACERLO A CREAR USUARIO DESDE ADMIN 
 
-    editAdmin: (req, res) => {
-        //let users = usersModel.all;
-        //res.render ('usersAdmin', users);
-    },
+   
     logout: (req, res) => {
         // let userTokens = usersTokensModel.findAllByField('userId', req.session.user.id);
         // userTokens.forEach(userToken => {

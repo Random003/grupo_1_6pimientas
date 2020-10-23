@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 
     // LOGIN 
     //-------------------------------------------------------------------------------------
-    
+     
     //ELEMENTOS DE LOGIN
     let formLoguin = document.getElementById('formLogin');
     if (formLoguin) {

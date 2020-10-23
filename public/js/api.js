@@ -62,17 +62,17 @@ window.addEventListener ('load', function () {
     };  
 
     // captura de imágenes cuando el Administrador crea un producto
-    let input_product_image_add = document.getElementById('inputProductAddImage')
+    let input_product_image_add = document.getElementById('inputProductAddImage');
     if (input_product_image_add) {
         input_product_image_add.addEventListener('change', function () {
-            let imgProdAdd = document.getElementById("productImageAdd");
-            let fileProdAdd = this.files[0];
-            imgProdAdd.classList.add("obj");
-            imgProdAdd.file = fileProdAdd;
-            let readerProdAdd = new FileReader();
-            readerProdAdd.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(imgProdAdd);
-            readerProdAdd.readAsDataURL(fileProdAdd);
-        })
+        let imgProdAdd = document.getElementById("productImageAdd");
+        let fileProdAdd = this.files[0];
+        imgProdAdd.classList.add("obj");
+        imgProdAdd.file = fileProdAdd;
+        let readerProdAdd = new FileReader();
+        readerProdAdd.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(imgProdAdd);
+        readerProdAdd.readAsDataURL(fileProdAdd);
+        });
     };
     
     
@@ -95,6 +95,7 @@ window.addEventListener ('load', function () {
                 let indexQuantity = inputQuantity.id.substr(11); 
                 if (this.value > 0 ) {
                     subTotal[indexQuantity].value = "$" + Number(this.value) * Number(pUnit[indexQuantity].value.substr(1));
+                    total.value = subTotal[indexQuantity].value.substr(1)
                     
                 } else {
                     this.value = 1;
@@ -133,11 +134,11 @@ window.addEventListener ('load', function () {
         });    
     };
     function actualizar_total (indexSub) {
-        total.array.forEach(subtotal => {
-                         
-                console.log(indexSub);
-                
-        });
+        // inputQuantities.forEach(buttonAdd => { 
+        //     let indexQuantity = inputQuantity.id.substr(11); 
+        //         console.log(indexSub);
+        //     });
+        
     }
 
     

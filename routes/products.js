@@ -13,26 +13,26 @@ var storage = multer.diskStorage({
     }
   });
    
-  
+   
 var upload = multer({ storage });
 
 /* Páginas de productos */
 
 router.get("/", productsController.products);
-router.post("/", upload.single('image'), productsController.store); 
+
  
 router.get("/productCart", productsController.productCart);
 router.post("/productCart"  , productsController.purchase);
   
 router.get("/add", productsController.add);
 
-router.post("/", upload.single('image'), validateProducts.create, validateProducts.editProduct, validateProducts.addToCart, productsController.store);
+router.post("/", upload.single('image'), validateProducts.create, productsController.store);
 
 router.get('/admin', productsController.productAdmin)
 
-router.post("/edit", validateProducts.editProduct, validateProducts.addToCart, productsController.edit);
+router.post("/edit", validateProducts.editProduct, productsController.edit);
 // para editar
-router.put("/:id", upload.single('image'), validateProducts.editProduct, validateProducts.addToCart, productsController.update);
+router.put("/:id", upload.single('image'), validateProducts.editProduct, productsController.update);
 //para eliminar
 router.delete('/delete/:id', productsController.destroy);
 

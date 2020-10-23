@@ -1,14 +1,17 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 const jsonTable = require ('../database/jsonTable'); 
 const { read } = require('fs');
 const productsModel = jsonTable('products');
 const { product, variety, product_variety, detail_shopping_bag, shopping_bag, detail_shopping_bag_product } = require ('../database/models');
 const { promiseImpl } = require('ejs');
-const { Op, DATE } = require("sequelize")
+const { Op, DATE } = require("sequelize");
+
 
 module.exports = {
     products : (req, res) => {
+
         //let products = productsModel.all();
         if(req.query.search) {
             product.findAll ( {
@@ -79,92 +82,116 @@ module.exports = {
     },
 
     store: async (req, res, next) => {
-        let newProduct = req.body;
-                
-        newProduct.image = 'default.png';
-        if (req.file) {
-            newProduct.image = req.file.filename;
-        }
-        let newProduct_db = await product.create(newProduct);
-        let tempVarieties = [
-            { name: req.body.variety[0], product_id: newProduct_db.id },
-            { name: req.body.variety[1], product_id: newProduct_db.id },
-            { name: req.body.variety[2], product_id: newProduct_db.id },
-            { name: req.body.variety[3], product_id: newProduct_db.id },
-            { name: req.body.variety[4], product_id: newProduct_db.id },
-            { name: req.body.variety[5], product_id: newProduct_db.id }
-        ];
-        // limpio objeto name con instancias vacías
-        let newVarieties = tempVarieties.filter (tempVariety => tempVariety.name);
-
-        //actualizo producto
+        let errorsStoreProducts = validationResult (req);
         
-                
-        //si hay variedades las creo junto con su nueva asociación en tabla product_variety  
-        if (newVarieties) {
-            let newVarieties_db = await variety.bulkCreate(newVarieties);
+
+        if (!errorsStoreProducts.isEmpty()) {
+            
+            res.render('./products/add', { errors: errorsStoreProducts.mapped(), product: req.body } );
+
+            
+        } else {
+            
+            let newProduct = req.body;
+                    
+            newProduct.image = 'default.png';
+            if (req.file) {
+                newProduct.image = req.file.filename;
+            }
+            let newProduct_db = await product.create(newProduct);
+            let tempVarieties = [
+                { name: req.body.variety[0], product_id: newProduct_db.id },
+                { name: req.body.variety[1], product_id: newProduct_db.id },
+                { name: req.body.variety[2], product_id: newProduct_db.id },
+                { name: req.body.variety[3], product_id: newProduct_db.id },
+                { name: req.body.variety[4], product_id: newProduct_db.id },
+                { name: req.body.variety[5], product_id: newProduct_db.id }
+            ];
+            // limpio objeto name con instancias vacías
+            let newVarieties = tempVarieties.filter (tempVariety => tempVariety.name);
+    
+            //actualizo producto
+            
+                    
+            //si hay variedades las creo junto con su nueva asociación en tabla product_variety  
+            if (newVarieties) {
+                let newVarieties_db = await variety.bulkCreate(newVarieties);
+            }
+           
+            //product.create(newProduct);
+            res.redirect('products');
+
         }
-       
-        //product.create(newProduct);
-        res.redirect('products');
 
     },
+
     productAdmin: (req, res) => {
         let products = productsModel.all();
         res.render('./products/productsAdmin', { products } );
     },
+
     update: async (req, res) => {
         //let product = req.body
         //product.id = req.params.id
         // let productEdit = productsModel.update(product);
-        
-        let editProduct = req.body;
-               
-        if (req.file) {
-            editProduct.image = req.file.filename;
+        let errorsEditProducts = validationResult (req);
+         console.log(errorsEditProducts);
+
+        if (!errorsEditProducts.isEmpty()) {
+            console.log("hay errores");
+            
+            res.render('./products/edit', { errors: errorsEditProducts.mapped(), product: req.body } );
+
+            
         } else {
-            let product_old_db = await product.findByPk(req.params.id); 
-            editProduct.image = product_old_db.image;
-        }
 
-        //genero objeto con id de variedades
-        let tempIdVarieties = [
-            { id: req.body.id_variety[0] },
-            { id: req.body.id_variety[1] },
-            { id: req.body.id_variety[2] },
-            { id: req.body.id_variety[3] },
-            { id: req.body.id_variety[4] },
-            { id: req.body.id_variety[5] }
-        ];
-        // limpio objeto id con instancias vacías
-        let newIdVarieties = tempIdVarieties.filter (tempIdVariety => tempIdVariety.id);
-        // borro variedades antiguas y relación con productos
-        for (x = 0; x < newIdVarieties.length; x++) {
-            await variety.destroy( { where: { id: newIdVarieties[x].id}})
-        }
 
-        //genero objeto con nombres de variedades
-        let tempVarieties = [
-            { name: req.body.variety[0], product_id: req.params.id },
-            { name: req.body.variety[1], product_id: req.params.id },
-            { name: req.body.variety[2], product_id: req.params.id },
-            { name: req.body.variety[3], product_id: req.params.id },
-            { name: req.body.variety[4], product_id: req.params.id },
-            { name: req.body.variety[5], product_id: req.params.id }
-        ];
-        // limpio objeto name con instancias vacías
-        let newVarieties = tempVarieties.filter (tempVariety => tempVariety.name);
-
-        //actualizo producto
-        let newProduct_db = await product.update(editProduct, { where: { id: req.params.id } });
+            let editProduct = req.body;
                 
-        //si hay variedades las creo junto con su nueva asociación en tabla product_variety  
-        if (newVarieties) {
-            let newVarieties_db = await variety.bulkCreate(newVarieties);
-        }
-   
-        res.redirect('/products');
+            if (req.file) {
+                editProduct.image = req.file.filename;
+            } else {
+                let product_old_db = await product.findByPk(req.params.id); 
+                editProduct.image = product_old_db.image;
+            }
+                //genero objeto con id de variedades
+                let tempIdVarieties = [
+                    { id: req.body.id_variety[0] },
+                    { id: req.body.id_variety[1] },
+                    { id: req.body.id_variety[2] },
+                    { id: req.body.id_variety[3] },
+                    { id: req.body.id_variety[4] },
+                    { id: req.body.id_variety[5] }
+                ];
+                // limpio objeto id con instancias vacías
+                let newIdVarieties = tempIdVarieties.filter (tempIdVariety => tempIdVariety.id);
+                // borro variedades antiguas y relación con productos
+                for (x = 0; x < newIdVarieties.length; x++) {
+                    await variety.destroy( { where: { id: newIdVarieties[x].id}})
+                }
 
+                //genero objeto con nombres de variedades
+                let tempVarieties = [
+                    { name: req.body.variety[0], product_id: req.params.id },
+                    { name: req.body.variety[1], product_id: req.params.id },
+                    { name: req.body.variety[2], product_id: req.params.id },
+                    { name: req.body.variety[3], product_id: req.params.id },
+                    { name: req.body.variety[4], product_id: req.params.id },
+                    { name: req.body.variety[5], product_id: req.params.id }
+                ];
+                // limpio objeto name con instancias vacías
+                let newVarieties = tempVarieties.filter (tempVariety => tempVariety.name);
+
+                //actualizo producto
+                let newProduct_db = await product.update(editProduct, { where: { id: req.params.id } });
+                        
+                //si hay variedades las creo junto con su nueva asociación en tabla product_variety  
+                if (newVarieties) {
+                    let newVarieties_db = await variety.bulkCreate(newVarieties);
+                }
+        
+                res.redirect('/products');
+        }
         
     },
 
