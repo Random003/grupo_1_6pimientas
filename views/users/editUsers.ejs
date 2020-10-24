@@ -3,7 +3,7 @@
 <%- include('../partials/head') %> 
 <body>
     <%- include('../partials/header');%> 
-    <main>
+    <main> 
         <div class="cajaLogin">
             <form  action="/users/edit/<%= locals.userToEdit && userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEditUser">
                 <h3>

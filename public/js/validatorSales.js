@@ -123,7 +123,7 @@ window.addEventListener('load', function () {
 
     };
 
-
+    // captura de imágen cuando se cambia imágen desde Edit
     let formEditSale = document.getElementById('formEditSale');
     if (formEditSale) {
         let input_sale_image_edit = document.getElementById('inputSaleImageEdit');

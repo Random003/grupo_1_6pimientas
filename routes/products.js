@@ -22,7 +22,12 @@ router.get("/", productsController.products);
 
  
 router.get("/productCart", productsController.productCart);
-router.post("/productCart"  , productsController.purchase);
+
+router.post('/productCart', productsController.addProduct);
+
+router.delete('/productCart', productsController.deleteProductBag);
+
+router.post('/endPurchase', productsController.endPurchase);
   
 router.get("/add", productsController.add);
 
@@ -36,7 +41,4 @@ router.put("/:id", upload.single('image'), validateProducts.editProduct, product
 //para eliminar
 router.delete('/delete/:id', productsController.destroy);
 
-router.post('/productCart', productsController.addProduct);
-
-router.delete('/productCart', productsController.deleteProductBag);
 module.exports = router;

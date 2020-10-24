@@ -358,7 +358,37 @@ window.addEventListener('load', function() {
         feedbackElement.innerText = feedback;
     }
 
+    //EVENTOS DE IMÁGENES DE USUARIOS--------------------------------------------------
 
+    // captura de imágenes cuando el usuario quiere cambiarla
+   
+
+    // captura de imágenes cuando se registra un usuario nuevo
+    let input_img_add_user = document.getElementById('inputImgAddUser')
+    if (input_img_add_user) {
+        input_img_add_user.addEventListener('change', function () {
+            let imgAddUser = document.getElementById("imgAddUser");
+            let fileAddUser = this.files[0];
+            imgAddUser.classList.add("obj");
+            imgAddUser.file = fileAddUser;
+            let readerAddUser = new FileReader();
+            readerAddUser.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(imgAddUser);
+            readerAddUser.readAsDataURL(fileAddUser);
+        })
+    };
+
+    let input_img_edit_user = document.getElementById('inputUserImageEdit')
+    if (input_img_edit_user) {
+        input_img_edit_user.addEventListener('change', function () {
+            let imgEditUser = document.getElementById("userImageEdit");
+            let fileEditUser = this.files[0];
+            imgEditUser.classList.add("obj");
+            imgEditUser.file = fileEditUser;
+            let readerEditUser = new FileReader();
+            readerEditUser.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(imgEditUser);
+            readerEditUser.readAsDataURL(fileEditUser);
+        })
+    };
    
 
 
