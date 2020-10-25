@@ -12,12 +12,6 @@ class LastProduct extends Component {
     /* Funcion para llamar a la API, hacemos una func porq vamos a llamar a varias */
 
 
-
-    mostrarProductos = (data)=>{
-        console.log(data);
-        
-      
-    } 
     componentDidMount(){
         
         fetch("http://localhost:5001/api/products/lastProduct", { method: "POST"} )

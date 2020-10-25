@@ -1,11 +1,10 @@
-const { product } = require ('../../database/models');
+const { product, shopping_bag } = require ('../../database/models');
 const { Op } = require("sequelize")
 const fs = require('fs');
 const path = require('path');
 
 module.exports = {
     productsAll: (req, res) => {
-        
         if(req.params.id) {
             product.findByPk (req.params.id, { include: 'variety' } )
             .then (products => {
@@ -16,13 +15,10 @@ module.exports = {
                                 url: req.originalUrl,
                                 status: 200,
                                 count: 1 
-            
                             },
                             data: products
-                            
                         }    
                     );
-    
                 } else {
                     res.status(400).json( {error: 'No results found'} );
                 }
@@ -32,7 +28,6 @@ module.exports = {
                 return res.status(500).json( { error: 'Could not connect to database' } );;
             })
         };
-        
         product.findAll( { order: ['id'], include: 'variety' })
         .then (products => {
             if (products) {
@@ -59,7 +54,6 @@ module.exports = {
         })
     },
 
-
     lastProduct: (req, res) => {
         product.findAll( { order: [ ['id', 'DESC'] ], limit: [1], raw: true}) //, nest: true, include: 'variety' 
         .then (products => {
@@ -67,8 +61,6 @@ module.exports = {
             let imageURL =  appPath + products[0].image;
             let lastProduct = products[0];
             lastProduct.imageURL = imageURL;
-
-            console.log(lastProduct);
             if (product) {
                 res.status(200).json(
                     {
@@ -79,10 +71,8 @@ module.exports = {
         
                         },
                         data: lastProduct
-                        
                     }    
                 );
-
             } else {
                 res.status(400).json( {error: 'No results found'} );
             }
@@ -91,7 +81,47 @@ module.exports = {
             console.log(error);
             return res.status(500).json( { error: 'Could not connect to database' } );;
         })
+    },
+
+    amountSales: (req, res) => {
+        shopping_bag.sum('total')  
+            .then(amountSales => { 
+                res.status(200).json(
+                    {
+                        meta: {
+                            url: req.originalUrl,
+                            status: 200,
+        
+                        },
+                        data: {
+                            amountSales     
+                        }
+                    }    
+                );
+            
+            } );
+
+        // .then (totalPurchase => {
+        //     return console.log(totalPurchase);
+        //     if (product) {
+        //         res.status(200).json(
+        //             {
+        //                 meta: {
+        //                     url: req.originalUrl,
+        //                     status: 200,
+        //                     count: 1 
+        
+        //                 },
+        //                 data: lastProduct
+        //             }    
+        //         );
+        //     } else {
+        //         res.status(400).json( {error: 'No results found'} );
+        //     }
+        // })
+        // .catch(error => {
+        //     console.log(error);
+        //     return res.status(500).json( { error: 'Could not connect to database' } );;
+        // })
     }
-
-
 }
