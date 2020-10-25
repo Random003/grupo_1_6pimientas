@@ -4,7 +4,8 @@
 
 # **Grupo 1 "Seis Pimientas"**
 
-Proyecto integrador de Curso Full Stack de "Digital House". Tema: e-Comerce; sitio web de fábrica de pastas "SeisPimientas". 
+Proyecto integrador de Curso Full Stack de "Digital House". <br>
+Tema: e-Comerce; sitio web de fábrica de pastas "SeisPimientas". <br>
 Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3 sucursales adicionales.
 
 
@@ -31,7 +32,7 @@ Fábrica de pastas dedicada a la elaboración artesanal, con venta insitu y en 3
 
 - Colocar "npm start" en la terminal dentro de la carpeta "dashboard" del proyecto.
 
-- Debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000) donde aparecerá el Dashboard.
+- Debe abrirse el navegador automáticamente en [http://localhost:3000](http://localhost:3000) donde aparecerá el mencionado Dashboard.
 
 - Para mayor información acerca del Dashboard creado en React leer su Readme en esta <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/dashboard/README.md">dirección</a>.
 
@@ -101,3 +102,17 @@ Visite el tablero de trabajo grupal en Trello <a href="https://trello.com/b/EJda
 # Comentarios a tener en cuenta para las entregas de Sprints:
 
 Visite <a href="https://github.com/Random003/grupo_1_6pimientas/blob/master/organization/comments.md">aquí</a> por favor para los comentarios dedicados a cada uno de los Sprints a entregar, como por ejemplo wireframes o pedidos de entregables determinados que no tengan un lugar especifico en el readme, gracias.
+
+
+
+<br>
+<br>
+<br>
+
+ Muchas gracias.
+
+<br>
+<br>
+<br>
+
+######   <p align="center">2020 Dev Team® </p>

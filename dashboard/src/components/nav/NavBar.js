@@ -75,19 +75,19 @@ function NavBar () {
                 <li className="nav-item">
                 <a className="nav-link" href="/">
                     <i className="fas fa-id-card"></i>
-                    <span>Contacto Fabrica</span></a>
+                    <span><a style={{ color: 'inherit', textDecoration: 'inherit'}} href="images/formulario.png" target="_blank" rel="noopener noreferrer">Contacto Fabrica</a></span></a>
                 </li>
 
                 <li className="nav-item">
                 <a className="nav-link" href="/">
                     <i className="fas fa-store"></i>
-                    <span>Contacto Locales</span></a>
+                    <span><a style={{ color: 'inherit', textDecoration: 'inherit'}} href="images/formulario.png" target="_blank" rel="noopener noreferrer">Contacto Locales</a></span></a>
                 </li>
 
                 <li className="nav-item">
                 <a className="nav-link" href="/">
                     <i className="fas fa-code"></i>
-                    <span>Contacto Desarrolladores</span></a>
+                    <span><a style={{ color: 'inherit', textDecoration: 'inherit'}} href="images/formulario.png" target="_blank" rel="noopener noreferrer">Contacto Desarrolladores</a></span></a>
                 </li>
     
             

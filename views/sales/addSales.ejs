@@ -18,13 +18,13 @@
                         <input class="ingresoCreate" type="text" name="name" id="name"  placeholder="Nombre de la promoción"
                         value="<%= locals.sales ? sales.name : '' %>">
                         <span class="error"><%= locals.errors && errors.name ? errors.name.msg : '' %> </span> 
-                    </p>
+                    </p><br><br>
                     <p>
                         <label>Descripción</label>
                         <textarea class="ingresoCreate" name="discount" id="discount" placeholder="Descuento"
                         ><%= locals.sales ? sales.discount : '' %></textarea>
                         <span class="error"><%= locals.errors && errors.discount ? errors.discount.msg : '' %> </span>
-                    </p>
+                    </p><br><br>
                 </div>
 
                 <div class="imagenEdit2">
@@ -46,6 +46,7 @@
                 </p>
 
                 <p>
+                    <br><br>
                     <button type="submit" class="ingresoCreate" id="botonIngreso">Crear Promo</button> 
                     <button type="reset" class="ingresoCreate" id="botonReseteo">Borrar Campos</button>
                 </p>
