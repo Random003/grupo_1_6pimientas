@@ -20,7 +20,7 @@
                     
                     <section class="detalle_bolsa">
                         <article>
-                            
+                            <input type="hidden" class="inputId" value="<%= itemDetail.products[0].id %>" id="inputId<%= i %>">
                             <img class="foto_producto_bolsa" src="../../images/products/<%= itemDetail.products[0].image %>" alt="Foto">
                         </article>
                         <article class="descripción_compra">
@@ -62,17 +62,18 @@
                         </article>
                     </section>
                     <% i++; %> 
+                    
                 <% }); %> 
                 
             </div>
             <div class="contenido_bolsa ">
-                <form class="container_fin_compra" action="/products/endPurchase" method="POST">
+                <form class="container_fin_compra" action="/products/endPurchase" method="POST" id="frm_end_purchase">
                     <div class="titulos_detalle_bc">
                         <input type="hidden" name="shopping_bag_id" value="<%= detailShoppingBag[0].shopping_bag_id %> ">
                         <h3 class="h3_bolsa_de_compras titulo_total_compra bolsaa">Total compra:</h3>
+                        
                         <input class="monto_total_compra bolsaa" type="text" name="total" id="Total" value="$0" readonly >
                         <input class="finaliza_compra" type="submit" name="finaliza_compra" id="finaliza_compra" value="Finalizar Compra">
-
                     </div>
                 </form>
             </div>

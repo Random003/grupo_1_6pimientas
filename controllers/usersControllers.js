@@ -138,7 +138,7 @@ module.exports = {
     updateUser: (req, res) => {
         
         //let oldUser = usersModel.find(req.params.id);
-        user.findByPk(req.params.id)
+        user.findByPk(req.body.id_user_edit)
             .then ((oldUser)=>{
                 
                 let old_category = '';
@@ -163,7 +163,7 @@ module.exports = {
                 }
         
                 let userUpdate = {
-                    id: req.params.id,
+                    id: req.body.id_user_edit,
                     full_name: req.body.full_name,
                     email: req.body.email,
                     password: password,
@@ -179,12 +179,12 @@ module.exports = {
                 };
                 
                 //let idUserUpdate = usersModel.update(userUpdate);
-                user.update(userUpdate, { where: { id: parseInt(req.params.id) } })
+                user.update(userUpdate, { where: { id: parseInt(req.body.id_user_edit) } })
                 .then(updateUser => {
                     
-                    if (req.session.user.id == req.params.id) {
+                    if (req.session.user.id == req.body.id_user_edit) {
                         req.session.user = userUpdate;
-                        res.render ('./home/home1', { user: userUpdate });
+                        res.redirect ('/');
                     } else {
                         res.redirect ('../usersAdmin');
                     } 

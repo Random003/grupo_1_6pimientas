@@ -213,88 +213,6 @@ module.exports = {
         //preguntar si existe alguna bolsa de compras abierta, si existe, traer detalle de bolsa y agregar item, 
         //si no existe, crearla tomar el id de la bolsa y agregar el item como nuevo detalle
         if (req.session.user) {
-
-
-            // MODO CON PROMESAS
-            // shopping_bag.findAll({
-            //     where: {
-            //         user_id: req.session.user.id,
-            //         status: 'abierto'
-            //     }
-            // })
-            //     .then(shoppingBag => {
-            //         if (shoppingBag.length = 0) {
-            //             let newShoppingBag = {
-            //                 date_purchase: Date.now(),
-            //                 user_id: req.session.user.id,
-            //                 status: 'abierto',
-            //             };
-            //             shopping_bag.create(newShoppingBag)
-            //                 .then(shoppingBag => {
-            //                     let newItemDetailAdd = {
-            //                         shopping_bag_id: shoppingBag[0].id,
-            //                         product_id: Number(req.body.id_product_add),
-            //                         quantity: 1,
-            //                     };
-            //                     detail_shopping_bag.create(newItemDetailAdd)
-            //                         .then(newItemDetail => {
-            //                             let newRelation = {
-            //                                 detail_shopping_bag_id: newItemDetail.id,
-            //                                 product_id: newItemDetail.product_id
-            //                             };
-            //                             detail_shopping_bag_product.create(newRelation)
-            //                                 .then(newRelationSBP => {
-            //                                     detail_shopping_bag.findAll({ where: { shopping_bag_id: shoppingBag[0].id }, include: ['products']})
-            //                                         .then(detailShoppingBag => {
-            //                                             for (let x = 0; x < detailShoppingBag.length; x++) {
-            //                                                 variety.findAll({ where: { product_id: detailShoppingBag[x].products[0].id } })
-            //                                                     .then(varieties => {
-            //                                                         if (varieties.length > 0) {
-            //                                                             detailShoppingBag[x].products[0].varieties = varieties;
-            //                                                         }
-
-            //                                                     })
-            //                                             }
-            //                                             res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag } );
-            //                                         });
-            //                                 });
-            //                         });
-            //                 });
-            //         } else {
-            //             let newItemDetailAdd = {
-            //                 shopping_bag_id: shoppingBag[0].id,
-            //                 product_id: Number(req.body.id_product_add),
-            //                 quantity: 1,
-            //             };
-            //             detail_shopping_bag.create(newItemDetailAdd)
-            //             .then(newItemDetail => {
-            //                 let newRelation = {
-            //                     detail_shopping_bag_id: newItemDetail.id,
-            //                     product_id: newItemDetail.product_id
-            //                 };
-            //                 detail_shopping_bag_product.create(newRelation)
-            //                     .then(newRelationSBP => {
-            //                         detail_shopping_bag.findAll({ where: { shopping_bag_id: shoppingBag[0].id }, include: ['products']})
-            //                             .then(detailShoppingBag => {
-            //                                 for (let x = 0; x < detailShoppingBag.length; x++) {
-            //                                     variety.findAll({ where: { product_id: detailShoppingBag[x].products[0].id } })
-            //                                         .then(varieties => {
-            //                                             if (varieties.length > 0) {
-            //                                                 detailShoppingBag[x].products[0].varieties = varieties;
-            //                                             }
-
-            //                                         })
-            //                                 }
-            //                                 res.render('./products/productCart', { detailShoppingBag: detailShoppingBag, shoppingBag: shoppingBag } );
-            //                             });
-            //                     });
-            //             });
-            //         };
-            //     });
-            // } else {
-            //     res.redirect('../users/login');
-            // }
-            
             let shoppingBag = await shopping_bag.findAll({
                 where: {
                     user_id: req.session.user.id,
@@ -319,18 +237,13 @@ module.exports = {
                     product_id: Number(req.body.id_product_add),
                     quantity: 1,
                 }
-                console.log('con 0', shoppingBag[0].id);
             } else {
                 newItemDetailAdd = {
                     shopping_bag_id: shoppingBag.id,
                     product_id: Number(req.body.id_product_add),
                     quantity: 1,
                 }
-                console.log('Sin 0', shoppingBag.id);
-
             }
-            console.log(newItemDetailAdd);
-            
             let newItemDetail = await detail_shopping_bag.create(newItemDetailAdd);
             // genero relación tabla muchos a muchos
             let newRelation = {
@@ -378,13 +291,10 @@ module.exports = {
             way_to_pay: 'efectivo',
             status: 'cerrado',
             total: Number(req.body.total.substr(1))
-        }
-
+        } 
 
         shopping_bag.update(purchase, { where: { id: req.body.shopping_bag_id } });
         res.redirect('../products');
-
-
 
     }
 

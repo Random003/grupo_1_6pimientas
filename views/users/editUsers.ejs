@@ -5,7 +5,8 @@
     <%- include('../partials/header');%> 
     <main> 
         <div class="cajaLogin">
-            <form  action="/users/edit/<%= locals.userToEdit && userToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="formEditUser">
+            <form  action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data" id="formEditUser">
+                <input type="hidden" name="id_user_edit" value="<%= locals.userToEdit && userToEdit.id %>">
                 <h3>
                     Editar un Usuario:
                 </h3>
@@ -17,7 +18,7 @@
                         <p>
                             <br>
                             <h4>Cambiar imagen</h4>
-                            <input class="ingresoCreate fileCreate" type="file" name="image" id="inputUserImageEdit" accept="image/x-png,image/gif,image/jpeg">></input>
+                            <input class="ingresoCreate fileCreate" type="file" name="image" id="inputUserImageEdit" accept="image/x-png,image/gif,image/jpeg"></input>
                             <label class="feedBack"><%= locals.errors && errors.image ? errors.image.msg : '' %> </label><br> 
                         </p>
                     </div>

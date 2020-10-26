@@ -9,19 +9,19 @@ window.addEventListener ('load', function () {
         botones_compra.forEach(boton_compra => {
             boton_compra.addEventListener('click', function() {
                 let id_user = document.getElementById('id_user');
-                if (id_user && id_user.value != '') {
-                } else {
+                if (id_user && id_user.value == '') {
                     window.location.href = ('/users/login');
                 }
             });
         });
-    };
+    };  
 
     //capturo el evento click de los botones más y menos de la bolsa de compras
     const pUnit = document.querySelectorAll('.p_unit');
     const subTotal =  document.querySelectorAll('.sub_total');
     const inputQuantities = document.querySelectorAll('.cantidad_producto_bolsa');
     const total = document.getElementById('Total');
+    
 
     if (inputQuantities) {
         inputQuantities.forEach(inputQuantity => {
@@ -35,7 +35,7 @@ window.addEventListener ('load', function () {
                     this.value = 1;
                 }
             })
-        });
+        }); 
     };
 
     const buttonsLess = document.querySelectorAll('.restar_producto_bolsa');
@@ -61,6 +61,7 @@ window.addEventListener ('load', function () {
                 inputQuantities[indexAdd].value = Number(inputQuantities[indexAdd].value) + 1; 
                 subTotal[indexAdd].value = "$" + Number(inputQuantities[indexAdd].value) * Number(pUnit[indexAdd].value.substr(1));
                 actualizar_total(buttonsAdd.length);
+                //actualizo un input hidden de la vista 
             });
     
         });    
@@ -80,6 +81,20 @@ window.addEventListener ('load', function () {
     if (subTotal) {
         actualizar_total(buttonsAdd.length);
     }
-    
+
+    const inputId = document.querySelectorAll('.inputId')
+    const frmEndPurchase = document.getElementById('frm_end_purchase');
+    if (frmEndPurchase) {
+        frmEndPurchase.addEventListener('submit', function (event) {
+            //event.preventDefault();
+            
+            let idQuantity = [];
+            for (let x = 0; x < inputId.length; x++ ) {
+                idQuantity.push({id: Number(inputId[x].value), quantity: Number(inputQuantities[x].value)});
+            };
+            event.idQuantity = idQuantity
+            console.log(event.idQuantity);
+        })
+    } 
    
 });
