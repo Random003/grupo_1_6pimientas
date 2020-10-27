@@ -10,9 +10,10 @@
             <div class="contenido_bolsa">
                 <div class="titulos_detalle_bc">
                     <label class="titulo_producto" for="">Producto:</label>
-                    <label class="titulo_producto" for="">Variedad:</label>
-                    <label class="titulo_producto" for="">Precio Unitario:</label>
-                    <label class="titulo_cantidad" for="">Subtotal:</label>
+                    <label class="titulo_descripcion" for="">Descipción:</label>
+                    <label class="titulo_variedad" for="">Variedad:</label>
+                    <label class="titulo_precio" for="">P. Unit.:</label>
+                    <label class="titulo_subtotal" for="">Subtotal:</label>
                     <label class="titulo_cantidad" for="">Cantidad:</label>
                 </div>
                 <% let i = 0; %> 
@@ -29,7 +30,7 @@
                         </article>
                         <article>
                             <% if (itemDetail.products[0].varieties) {  %>
-                                <select name="" id="selectVariety<%= i %>">
+                                <select class="select_variedad" name="" id="selectVariety<%= i %>">
                                     <% itemDetail.products[0].varieties.forEach(varietiesProduct => { %>
                                         <option value="<%= varietiesProduct.id %>"><%= varietiesProduct.name %></option>
                                     
@@ -38,16 +39,16 @@
                                 </select>
                             <% } %> 
                         </article>
-                        <article>
+                        <article >
                             <div>
                                 <input class="p_unit" id="p_unit<%= i %>" value="$<%= itemDetail.products[0].price %>" readonly>
                             </div>
                             
                         </article>
-                        <article>
-                            <div>
+                        <article class="sub_total_article">
+                           
                                 <input class="sub_total" type="text" name="subTotal<%= i %>" id="subTotal<%= i %>" value=$<%= itemDetail.products[0].price %> readonly >
-                            </div>
+                            
                         </article>
                         <article class="botones_bolsa">
                             <nav class="botones_mas_menos">
@@ -68,9 +69,9 @@
             </div>
             <div class="contenido_bolsa ">
                 <form class="container_fin_compra" action="/products/endPurchase" method="POST" id="frm_end_purchase">
-                    <div class="titulos_detalle_bc">
+                    <div class="seccion_finaliza_compra">
                         <input type="hidden" name="shopping_bag_id" value="<%= detailShoppingBag[0].shopping_bag_id %> ">
-                        <h3 class="h3_bolsa_de_compras titulo_total_compra bolsaa">Total compra:</h3>
+                        <h3 class="h3_fin_bolsa_de_compras titulo_total_compra bolsaa">Total compra:</h3>
                         
                         <input class="monto_total_compra bolsaa" type="text" name="total" id="Total" value="$0" readonly >
                         <input class="finaliza_compra" type="submit" name="finaliza_compra" id="finaliza_compra" value="Finalizar Compra">
@@ -79,10 +80,10 @@
             </div>
         <% } else { %>
             <form action="/products" method="GET">
-                <div class="contenido_bolsa">
+                <div class="contenido_bolsa centrado">
                 <h3 class="h3_bolsa_de_compras">Bolsa de compras vacía</h3>
               
-                <input class="eliminar_producto_bolsa" type="submit" id="" value="Ir a Productos">
+                <input class="ir_productos_bolsa" type="submit" id="" value="Ir a Productos">
                 </div>
 
             </form>

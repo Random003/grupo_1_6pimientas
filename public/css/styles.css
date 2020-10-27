@@ -594,7 +594,12 @@ a {
     font-size: 1.6rem;
     justify-items: center;
     color: rgb(163, 31, 53);
+    width: 30%;
+
     
+}
+.sub_total_article {
+    margin: -80px;
 }
 
 .p_unit {
@@ -610,8 +615,7 @@ a {
 }
 
 .titulo_total_compra {
-    text-align: right;
-    width: 70%;
+    
 }
 .monto_total_compra {
     margin: 0;
@@ -622,7 +626,7 @@ a {
     font-size: 2rem;
     justify-items: center;
     color: rgb(163, 31, 53);
-    width: 15%;
+    width: 11%;
 }
 
 .finaliza_compra {
@@ -637,9 +641,9 @@ a {
     text-align: center;
     background-color: rgb(163, 31, 53) ;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     justify-items: center;
-    font-weight: bolder;
+    
 }
 
 .container_fin_compra {
@@ -804,21 +808,34 @@ header div ul {
 .h3_bolsa_de_compras {
     background-color: #FDE3B3;
     padding: 2rem;
-    width: 100%;
     max-width: 1280px;
     color: rgb(163, 31, 53);
     font-size: 1.7rem;
     font-weight: bolder;
     margin-bottom: 8px;
     margin-top: 8px;    
+    text-align: center;
+    width: 100%;
 }
-
+.h3_fin_bolsa_de_compras {
+    background-color: #FDE3B3;
+    padding: 2rem;
+    max-width: 1280px;
+    color: rgb(163, 31, 53);
+    font-size: 1.7rem;
+    font-weight: bolder;
+    margin-bottom: 8px;
+    margin-top: 8px;    
+    text-align: right;
+    width: 75%;
+}
 .contenido_bolsa {
     display: flex;
     flex-wrap: wrap;
     background-color: #FDE3B3;
-    padding: 20px 20px;
-    justify-content: space-around;
+    padding: 20px 0px;
+    
+    justify-content: flex-start;
     width: 100%;
     max-width: 1280px;
     color: rgb(163, 31, 53);
@@ -829,8 +846,8 @@ header div ul {
 .titulos_detalle_bc {
     display: inline-flex;
     flex-direction: row;
-    font-size: 1.1rem;
-    justify-content: space-between;
+    font-size: 1.5rem;
+    justify-content: flex-start ;
     margin-bottom: 10px;    
     margin-left: 10px;
     margin-right: 10px;
@@ -838,12 +855,74 @@ header div ul {
 }
 
 
+
 .titulo_producto {
     padding-left: 0.5rem;
+    width: 12%;
+    text-align: center;
+    
+}
+
+.foto_producto_bolsa {
+    width: 12%;
+    padding-top: 5px;
+    padding-left: 0.0rem;
+    min-width: 120px;
+    max-width: 100px;
+    margin-left: 0rem;
+
+
+}
+
+
+.titulo_descripcion {
+    
+    width: 25%;
+    justify-content: left;
+    text-align: left;
+    padding-left: 3.5rem;
+    
+}
+.titulo_variedad {
+    
+    width: 12%;
+    padding-left: 0;
+    text-align: center;
+    
+}
+.select_variedad {
+    margin: 0;
+    
+    border-radius: 15px;
+    width: 100%;
+    
+    height: 4rem;   
+    border: 0;
+    overflow: hidden;
+    text-transform: none;
+    text-align: center;
+    background-color: rgb(163, 31, 53) ;
+    color: white;
+    font-size: 1.5rem;
+    justify-items: center;
+    
+}
+
+.titulo_precio {
+    width: 9%;
+    text-align: center;
+    padding-left: 0rem;
+}
+.titulo_subtotal {
+    padding-left: 0rem;
+    width: 8%;
+    text-align: center;
 }
 
 .titulo_cantidad {
-    padding-right: 1.1rem;
+    
+    width: 21%;
+    text-align: center;
 }
 
 .detalle_bolsa {
@@ -858,13 +937,7 @@ header div ul {
     padding-bottom: 10px;
 }
 
-.foto_producto_bolsa {
-    width: 33%;
-    padding-top: 5px;
-    padding-left: 10px;
-    min-width: 100px;
-    max-width: 100px;
-}
+
 
 .descripción_compra {
     text-align: left;
@@ -878,20 +951,56 @@ header div ul {
 
 main div section article input {
     margin: 0;
-    width: 40px;
+    width: 5rem;
     height: 40px;
+    padding: 5px;
     border: 0;
     overflow: hidden;
     text-transform: none;
     text-align: center;
     background-color: rgb(163, 31, 53) ;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
     justify-items: center;
-    font-weight: bolder;
+    
+}
+.ir_productos_bolsa {
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    border: 0;
+    overflow: hidden;
+    text-transform: none;
+    text-align: center;
+    background-color: rgb(163, 31, 53) ;
+    color: white;
+    font-size: 1.3rem;
+    justify-content: center;
+    
+    border-radius: 15px;
+    
+    max-width: 150px;
+}
+.centrado {
+    justify-content: center;
 }
 
-
+.banner_footer {
+    background-image: url("/images/home/bannerHome.jpg");
+    color: white;
+    text-align: center;
+    font-size: 4rem;
+    padding-right: 10%;
+    position: relative;
+    padding: 4rem;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 100%;
+    width: 100%;
+    font-family: 'paris';
+    font-style: italic;
+}
 
 .botones_bolsa {
     align-items: center;
@@ -905,7 +1014,7 @@ main div section article input {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    width: 33%;
+    width: 30%;
     min-width: 15rem;
 }
 
@@ -936,10 +1045,16 @@ main div section article input {
 .eliminar_producto_bolsa {
     margin-left: 20px;
     border-radius: 15px;
-    width: 40%;
-    max-width: 120px;
+    width: 50%;
+    max-width: 150px;
 }
-
+.seccion_finaliza_compra {
+    display: inline-flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    justify-content: flex-start ;
+    width: 100%;
+}
 
 
 /* FOOTER BOLSA*/
@@ -1335,16 +1450,13 @@ footer section article p {
         margin-top: auto;
         margin-bottom: auto;
     }
-    .titulos_detalle_bc {
-        justify-content: space-around;
-        
-    }
+    
     .titulo_cantidad {padding-left: 1.4rem;}
     .detalle_bolsa {
         justify-content: space-around;
     }
     .botones_bolsa {
-        width: 100%;
+        /* width: 100%; */
         flex-direction: row;
         min-width: 7rem;
         padding: 0px;
@@ -1402,9 +1514,7 @@ footer section article p {
         margin-bottom: auto;
     }
     .encabezado {width: 60%;}
-    .titulos_detalle_bc {
-        justify-content: space-around;
-    }
+   
     .titulo_cantidad {padding-left: 1.4rem;}
     .cajaflex {
         align-self: center;
@@ -1427,11 +1537,7 @@ footer section article p {
 }
 
 @media all and (min-width: 470px) {
-    .titulos_detalle_bc {
-        justify-content: space-between;
-        width: 100%;
-        padding: 0px;
-    }
+   
     .titulo_cantidad {padding-left: 0px;}
     .detalle_bolsa {
         justify-content: space-around;
@@ -1440,10 +1546,10 @@ footer section article p {
         padding-left: 1rem;
     }
     .botones_bolsa {
-        width: 33%;
+        width: 30%;
         justify-content: space-around;
     }
-    .titulo_producto,
+    /* .titulo_producto,
     .titulo_cantidad {
         width: 30%;
         padding: 0px;
@@ -1452,7 +1558,7 @@ footer section article p {
         width: 38%;
         padding-left: 1.1rem;
         text-align: left;
-    }
+    } */
     .cajaflex {
         align-self: center;
     }
@@ -1533,7 +1639,7 @@ footer section article p {
         
     }
     
-    .titulo_producto,
+    /* .titulo_producto,
     .titulo_cantidad {
         width: 38%;
         
@@ -1542,7 +1648,7 @@ footer section article p {
         width: 38%;
         padding-left: 1.7rem;
         text-align: left;
-    }
+    } */
     .botones_bolsa {
         padding: 1rem;
     }
@@ -1602,18 +1708,13 @@ footer section article p {
     
     .titulo_producto,
     .titulo_cantidad {
-        width: 38%;
+       /* width: 38%;*/
         
     }
-    .titulo_producto {
-        width: 38%;
-        padding-left: 1.7rem;
-        text-align: left;
-        
-    }
+/*     
     .botones_bolsa {
         padding: 1rem;
-    }
+    } */
     .cajaflex {
         flex-direction: row;
         display: inline-block;
