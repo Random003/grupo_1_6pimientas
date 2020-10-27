@@ -186,7 +186,7 @@ module.exports = {
                         req.session.user = userUpdate;
                         res.redirect ('/');
                     } else {
-                        res.redirect ('../usersAdmin');
+                        res.redirect ('../users/usersAdmin');
                     } 
         
                 });

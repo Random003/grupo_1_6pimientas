@@ -31,7 +31,7 @@ module.exports = {
   editSale: [
     check('name')
       .notEmpty().withMessage('Debes completar el campo de nombre').bail()
-      .isLength({ min: 8 }).withMessage('El nombre debe tener al menos 8 caracteres'),
+      .isLength({ min: 4 }).withMessage('El nombre debe tener al menos 4 caracteres'),
 
     check("discount")
       .notEmpty()
